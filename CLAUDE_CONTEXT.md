@@ -44,15 +44,32 @@ Netlify serves static site
 | `public/data/my_team.json` | User's squad with projections |
 | `public/data/projections.json` | Top players by position |
 
-## Current State (v2)
+## Current State (v3)
 - ✅ Real xG/xA data from Understat via `understatapi` package
 - ✅ Team strength calculated from actual xGA (not FPL's arbitrary ratings)
 - ✅ Fuzzy name matching to link FPL players → Understat profiles
 - ✅ Fixture difficulty based on opponent's real defensive record
-- ✅ Captain picks with ownership % and differential flags
-- ✅ Transfer recommendations with net -4 hit value calculation
-- ✅ DGW/BGW detection with chip alerts
+- ✅ Captain picks with ownership %, differential flags, DGW indicators
 - ✅ Data quality badges (✓ xG data vs ~ estimated)
+
+### v3 Transfer Logic (Level 2)
+- ✅ Only suggests replacing STARTERS (not bench fodder)
+- ✅ Weights individual fixtures (not just averages)
+- ✅ Includes form trend (hot 🔥 / cold 🥶)
+- ✅ Flags players with upcoming DGWs
+- ✅ Points-per-million value score
+- ✅ Respects 3-player team limit
+- ✅ Shows sell reasons (injury, form, fixtures, blanks)
+- ✅ Shows buy reasons (DGW, form, easy fixtures)
+- ✅ Net hit value calculation (worth -4?)
+
+### v3 Chip Strategy Optimizer
+- ✅ Bench Boost: finds best DGW based on bench coverage
+- ✅ Triple Captain: finds premium with best DGW fixtures
+- ✅ Free Hit: identifies BGW with poor squad coverage
+- ✅ Wildcard: triggers on multiple issues (injuries, poor DGW coverage, cold players)
+- ✅ Shows confidence level (HIGH/MEDIUM)
+- ✅ Specific action needed for each chip
 
 ## Configuration Constants (in projections.py)
 ```python
@@ -66,16 +83,16 @@ DECAY_FACTOR = 0.85   # Each older match weighted 15% less
 ## Planned Improvements (Priority Order)
 
 ### High Priority
-1. **Rolling 5-match xG** - Weight recent form more heavily, not just season totals
-2. **Chip strategy optimizer** - Specific recommendations for when to use BB/TC/FH/WC based on fixture swings and squad structure
-3. **Form trend detection** - Identify players on hot/cold streaks
+1. **Level 3 Multi-Move Optimizer** - Consider 2-transfer combos, "Sell X+Y, buy A+B" recommendations, optimize for chip planning
+2. **Rolling 5-match xG** - Weight recent form more heavily, not just season totals (requires match-by-match Understat data)
+3. **Form trend detection** - More sophisticated hot/cold detection using actual xG vs output
 
 ### Medium Priority
 4. **Penalty/set piece taker identification** - Bonus xG for designated takers
 5. **Minutes prediction** - Model rotation risk (especially for Pep's team)
-6. **Fixture ticker** - Show next 6 fixtures color-coded by difficulty
+6. **Fixture ticker** - Visual fixture difficulty chart for next 6 GWs
 
-### Lower Priority
+### Lower Priority  
 7. **Backtesting module** - Validate model against 2019-2024 seasons
 8. **Effective ownership** - Compare against top 10k, not overall ownership
 9. **What-if scenarios** - "What if I did transfer X instead?"
@@ -85,7 +102,8 @@ DECAY_FACTOR = 0.85   # Each older match weighted 15% less
 - xG data is season-level from Understat (not match-by-match rolling)
 - ~80% player match rate between FPL and Understat (fuzzy matching)
 - No rotation risk modeling yet
-- Chip recommendations are alerts only, not optimized timing
+- Chip analysis depends on DGW/BGW being announced (FPL updates fixtures)
+- Transfer logic is single-move only (Level 3 multi-move coming next)
 
 ## Points Projection Formula
 ```
