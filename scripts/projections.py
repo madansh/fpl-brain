@@ -607,7 +607,7 @@ def run_projections():
         top_by_position[pos_name] = pos_players[:15]
    
     # Save outputs
-    output_dir = Path('data')
+    output_dir = Path('public/data')
     output_dir.mkdir(exist_ok=True)
    
     with open(output_dir / 'projections.json', 'w') as f:
