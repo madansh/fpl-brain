@@ -1,23 +1,24 @@
 """
-FPL Brain - Projection Engine
-Generates xG-based recommendations for captain, transfers, and chip timing.
+FPL Brain - Projection Engine v2
+Now with REAL xG data from Understat + improved fixture difficulty
 """
 
 import requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
-import math
+from difflib import SequenceMatcher
+from understatapi import UnderstatClient
 
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
 
 TEAM_ID = 5033680
-PLANNING_HORIZON = 4  # Gameweeks to optimize transfers over
-HIT_THRESHOLD_GWS = 3  # Take hit if gain > 4 over this many GWs (aggressive)
+PLANNING_HORIZON = 4
+HIT_THRESHOLD_GWS = 3  # Aggressive: take hit if gain > 4 over 3 GWs
 FORM_WEIGHT = 0.6  # 60% recent form, 40% season average
-DECAY_FACTOR = 0.85  # Each older match weighted 15% less
+DECAY_FACTOR = 0.85
 
 # FPL API endpoints
 BASE_URL = "https://fantasy.premierleague.com/api"
@@ -25,22 +26,18 @@ BOOTSTRAP_URL = f"{BASE_URL}/bootstrap-static/"
 FIXTURES_URL = f"{BASE_URL}/fixtures/"
 TEAM_URL = f"{BASE_URL}/entry/{TEAM_ID}/"
 PICKS_URL = f"{BASE_URL}/entry/{TEAM_ID}/event/{{gw}}/picks/"
-PLAYER_URL = f"{BASE_URL}/element-summary/{{player_id}}/"
 
 # Points mapping
-PTS_GOAL = {1: 6, 2: 6, 3: 5, 4: 4}  # GK, DEF, MID, FWD
+PTS_GOAL = {1: 6, 2: 6, 3: 5, 4: 4}
 PTS_ASSIST = 3
 PTS_CLEAN_SHEET = {1: 4, 2: 4, 3: 1, 4: 0}
 PTS_APPEARANCE = 2
-PTS_BONUS_AVG = 1.2  # Average bonus for high xGI players
-
 
 # =============================================================================
 # DATA FETCHING
 # =============================================================================
 
 def fetch_json(url):
-    """Fetch JSON from URL with error handling."""
     try:
         resp = requests.get(url, timeout=30)
         resp.raise_for_status()
@@ -50,382 +47,422 @@ def fetch_json(url):
         return None
 
 
-def get_bootstrap_data():
-    """Get all static FPL data - players, teams, gameweeks."""
-    return fetch_json(BOOTSTRAP_URL)
+def get_understat_data():
+    """Fetch real xG/xA data from Understat for current season."""
+    print("Fetching Understat xG data...")
+    try:
+        understat = UnderstatClient()
+        # 2024 = 2024/25 season
+        player_data = understat.league(league="EPL").get_player_data(season="2024")
+        team_data = understat.league(league="EPL").get_team_data(season="2024")
+        return player_data, team_data
+    except Exception as e:
+        print(f"Error fetching Understat data: {e}")
+        return None, None
 
 
-def get_fixtures():
-    """Get all fixtures for the season."""
-    return fetch_json(FIXTURES_URL)
-
-
-def get_my_team(current_gw):
-    """Get user's current squad."""
-    url = PICKS_URL.format(gw=current_gw)
-    return fetch_json(url)
-
-
-def get_player_history(player_id):
-    """Get detailed player history including past fixtures."""
-    url = PLAYER_URL.format(player_id=player_id)
-    return fetch_json(url)
+def match_player_names(fpl_name, fpl_team, understat_players, team_mapping):
+    """
+    Match FPL player to Understat player using fuzzy name matching.
+    Returns Understat player data or None.
+    """
+    fpl_name_clean = fpl_name.lower().strip()
+    best_match = None
+    best_score = 0
+    
+    for us_player in understat_players:
+        us_name = us_player.get('player_name', '').lower()
+        us_team = us_player.get('team_name', '')
+        
+        # Check if teams match (using mapping)
+        fpl_team_name = team_mapping.get(fpl_team, '').lower()
+        if fpl_team_name and fpl_team_name not in us_team.lower():
+            continue
+        
+        # Fuzzy match on name
+        # Try matching last name (web_name in FPL is usually last name)
+        score = SequenceMatcher(None, fpl_name_clean, us_name).ratio()
+        
+        # Also try if FPL name is contained in Understat name
+        if fpl_name_clean in us_name or us_name.split()[-1] == fpl_name_clean:
+            score = max(score, 0.85)
+        
+        if score > best_score and score > 0.6:
+            best_score = score
+            best_match = us_player
+    
+    return best_match
 
 
 # =============================================================================
-# TEAM STRENGTH CALCULATION
+# TEAM STRENGTH (using Understat team xG data)
 # =============================================================================
 
-def calculate_team_strengths(teams, fixtures):
+def calculate_team_strengths(understat_teams, fpl_teams):
     """
-    Calculate defensive/offensive strength per team based on season performance.
-    Returns xG conceded and xG scored estimates.
+    Calculate team strengths using REAL xG data from Understat.
+    Much better than FPL's arbitrary strength ratings.
     """
-    # FPL provides strength ratings - we'll enhance with fixture results
     team_strength = {}
-   
-    for team in teams:
-        team_strength[team['id']] = {
-            'name': team['name'],
-            'short_name': team['short_name'],
-            'strength_attack_home': team['strength_attack_home'],
-            'strength_attack_away': team['strength_attack_away'],
-            'strength_defence_home': team['strength_defence_home'],
-            'strength_defence_away': team['strength_defence_away'],
-            # Derive clean sheet probability from defensive strength
-            # Higher defensive strength = higher CS probability
-            'cs_prob_home': min(0.45, team['strength_defence_home'] / 3000),
-            'cs_prob_away': min(0.35, team['strength_defence_away'] / 3200),
-        }
-   
+    
+    # Build FPL team name mapping
+    fpl_team_names = {t['id']: t['name'] for t in fpl_teams}
+    
+    # Team name mapping (FPL name -> Understat name variations)
+    name_map = {
+        'Arsenal': 'Arsenal', 'Aston Villa': 'Aston Villa', 'Bournemouth': 'Bournemouth',
+        'Brentford': 'Brentford', 'Brighton': 'Brighton', 'Chelsea': 'Chelsea',
+        'Crystal Palace': 'Crystal Palace', 'Everton': 'Everton', 'Fulham': 'Fulham',
+        'Ipswich': 'Ipswich', 'Leicester': 'Leicester', 'Liverpool': 'Liverpool',
+        'Man City': 'Manchester City', 'Man Utd': 'Manchester United',
+        'Newcastle': 'Newcastle United', "Nott'm Forest": 'Nottingham Forest',
+        'Southampton': 'Southampton', 'Spurs': 'Tottenham', 'West Ham': 'West Ham',
+        'Wolves': 'Wolverhampton Wanderers'
+    }
+    
+    for fpl_team in fpl_teams:
+        team_id = fpl_team['id']
+        fpl_name = fpl_team['name']
+        us_name = name_map.get(fpl_name, fpl_name)
+        
+        # Find matching Understat team
+        us_team = None
+        if understat_teams:
+            for t_id, t_data in understat_teams.items():
+                if t_data.get('title', '').lower() == us_name.lower():
+                    us_team = t_data
+                    break
+        
+        if us_team and 'history' in us_team:
+            history = us_team['history']
+            if history:
+                # Calculate actual xG and xGA per game
+                total_xg = sum(float(h.get('xG', 0)) for h in history)
+                total_xga = sum(float(h.get('xGA', 0)) for h in history)
+                games = len(history)
+                
+                xg_per_game = total_xg / games if games > 0 else 1.3
+                xga_per_game = total_xga / games if games > 0 else 1.3
+                
+                # Clean sheet probability based on xGA
+                # Lower xGA = higher CS prob
+                cs_prob = max(0.05, min(0.5, 0.6 - (xga_per_game * 0.25)))
+                
+                team_strength[team_id] = {
+                    'name': fpl_name,
+                    'short_name': fpl_team['short_name'],
+                    'xg_per_game': round(xg_per_game, 2),
+                    'xga_per_game': round(xga_per_game, 2),
+                    'cs_prob': round(cs_prob, 3),
+                    'attack_strength': xg_per_game / 1.3,  # Normalized to league avg
+                    'defense_strength': xga_per_game / 1.3,
+                }
+            else:
+                team_strength[team_id] = get_default_team_strength(fpl_team)
+        else:
+            team_strength[team_id] = get_default_team_strength(fpl_team)
+    
     return team_strength
+
+
+def get_default_team_strength(fpl_team):
+    """Fallback if Understat data unavailable."""
+    return {
+        'name': fpl_team['name'],
+        'short_name': fpl_team['short_name'],
+        'xg_per_game': 1.3,
+        'xga_per_game': 1.3,
+        'cs_prob': 0.25,
+        'attack_strength': 1.0,
+        'defense_strength': 1.0,
+    }
 
 
 def get_fixture_difficulty(team_strengths, opponent_id, is_home):
     """
-    Return a difficulty multiplier (0.7 - 1.3) based on opponent.
-    Lower = easier fixture = higher expected points.
+    Calculate fixture difficulty based on opponent's REAL defensive xGA.
+    Lower opponent xGA = harder fixture = higher difficulty multiplier.
     """
     opp = team_strengths.get(opponent_id, {})
-   
-    if is_home:
-        # Playing at home against opponent's away attack
-        opp_attack = opp.get('strength_attack_away', 1100)
-    else:
-        # Playing away against opponent's home attack
-        opp_attack = opp.get('strength_attack_home', 1200)
-   
-    # Normalize: 1000 = easy (0.8), 1200 = average (1.0), 1400 = hard (1.2)
-    difficulty = 0.8 + (opp_attack - 1000) / 1000
-    return max(0.7, min(1.3, difficulty))
+    opp_defense = opp.get('defense_strength', 1.0)
+    
+    # Home advantage adjustment
+    home_boost = 0.9 if is_home else 1.1
+    
+    # Difficulty: good defense (low xGA) = harder
+    # opp_defense < 1 means they concede less than average
+    difficulty = opp_defense * home_boost
+    
+    return max(0.6, min(1.5, difficulty))
 
 
 # =============================================================================
-# FORM & PROJECTION CALCULATIONS
+# PROJECTION CALCULATIONS (using real xG)
 # =============================================================================
 
-def calculate_form_xgi(player_history, num_matches=5):
+def calculate_player_xgi(fpl_player, understat_match, team_strengths):
     """
-    Calculate form-weighted xGI from recent matches.
-    Uses exponential decay - recent matches count more.
-   
-    Since FPL API doesn't give raw xG, we estimate from:
-    - Goals scored (reverse engineer approximate xG)
-    - Assists
-    - Expected bonus points
+    Calculate expected goal involvement using REAL Understat xG/xA.
     """
-    if not player_history or 'history' not in player_history:
+    if not understat_match:
+        # Fallback to FPL approximation if no Understat match
+        mins = fpl_player.get('minutes', 0)
+        if mins < 90:
+            return None
+        goals = fpl_player.get('goals_scored', 0)
+        assists = fpl_player.get('assists', 0)
+        return {
+            'xg_p90': (goals / mins) * 90,
+            'xa_p90': (assists / mins) * 90,
+            'npxg_p90': (goals / mins) * 90,
+            'shots_p90': (fpl_player.get('shots', goals * 3) / mins) * 90,
+            'key_passes_p90': (fpl_player.get('creativity', 0) / 100 / mins) * 90,
+            'minutes': mins,
+            'games': fpl_player.get('starts', 1),
+            'data_quality': 'approximated'
+        }
+    
+    # Use REAL Understat data
+    mins = float(understat_match.get('time', 0))
+    games = int(understat_match.get('games', 0))
+    
+    if mins < 90 or games < 1:
         return None
-   
-    history = player_history['history']
-    if not history:
-        return None
-   
-    # Get last N matches where player had minutes
-    recent = [h for h in history if h['minutes'] > 0][-num_matches:]
-   
-    if not recent:
-        return None
-   
-    weighted_goals = 0
-    weighted_assists = 0
-    weighted_minutes = 0
-    total_weight = 0
-   
-    for i, match in enumerate(reversed(recent)):  # Most recent first
-        weight = DECAY_FACTOR ** i
-       
-        # Per 90 normalization
-        mins = match['minutes']
-        if mins > 0:
-            goals_p90 = (match['goals_scored'] / mins) * 90
-            assists_p90 = (match['assists'] / mins) * 90
-           
-            weighted_goals += goals_p90 * weight
-            weighted_assists += assists_p90 * weight
-            weighted_minutes += mins * weight
-            total_weight += weight
-   
-    if total_weight == 0:
-        return None
-   
+    
+    xg = float(understat_match.get('xG', 0))
+    xa = float(understat_match.get('xA', 0))
+    npxg = float(understat_match.get('npxG', 0))
+    shots = int(understat_match.get('shots', 0))
+    key_passes = int(understat_match.get('key_passes', 0))
+    
     return {
-        'goals_p90': weighted_goals / total_weight,
-        'assists_p90': weighted_assists / total_weight,
-        'avg_minutes': weighted_minutes / total_weight,
-        'matches_played': len(recent)
+        'xg_p90': (xg / mins) * 90,
+        'xa_p90': (xa / mins) * 90,
+        'npxg_p90': (npxg / mins) * 90,
+        'shots_p90': (shots / mins) * 90,
+        'key_passes_p90': (key_passes / mins) * 90,
+        'minutes': mins,
+        'games': games,
+        'total_xgi': xg + xa,
+        'data_quality': 'understat'
     }
 
 
-def calculate_season_xgi(player):
-    """Calculate season average xGI from bootstrap data."""
-    mins = player.get('minutes', 0)
-    if mins < 90:  # Not enough data
-        return None
-   
-    goals = player.get('goals_scored', 0)
-    assists = player.get('assists', 0)
-   
-    return {
-        'goals_p90': (goals / mins) * 90,
-        'assists_p90': (assists / mins) * 90,
-        'avg_minutes': mins / max(1, player.get('starts', 1)),
-    }
-
-
-def blend_projections(form_xgi, season_xgi):
-    """Blend form and season stats with configured weighting."""
-    if form_xgi is None and season_xgi is None:
-        return None
-   
-    if form_xgi is None:
-        return season_xgi
-   
-    if season_xgi is None:
-        return form_xgi
-   
-    return {
-        'goals_p90': (form_xgi['goals_p90'] * FORM_WEIGHT +
-                      season_xgi['goals_p90'] * (1 - FORM_WEIGHT)),
-        'assists_p90': (form_xgi['assists_p90'] * FORM_WEIGHT +
-                        season_xgi['assists_p90'] * (1 - FORM_WEIGHT)),
-        'avg_minutes': (form_xgi['avg_minutes'] * FORM_WEIGHT +
-                        season_xgi['avg_minutes'] * (1 - FORM_WEIGHT)),
-    }
-
-
-def project_gameweek_points(player, projection, fixture_difficulty,
-                            team_cs_prob, element_type):
+def project_gameweek_points(player, xgi_stats, fixture_difficulty, 
+                            opponent_cs_prob, element_type, team_cs_prob):
     """
-    Project points for a single gameweek.
-   
-    Points = (xG × goal_pts) + (xA × 3) + (CS_prob × CS_pts) + appearance + bonus
+    Project points for a single gameweek using real xG data.
     """
-    if projection is None:
+    if xgi_stats is None:
         return 0
-   
+    
     # Availability check
     chance = player.get('chance_of_playing_next_round')
     if chance is not None and chance < 50:
         return 0
-   
-    availability_mult = (chance / 100) if chance is not None else 0.95
-   
-    # Minutes probability (will they play 60+?)
-    mins_prob = min(1.0, projection['avg_minutes'] / 70)
-   
-    # Expected goals and assists, adjusted for fixture
-    xg = projection['goals_p90'] / fixture_difficulty
-    xa = projection['assists_p90'] / fixture_difficulty
-   
+    availability = (chance / 100) if chance is not None else 0.95
+    
+    # Minutes probability
+    avg_mins = xgi_stats.get('minutes', 0) / max(1, xgi_stats.get('games', 1))
+    mins_prob = min(1.0, avg_mins / 70)
+    
+    # Expected goals adjusted for fixture
+    # Lower difficulty = easier fixture = higher xG realization
+    xg_adj = xgi_stats['xg_p90'] / fixture_difficulty
+    xa_adj = xgi_stats['xa_p90'] / fixture_difficulty
+    
     # Points calculation
-    goal_pts = xg * PTS_GOAL.get(element_type, 4)
-    assist_pts = xa * PTS_ASSIST
-   
-    # Clean sheet (defenders and GKs)
-    cs_pts = team_cs_prob * PTS_CLEAN_SHEET.get(element_type, 0) / fixture_difficulty
-   
-    # Appearance points (assume they play if mins_prob > 0.5)
-    appearance_pts = PTS_APPEARANCE if mins_prob > 0.5 else 1
-   
-    # Bonus estimate (correlated with xGI)
-    xgi = xg + xa
-    bonus_pts = min(3, xgi * 2) if xgi > 0.3 else 0
-   
-    total = (goal_pts + assist_pts + cs_pts + appearance_pts + bonus_pts)
-   
-    return round(total * availability_mult * mins_prob, 2)
+    goal_pts = xg_adj * PTS_GOAL.get(element_type, 4)
+    assist_pts = xa_adj * PTS_ASSIST
+    
+    # Clean sheet points (for DEF/GK)
+    cs_pts = team_cs_prob * PTS_CLEAN_SHEET.get(element_type, 0)
+    
+    # Appearance (2 pts for 60+ mins)
+    appearance_pts = PTS_APPEARANCE if mins_prob > 0.6 else 1
+    
+    # Bonus estimate based on xGI
+    xgi = xg_adj + xa_adj
+    if element_type in [1, 2]:  # GK/DEF get bonus for CS too
+        bonus_pts = min(3, xgi * 1.5 + (team_cs_prob * 1.5))
+    else:
+        bonus_pts = min(3, xgi * 2.5) if xgi > 0.25 else 0
+    
+    total = goal_pts + assist_pts + cs_pts + appearance_pts + bonus_pts
+    return round(total * availability * mins_prob, 2)
 
 
 # =============================================================================
-# TRANSFER LOGIC
+# TRANSFER LOGIC (improved)
 # =============================================================================
 
 def get_best_transfers(my_squad, all_players, projections, bank, free_transfers):
-    """
-    Find optimal transfers considering:
-    - 4 GW planning horizon
-    - Price constraints
-    - Position limits
-    - Hit threshold for aggressive play
-    """
+    """Find optimal transfers with improved logic."""
     recommendations = []
-   
-    # Group players by position
+    
+    # Get squad player IDs
+    squad_ids = {p['element'] for p in my_squad}
+    
+    # Group all players by position with projections
     by_position = {1: [], 2: [], 3: [], 4: []}
     for p in all_players:
+        if p['id'] in squad_ids:
+            continue
         pos = p['element_type']
-        player_proj = projections.get(p['id'], {})
-        if player_proj:
+        proj = projections.get(p['id'], {})
+        if proj.get('next_4gw_pts', 0) > 0:
             by_position[pos].append({
                 'player': p,
-                'projected_4gw': player_proj.get('next_4gw_pts', 0),
-                'projected_1gw': player_proj.get('next_gw_pts', 0),
+                'proj_4gw': proj.get('next_4gw_pts', 0),
+                'proj_1gw': proj.get('next_gw_pts', 0),
+                'proj_6gw': proj.get('next_6gw_pts', 0),
+                'xgi_quality': proj.get('data_quality', 'unknown'),
             })
-   
-    # Sort each position by 4GW projection
+    
+    # Sort by 4GW projection
     for pos in by_position:
-        by_position[pos].sort(key=lambda x: x['projected_4gw'], reverse=True)
-   
-    # Find weakest players in squad
-    squad_with_proj = []
+        by_position[pos].sort(key=lambda x: x['proj_4gw'], reverse=True)
+    
+    # Analyze squad weaknesses
+    squad_analysis = []
     for pick in my_squad:
         player_id = pick['element']
         proj = projections.get(player_id, {})
-        squad_with_proj.append({
+        squad_analysis.append({
             'player_id': player_id,
-            'position': pick['element_type'],
-            'selling_price': pick.get('selling_price', 0),
-            'projected_4gw': proj.get('next_4gw_pts', 0),
-            'projected_1gw': proj.get('next_gw_pts', 0),
+            'position': pick.get('element_type', 0),
+            'selling_price': pick.get('selling_price', 0) / 10,
+            'name': pick.get('web_name', 'Unknown'),
+            'proj_4gw': proj.get('next_4gw_pts', 0),
+            'proj_1gw': proj.get('next_gw_pts', 0),
+            'is_starter': pick.get('multiplier', 0) > 0,
         })
-   
-    # Sort by projected points (lowest first = transfer out candidates)
-    squad_with_proj.sort(key=lambda x: x['projected_4gw'])
-   
-    # For each weak player, find best replacement within budget
-    for weak in squad_with_proj[:3]:  # Check bottom 3
+    
+    # Sort by projected points (worst first)
+    squad_analysis.sort(key=lambda x: (x['is_starter'], x['proj_4gw']))
+    
+    # Find upgrade opportunities
+    for weak in squad_analysis[:5]:  # Check bottom 5
         pos = weak['position']
+        if pos == 0:
+            continue
+            
         budget = bank + weak['selling_price']
-       
-        for candidate in by_position[pos][:10]:
-            cand_player = candidate['player']
-           
-            # Skip if already in squad
-            if cand_player['id'] in [p['player_id'] for p in squad_with_proj]:
+        
+        for candidate in by_position.get(pos, [])[:15]:
+            cand = candidate['player']
+            cost = cand['now_cost'] / 10
+            
+            if cost > budget:
                 continue
-           
-            # Check budget
-            if cand_player['now_cost'] > budget:
-                continue
-           
-            # Calculate gain
-            gain_4gw = candidate['projected_4gw'] - weak['projected_4gw']
-            gain_1gw = candidate['projected_1gw'] - weak['projected_1gw']
-           
-            # Worth a hit? (aggressive: gain > 4 over 3 GWs)
-            worth_hit = gain_4gw > (4 * (4 / HIT_THRESHOLD_GWS))
-           
-            if gain_4gw > 2:  # Meaningful improvement
+            
+            gain_4gw = candidate['proj_4gw'] - weak['proj_4gw']
+            gain_1gw = candidate['proj_1gw'] - weak['proj_1gw']
+            
+            # Is it worth a hit?
+            hit_value = gain_4gw - (4 * PLANNING_HORIZON / HIT_THRESHOLD_GWS)
+            worth_hit = hit_value > 0
+            
+            if gain_4gw > 1.5:  # At least 1.5 pts gain over 4 GW
                 recommendations.append({
                     'out_id': weak['player_id'],
-                    'in_id': cand_player['id'],
-                    'in_name': cand_player['web_name'],
-                    'in_team': cand_player['team'],
-                    'in_cost': cand_player['now_cost'] / 10,
+                    'out_name': weak['name'],
+                    'in_id': cand['id'],
+                    'in_name': cand['web_name'],
+                    'in_team': cand['team'],
+                    'in_cost': cost,
                     'gain_4gw': round(gain_4gw, 1),
                     'gain_1gw': round(gain_1gw, 1),
                     'worth_hit': worth_hit,
+                    'hit_value': round(hit_value, 1),
                     'position': pos,
+                    'data_quality': candidate['xgi_quality'],
                 })
-                break  # One rec per weak player
-   
-    # Sort by 4GW gain
+                break
+    
     recommendations.sort(key=lambda x: x['gain_4gw'], reverse=True)
-   
-    return recommendations
+    return recommendations[:5]
 
 
 # =============================================================================
 # CAPTAIN SELECTION
 # =============================================================================
 
-def get_captain_picks(my_squad, projections, all_players, ownership_data):
-    """
-    Rank captain options by projected points.
-    Include ownership for differential consideration.
-    """
+def get_captain_picks(my_squad, projections, all_players):
+    """Rank captain options with ownership data for differential analysis."""
     captain_options = []
-   
     player_lookup = {p['id']: p for p in all_players}
-   
+    
     for pick in my_squad:
+        if pick.get('multiplier', 0) == 0:  # Skip bench
+            continue
+            
         player_id = pick['element']
         proj = projections.get(player_id, {})
         player = player_lookup.get(player_id, {})
-       
-        if proj.get('next_gw_pts', 0) > 2:
+        
+        proj_pts = proj.get('next_gw_pts', 0)
+        if proj_pts > 2:
+            ownership = float(player.get('selected_by_percent', 0))
             captain_options.append({
                 'player_id': player_id,
                 'name': player.get('web_name', 'Unknown'),
-                'team': player.get('team', 0),
-                'projected_pts': proj.get('next_gw_pts', 0),
+                'team': proj.get('team', '?'),
+                'projected_pts': proj_pts,
+                'doubled_pts': round(proj_pts * 2, 1),
                 'fixture': proj.get('next_fixture', ''),
-                'fixture_difficulty': proj.get('next_fixture_diff', 3),
-                'ownership': player.get('selected_by_percent', '0'),
+                'fixture_difficulty': proj.get('next_fixture_diff', 1.0),
+                'ownership': ownership,
                 'form': player.get('form', '0'),
+                'is_differential': ownership < 15,
+                'data_quality': proj.get('data_quality', 'unknown'),
             })
-   
-    # Sort by projected points
+    
     captain_options.sort(key=lambda x: x['projected_pts'], reverse=True)
-   
     return captain_options[:5]
 
 
 # =============================================================================
-# CHIP PLANNING
+# CHIP ANALYSIS
 # =============================================================================
 
-def analyze_chip_timing(fixtures, current_gw, chips_remaining):
-    """
-    Analyze upcoming fixtures to recommend chip timing.
-   
-    - Bench Boost: Double gameweek with strong bench
-    - Triple Captain: Premium player with double + easy fixtures
-    - Free Hit: Blank gameweek
-    - Wildcard: Major squad restructure needed
-    """
+def analyze_chip_timing(fixtures, current_gw):
+    """Detect DGW/BGW and recommend chip usage."""
     recommendations = []
-   
-    # Look for double and blank gameweeks
-    gw_fixture_counts = {}
+    
+    gw_fixtures = {}
     for f in fixtures:
         gw = f.get('event')
         if gw and gw >= current_gw:
-            gw_fixture_counts[gw] = gw_fixture_counts.get(gw, 0) + 1
-   
-    # Standard is 10 fixtures per GW (20 teams / 2)
-    for gw, count in gw_fixture_counts.items():
-        if gw > current_gw + 10:  # Only look 10 weeks ahead
-            continue
-           
-        if count > 10:  # Double gameweek
+            if gw not in gw_fixtures:
+                gw_fixtures[gw] = []
+            gw_fixtures[gw].append(f)
+    
+    for gw in sorted(gw_fixtures.keys()):
+        if gw > current_gw + 10:
+            break
+            
+        count = len(gw_fixtures[gw])
+        
+        if count > 10:
             recommendations.append({
                 'gameweek': gw,
                 'type': 'double',
                 'fixtures': count,
                 'chip_suggestion': 'Bench Boost or Triple Captain',
-                'notes': f'GW{gw} has {count} fixtures - plan transfers to maximize DGW players'
+                'priority': 'HIGH' if count >= 12 else 'MEDIUM',
+                'notes': f'GW{gw} has {count} fixtures. Stack DGW players and consider BB if bench is strong, TC on premium with 2 good fixtures.'
             })
-        elif count < 10:  # Blank gameweek
+        elif count < 10:
             recommendations.append({
                 'gameweek': gw,
                 'type': 'blank',
                 'fixtures': count,
                 'chip_suggestion': 'Free Hit candidate',
-                'notes': f'GW{gw} has only {count} fixtures - consider Free Hit if squad coverage is poor'
+                'priority': 'HIGH' if count <= 6 else 'MEDIUM',
+                'notes': f'GW{gw} has only {count} fixtures. Check squad coverage - Free Hit if fewer than 8 players have games.'
             })
-   
+    
     return recommendations
 
 
@@ -434,87 +471,105 @@ def analyze_chip_timing(fixtures, current_gw, chips_remaining):
 # =============================================================================
 
 def run_projections():
-    """Main function to generate all projections and recommendations."""
-   
-    print("Fetching FPL data...")
-    bootstrap = get_bootstrap_data()
-    fixtures = get_fixtures()
-   
+    print("=" * 60)
+    print("FPL BRAIN v2 - Projection Engine")
+    print("=" * 60)
+    
+    # Fetch all data
+    print("\nFetching FPL data...")
+    bootstrap = fetch_json(BOOTSTRAP_URL)
+    fixtures = fetch_json(FIXTURES_URL)
+    
     if not bootstrap or not fixtures:
-        print("Failed to fetch data")
+        print("Failed to fetch FPL data!")
         return
-   
+    
     players = bootstrap['elements']
     teams = bootstrap['teams']
     events = bootstrap['events']
-   
-    # Find current gameweek
+    
+    # Get Understat data
+    understat_players, understat_teams = get_understat_data()
+    
+    # Find current/next gameweek
     current_gw = next((e['id'] for e in events if e['is_current']), 1)
-    next_gw = current_gw + 1 if not any(e['is_next'] for e in events) else \
-              next(e['id'] for e in events if e['is_next'])
-   
+    next_gw = next((e['id'] for e in events if e['is_next']), current_gw + 1)
     print(f"Current GW: {current_gw}, Next GW: {next_gw}")
-   
-    # Get team strengths
-    team_strengths = calculate_team_strengths(teams, fixtures)
+    
+    # Calculate team strengths from Understat
+    team_strengths = calculate_team_strengths(understat_teams, teams)
     team_lookup = {t['id']: t for t in teams}
-   
+    
+    # Build team name mapping for player matching
+    team_name_map = {t['id']: t['name'] for t in teams}
+    
     # Get upcoming fixtures per team
     upcoming = {}
     for f in fixtures:
-        if f['event'] and f['event'] >= next_gw and f['event'] < next_gw + 6:
+        gw = f.get('event')
+        if gw and gw >= next_gw and gw < next_gw + 6:
             for team_id, is_home in [(f['team_h'], True), (f['team_a'], False)]:
                 if team_id not in upcoming:
                     upcoming[team_id] = []
                 opp_id = f['team_a'] if is_home else f['team_h']
                 upcoming[team_id].append({
-                    'gw': f['event'],
-                    'opponent': opp_id,
+                    'gw': gw,
+                    'opponent_id': opp_id,
+                    'opponent': team_lookup.get(opp_id, {}).get('short_name', '?'),
                     'is_home': is_home,
                     'difficulty': get_fixture_difficulty(team_strengths, opp_id, is_home)
                 })
-   
-    # Calculate projections for all players
-    print("Calculating projections...")
+    
+    # Calculate projections
+    print("Calculating projections with real xG data...")
     projections = {}
-   
+    matched_count = 0
+    
     for player in players:
         player_id = player['id']
         team_id = player['team']
         element_type = player['element_type']
-       
-        # Get form and season stats
-        season_xgi = calculate_season_xgi(player)
-       
-        # For now, use season stats (form would require individual API calls)
-        # In production, we'd batch these or use cached data
-        projection = season_xgi
-       
-        if projection is None:
-            continue
-       
-        # Get team's upcoming fixtures
-        team_fixtures = upcoming.get(team_id, [])
-       
-        # Project points for next 6 gameweeks
-        gw_projections = []
-        for i, fix in enumerate(team_fixtures[:6]):
-            cs_prob = team_strengths.get(team_id, {}).get(
-                'cs_prob_home' if fix['is_home'] else 'cs_prob_away', 0.2
+        
+        # Try to match with Understat player
+        us_match = None
+        if understat_players:
+            us_match = match_player_names(
+                player['web_name'], 
+                team_id, 
+                understat_players,
+                team_name_map
             )
+            if us_match:
+                matched_count += 1
+        
+        # Calculate xGI stats
+        xgi_stats = calculate_player_xgi(player, us_match, team_strengths)
+        
+        if xgi_stats is None:
+            continue
+        
+        # Get fixtures
+        team_fixtures = upcoming.get(team_id, [])
+        team_cs_prob = team_strengths.get(team_id, {}).get('cs_prob', 0.2)
+        
+        # Project each gameweek
+        gw_projections = []
+        for fix in team_fixtures[:6]:
+            opp_cs_prob = team_strengths.get(fix['opponent_id'], {}).get('cs_prob', 0.2)
             pts = project_gameweek_points(
-                player, projection, fix['difficulty'], cs_prob, element_type
+                player, xgi_stats, fix['difficulty'],
+                opp_cs_prob, element_type, team_cs_prob
             )
             gw_projections.append({
                 'gw': fix['gw'],
                 'projected_pts': pts,
-                'opponent': team_lookup.get(fix['opponent'], {}).get('short_name', '?'),
+                'opponent': fix['opponent'],
                 'is_home': fix['is_home'],
-                'difficulty': fix['difficulty']
+                'difficulty': round(fix['difficulty'], 2)
             })
-       
-        # Store projections
+        
         next_fix = gw_projections[0] if gw_projections else {}
+        
         projections[player_id] = {
             'player_id': player_id,
             'name': player['web_name'],
@@ -525,50 +580,47 @@ def run_projections():
             'form': player['form'],
             'news': player.get('news', ''),
             'chance_of_playing': player.get('chance_of_playing_next_round'),
+            'xg_p90': round(xgi_stats.get('xg_p90', 0), 3),
+            'xa_p90': round(xgi_stats.get('xa_p90', 0), 3),
             'next_gw_pts': next_fix.get('projected_pts', 0),
             'next_fixture': f"{'(H)' if next_fix.get('is_home') else '(A)'} {next_fix.get('opponent', '?')}",
-            'next_fixture_diff': next_fix.get('difficulty', 1),
-            'next_4gw_pts': sum(g['projected_pts'] for g in gw_projections[:4]),
-            'next_6gw_pts': sum(g['projected_pts'] for g in gw_projections[:6]),
+            'next_fixture_diff': next_fix.get('difficulty', 1.0),
+            'next_4gw_pts': round(sum(g['projected_pts'] for g in gw_projections[:4]), 1),
+            'next_6gw_pts': round(sum(g['projected_pts'] for g in gw_projections[:6]), 1),
             'fixtures': gw_projections,
+            'data_quality': xgi_stats.get('data_quality', 'unknown'),
         }
-   
-    # Get my team
+    
+    print(f"Matched {matched_count}/{len(players)} players with Understat data")
+    
+    # Get user's team
     print("Fetching your team...")
-    my_team_data = get_my_team(current_gw)
+    my_team_data = fetch_json(PICKS_URL.format(gw=current_gw))
     my_entry = fetch_json(TEAM_URL)
-   
+    
+    transfers = []
+    captains = []
+    my_team_output = None
+    
     if my_team_data and my_entry:
         my_picks = my_team_data.get('picks', [])
-       
-        # Enrich picks with player data
+        
         for pick in my_picks:
-            player = next((p for p in players if p['id'] == pick['element']), {})
-            pick['element_type'] = player.get('element_type', 0)
-            pick['web_name'] = player.get('web_name', 'Unknown')
-            pick['selling_price'] = pick.get('selling_price', player.get('now_cost', 0))
-       
+            p = next((pl for pl in players if pl['id'] == pick['element']), {})
+            pick['element_type'] = p.get('element_type', 0)
+            pick['web_name'] = p.get('web_name', 'Unknown')
+            pick['selling_price'] = pick.get('selling_price', p.get('now_cost', 0))
+        
         bank = my_entry.get('last_deadline_bank', 0) / 10
-       
-        # Get transfer recommendations
-        transfers = get_best_transfers(
-            my_picks, players, projections, bank,
-            my_team_data.get('transfers', {}).get('limit', 1)
-        )
-       
-        # Get captain picks
-        captains = get_captain_picks(my_picks, projections, players, {})
-       
-        # Analyze chip timing
-        chips_used = []  # Would parse from entry history
-        chip_analysis = analyze_chip_timing(fixtures, next_gw, chips_used)
-       
-        # Build my team output
+        
+        transfers = get_best_transfers(my_picks, players, projections, bank, 1)
+        captains = get_captain_picks(my_picks, projections, players)
+        
         my_team_output = {
             'team_id': TEAM_ID,
             'current_gw': current_gw,
             'next_gw': next_gw,
-            'bank': bank,
+            'bank': round(bank, 1),
             'squad': [{
                 'player_id': p['element'],
                 'name': p['web_name'],
@@ -579,55 +631,63 @@ def run_projections():
                 'projected_pts': projections.get(p['element'], {}).get('next_gw_pts', 0),
                 'projected_4gw': projections.get(p['element'], {}).get('next_4gw_pts', 0),
             } for p in my_picks],
-            'total_projected_pts': sum(
+            'total_projected_pts': round(sum(
                 projections.get(p['element'], {}).get('next_gw_pts', 0) * p['multiplier']
                 for p in my_picks if p['multiplier'] > 0
-            ),
+            ), 1),
         }
-    else:
-        my_team_output = None
-        transfers = []
-        captains = []
-        chip_analysis = analyze_chip_timing(fixtures, next_gw, [])
-   
-    # Build recommendations output
+    
+    chip_analysis = analyze_chip_timing(fixtures, next_gw)
+    
+    # Build outputs
     recommendations = {
         'generated_at': datetime.utcnow().isoformat(),
         'next_gameweek': next_gw,
+        'data_source': f"Understat ({matched_count} players matched)",
         'captain_picks': captains,
         'transfer_recommendations': transfers,
         'chip_analysis': chip_analysis,
     }
-   
-    # Build top players by position for general browsing
+    
+    # Top players by position
     top_by_position = {}
-    for pos, pos_name in [(1, 'GK'), (2, 'DEF'), (3, 'MID'), (4, 'FWD')]:
+    for pos, name in [(1, 'GK'), (2, 'DEF'), (3, 'MID'), (4, 'FWD')]:
         pos_players = [p for p in projections.values() if p['position'] == pos]
         pos_players.sort(key=lambda x: x['next_4gw_pts'], reverse=True)
-        top_by_position[pos_name] = pos_players[:15]
-   
+        top_by_position[name] = pos_players[:15]
+    
     # Save outputs
     output_dir = Path('public/data')
     output_dir.mkdir(parents=True, exist_ok=True)
-   
+    
     with open(output_dir / 'projections.json', 'w') as f:
         json.dump({
             'generated_at': datetime.utcnow().isoformat(),
             'next_gameweek': next_gw,
             'top_by_position': top_by_position,
         }, f, indent=2)
-   
+    
     with open(output_dir / 'recommendations.json', 'w') as f:
         json.dump(recommendations, f, indent=2)
-   
+    
     if my_team_output:
         with open(output_dir / 'my_team.json', 'w') as f:
             json.dump(my_team_output, f, indent=2)
-   
-    print(f"Done! Files written to {output_dir}/")
-    print(f"Top captain pick: {captains[0]['name'] if captains else 'N/A'}")
+    
+    print(f"\n{'=' * 60}")
+    print("RESULTS")
+    print('=' * 60)
+    print(f"Files written to {output_dir}/")
+    
+    if captains:
+        print(f"\n🎯 Top Captain: {captains[0]['name']} ({captains[0]['projected_pts']:.1f} pts)")
     if transfers:
-        print(f"Top transfer: {transfers[0]['in_name']} (gain: {transfers[0]['gain_4gw']} pts over 4GW)")
+        t = transfers[0]
+        print(f"📈 Top Transfer: {t['out_name']} → {t['in_name']} (+{t['gain_4gw']} pts/4GW)")
+        if t['worth_hit']:
+            print(f"   ⚡ Worth a -4 hit!")
+    
+    print("\nDone!")
 
 
 if __name__ == '__main__':
