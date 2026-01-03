@@ -11,8 +11,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 3.54,
-      "projected_4gw": 14.03
+      "projected_pts": 3.38,
+      "projected_4gw": 13.5
     },
     {
       "player_id": 373,
@@ -21,8 +21,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 3.07,
-      "projected_4gw": 13.760000000000002
+      "projected_pts": 3.58,
+      "projected_4gw": 14.3
     },
     {
       "player_id": 291,
@@ -31,8 +31,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 3.7,
-      "projected_4gw": 14.32
+      "projected_pts": 3.39,
+      "projected_4gw": 13.6
     },
     {
       "player_id": 441,
@@ -41,8 +41,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 5.48,
-      "projected_4gw": 18.42
+      "projected_pts": 4.26,
+      "projected_4gw": 17.8
     },
     {
       "player_id": 485,
@@ -51,8 +51,8 @@
       "is_captain": false,
       "is_vice": true,
       "multiplier": 1,
-      "projected_pts": 5.81,
-      "projected_4gw": 22.830000000000002
+      "projected_pts": 5.92,
+      "projected_4gw": 21.9
     },
     {
       "player_id": 47,
@@ -61,8 +61,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 6.05,
-      "projected_4gw": 24.439999999999998
+      "projected_pts": 5.12,
+      "projected_4gw": 22.2
     },
     {
       "player_id": 382,
@@ -71,8 +71,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 3.01,
-      "projected_4gw": 12.92
+      "projected_pts": 3.22,
+      "projected_4gw": 12.6
     },
     {
       "player_id": 450,
@@ -81,8 +81,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 4.82,
-      "projected_4gw": 16.45
+      "projected_pts": 4.09,
+      "projected_4gw": 17.5
     },
     {
       "player_id": 414,
@@ -91,8 +91,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 6.63,
-      "projected_4gw": 26.61
+      "projected_pts": 6.03,
+      "projected_4gw": 22.1
     },
     {
       "player_id": 136,
@@ -101,8 +101,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "projected_pts": 6.39,
-      "projected_4gw": 25.38
+      "projected_pts": 6.87,
+      "projected_4gw": 24.4
     },
     {
       "player_id": 430,
@@ -111,8 +111,8 @@
       "is_captain": true,
       "is_vice": false,
       "multiplier": 2,
-      "projected_pts": 10.07,
-      "projected_4gw": 40.77
+      "projected_pts": 9.4,
+      "projected_4gw": 33.7
     },
     {
       "player_id": 67,
@@ -121,8 +121,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "projected_pts": 3.5,
-      "projected_4gw": 13.75
+      "projected_pts": 3.18,
+      "projected_4gw": 12.7
     },
     {
       "player_id": 317,
@@ -131,8 +131,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "projected_pts": 3.53,
-      "projected_4gw": 14.29
+      "projected_pts": 3.52,
+      "projected_4gw": 14.1
     },
     {
       "player_id": 252,
@@ -141,8 +141,8 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "projected_pts": 4.07,
-      "projected_4gw": 16.13
+      "projected_pts": 3.83,
+      "projected_4gw": 14.8
     },
     {
       "player_id": 191,
@@ -155,5 +155,5 @@
       "projected_4gw": 0
     }
   ],
-  "total_projected_pts": 68.64
+  "total_projected_pts": 64.7
 }
