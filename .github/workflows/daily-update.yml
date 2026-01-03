@@ -34,12 +34,12 @@ jobs:
           echo "Current directory:"
           pwd
           echo "Data folder contents:"
-          ls -la data/
+          ls -la public/data/
 
       - name: Commit and push updates
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/
+          git add public/data/
           git diff --staged --quiet || git commit -m "Update projections for $(date +'%Y-%m-%d')"
           git push
