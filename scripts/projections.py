@@ -608,7 +608,7 @@ def run_projections():
    
     # Save outputs
     output_dir = Path('public/data')
-    output_dir.mkdir(exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
    
     with open(output_dir / 'projections.json', 'w') as f:
         json.dump({
