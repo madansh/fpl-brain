@@ -1,16 +1,17 @@
-# .github/workflows/daily-update.yml
 name: Daily FPL Projections Update
 
 on:
   schedule:
-    # Runs at 6:00 AM UTC every day
     - cron: '0 6 * * *'
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   update-projections:
     runs-on: ubuntu-latest
-   
+    
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,16 +29,17 @@ jobs:
       - name: Run projection engine
         run: python scripts/projections.py
 
-      - name: Check for changes
-        id: changes
+      - name: Debug - show data folder contents
         run: |
-          git diff --quiet data/ || echo "changes=true" >> $GITHUB_OUTPUT
+          echo "Current directory:"
+          pwd
+          echo "Data folder contents:"
+          ls -la data/
 
       - name: Commit and push updates
-        if: steps.changes.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/
-          git commit -m "Update projections for $(date +'%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "Update projections for $(date +'%Y-%m-%d')"
           git push
