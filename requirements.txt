@@ -1,2 +1,2 @@
-requests==2.31.0
-understatapi==0.7.0
+requests>=2.32.0
+understatapi>=0.7.0
