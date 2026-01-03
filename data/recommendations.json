@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-01-03T19:10:56.408415",
+  "next_gameweek": 21,
+  "captain_picks": [
+    {
+      "player_id": 430,
+      "name": "Haaland",
+      "team": 13,
+      "projected_pts": 10.07,
+      "fixture": "(H) BHA",
+      "fixture_difficulty": 0.91,
+      "ownership": "74.2",
+      "form": "5.8"
+    },
+    {
+      "player_id": 414,
+      "name": "Foden",
+      "team": 13,
+      "projected_pts": 6.63,
+      "fixture": "(H) BHA",
+      "fixture_difficulty": 0.91,
+      "ownership": "38.6",
+      "form": "5.2"
+    },
+    {
+      "player_id": 136,
+      "name": "Thiago",
+      "team": 5,
+      "projected_pts": 6.39,
+      "fixture": "(H) SUN",
+      "fixture_difficulty": 0.92,
+      "ownership": "25.9",
+      "form": "2.2"
+    },
+    {
+      "player_id": 47,
+      "name": "Rogers",
+      "team": 2,
+      "projected_pts": 6.05,
+      "fixture": "(A) CRY",
+      "fixture_difficulty": 0.9500000000000001,
+      "ownership": "29.7",
+      "form": "6.5"
+    },
+    {
+      "player_id": 485,
+      "name": "Gordon",
+      "team": 15,
+      "projected_pts": 5.81,
+      "fixture": "(H) LEE",
+      "fixture_difficulty": 0.9,
+      "ownership": "6.1",
+      "form": "4.7"
+    }
+  ],
+  "transfer_recommendations": [
+    {
+      "out_id": 191,
+      "in_id": 197,
+      "in_name": "Sonne",
+      "in_team": 3,
+      "in_cost": 3.8,
+      "gain_4gw": 31.1,
+      "gain_1gw": 7.8,
+      "worth_hit": true,
+      "position": 2
+    },
+    {
+      "out_id": 382,
+      "in_id": 385,
+      "in_name": "Chiesa",
+      "in_team": 12,
+      "in_cost": 6.3,
+      "gain_4gw": 28.5,
+      "gain_1gw": 6.1,
+      "worth_hit": true,
+      "position": 3
+    }
+  ],
+  "chip_analysis": []
+}
