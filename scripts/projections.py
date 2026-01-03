@@ -206,19 +206,20 @@ def calculate_player_xgi(fpl_player, understat_match, team_strengths):
     """
     if not understat_match:
         # Fallback to FPL approximation if no Understat match
-        mins = fpl_player.get('minutes', 0)
+        mins = int(fpl_player.get('minutes', 0) or 0)
         if mins < 90:
             return None
-        goals = fpl_player.get('goals_scored', 0)
-        assists = fpl_player.get('assists', 0)
+        goals = int(fpl_player.get('goals_scored', 0) or 0)
+        assists = int(fpl_player.get('assists', 0) or 0)
+        creativity = float(fpl_player.get('creativity', 0) or 0)
         return {
             'xg_p90': (goals / mins) * 90,
             'xa_p90': (assists / mins) * 90,
             'npxg_p90': (goals / mins) * 90,
-            'shots_p90': (fpl_player.get('shots', goals * 3) / mins) * 90,
-            'key_passes_p90': (fpl_player.get('creativity', 0) / 100 / mins) * 90,
+            'shots_p90': (goals * 3 / mins) * 90,
+            'key_passes_p90': (creativity / 100 / mins) * 90,
             'minutes': mins,
-            'games': fpl_player.get('starts', 1),
+            'games': int(fpl_player.get('starts', 1) or 1),
             'data_quality': 'approximated'
         }
     
