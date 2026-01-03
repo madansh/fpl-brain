@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Position labels
 const POS_LABELS = { 1: 'GK', 2: 'DEF', 3: 'MID', 4: 'FWD' };
 const POS_COLORS = { 
   1: 'bg-yellow-500', 
@@ -10,149 +9,197 @@ const POS_COLORS = {
 };
 
 function DifficultyBadge({ difficulty }) {
-  const color = difficulty < 0.9 ? 'bg-green-100 text-green-800' :
-                difficulty > 1.1 ? 'bg-red-100 text-red-800' :
-                'bg-gray-100 text-gray-800';
+  const label = difficulty < 0.85 ? 'Easy' : difficulty > 1.15 ? 'Hard' : 'Medium';
+  const color = difficulty < 0.85 ? 'bg-green-100 text-green-800' :
+                difficulty > 1.15 ? 'bg-red-100 text-red-800' :
+                'bg-yellow-100 text-yellow-800';
   return (
     <span className={`px-2 py-0.5 rounded text-xs font-medium ${color}`}>
-      {difficulty < 0.9 ? 'Easy' : difficulty > 1.1 ? 'Hard' : 'Mid'}
+      {label}
     </span>
   );
 }
 
+function DataQualityBadge({ quality }) {
+  if (quality === 'understat') {
+    return <span className="text-xs text-green-600">✓ xG data</span>;
+  }
+  return <span className="text-xs text-gray-400">~ estimated</span>;
+}
+
 function CaptainCard({ pick, rank }) {
+  const isTop = rank === 1;
   return (
-    <div className={`p-4 rounded-lg border-2 ${rank === 1 ? 'border-yellow-400 bg-yellow-50' : 'border-gray-200 bg-white'}`}>
+    <div className={`p-4 rounded-lg border-2 ${isTop ? 'border-yellow-400 bg-gradient-to-r from-yellow-50 to-orange-50' : 'border-gray-200 bg-white'}`}>
       <div className="flex justify-between items-start">
         <div>
           <div className="flex items-center gap-2">
-            {rank === 1 && <span className="text-yellow-500 text-xl">👑</span>}
+            {isTop && <span className="text-xl">👑</span>}
             <h3 className="font-bold text-lg">{pick.name}</h3>
+            {pick.is_differential && (
+              <span className="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded-full">
+                Differential
+              </span>
+            )}
           </div>
           <p className="text-gray-600 text-sm">{pick.team} • {pick.fixture}</p>
         </div>
         <div className="text-right">
-          <p className="text-2xl font-bold text-blue-600">{pick.projected_pts.toFixed(1)}</p>
-          <p className="text-xs text-gray-500">projected pts</p>
+          <p className="text-3xl font-bold text-blue-600">{pick.projected_pts.toFixed(1)}</p>
+          <p className="text-sm text-gray-500">×2 = {pick.doubled_pts}</p>
         </div>
       </div>
-      <div className="mt-3 flex gap-4 text-sm">
+      <div className="mt-3 flex flex-wrap gap-3 text-sm items-center">
         <span className="text-gray-600">Own: {pick.ownership}%</span>
         <span className="text-gray-600">Form: {pick.form}</span>
         <DifficultyBadge difficulty={pick.fixture_difficulty} />
+        <DataQualityBadge quality={pick.data_quality} />
       </div>
     </div>
   );
 }
 
-function TransferCard({ transfer, playerLookup }) {
-  const outPlayer = playerLookup[transfer.out_id];
+function TransferCard({ transfer }) {
   return (
-    <div className="p-4 rounded-lg border border-gray-200 bg-white">
-      <div className="flex items-center gap-3">
+    <div className="p-4 rounded-lg border border-gray-200 bg-white hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-4">
         <div className="flex-1">
-          <p className="text-red-600 text-sm">OUT</p>
-          <p className="font-medium">{outPlayer?.name || 'Unknown'}</p>
+          <p className="text-red-500 text-xs font-medium">OUT</p>
+          <p className="font-semibold text-gray-700">{transfer.out_name}</p>
         </div>
-        <div className="text-2xl">→</div>
+        <div className="text-2xl text-gray-300">→</div>
         <div className="flex-1">
-          <p className="text-green-600 text-sm">IN</p>
-          <p className="font-medium">{transfer.in_name}</p>
+          <p className="text-green-500 text-xs font-medium">IN</p>
+          <p className="font-semibold">{transfer.in_name}</p>
           <p className="text-gray-500 text-sm">£{transfer.in_cost}m</p>
         </div>
-        <div className="text-right">
-          <p className="text-xl font-bold text-green-600">+{transfer.gain_4gw}</p>
-          <p className="text-xs text-gray-500">pts over 4GW</p>
+        <div className="text-right pl-4 border-l">
+          <p className="text-2xl font-bold text-green-600">+{transfer.gain_4gw}</p>
+          <p className="text-xs text-gray-500">pts / 4GW</p>
         </div>
       </div>
-      {transfer.worth_hit && (
-        <div className="mt-2 px-2 py-1 bg-orange-100 text-orange-800 rounded text-sm">
-          ⚡ Worth a hit (-4)
-        </div>
-      )}
+      <div className="mt-3 flex gap-2">
+        {transfer.worth_hit && (
+          <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-medium">
+            ⚡ Worth a -4 (net +{transfer.hit_value})
+          </span>
+        )}
+        <DataQualityBadge quality={transfer.data_quality} />
+      </div>
     </div>
   );
 }
 
-function SquadView({ squad, projections }) {
+function SquadView({ squad }) {
   const positions = [
-    { pos: 1, label: 'Goalkeepers', count: 2 },
-    { pos: 2, label: 'Defenders', count: 5 },
-    { pos: 3, label: 'Midfielders', count: 5 },
-    { pos: 4, label: 'Forwards', count: 3 },
+    { pos: 1, label: 'Goalkeepers' },
+    { pos: 2, label: 'Defenders' },
+    { pos: 3, label: 'Midfielders' },
+    { pos: 4, label: 'Forwards' },
   ];
 
+  const starters = squad.filter(p => p.multiplier > 0);
+  const bench = squad.filter(p => p.multiplier === 0);
+
   return (
-    <div className="space-y-4">
-      {positions.map(({ pos, label }) => (
-        <div key={pos}>
-          <h4 className="font-medium text-gray-700 mb-2">{label}</h4>
-          <div className="grid gap-2">
-            {squad
-              .filter(p => p.position === pos)
-              .sort((a, b) => b.projected_pts - a.projected_pts)
-              .map(player => (
-                <div 
-                  key={player.player_id}
-                  className={`p-3 rounded flex justify-between items-center ${
-                    player.multiplier === 0 ? 'bg-gray-100 opacity-60' : 'bg-white border'
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className={`w-8 h-8 rounded-full ${POS_COLORS[pos]} text-white text-xs flex items-center justify-center`}>
-                      {POS_LABELS[pos]}
-                    </span>
-                    <div>
-                      <p className="font-medium">
-                        {player.name}
-                        {player.is_captain && ' ©'}
-                        {player.is_vice && ' (V)'}
-                      </p>
-                      {player.multiplier === 0 && (
-                        <p className="text-xs text-gray-500">Bench</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-bold">{player.projected_pts.toFixed(1)}</p>
-                    <p className="text-xs text-gray-500">{player.projected_4gw.toFixed(1)} (4GW)</p>
+    <div className="space-y-6">
+      <div>
+        <h3 className="font-bold text-gray-700 mb-3">Starting XI</h3>
+        <div className="grid gap-2">
+          {starters
+            .sort((a, b) => a.position - b.position || b.projected_pts - a.projected_pts)
+            .map(player => (
+              <div 
+                key={player.player_id}
+                className="p-3 rounded-lg bg-white border flex justify-between items-center"
+              >
+                <div className="flex items-center gap-3">
+                  <span className={`w-10 h-10 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center font-medium`}>
+                    {POS_LABELS[player.position]}
+                  </span>
+                  <div>
+                    <p className="font-medium">
+                      {player.name}
+                      {player.is_captain && <span className="ml-1 text-yellow-600">(C)</span>}
+                      {player.is_vice && <span className="ml-1 text-gray-400">(V)</span>}
+                    </p>
                   </div>
                 </div>
-              ))}
-          </div>
+                <div className="text-right">
+                  <p className="text-lg font-bold">{player.projected_pts.toFixed(1)}</p>
+                  <p className="text-xs text-gray-500">{player.projected_4gw.toFixed(1)} (4GW)</p>
+                </div>
+              </div>
+            ))}
         </div>
-      ))}
+      </div>
+      
+      <div>
+        <h3 className="font-bold text-gray-500 mb-3">Bench</h3>
+        <div className="grid gap-2 opacity-70">
+          {bench.map(player => (
+            <div 
+              key={player.player_id}
+              className="p-3 rounded-lg bg-gray-50 border border-dashed flex justify-between items-center"
+            >
+              <div className="flex items-center gap-3">
+                <span className={`w-8 h-8 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center`}>
+                  {POS_LABELS[player.position]}
+                </span>
+                <p className="font-medium text-gray-600">{player.name}</p>
+              </div>
+              <div className="text-right">
+                <p className="font-bold text-gray-600">{player.projected_pts.toFixed(1)}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
 
 function TopPlayersTable({ players, title }) {
+  if (!players?.length) return null;
+  
   return (
-    <div>
-      <h3 className="font-bold text-lg mb-3">{title}</h3>
+    <div className="bg-white rounded-lg border overflow-hidden">
+      <h3 className="font-bold text-lg p-4 border-b bg-gray-50">{title}</h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b">
-              <th className="text-left py-2">Player</th>
-              <th className="text-left py-2">Team</th>
-              <th className="text-right py-2">Price</th>
-              <th className="text-right py-2">Own%</th>
-              <th className="text-right py-2">Next GW</th>
-              <th className="text-right py-2">4GW</th>
-              <th className="text-left py-2">Fixture</th>
+            <tr className="border-b bg-gray-50">
+              <th className="text-left py-3 px-4">Player</th>
+              <th className="text-left py-3 px-2">Team</th>
+              <th className="text-right py-3 px-2">Price</th>
+              <th className="text-right py-3 px-2">Own%</th>
+              <th className="text-right py-3 px-2">xG/90</th>
+              <th className="text-right py-3 px-2">xA/90</th>
+              <th className="text-right py-3 px-2 font-bold">Next</th>
+              <th className="text-right py-3 px-2 font-bold">4GW</th>
+              <th className="text-left py-3 px-4">Fixture</th>
             </tr>
           </thead>
           <tbody>
-            {players.slice(0, 10).map((p, i) => (
-              <tr key={p.player_id} className={i % 2 === 0 ? 'bg-gray-50' : ''}>
-                <td className="py-2 font-medium">{p.name}</td>
-                <td className="py-2">{p.team}</td>
-                <td className="py-2 text-right">£{p.price}m</td>
-                <td className="py-2 text-right">{p.ownership}%</td>
-                <td className="py-2 text-right font-bold">{p.next_gw_pts.toFixed(1)}</td>
-                <td className="py-2 text-right">{p.next_4gw_pts.toFixed(1)}</td>
-                <td className="py-2">{p.next_fixture}</td>
+            {players.slice(0, 12).map((p, i) => (
+              <tr key={p.player_id} className={`border-b hover:bg-blue-50 ${i < 3 ? 'bg-green-50' : ''}`}>
+                <td className="py-3 px-4">
+                  <span className="font-medium">{p.name}</span>
+                  {p.news && <span className="ml-1 text-orange-500" title={p.news}>⚠️</span>}
+                </td>
+                <td className="py-3 px-2 text-gray-600">{p.team}</td>
+                <td className="py-3 px-2 text-right">£{p.price}m</td>
+                <td className="py-3 px-2 text-right text-gray-600">{p.ownership}%</td>
+                <td className="py-3 px-2 text-right font-mono text-gray-600">{p.xg_p90?.toFixed(2) || '-'}</td>
+                <td className="py-3 px-2 text-right font-mono text-gray-600">{p.xa_p90?.toFixed(2) || '-'}</td>
+                <td className="py-3 px-2 text-right font-bold">{p.next_gw_pts?.toFixed(1)}</td>
+                <td className="py-3 px-2 text-right font-bold text-blue-600">{p.next_4gw_pts?.toFixed(1)}</td>
+                <td className="py-3 px-4">
+                  <span className="flex items-center gap-2">
+                    {p.next_fixture}
+                    <DifficultyBadge difficulty={p.next_fixture_diff} />
+                  </span>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -163,17 +210,24 @@ function TopPlayersTable({ players, title }) {
 }
 
 function ChipAlert({ chip }) {
-  const icon = chip.type === 'double' ? '📈' : '⚠️';
-  const bgColor = chip.type === 'double' ? 'bg-green-50 border-green-200' : 'bg-yellow-50 border-yellow-200';
+  const isDGW = chip.type === 'double';
+  const bgColor = isDGW ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300' : 'bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-300';
   
   return (
-    <div className={`p-4 rounded-lg border ${bgColor}`}>
+    <div className={`p-4 rounded-lg border-2 ${bgColor}`}>
       <div className="flex items-start gap-3">
-        <span className="text-2xl">{icon}</span>
-        <div>
-          <h4 className="font-bold">GW{chip.gameweek}: {chip.type === 'double' ? 'Double Gameweek' : 'Blank Gameweek'}</h4>
-          <p className="text-sm text-gray-700">{chip.notes}</p>
-          <p className="text-sm font-medium mt-1">💡 {chip.chip_suggestion}</p>
+        <span className="text-3xl">{isDGW ? '📈' : '⚠️'}</span>
+        <div className="flex-1">
+          <div className="flex items-center gap-2">
+            <h4 className="font-bold text-lg">GW{chip.gameweek}</h4>
+            <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+              chip.priority === 'HIGH' ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'
+            }`}>
+              {chip.priority}
+            </span>
+          </div>
+          <p className="text-sm text-gray-700 mt-1">{chip.notes}</p>
+          <p className="text-sm font-semibold mt-2 text-blue-700">💡 {chip.chip_suggestion}</p>
         </div>
       </div>
     </div>
@@ -186,16 +240,20 @@ export default function App() {
   const [projections, setProjections] = useState(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/recommendations.json').then(r => r.json()).catch(() => null),
-      fetch('/data/my_team.json').then(r => r.json()).catch(() => null),
-      fetch('/data/projections.json').then(r => r.json()).catch(() => null),
+      fetch('/data/recommendations.json').then(r => r.ok ? r.json() : null),
+      fetch('/data/my_team.json').then(r => r.ok ? r.json() : null),
+      fetch('/data/projections.json').then(r => r.ok ? r.json() : null),
     ]).then(([recs, team, proj]) => {
       setRecommendations(recs);
       setMyTeam(team);
       setProjections(proj);
+      setLoading(false);
+    }).catch(e => {
+      setError(e.message);
       setLoading(false);
     });
   }, []);
@@ -204,7 +262,7 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading projections...</p>
         </div>
       </div>
@@ -212,38 +270,34 @@ export default function App() {
   }
 
   const tabs = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'squad', label: 'My Squad' },
-    { id: 'players', label: 'Top Players' },
+    { id: 'overview', label: '🎯 Overview' },
+    { id: 'squad', label: '👥 My Squad' },
+    { id: 'players', label: '📊 Top Players' },
   ];
-
-  // Build player lookup from squad
-  const playerLookup = {};
-  if (myTeam?.squad) {
-    myTeam.squad.forEach(p => {
-      playerLookup[p.player_id] = p;
-    });
-  }
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-gradient-to-r from-purple-700 to-blue-600 text-white p-6">
-        <h1 className="text-2xl font-bold">FPL Brain</h1>
-        <p className="text-purple-200">
-          GW{recommendations?.next_gameweek || '?'} • Updated {recommendations?.generated_at ? new Date(recommendations.generated_at).toLocaleString() : 'N/A'}
-        </p>
+      <header className="bg-gradient-to-r from-purple-700 via-purple-600 to-blue-600 text-white p-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl font-bold">FPL Brain</h1>
+          <p className="text-purple-200 mt-1">
+            GW{recommendations?.next_gameweek || '?'} • 
+            {recommendations?.data_source && ` ${recommendations.data_source} • `}
+            Updated {recommendations?.generated_at ? new Date(recommendations.generated_at).toLocaleString() : 'N/A'}
+          </p>
+        </div>
       </header>
 
-      <nav className="bg-white border-b sticky top-0 z-10">
-        <div className="flex">
+      <nav className="bg-white border-b sticky top-0 z-10 shadow-sm">
+        <div className="max-w-4xl mx-auto flex">
           {tabs.map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 font-medium transition-colors ${
+              className={`px-6 py-4 font-medium transition-all ${
                 activeTab === tab.id 
-                  ? 'text-blue-600 border-b-2 border-blue-600' 
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50' 
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}
             >
               {tab.label}
@@ -255,30 +309,42 @@ export default function App() {
       <main className="max-w-4xl mx-auto p-4 space-y-6">
         {activeTab === 'overview' && (
           <>
+            {/* Projected Points Summary */}
+            {myTeam && (
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+                <p className="text-blue-100 text-sm">GW{recommendations?.next_gameweek} Projected Total</p>
+                <p className="text-5xl font-bold mt-1">{myTeam.total_projected_pts} pts</p>
+                <p className="text-blue-200 mt-2">Bank: £{myTeam.bank}m</p>
+              </div>
+            )}
+
             {/* Captain Picks */}
             <section>
-              <h2 className="text-xl font-bold mb-4">Captain Picks</h2>
+              <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                👑 Captain Picks
+              </h2>
               <div className="space-y-3">
                 {recommendations?.captain_picks?.map((pick, i) => (
                   <CaptainCard key={pick.player_id} pick={pick} rank={i + 1} />
                 ))}
                 {!recommendations?.captain_picks?.length && (
-                  <p className="text-gray-500">No captain data available</p>
+                  <p className="text-gray-500 bg-white p-4 rounded-lg">No captain data available</p>
                 )}
               </div>
             </section>
 
             {/* Transfer Recommendations */}
             <section>
-              <h2 className="text-xl font-bold mb-4">Transfer Recommendations</h2>
+              <h2 className="text-xl font-bold mb-4">📈 Transfer Recommendations</h2>
               <div className="space-y-3">
                 {recommendations?.transfer_recommendations?.map((transfer, i) => (
-                  <TransferCard key={i} transfer={transfer} playerLookup={playerLookup} />
+                  <TransferCard key={i} transfer={transfer} />
                 ))}
                 {!recommendations?.transfer_recommendations?.length && (
-                  <p className="text-gray-500 bg-white p-4 rounded-lg">
-                    No transfers recommended - your squad looks strong! 💪
-                  </p>
+                  <div className="bg-white p-6 rounded-lg border text-center">
+                    <p className="text-2xl mb-2">💪</p>
+                    <p className="text-gray-600">No transfers recommended - your squad looks strong!</p>
+                  </div>
                 )}
               </div>
             </section>
@@ -286,7 +352,7 @@ export default function App() {
             {/* Chip Analysis */}
             {recommendations?.chip_analysis?.length > 0 && (
               <section>
-                <h2 className="text-xl font-bold mb-4">Upcoming Chip Opportunities</h2>
+                <h2 className="text-xl font-bold mb-4">🎮 Chip Opportunities</h2>
                 <div className="space-y-3">
                   {recommendations.chip_analysis.map((chip, i) => (
                     <ChipAlert key={i} chip={chip} />
@@ -294,40 +360,29 @@ export default function App() {
                 </div>
               </section>
             )}
-
-            {/* Projected Points */}
-            {myTeam && (
-              <section className="bg-white rounded-lg p-4 border">
-                <h2 className="text-lg font-bold mb-2">GW{recommendations?.next_gameweek} Projected Total</h2>
-                <p className="text-4xl font-bold text-blue-600">{myTeam.total_projected_pts?.toFixed(1)} pts</p>
-                <p className="text-sm text-gray-500 mt-1">Bank: £{myTeam.bank?.toFixed(1)}m</p>
-              </section>
-            )}
           </>
         )}
 
         {activeTab === 'squad' && myTeam && (
-          <section>
-            <h2 className="text-xl font-bold mb-4">My Squad</h2>
-            <SquadView squad={myTeam.squad} projections={projections} />
-          </section>
+          <SquadView squad={myTeam.squad} />
         )}
 
         {activeTab === 'players' && projections?.top_by_position && (
-          <section className="space-y-8">
+          <div className="space-y-6">
             {['FWD', 'MID', 'DEF', 'GK'].map(pos => (
               <TopPlayersTable 
                 key={pos} 
-                players={projections.top_by_position[pos] || []} 
-                title={`Top ${pos}s`}
+                players={projections.top_by_position[pos]} 
+                title={`Top ${pos === 'GK' ? 'Goalkeepers' : pos === 'DEF' ? 'Defenders' : pos === 'MID' ? 'Midfielders' : 'Forwards'}`}
               />
             ))}
-          </section>
+          </div>
         )}
       </main>
 
-      <footer className="text-center py-6 text-gray-500 text-sm">
-        Built for top 100 glory • Data updates daily at 6am UTC
+      <footer className="text-center py-8 text-gray-400 text-sm">
+        <p>Built for top 100 glory 🏆</p>
+        <p className="mt-1">Data: FPL API + Understat xG • Updates daily at 6am UTC</p>
       </footer>
     </div>
   );
