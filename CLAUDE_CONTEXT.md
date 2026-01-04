@@ -1,7 +1,7 @@
 # FPL Brain - Project Context
 
 ## Overview
-An xG-based FPL recommendation engine targeting a top 100 finish. Data-driven captain picks, transfer suggestions, and chip timing without watching every game.
+An xG-based FPL recommendation engine targeting a top 100 finish. Data-driven captain picks, transfer suggestions, Starting XI optimization, and chip timing without watching every game.
 
 ## User Profile
 - FPL Team ID: 5033680
@@ -10,7 +10,7 @@ An xG-based FPL recommendation engine targeting a top 100 finish. Data-driven ca
 - Currently mid-season (started GW20+), needs to catch up
 
 ## Repo & Hosting
-- GitHub: [your-username]/fpl-brain
+- GitHub: madansh/fpl-brain
 - Live: https://fplbrain.netlify.app
 - Deploys automatically via Netlify on any commit
 
@@ -21,8 +21,8 @@ GitHub Actions (daily 6am UTC)
     ▼
 scripts/projections.py (Python)
     │ - Fetches FPL API + Understat xG data
-    │ - Calculates projections
-    │ - Generates recommendations
+    │ - Calculates projections + xMin
+    │ - Generates recommendations + Starting XI
     ▼
 public/data/*.json
     │
@@ -36,15 +36,18 @@ Netlify serves static site
 ## Key Files
 | File | Purpose |
 |------|---------|
-| `scripts/projections.py` | Core engine - fetches data, calculates xG projections, outputs JSON |
-| `src/App.jsx` | React frontend with Overview/Squad/Top Players tabs |
+| `scripts/projections.py` | Core engine - fetches data, calculates xG/xMin projections, outputs JSON |
+| `src/App.jsx` | React frontend with Overview/Starting XI/Chips/Squad/Players tabs |
 | `.github/workflows/daily-update.yml` | GitHub Action for daily automation |
 | `requirements.txt` | Python deps: `requests>=2.32.0`, `understatapi>=0.7.0` |
 | `public/data/recommendations.json` | Captain picks, transfer recs, chip alerts |
 | `public/data/my_team.json` | User's squad with projections |
 | `public/data/projections.json` | Top players by position |
+| `public/data/starting_xi.json` | Starting XI recommendations for GW+1 to GW+6 |
 
-## Current State (v3)
+## Current State (v3.1)
+
+### Core Features (v3)
 - ✅ Real xG/xA data from Understat via `understatapi` package
 - ✅ Team strength calculated from actual xGA (not FPL's arbitrary ratings)
 - ✅ Fuzzy name matching to link FPL players → Understat profiles
@@ -71,6 +74,18 @@ Netlify serves static site
 - ✅ Shows confidence level (HIGH/MEDIUM)
 - ✅ Specific action needed for each chip
 
+### v3.1 xMin + Starting XI (NEW)
+- ✅ xMin calculation: `base_mins × availability × rotation_factor × form_factor`
+- ✅ Known rotation risks database (Pep players, etc.)
+- ✅ Effective projection = `projected_pts × (xMin/90)`
+- ✅ Starting XI optimizer for GW+1 through GW+6
+- ✅ Formation optimizer (tests all 8 valid FPL formations)
+- ✅ Auto-captain selection based on effective pts
+- ✅ Bench ordering for auto-sub priority
+- ✅ GW alerts for blank exposure and low xMin issues
+- ✅ Visual xMin bars in UI (green ≥80, yellow 60-79, red <60)
+- ✅ New "Starting XI" tab in the app
+
 ## Configuration Constants (in projections.py)
 ```python
 TEAM_ID = 5033680
@@ -78,32 +93,33 @@ PLANNING_HORIZON = 4  # GWs for transfer optimization
 HIT_THRESHOLD_GWS = 3  # Aggressive: hit worth it if gain > 4 over 3 GWs
 FORM_WEIGHT = 0.6     # 60% recent form, 40% season average
 DECAY_FACTOR = 0.85   # Each older match weighted 15% less
+
+# Rotation risks (reduce xMin for these players)
+ROTATION_RISKS = {
+    'high': ['Foden', 'Stones', 'Gvardiol', 'Grealish', 'Doku', 'Nkunku', 'Sterling', 'Neto'],
+    'medium': ['Diaz', 'Gakpo', 'Jota', 'Rashford', 'Mount', 'Garnacho', 'Gordon', 'Barnes']
+}
+
+# Valid FPL formations
+VALID_FORMATIONS = [
+    (3, 4, 3), (3, 5, 2), (4, 3, 3), (4, 4, 2), 
+    (4, 5, 1), (5, 2, 3), (5, 3, 2), (5, 4, 1)
+]
 ```
 
 ## Planned Improvements (Priority Order)
 
 ### HIGH PRIORITY - Next Session
 
-#### 1. Transfer Logic v3 (Evaluate All 15 + xMin + Starting XI)
-Current problem: Only evaluates starters, ignores rotation risk
-What to build:
-- Evaluate ALL 15 squad players, not just current starters
-- Calculate xMin (expected minutes) per player:
-  - `xMin = (season_minutes / starts) × availability_multiplier`
-  - Reduce xMin for known rotation risks (Pep roulette, cup congestion)
-- Effective projection = `xG_pts × (xMin / 90)`
-- Output: Recommended Starting XI for each GW in planning horizon
-- Transfer recs should avoid players with low xMin or upcoming blanks
-
-#### 2. Chip Strategy Without DGW Dependency
+#### 1. Chip Strategy Without DGW Dependency
 Current problem: Only triggers chips on detected DGW/BGW, but those are hard to predict
 What to build:
 - **Bench Boost**: Find GW where bench has highest (xMin × fixture_ease), even without DGW
-- **Triple Captain**: Find GW where premium has easiest fixture + home + high xMin (DGW not required - Haaland H vs Ipswich may beat a hard DGW)
+- **Triple Captain**: Find GW where premium has easiest fixture + home + high xMin (DGW not required)
 - **Free Hit**: Trigger on massive fixture swings or injury clusters, not just blanks
 - **Wildcard**: Trigger on value bleeding, chip setup needs, fixture pivot points
 
-#### 3. Blank/Double Prediction + Manual Override UI
+#### 2. Blank/Double Prediction + Manual Override UI
 Current problem: FPL API announces blanks very late (depends on cup results)
 What to build:
 - Automated prediction based on cup progress (teams in FA Cup/EFL Cup rounds = potential blank)
@@ -112,35 +128,52 @@ What to build:
   - Simple form: "Add predicted blank: [GW dropdown] [Team multiselect]"
   - Simple form: "Add predicted double: [GW dropdown] [Team multiselect]"
   - Display current predictions with delete option
-  - Store in localStorage or simple backend
+  - Store in localStorage
 - Show confidence level: "Confirmed" vs "Predicted" vs "Possible"
 
-#### 4. Starting XI Recommendation Per GW
-New feature:
-- For GW+1 through GW+6, show optimal starting XI based on fixtures
-- Auto-pick captain and vice-captain
-- Show bench order (first sub should be highest xPts among bench)
-- Flag any GW where <11 players have fixtures (blank exposure)
-
 ### Medium Priority
-5. **Level 3 Multi-Move Optimizer** - Consider 2-transfer combos, "Sell X+Y, buy A+B"
-6. **Rolling 5-match xG** - Weight recent form more heavily (requires match-by-match Understat)
-7. **Rotation risk database** - Flag Pep players, players with cup commitments, AFCON etc.
-8. **Fixture difficulty visualization** - Calendar view like Legomane's graphics
+3. **Level 3 Multi-Move Optimizer** - Consider 2-transfer combos, "Sell X+Y, buy A+B"
+4. **Rolling 5-match xG** - Weight recent form more heavily (requires match-by-match Understat)
+5. **Fixture difficulty visualization** - Calendar view like Legomane's graphics
+6. **Transfer Logic v3** - Evaluate ALL 15 squad players for weak links, not just starters
 
 ### Lower Priority
-9. **Backtesting module** - Validate model against 2019-2024 seasons
-10. **Effective ownership** - Compare against top 10k, not overall
-11. **What-if scenarios** - "What if I did transfer X instead?"
-12. **Price change predictions** - Flag players likely to rise/fall
-13. **Web scraping for community data** - Auto-pull from Ben Crellin, Legomane sources
+7. **Backtesting module** - Validate model against 2019-2024 seasons
+8. **Effective ownership** - Compare against top 10k, not overall
+9. **What-if scenarios** - "What if I did transfer X instead?"
+10. **Price change predictions** - Flag players likely to rise/fall
+11. **Web scraping for community data** - Auto-pull from Ben Crellin, Legomane sources
 
 ## Known Limitations
 - xG data is season-level from Understat (not match-by-match rolling)
 - ~80% player match rate between FPL and Understat (fuzzy matching)
-- No rotation risk modeling yet
-- Chip analysis depends on DGW/BGW being announced (FPL updates fixtures)
-- Transfer logic is single-move only (Level 3 multi-move coming next)
+- Chip analysis depends on DGW/BGW being announced (FPL updates fixtures late)
+- Transfer logic is single-move only (Level 3 multi-move coming)
+
+## Key Context from User
+
+### Blank/Double Gameweek Reality
+- FPL only confirms blanks AFTER cup results (e.g., FA Cup, EFL Cup)
+- Community sources (Ben Crellin, Legomane) predict blanks based on cup progress
+- Example: GW31 blanks depend on semi-final results - Arsenal, City, Chelsea, Newcastle won SF so they WILL blank in GW31
+- Blanks are "confirmed after second legs" - so predictions change as cups progress
+- User doesn't have time to manually track this - needs automation or simple UI input
+
+### Fixture Difficulty Sources
+- Keep using Understat xGA for automated FDR calculation
+- Legomane publishes visual FDR calendars on Twitter
+- Color coding: Green = easy, Yellow = medium, Red = hard
+- AFCON (Africa Cup of Nations) affects player availability in Jan-Feb
+
+### User Preferences on Manual Input
+- Does NOT want to edit raw JSON files
+- Wants automation by default
+- If manual input needed, wants simple UI abstracted away from code
+- Time-constrained - can't constantly monitor Twitter for updates
+
+### Useful Community Data Sources (for potential scraping)
+- **Ben Crellin** (@BenCrellin) - Blank/Double predictions spreadsheet
+- **Legomane** (@Legomane_FPL) - Fixture difficulty calendars, AFCON tracking
 
 ## Points Projection Formula
 ```
@@ -152,12 +185,26 @@ Projected Points =
   bonus_estimate
 ```
 
+## xMin Formula (NEW in v3.1)
+```python
+xMin = base_mins × availability × rotation_factor × form_factor
+
+Where:
+- base_mins = season_minutes / starts (capped at 90)
+- availability = chance_of_playing / 100 (from FPL API)
+- rotation_factor = 0.65 for high risk, 0.80 for medium, 1.0 for others
+- form_factor = 1.05 if hot, 0.90 if cold, 1.0 if neutral
+
+effective_pts = projected_pts × (xMin / 90)
+```
+
 ## Troubleshooting
 - **"No captain data"**: API might have returned empty, check Actions logs
 - **Blank recommendations**: Check if `public/data/*.json` files exist
 - **Netlify not updating**: Check if GitHub Action committed new files
 - **Python errors**: Usually dependency issues, check `requirements.txt`
+- **Starting XI not showing**: Check if `starting_xi.json` was generated
 
 ## Starting a New Claude Conversation
 Paste this file or link to it and say:
-"Continuing FPL Brain project. Context in CLAUDE_CONTEXT.md. Last worked on [X]. Ready to add [Y]."
+"Continuing FPL Brain project. Context in CLAUDE_CONTEXT.md. Last session completed v3.1 with xMin and Starting XI. Ready to build: [Chip strategy without DGW / Blank prediction UI / Level 3 transfers]."
