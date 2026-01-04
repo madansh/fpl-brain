@@ -82,21 +82,58 @@ DECAY_FACTOR = 0.85   # Each older match weighted 15% less
 
 ## Planned Improvements (Priority Order)
 
-### High Priority
-1. **Level 3 Multi-Move Optimizer** - Consider 2-transfer combos, "Sell X+Y, buy A+B" recommendations, optimize for chip planning
-2. **Rolling 5-match xG** - Weight recent form more heavily, not just season totals (requires match-by-match Understat data)
-3. **Form trend detection** - More sophisticated hot/cold detection using actual xG vs output
+### HIGH PRIORITY - Next Session
+
+#### 1. Transfer Logic v3 (Evaluate All 15 + xMin + Starting XI)
+Current problem: Only evaluates starters, ignores rotation risk
+What to build:
+- Evaluate ALL 15 squad players, not just current starters
+- Calculate xMin (expected minutes) per player:
+  - `xMin = (season_minutes / starts) × availability_multiplier`
+  - Reduce xMin for known rotation risks (Pep roulette, cup congestion)
+- Effective projection = `xG_pts × (xMin / 90)`
+- Output: Recommended Starting XI for each GW in planning horizon
+- Transfer recs should avoid players with low xMin or upcoming blanks
+
+#### 2. Chip Strategy Without DGW Dependency
+Current problem: Only triggers chips on detected DGW/BGW, but those are hard to predict
+What to build:
+- **Bench Boost**: Find GW where bench has highest (xMin × fixture_ease), even without DGW
+- **Triple Captain**: Find GW where premium has easiest fixture + home + high xMin (DGW not required - Haaland H vs Ipswich may beat a hard DGW)
+- **Free Hit**: Trigger on massive fixture swings or injury clusters, not just blanks
+- **Wildcard**: Trigger on value bleeding, chip setup needs, fixture pivot points
+
+#### 3. Blank/Double Prediction + Manual Override UI
+Current problem: FPL API announces blanks very late (depends on cup results)
+What to build:
+- Automated prediction based on cup progress (teams in FA Cup/EFL Cup rounds = potential blank)
+- Web scraping option: Pull Ben Crellin's spreadsheet or similar community source
+- **In-app UI for manual override** (NOT raw JSON editing):
+  - Simple form: "Add predicted blank: [GW dropdown] [Team multiselect]"
+  - Simple form: "Add predicted double: [GW dropdown] [Team multiselect]"
+  - Display current predictions with delete option
+  - Store in localStorage or simple backend
+- Show confidence level: "Confirmed" vs "Predicted" vs "Possible"
+
+#### 4. Starting XI Recommendation Per GW
+New feature:
+- For GW+1 through GW+6, show optimal starting XI based on fixtures
+- Auto-pick captain and vice-captain
+- Show bench order (first sub should be highest xPts among bench)
+- Flag any GW where <11 players have fixtures (blank exposure)
 
 ### Medium Priority
-4. **Penalty/set piece taker identification** - Bonus xG for designated takers
-5. **Minutes prediction** - Model rotation risk (especially for Pep's team)
-6. **Fixture ticker** - Visual fixture difficulty chart for next 6 GWs
+5. **Level 3 Multi-Move Optimizer** - Consider 2-transfer combos, "Sell X+Y, buy A+B"
+6. **Rolling 5-match xG** - Weight recent form more heavily (requires match-by-match Understat)
+7. **Rotation risk database** - Flag Pep players, players with cup commitments, AFCON etc.
+8. **Fixture difficulty visualization** - Calendar view like Legomane's graphics
 
-### Lower Priority  
-7. **Backtesting module** - Validate model against 2019-2024 seasons
-8. **Effective ownership** - Compare against top 10k, not overall ownership
-9. **What-if scenarios** - "What if I did transfer X instead?"
-10. **Price change predictions** - Flag players likely to rise/fall
+### Lower Priority
+9. **Backtesting module** - Validate model against 2019-2024 seasons
+10. **Effective ownership** - Compare against top 10k, not overall
+11. **What-if scenarios** - "What if I did transfer X instead?"
+12. **Price change predictions** - Flag players likely to rise/fall
+13. **Web scraping for community data** - Auto-pull from Ben Crellin, Legomane sources
 
 ## Known Limitations
 - xG data is season-level from Understat (not match-by-match rolling)
