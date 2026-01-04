@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const POS_LABELS = { 1: 'GK', 2: 'DEF', 3: 'MID', 4: 'FWD' };
 const POS_COLORS = { 1: 'bg-yellow-500', 2: 'bg-green-500', 3: 'bg-blue-500', 4: 'bg-red-500' };
+const POS_COLORS_BY_NAME = { GK: 'bg-yellow-500', DEF: 'bg-green-500', MID: 'bg-blue-500', FWD: 'bg-red-500' };
 
 function DifficultyBadge({ difficulty, small = false }) {
   if (!difficulty) return null;
@@ -17,6 +18,16 @@ function FormBadge({ trend }) {
   if (trend === 'hot') return <span className="text-orange-500" title="Hot form">🔥</span>;
   if (trend === 'cold') return <span className="text-blue-400" title="Cold form">🥶</span>;
   return null;
+}
+
+function XminBar({ xmin }) {
+  const pct = Math.min(100, (xmin / 90) * 100);
+  const color = xmin >= 80 ? 'bg-green-400' : xmin >= 60 ? 'bg-yellow-400' : 'bg-red-400';
+  return (
+    <div className="w-12 h-1.5 bg-gray-200 rounded-full overflow-hidden" title={`${xmin} xMin`}>
+      <div className={`h-full ${color} rounded-full`} style={{ width: `${pct}%` }} />
+    </div>
+  );
 }
 
 function FixtureRun({ fixtures }) {
@@ -47,30 +58,17 @@ function ReasonTags({ reasons, type }) {
     'low_projection': 'bg-gray-100 text-gray-600',
   };
   const labelMap = {
-    'hot_form': '🔥 Hot',
-    'cold_form': '🥶 Cold',
-    'easy_fixtures': '📅 Easy run',
-    'hard_fixtures': '📅 Hard run',
-    'injury_doubt': '🏥 Injury',
-    'low_projection': '📉 Low pts',
+    'hot_form': '🔥 Hot', 'cold_form': '🥶 Cold', 'easy_fixtures': '📅 Easy run',
+    'hard_fixtures': '📅 Hard run', 'injury_doubt': '🏥 Injury', 'low_projection': '📉 Low pts',
   };
-  
   return (
     <div className="flex flex-wrap gap-1">
       {reasons?.map((r, i) => {
         const isDGW = r.startsWith('dgw');
         const isBGW = r.startsWith('blank');
-        if (isDGW) {
-          return <span key={i} className="px-1.5 py-0.5 text-xs rounded bg-purple-100 text-purple-700 font-medium">🎯 {r.toUpperCase()}</span>;
-        }
-        if (isBGW) {
-          return <span key={i} className="px-1.5 py-0.5 text-xs rounded bg-yellow-100 text-yellow-700">⚠️ {r}</span>;
-        }
-        return (
-          <span key={i} className={`px-1.5 py-0.5 text-xs rounded ${colorMap[r] || 'bg-gray-100 text-gray-600'}`}>
-            {labelMap[r] || r}
-          </span>
-        );
+        if (isDGW) return <span key={i} className="px-1.5 py-0.5 text-xs rounded bg-purple-100 text-purple-700 font-medium">🎯 {r.toUpperCase()}</span>;
+        if (isBGW) return <span key={i} className="px-1.5 py-0.5 text-xs rounded bg-yellow-100 text-yellow-700">⚠️ {r}</span>;
+        return <span key={i} className={`px-1.5 py-0.5 text-xs rounded ${colorMap[r] || 'bg-gray-100 text-gray-600'}`}>{labelMap[r] || r}</span>;
       })}
     </div>
   );
@@ -141,19 +139,8 @@ function TransferCard({ transfer }) {
 }
 
 function ChipCard({ chip }) {
-  const colors = {
-    'Bench Boost': 'from-green-500 to-emerald-600',
-    'Triple Captain': 'from-purple-500 to-indigo-600',
-    'Free Hit': 'from-orange-500 to-red-500',
-    'Wildcard': 'from-blue-500 to-cyan-600',
-  };
-  const icons = {
-    'Bench Boost': '🪑',
-    'Triple Captain': '👑',
-    'Free Hit': '⚡',
-    'Wildcard': '🃏',
-  };
-  
+  const colors = { 'Bench Boost': 'from-green-500 to-emerald-600', 'Triple Captain': 'from-purple-500 to-indigo-600', 'Free Hit': 'from-orange-500 to-red-500', 'Wildcard': 'from-blue-500 to-cyan-600' };
+  const icons = { 'Bench Boost': '🪑', 'Triple Captain': '👑', 'Free Hit': '⚡', 'Wildcard': '🃏' };
   return (
     <div className={`rounded-xl overflow-hidden bg-gradient-to-r ${colors[chip.chip] || 'from-gray-500 to-gray-600'}`}>
       <div className="p-4 text-white">
@@ -165,17 +152,9 @@ function ChipCard({ chip }) {
               <p className="text-white/80 text-sm">Recommended: GW{chip.recommended_gw}</p>
             </div>
           </div>
-          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-            chip.confidence === 'HIGH' ? 'bg-white/30' : 'bg-white/20'
-          }`}>
-            {chip.confidence}
-          </span>
+          <span className={`px-3 py-1 rounded-full text-sm font-medium ${chip.confidence === 'HIGH' ? 'bg-white/30' : 'bg-white/20'}`}>{chip.confidence}</span>
         </div>
-        {chip.recommended_player && (
-          <p className="mt-2 text-white/90 text-sm">
-            Player: <strong>{chip.recommended_player}</strong>
-          </p>
-        )}
+        {chip.recommended_player && <p className="mt-2 text-white/90 text-sm">Player: <strong>{chip.recommended_player}</strong></p>}
       </div>
       <div className="bg-white p-4">
         <p className="text-gray-700 text-sm">{chip.reasoning}</p>
@@ -188,50 +167,38 @@ function ChipCard({ chip }) {
 function SquadView({ squad }) {
   const starters = squad?.filter(p => p.multiplier > 0) || [];
   const bench = squad?.filter(p => p.multiplier === 0) || [];
-
   return (
     <div className="space-y-6">
       <div>
         <h3 className="font-bold text-gray-700 mb-3">Starting XI</h3>
         <div className="grid gap-2">
-          {starters
-            .sort((a, b) => a.position - b.position || b.projected_pts - a.projected_pts)
-            .map(player => (
-              <div key={player.player_id} className="p-3 rounded-lg bg-white border flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <span className={`w-10 h-10 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center font-medium`}>
-                    {POS_LABELS[player.position]}
-                  </span>
-                  <div>
-                    <div className="flex items-center gap-1">
-                      <p className="font-medium">
-                        {player.name}
-                        {player.is_captain && <span className="ml-1 text-yellow-600">(C)</span>}
-                        {player.is_vice && <span className="ml-1 text-gray-400">(V)</span>}
-                      </p>
-                      <FormBadge trend={player.form_trend} />
-                    </div>
-                    <FixtureRun fixtures={player.fixture_preview} />
+          {starters.sort((a, b) => a.position - b.position || b.projected_pts - a.projected_pts).map(player => (
+            <div key={player.player_id} className="p-3 rounded-lg bg-white border flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <span className={`w-10 h-10 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center font-medium`}>{POS_LABELS[player.position]}</span>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <p className="font-medium">{player.name}{player.is_captain && <span className="ml-1 text-yellow-600">(C)</span>}{player.is_vice && <span className="ml-1 text-gray-400">(V)</span>}</p>
+                    <FormBadge trend={player.form_trend} />
                   </div>
-                </div>
-                <div className="text-right">
-                  <p className="text-lg font-bold">{player.projected_pts?.toFixed(1)}</p>
-                  <p className="text-xs text-gray-500">{player.projected_4gw?.toFixed(1)} (4GW)</p>
+                  <FixtureRun fixtures={player.fixture_preview} />
                 </div>
               </div>
-            ))}
+              <div className="text-right">
+                <p className="text-lg font-bold">{player.projected_pts?.toFixed(1)}</p>
+                <p className="text-xs text-gray-500">{player.projected_4gw?.toFixed(1)} (4GW)</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      
       <div>
         <h3 className="font-bold text-gray-500 mb-3">Bench</h3>
         <div className="grid gap-2 opacity-70">
           {bench.map(player => (
             <div key={player.player_id} className="p-3 rounded-lg bg-gray-50 border border-dashed flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <span className={`w-8 h-8 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center`}>
-                  {POS_LABELS[player.position]}
-                </span>
+                <span className={`w-8 h-8 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center`}>{POS_LABELS[player.position]}</span>
                 <div>
                   <p className="font-medium text-gray-600">{player.name}</p>
                   <FixtureRun fixtures={player.fixture_preview} />
@@ -246,9 +213,147 @@ function SquadView({ squad }) {
   );
 }
 
+// ===================== NEW: STARTING XI COMPONENTS =====================
+
+function XIPlayerCard({ player, isCaptain, isVice }) {
+  return (
+    <div className={`relative flex flex-col items-center p-2 rounded-lg bg-white border-2 ${isCaptain ? 'border-yellow-400 shadow-md' : isVice ? 'border-gray-400' : 'border-gray-200'}`}>
+      {isCaptain && <span className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 text-black text-xs font-bold rounded-full flex items-center justify-center shadow">C</span>}
+      {isVice && !isCaptain && <span className="absolute -top-2 -right-2 w-5 h-5 bg-gray-400 text-white text-xs font-bold rounded-full flex items-center justify-center">V</span>}
+      <span className={`text-xs px-1.5 py-0.5 rounded ${POS_COLORS_BY_NAME[player.position]} text-white font-medium`}>{player.position}</span>
+      <span className="text-sm font-semibold text-gray-800 mt-1 truncate max-w-20 text-center">{player.name}</span>
+      <span className="text-xs text-gray-500">{player.team}</span>
+      <span className="text-lg font-bold text-green-600">{player.effective_pts?.toFixed(1)}</span>
+      <div className="flex items-center gap-1 mt-1">
+        <XminBar xmin={player.xmin} />
+        <span className="text-xs text-gray-400">{player.xmin}</span>
+      </div>
+      <div className="mt-1">
+        <span className={`text-xs px-1.5 py-0.5 rounded ${
+          player.is_dgw ? 'bg-purple-100 text-purple-700 font-medium' :
+          player.difficulty < 0.85 ? 'bg-green-100 text-green-700' :
+          player.difficulty > 1.15 ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'
+        }`}>{player.is_dgw ? 'DGW' : player.fixture?.split(' ')[0] || '?'}</span>
+      </div>
+    </div>
+  );
+}
+
+function PitchFormation({ xi, captain, viceCapt }) {
+  const grouped = { GK: [], DEF: [], MID: [], FWD: [] };
+  xi?.forEach(p => grouped[p.position]?.push(p));
+  return (
+    <div className="bg-gradient-to-b from-green-600 to-green-700 rounded-xl p-4 space-y-2">
+      {['GK', 'DEF', 'MID', 'FWD'].map(pos => (
+        <div key={pos} className="flex justify-center gap-2 flex-wrap">
+          {grouped[pos].map((p, i) => (
+            <XIPlayerCard key={`${p.name}-${i}`} player={p} isCaptain={captain?.name === p.name} isVice={viceCapt?.name === p.name} />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function BenchRow({ bench }) {
+  return (
+    <div className="mt-3 p-3 bg-gray-100 rounded-lg">
+      <div className="text-xs text-gray-500 mb-2 font-medium uppercase tracking-wide">Bench (auto-sub order)</div>
+      <div className="flex gap-2 overflow-x-auto pb-1">
+        {bench?.map((p, i) => (
+          <div key={p.name} className={`flex-shrink-0 flex items-center gap-2 bg-white rounded-lg px-3 py-2 border ${p.status === 'blank' ? 'border-yellow-400 bg-yellow-50' : p.status === 'unlikely' ? 'border-red-300 bg-red-50' : 'border-gray-200'}`}>
+            <span className="text-xs text-gray-400 font-mono w-4">{p.bench_order}</span>
+            <span className={`text-xs px-1 py-0.5 rounded ${POS_COLORS_BY_NAME[p.position]} text-white`}>{p.position}</span>
+            <span className="text-sm text-gray-700">{p.name}</span>
+            <span className="text-sm text-green-600 font-semibold">{p.effective_pts?.toFixed(1)}</span>
+            <XminBar xmin={p.xmin} />
+            {p.status === 'blank' && <span className="text-xs text-yellow-600">BGW</span>}
+            {p.status === 'unlikely' && <span className="text-xs text-red-500">Low xMin</span>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function GWSelector({ gws, selected, onChange }) {
+  return (
+    <div className="flex gap-1 bg-gray-100 p-1 rounded-lg">
+      {gws.map(gw => (
+        <button key={gw} onClick={() => onChange(gw)} className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${selected === gw ? 'bg-purple-600 text-white shadow' : 'text-gray-600 hover:text-gray-900 hover:bg-white'}`}>
+          GW{gw}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function StartingXIView({ data }) {
+  const [selectedGW, setSelectedGW] = useState(null);
+
+  useEffect(() => {
+    if (data?.recommendations?.length && !selectedGW) {
+      setSelectedGW(data.recommendations[0]?.gameweek);
+    }
+  }, [data, selectedGW]);
+
+  if (!data?.recommendations?.length) {
+    return <div className="bg-white p-6 rounded-lg border text-center text-gray-500">No Starting XI data available yet.</div>;
+  }
+
+  const gws = data.recommendations.map(r => r.gameweek);
+  const current = data.recommendations.find(r => r.gameweek === selectedGW);
+
+  if (!current) return null;
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-bold">📋 Starting XI</h2>
+        <GWSelector gws={gws} selected={selectedGW} onChange={setSelectedGW} />
+      </div>
+
+      {current.alerts?.needs_attention && (
+        <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 text-sm">
+          ⚠️ GW{current.gameweek} needs attention: {current.alerts.blank_count > 0 && `${current.alerts.blank_count} players blanking`}
+          {current.alerts.blank_count > 0 && current.alerts.low_xmin_count > 0 && ', '}
+          {current.alerts.low_xmin_count > 0 && `${current.alerts.low_xmin_count} with low xMin`}
+        </div>
+      )}
+
+      <div className="flex items-center justify-between bg-white p-4 rounded-lg border">
+        <div className="flex items-center gap-4">
+          <span className="text-3xl font-bold text-gray-800">{current.formation}</span>
+          <span className="text-sm text-gray-500">Formation</span>
+        </div>
+        <div className="text-right">
+          <span className="text-3xl font-bold text-green-600">{current.total_effective_pts}</span>
+          <span className="text-sm text-gray-500 ml-1">eff pts</span>
+        </div>
+      </div>
+
+      <PitchFormation xi={current.starting_xi} captain={current.captain} viceCapt={current.vice_captain} />
+      <BenchRow bench={current.bench} />
+
+      <div className="p-4 bg-gray-50 rounded-lg text-sm text-gray-600">
+        <div className="font-medium text-gray-700 mb-2">Legend</div>
+        <div className="flex flex-wrap gap-4">
+          <div className="flex items-center gap-2"><div className="w-6 h-1.5 bg-green-400 rounded-full" /><span>xMin ≥80</span></div>
+          <div className="flex items-center gap-2"><div className="w-6 h-1.5 bg-yellow-400 rounded-full" /><span>xMin 60-79</span></div>
+          <div className="flex items-center gap-2"><div className="w-6 h-1.5 bg-red-400 rounded-full" /><span>xMin &lt;60</span></div>
+        </div>
+        <p className="mt-2 text-xs text-gray-500">
+          <strong>Effective pts</strong> = projected pts × (xMin/90). Accounts for rotation risk and availability.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ===================== END STARTING XI COMPONENTS =====================
+
 function TopPlayersTable({ players, title }) {
   if (!players?.length) return null;
-  
   return (
     <div className="bg-white rounded-lg border overflow-hidden">
       <h3 className="font-bold text-lg p-4 border-b bg-gray-50">{title}</h3>
@@ -283,9 +388,7 @@ function TopPlayersTable({ players, title }) {
                 <td className="py-3 px-2 text-right font-mono text-gray-600">{p.xa_p90?.toFixed(2)}</td>
                 <td className="py-3 px-2 text-right">{p.next_gw_pts?.toFixed(1)}</td>
                 <td className="py-3 px-2 text-right font-bold text-blue-600">{p.next_4gw_pts?.toFixed(1)}</td>
-                <td className="py-3 px-4">
-                  <FixtureRun fixtures={p.fixture_preview} />
-                </td>
+                <td className="py-3 px-4"><FixtureRun fixtures={p.fixture_preview} /></td>
               </tr>
             ))}
           </tbody>
@@ -299,6 +402,7 @@ export default function App() {
   const [recommendations, setRecommendations] = useState(null);
   const [myTeam, setMyTeam] = useState(null);
   const [projections, setProjections] = useState(null);
+  const [startingXI, setStartingXI] = useState(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [loading, setLoading] = useState(true);
 
@@ -307,10 +411,12 @@ export default function App() {
       fetch('/data/recommendations.json').then(r => r.ok ? r.json() : null),
       fetch('/data/my_team.json').then(r => r.ok ? r.json() : null),
       fetch('/data/projections.json').then(r => r.ok ? r.json() : null),
-    ]).then(([recs, team, proj]) => {
+      fetch('/data/starting_xi.json').then(r => r.ok ? r.json() : null),
+    ]).then(([recs, team, proj, xi]) => {
       setRecommendations(recs);
       setMyTeam(team);
       setProjections(proj);
+      setStartingXI(xi);
       setLoading(false);
     });
   }, []);
@@ -328,6 +434,7 @@ export default function App() {
 
   const tabs = [
     { id: 'overview', label: '🎯 Overview' },
+    { id: 'xi', label: '📋 Starting XI' },
     { id: 'chips', label: '🎮 Chips' },
     { id: 'squad', label: '👥 Squad' },
     { id: 'players', label: '📊 Players' },
@@ -343,10 +450,7 @@ export default function App() {
             <span>•</span>
             <span>{recommendations?.data_source}</span>
             {recommendations?.fixture_alerts?.dgw_gws?.length > 0 && (
-              <>
-                <span>•</span>
-                <span className="text-yellow-300">DGWs: {recommendations.fixture_alerts.dgw_gws.join(', ')}</span>
-              </>
+              <><span>•</span><span className="text-yellow-300">DGWs: {recommendations.fixture_alerts.dgw_gws.join(', ')}</span></>
             )}
           </div>
         </div>
@@ -355,15 +459,7 @@ export default function App() {
       <nav className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="max-w-4xl mx-auto flex overflow-x-auto">
           {tabs.map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-5 py-4 font-medium whitespace-nowrap transition-all ${
-                activeTab === tab.id 
-                  ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50' 
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-5 py-4 font-medium whitespace-nowrap transition-all ${activeTab === tab.id ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50' : 'text-gray-600 hover:text-gray-900'}`}>
               {tab.label}
             </button>
           ))}
@@ -387,23 +483,17 @@ export default function App() {
                 </div>
               </div>
             )}
-
             <section>
               <h2 className="text-xl font-bold mb-4">👑 Captain Picks</h2>
               <div className="space-y-3">
-                {recommendations?.captain_picks?.map((pick, i) => (
-                  <CaptainCard key={pick.player_id} pick={pick} rank={i + 1} />
-                ))}
+                {recommendations?.captain_picks?.map((pick, i) => <CaptainCard key={pick.player_id} pick={pick} rank={i + 1} />)}
               </div>
             </section>
-
             <section>
               <h2 className="text-xl font-bold mb-4">📈 Transfer Recommendations</h2>
               <div className="space-y-3">
                 {recommendations?.transfer_recommendations?.length > 0 ? (
-                  recommendations.transfer_recommendations.map((transfer, i) => (
-                    <TransferCard key={i} transfer={transfer} />
-                  ))
+                  recommendations.transfer_recommendations.map((t, i) => <TransferCard key={i} transfer={t} />)
                 ) : (
                   <div className="bg-white p-6 rounded-lg border text-center">
                     <p className="text-2xl mb-2">💪</p>
@@ -415,48 +505,31 @@ export default function App() {
           </>
         )}
 
+        {activeTab === 'xi' && <StartingXIView data={startingXI} />}
+
         {activeTab === 'chips' && (
           <section>
             <h2 className="text-xl font-bold mb-4">🎮 Chip Strategy</h2>
             {recommendations?.chip_strategy?.length > 0 ? (
-              <div className="space-y-4">
-                {recommendations.chip_strategy.map((chip, i) => (
-                  <ChipCard key={i} chip={chip} />
-                ))}
-              </div>
+              <div className="space-y-4">{recommendations.chip_strategy.map((chip, i) => <ChipCard key={i} chip={chip} />)}</div>
             ) : (
-              <div className="bg-white p-6 rounded-lg border text-center">
-                <p className="text-gray-600">No chip recommendations yet. Check back closer to DGWs/BGWs.</p>
-              </div>
+              <div className="bg-white p-6 rounded-lg border text-center"><p className="text-gray-600">No chip recommendations yet. Check back closer to DGWs/BGWs.</p></div>
             )}
-            
             {myTeam?.chips_available && (
               <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                 <h3 className="font-medium text-gray-700 mb-2">Available Chips</h3>
-                <div className="flex flex-wrap gap-2">
-                  {myTeam.chips_available.map(chip => (
-                    <span key={chip} className="px-3 py-1 bg-white border rounded-full text-sm">
-                      {chip.replace('_', ' ')}
-                    </span>
-                  ))}
-                </div>
+                <div className="flex flex-wrap gap-2">{myTeam.chips_available.map(chip => <span key={chip} className="px-3 py-1 bg-white border rounded-full text-sm">{chip.replace('_', ' ')}</span>)}</div>
               </div>
             )}
           </section>
         )}
 
-        {activeTab === 'squad' && myTeam && (
-          <SquadView squad={myTeam.squad} />
-        )}
+        {activeTab === 'squad' && myTeam && <SquadView squad={myTeam.squad} />}
 
         {activeTab === 'players' && projections?.top_by_position && (
           <div className="space-y-6">
             {['FWD', 'MID', 'DEF', 'GK'].map(pos => (
-              <TopPlayersTable 
-                key={pos} 
-                players={projections.top_by_position[pos]} 
-                title={pos === 'GK' ? 'Goalkeepers' : pos === 'DEF' ? 'Defenders' : pos === 'MID' ? 'Midfielders' : 'Forwards'}
-              />
+              <TopPlayersTable key={pos} players={projections.top_by_position[pos]} title={pos === 'GK' ? 'Goalkeepers' : pos === 'DEF' ? 'Defenders' : pos === 'MID' ? 'Midfielders' : 'Forwards'} />
             ))}
           </div>
         )}
