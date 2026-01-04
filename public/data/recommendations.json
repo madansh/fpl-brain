@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-04T06:25:38.259654",
+  "generated_at": "2026-01-04T19:56:54.871406",
   "next_gameweek": 21,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
@@ -7,12 +7,12 @@
       "player_id": 430,
       "name": "Haaland",
       "team": "MCI",
-      "projected_pts": 9.4,
-      "doubled_pts": 18.8,
+      "projected_pts": 9.02,
+      "doubled_pts": 18.0,
       "fixture": "BHA (H)",
       "fixture_difficulty": 1.08,
       "ownership": 74.2,
-      "form": "5.8",
+      "form": "6.2",
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
@@ -22,13 +22,13 @@
       "player_id": 136,
       "name": "Thiago",
       "team": "BRE",
-      "projected_pts": 6.87,
-      "doubled_pts": 13.7,
+      "projected_pts": 7.77,
+      "doubled_pts": 15.5,
       "fixture": "SUN (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 25.9,
-      "form": "2.2",
-      "form_trend": "cold",
+      "ownership": 26.7,
+      "form": "4.5",
+      "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -37,12 +37,12 @@
       "player_id": 414,
       "name": "Foden",
       "team": "MCI",
-      "projected_pts": 6.03,
-      "doubled_pts": 12.1,
+      "projected_pts": 5.8,
+      "doubled_pts": 11.6,
       "fixture": "BHA (H)",
       "fixture_difficulty": 1.08,
-      "ownership": 38.5,
-      "form": "5.2",
+      "ownership": 38.2,
+      "form": "5.5",
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
@@ -52,12 +52,12 @@
       "player_id": 485,
       "name": "Gordon",
       "team": "NEW",
-      "projected_pts": 5.92,
-      "doubled_pts": 11.8,
+      "projected_pts": 5.67,
+      "doubled_pts": 11.3,
       "fixture": "LEE (H)",
       "fixture_difficulty": 0.9,
       "ownership": 6.1,
-      "form": "4.7",
+      "form": "5.0",
       "form_trend": "hot",
       "is_differential": true,
       "has_dgw": false,
@@ -71,7 +71,7 @@
       "doubled_pts": 10.2,
       "fixture": "CRY (A)",
       "fixture_difficulty": 1.31,
-      "ownership": 29.8,
+      "ownership": 30.1,
       "form": "6.5",
       "form_trend": "hot",
       "is_differential": false,
@@ -79,54 +79,7 @@
       "data_quality": "approximated"
     }
   ],
-  "transfer_recommendations": [
-    {
-      "priority": 1,
-      "out_id": 136,
-      "out_name": "Thiago",
-      "out_reasons": [
-        "cold_form",
-        "hard_fixtures"
-      ],
-      "in_id": 31,
-      "in_name": "G.Jesus",
-      "in_team": "ARS",
-      "in_cost": 6.4,
-      "gain_4gw": 8.8,
-      "buy_reasons": [],
-      "worth_hit": true,
-      "hit_value": 3.5,
-      "value_score": 5.19,
-      "position": 4,
-      "fixtures": [
-        {
-          "gw": 21,
-          "fixture": "LIV (H)",
-          "difficulty": 0.77,
-          "is_dgw": false
-        },
-        {
-          "gw": 22,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
-          "is_dgw": false
-        },
-        {
-          "gw": 23,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "gw": 24,
-          "fixture": "LEE (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "approximated"
-    }
-  ],
+  "transfer_recommendations": [],
   "chip_strategy": [],
   "fixture_alerts": {
     "dgw_gws": [],

@@ -4,9 +4,9 @@
   "next_gw": 21,
   "bank": 0.6,
   "chips_available": [
+    "triple_captain",
     "bench_boost",
-    "free_hit",
-    "triple_captain"
+    "free_hit"
   ],
   "squad": [
     {
@@ -96,8 +96,8 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 5.6,
-      "projected_pts": 3.39,
-      "projected_4gw": 13.6,
+      "projected_pts": 3.38,
+      "projected_4gw": 13.5,
       "form_trend": "neutral",
       "fixture_preview": [
         {
@@ -135,8 +135,8 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 4.2,
-      "projected_pts": 4.26,
-      "projected_4gw": 17.8,
+      "projected_pts": 4.14,
+      "projected_4gw": 17.3,
       "form_trend": "hot",
       "fixture_preview": [
         {
@@ -174,8 +174,8 @@
       "is_vice": true,
       "multiplier": 1,
       "selling_price": 7.4,
-      "projected_pts": 5.92,
-      "projected_4gw": 21.9,
+      "projected_pts": 5.67,
+      "projected_4gw": 21.0,
       "form_trend": "hot",
       "fixture_preview": [
         {
@@ -252,8 +252,8 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 8.2,
-      "projected_pts": 3.22,
-      "projected_4gw": 12.6,
+      "projected_pts": 4.32,
+      "projected_4gw": 16.0,
       "form_trend": "hot",
       "fixture_preview": [
         {
@@ -291,9 +291,9 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 8.2,
-      "projected_pts": 4.09,
-      "projected_4gw": 17.5,
-      "form_trend": "neutral",
+      "projected_pts": 4.44,
+      "projected_4gw": 19.1,
+      "form_trend": "hot",
       "fixture_preview": [
         {
           "gw": 21,
@@ -330,8 +330,8 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 8.9,
-      "projected_pts": 6.03,
-      "projected_4gw": 22.1,
+      "projected_pts": 5.8,
+      "projected_4gw": 21.3,
       "form_trend": "neutral",
       "fixture_preview": [
         {
@@ -369,9 +369,9 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.9,
-      "projected_pts": 6.87,
-      "projected_4gw": 24.4,
-      "form_trend": "cold",
+      "projected_pts": 7.77,
+      "projected_4gw": 27.4,
+      "form_trend": "neutral",
       "fixture_preview": [
         {
           "gw": 21,
@@ -408,8 +408,8 @@
       "is_vice": false,
       "multiplier": 2,
       "selling_price": 15.1,
-      "projected_pts": 9.4,
-      "projected_4gw": 33.7,
+      "projected_pts": 9.02,
+      "projected_4gw": 32.4,
       "form_trend": "neutral",
       "fixture_preview": [
         {
@@ -595,5 +595,5 @@
       ]
     }
   ],
-  "total_projected_pts": 64.7
+  "total_projected_pts": 65.6
 }
