@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-05T06:32:17.066025",
+  "generated_at": "2026-01-06T06:27:40.950394",
   "team_id": 5033680,
   "next_gameweek": 21,
   "recommendations": [
     {
       "gameweek": 21,
       "formation": "3-5-2",
-      "total_effective_pts": 52.1,
+      "total_effective_pts": 51.9,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -97,17 +97,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gordon",
-          "position": "MID",
-          "team": "NEW",
-          "effective_pts": 3.74,
-          "projected_pts": 5.67,
-          "xmin": 59.4,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
           "name": "Foden",
           "position": "MID",
           "team": "MCI",
@@ -116,6 +105,17 @@
           "xmin": 57.2,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "team": "NEW",
+          "effective_pts": 3.57,
+          "projected_pts": 5.67,
+          "xmin": 56.6,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         },
         {
@@ -329,18 +329,18 @@
           "bench_order": 1
         },
         {
-          "name": "Gordon",
-          "position": "MID",
-          "effective_pts": 2.97,
-          "xmin": 59.4,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 2.86,
           "xmin": 81.0,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 2.83,
+          "xmin": 56.6,
           "status": "available",
           "bench_order": 3
         },
@@ -362,7 +362,7 @@
     {
       "gameweek": 23,
       "formation": "4-4-2",
-      "total_effective_pts": 51.0,
+      "total_effective_pts": 50.9,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -467,9 +467,9 @@
           "name": "Gordon",
           "position": "MID",
           "team": "NEW",
-          "effective_pts": 3.51,
+          "effective_pts": 3.35,
           "projected_pts": 5.32,
-          "xmin": 59.4,
+          "xmin": 56.6,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -540,7 +540,7 @@
     {
       "gameweek": 24,
       "formation": "4-4-2",
-      "total_effective_pts": 49.4,
+      "total_effective_pts": 49.2,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -645,9 +645,9 @@
           "name": "Gordon",
           "position": "MID",
           "team": "NEW",
-          "effective_pts": 3.64,
+          "effective_pts": 3.47,
           "projected_pts": 5.52,
-          "xmin": 59.4,
+          "xmin": 56.6,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -857,8 +857,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.32,
-          "xmin": 59.4,
+          "effective_pts": 3.16,
+          "xmin": 56.6,
           "status": "available",
           "bench_order": 1
         },
@@ -1051,8 +1051,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 2.84,
-          "xmin": 59.4,
+          "effective_pts": 2.7,
+          "xmin": 56.6,
           "status": "available",
           "bench_order": 3
         },
