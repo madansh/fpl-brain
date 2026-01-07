@@ -1,190 +1,12 @@
 {
-  "generated_at": "2026-01-06T06:27:40.950394",
+  "generated_at": "2026-01-07T06:27:25.213369",
   "team_id": 5033680,
-  "next_gameweek": 21,
+  "next_gameweek": 22,
   "recommendations": [
-    {
-      "gameweek": 21,
-      "formation": "3-5-2",
-      "total_effective_pts": 51.9,
-      "captain": {
-        "name": "Haaland",
-        "team": "MCI",
-        "effective_pts": 8.68,
-        "xmin": 86.6,
-        "fixture": "BHA (H)"
-      },
-      "vice_captain": {
-        "name": "Thiago",
-        "effective_pts": 7.59
-      },
-      "starting_xi": [
-        {
-          "name": "D\u00fabravka",
-          "position": "GK",
-          "team": "BUR",
-          "effective_pts": 3.38,
-          "projected_pts": 3.38,
-          "xmin": 90,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "name": "Dorgu",
-          "position": "DEF",
-          "team": "MUN",
-          "effective_pts": 4.14,
-          "projected_pts": 4.14,
-          "xmin": 90,
-          "fixture": "BUR (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "name": "Virgil",
-          "position": "DEF",
-          "team": "LIV",
-          "effective_pts": 3.58,
-          "projected_pts": 3.58,
-          "xmin": 90,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.42,
-          "projected_pts": 3.52,
-          "xmin": 87.4,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
-          "is_dgw": false
-        },
-        {
-          "name": "Rogers",
-          "position": "MID",
-          "team": "AVL",
-          "effective_pts": 5.12,
-          "projected_pts": 5.12,
-          "xmin": 90,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
-          "is_dgw": false
-        },
-        {
-          "name": "Cunha",
-          "position": "MID",
-          "team": "MUN",
-          "effective_pts": 4.44,
-          "projected_pts": 4.44,
-          "xmin": 90,
-          "fixture": "BUR (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 4.32,
-          "projected_pts": 4.32,
-          "xmin": 90,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
-        {
-          "name": "Foden",
-          "position": "MID",
-          "team": "MCI",
-          "effective_pts": 3.69,
-          "projected_pts": 5.8,
-          "xmin": 57.2,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "name": "Gordon",
-          "position": "MID",
-          "team": "NEW",
-          "effective_pts": 3.57,
-          "projected_pts": 5.67,
-          "xmin": 56.6,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Haaland",
-          "position": "FWD",
-          "team": "MCI",
-          "effective_pts": 8.68,
-          "projected_pts": 9.02,
-          "xmin": 86.6,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "name": "Thiago",
-          "position": "FWD",
-          "team": "BRE",
-          "effective_pts": 7.59,
-          "projected_pts": 7.77,
-          "xmin": 87.9,
-          "fixture": "SUN (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        }
-      ],
-      "bench": [
-        {
-          "name": "Marc Guiu",
-          "position": "FWD",
-          "effective_pts": 3.45,
-          "xmin": 81.0,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
-          "name": "Tarkowski",
-          "position": "DEF",
-          "effective_pts": 3.38,
-          "xmin": 90,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Petrovi\u0107",
-          "position": "GK",
-          "effective_pts": 2.86,
-          "xmin": 81.0,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0,
-          "xmin": 0,
-          "status": "unlikely",
-          "bench_order": 4
-        }
-      ],
-      "alerts": {
-        "blank_count": 0,
-        "low_xmin_count": 3,
-        "needs_attention": false
-      }
-    },
     {
       "gameweek": 22,
       "formation": "4-3-3",
-      "total_effective_pts": 50.1,
+      "total_effective_pts": 50.0,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -256,9 +78,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 6.1,
+          "effective_pts": 6.02,
           "projected_pts": 6.1,
-          "xmin": 90,
+          "xmin": 88.8,
           "fixture": "EVE (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -323,8 +145,8 @@
         {
           "name": "Foden",
           "position": "MID",
-          "effective_pts": 3.23,
-          "xmin": 57.2,
+          "effective_pts": 2.9,
+          "xmin": 51.4,
           "status": "available",
           "bench_order": 1
         },
@@ -347,9 +169,9 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 0,
-          "xmin": 0,
-          "status": "unlikely",
+          "effective_pts": 0.72,
+          "xmin": 38.3,
+          "status": "available",
           "bench_order": 4
         }
       ],
@@ -362,7 +184,7 @@
     {
       "gameweek": 23,
       "formation": "4-4-2",
-      "total_effective_pts": 50.9,
+      "total_effective_pts": 50.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -434,9 +256,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.38,
+          "effective_pts": 5.31,
           "projected_pts": 5.38,
-          "xmin": 90,
+          "xmin": 88.8,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -453,17 +275,6 @@
           "is_dgw": false
         },
         {
-          "name": "Foden",
-          "position": "MID",
-          "team": "MCI",
-          "effective_pts": 3.6,
-          "projected_pts": 5.66,
-          "xmin": 57.2,
-          "fixture": "WOL (H)",
-          "difficulty": 1.12,
-          "is_dgw": false
-        },
-        {
           "name": "Gordon",
           "position": "MID",
           "team": "NEW",
@@ -472,6 +283,17 @@
           "xmin": 56.6,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
+          "is_dgw": false
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "team": "LIV",
+          "effective_pts": 3.23,
+          "projected_pts": 3.23,
+          "xmin": 90,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
           "is_dgw": false
         },
         {
@@ -499,10 +321,10 @@
       ],
       "bench": [
         {
-          "name": "Wirtz",
+          "name": "Foden",
           "position": "MID",
           "effective_pts": 3.23,
-          "xmin": 90,
+          "xmin": 51.4,
           "status": "available",
           "bench_order": 1
         },
@@ -525,9 +347,9 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 0,
-          "xmin": 0,
-          "status": "unlikely",
+          "effective_pts": 0.72,
+          "xmin": 38.3,
+          "status": "available",
           "bench_order": 4
         }
       ],
@@ -540,7 +362,7 @@
     {
       "gameweek": 24,
       "formation": "4-4-2",
-      "total_effective_pts": 49.2,
+      "total_effective_pts": 49.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -612,9 +434,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.64,
+          "effective_pts": 5.56,
           "projected_pts": 5.64,
-          "xmin": 90,
+          "xmin": 88.8,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -685,27 +507,27 @@
           "bench_order": 1
         },
         {
-          "name": "Foden",
-          "position": "MID",
-          "effective_pts": 3.05,
-          "xmin": 57.2,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 2.86,
           "xmin": 81.0,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Foden",
+          "position": "MID",
+          "effective_pts": 2.74,
+          "xmin": 51.4,
           "status": "available",
           "bench_order": 3
         },
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 0,
-          "xmin": 0,
-          "status": "unlikely",
+          "effective_pts": 0.72,
+          "xmin": 38.3,
+          "status": "available",
           "bench_order": 4
         }
       ],
@@ -718,7 +540,7 @@
     {
       "gameweek": 25,
       "formation": "4-4-2",
-      "total_effective_pts": 51.2,
+      "total_effective_pts": 50.7,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -790,9 +612,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.38,
+          "effective_pts": 5.31,
           "projected_pts": 5.38,
-          "xmin": 90,
+          "xmin": 88.8,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -823,9 +645,9 @@
           "name": "Foden",
           "position": "MID",
           "team": "MCI",
-          "effective_pts": 4.01,
+          "effective_pts": 3.6,
           "projected_pts": 6.31,
-          "xmin": 57.2,
+          "xmin": 51.4,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -881,9 +703,9 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 0,
-          "xmin": 0,
-          "status": "unlikely",
+          "effective_pts": 0.72,
+          "xmin": 38.3,
+          "status": "available",
           "bench_order": 4
         }
       ],
@@ -896,7 +718,7 @@
     {
       "gameweek": 26,
       "formation": "4-3-3",
-      "total_effective_pts": 53.3,
+      "total_effective_pts": 52.8,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -968,9 +790,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.74,
+          "effective_pts": 5.66,
           "projected_pts": 5.74,
-          "xmin": 90,
+          "xmin": 88.8,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
           "is_dgw": false
@@ -979,9 +801,9 @@
           "name": "Foden",
           "position": "MID",
           "team": "MCI",
-          "effective_pts": 4.14,
+          "effective_pts": 3.72,
           "projected_pts": 6.51,
-          "xmin": 57.2,
+          "xmin": 51.4,
           "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -1059,9 +881,187 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 0,
-          "xmin": 0,
-          "status": "unlikely",
+          "effective_pts": 0.72,
+          "xmin": 38.3,
+          "status": "available",
+          "bench_order": 4
+        }
+      ],
+      "alerts": {
+        "blank_count": 0,
+        "low_xmin_count": 3,
+        "needs_attention": false
+      }
+    },
+    {
+      "gameweek": 27,
+      "formation": "4-3-3",
+      "total_effective_pts": 51.7,
+      "captain": {
+        "name": "Haaland",
+        "team": "MCI",
+        "effective_pts": 9.29,
+        "xmin": 86.6,
+        "fixture": "NEW (H)"
+      },
+      "vice_captain": {
+        "name": "Thiago",
+        "effective_pts": 6.67
+      },
+      "starting_xi": [
+        {
+          "name": "D\u00fabravka",
+          "position": "GK",
+          "team": "BUR",
+          "effective_pts": 3.38,
+          "projected_pts": 3.38,
+          "xmin": 90,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
+          "is_dgw": false
+        },
+        {
+          "name": "Dorgu",
+          "position": "DEF",
+          "team": "MUN",
+          "effective_pts": 4.05,
+          "projected_pts": 4.05,
+          "xmin": 90,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
+          "is_dgw": false
+        },
+        {
+          "name": "Virgil",
+          "position": "DEF",
+          "team": "LIV",
+          "effective_pts": 3.58,
+          "projected_pts": 3.58,
+          "xmin": 90,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.42,
+          "projected_pts": 3.52,
+          "xmin": 87.4,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "name": "Tarkowski",
+          "position": "DEF",
+          "team": "EVE",
+          "effective_pts": 3.38,
+          "projected_pts": 3.38,
+          "xmin": 90,
+          "fixture": "MUN (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 6.34,
+          "projected_pts": 6.43,
+          "xmin": 88.8,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "name": "Cunha",
+          "position": "MID",
+          "team": "MUN",
+          "effective_pts": 4.26,
+          "projected_pts": 4.26,
+          "xmin": 90,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
+          "is_dgw": false
+        },
+        {
+          "name": "Foden",
+          "position": "MID",
+          "team": "MCI",
+          "effective_pts": 3.51,
+          "projected_pts": 6.14,
+          "xmin": 51.4,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "name": "Haaland",
+          "position": "FWD",
+          "team": "MCI",
+          "effective_pts": 9.29,
+          "projected_pts": 9.65,
+          "xmin": 86.6,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "name": "Thiago",
+          "position": "FWD",
+          "team": "BRE",
+          "effective_pts": 6.67,
+          "projected_pts": 6.83,
+          "xmin": 87.9,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
+          "name": "Marc Guiu",
+          "position": "FWD",
+          "team": "CHE",
+          "effective_pts": 3.81,
+          "projected_pts": 4.23,
+          "xmin": 81.0,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        }
+      ],
+      "bench": [
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "effective_pts": 3.2,
+          "xmin": 90,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.06,
+          "xmin": 56.6,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Petrovi\u0107",
+          "position": "GK",
+          "effective_pts": 2.86,
+          "xmin": 81.0,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 0.72,
+          "xmin": 38.3,
+          "status": "available",
           "bench_order": 4
         }
       ],
