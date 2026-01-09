@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-08T06:27:40.063798",
+  "generated_at": "2026-01-09T06:27:18.174629",
   "team_id": 5033680,
   "next_gameweek": 22,
   "recommendations": [
     {
       "gameweek": 22,
       "formation": "4-3-3",
-      "total_effective_pts": 50.3,
+      "total_effective_pts": 50.2,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -100,8 +100,8 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.3,
-          "projected_pts": 4.3,
+          "effective_pts": 4.17,
+          "projected_pts": 4.17,
           "xmin": 90,
           "fixture": "BUR (H)",
           "difficulty": 0.9,
@@ -151,12 +151,20 @@
           "bench_order": 1
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 2.88,
+          "xmin": 76.8,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 2.86,
           "xmin": 81.0,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Gordon",
@@ -164,20 +172,12 @@
           "effective_pts": 2.73,
           "xmin": 57.1,
           "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0.72,
-          "xmin": 38.4,
-          "status": "available",
           "bench_order": 4
         }
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 3,
+        "low_xmin_count": 2,
         "needs_attention": false
       }
     },
@@ -286,14 +286,14 @@
           "is_dgw": false
         },
         {
-          "name": "Wirtz",
+          "name": "Gordon",
           "position": "MID",
-          "team": "LIV",
-          "effective_pts": 3.23,
-          "projected_pts": 3.23,
-          "xmin": 90,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
+          "team": "NEW",
+          "effective_pts": 3.22,
+          "projected_pts": 5.08,
+          "xmin": 57.1,
+          "fixture": "AVL (H)",
+          "difficulty": 1.0,
           "is_dgw": false
         },
         {
@@ -321,10 +321,10 @@
       ],
       "bench": [
         {
-          "name": "Gordon",
+          "name": "Wirtz",
           "position": "MID",
-          "effective_pts": 3.22,
-          "xmin": 57.1,
+          "effective_pts": 3.18,
+          "xmin": 90,
           "status": "available",
           "bench_order": 1
         },
@@ -337,32 +337,32 @@
           "bench_order": 2
         },
         {
-          "name": "Petrovi\u0107",
-          "position": "GK",
-          "effective_pts": 2.86,
-          "xmin": 81.0,
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 2.88,
+          "xmin": 76.8,
           "status": "available",
           "bench_order": 3
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0.72,
-          "xmin": 38.4,
+          "name": "Petrovi\u0107",
+          "position": "GK",
+          "effective_pts": 2.86,
+          "xmin": 81.0,
           "status": "available",
           "bench_order": 4
         }
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 3,
+        "low_xmin_count": 2,
         "needs_attention": false
       }
     },
     {
       "gameweek": 24,
       "formation": "4-4-2",
-      "total_effective_pts": 49.3,
+      "total_effective_pts": 49.2,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -456,8 +456,8 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.13,
-          "projected_pts": 4.13,
+          "effective_pts": 4.02,
+          "projected_pts": 4.02,
           "xmin": 90,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
@@ -515,32 +515,32 @@
           "bench_order": 2
         },
         {
-          "name": "Petrovi\u0107",
-          "position": "GK",
-          "effective_pts": 2.86,
-          "xmin": 81.0,
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 2.88,
+          "xmin": 76.8,
           "status": "available",
           "bench_order": 3
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0.72,
-          "xmin": 38.4,
+          "name": "Petrovi\u0107",
+          "position": "GK",
+          "effective_pts": 2.86,
+          "xmin": 81.0,
           "status": "available",
           "bench_order": 4
         }
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 3,
+        "low_xmin_count": 2,
         "needs_attention": false
       }
     },
     {
       "gameweek": 25,
       "formation": "4-4-2",
-      "total_effective_pts": 51.2,
+      "total_effective_pts": 51.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -620,17 +620,6 @@
           "is_dgw": false
         },
         {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 4.17,
-          "projected_pts": 4.17,
-          "xmin": 90,
-          "fixture": "MCI (H)",
-          "difficulty": 0.96,
-          "is_dgw": false
-        },
-        {
           "name": "Cunha",
           "position": "MID",
           "team": "MUN",
@@ -639,6 +628,17 @@
           "xmin": 90,
           "fixture": "TOT (H)",
           "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "team": "LIV",
+          "effective_pts": 4.05,
+          "projected_pts": 4.05,
+          "xmin": 90,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
           "is_dgw": false
         },
         {
@@ -693,32 +693,32 @@
           "bench_order": 2
         },
         {
-          "name": "Petrovi\u0107",
-          "position": "GK",
-          "effective_pts": 2.86,
-          "xmin": 81.0,
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 2.88,
+          "xmin": 76.8,
           "status": "available",
           "bench_order": 3
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0.72,
-          "xmin": 38.4,
+          "name": "Petrovi\u0107",
+          "position": "GK",
+          "effective_pts": 2.86,
+          "xmin": 81.0,
           "status": "available",
           "bench_order": 4
         }
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 3,
+        "low_xmin_count": 2,
         "needs_attention": false
       }
     },
     {
       "gameweek": 26,
       "formation": "4-3-3",
-      "total_effective_pts": 53.6,
+      "total_effective_pts": 53.5,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -812,8 +812,8 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 3.32,
-          "projected_pts": 3.32,
+          "effective_pts": 3.25,
+          "projected_pts": 3.25,
           "xmin": 90,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
@@ -863,12 +863,20 @@
           "bench_order": 1
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 2.88,
+          "xmin": 76.8,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 2.86,
           "xmin": 81.0,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Gordon",
@@ -876,20 +884,12 @@
           "effective_pts": 2.63,
           "xmin": 57.1,
           "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0.72,
-          "xmin": 38.4,
-          "status": "available",
           "bench_order": 4
         }
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 3,
+        "low_xmin_count": 2,
         "needs_attention": false
       }
     },
@@ -1035,7 +1035,7 @@
         {
           "name": "Wirtz",
           "position": "MID",
-          "effective_pts": 3.2,
+          "effective_pts": 3.15,
           "xmin": 90,
           "status": "available",
           "bench_order": 1
@@ -1049,25 +1049,25 @@
           "bench_order": 2
         },
         {
-          "name": "Petrovi\u0107",
-          "position": "GK",
-          "effective_pts": 2.86,
-          "xmin": 81.0,
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 2.88,
+          "xmin": 76.8,
           "status": "available",
           "bench_order": 3
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 0.72,
-          "xmin": 38.4,
+          "name": "Petrovi\u0107",
+          "position": "GK",
+          "effective_pts": 2.86,
+          "xmin": 81.0,
           "status": "available",
           "bench_order": 4
         }
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 3,
+        "low_xmin_count": 2,
         "needs_attention": false
       }
     }
