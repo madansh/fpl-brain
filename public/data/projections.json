@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T06:27:18.165735",
+  "generated_at": "2026-01-10T06:24:07.517441",
   "next_gameweek": 22,
   "top_by_position": {
     "GK": [
@@ -10,7 +10,7 @@
         "team_id": 12,
         "position": 1,
         "price": 5.4,
-        "ownership": "5.9",
+        "ownership": "6.0",
         "form": "5.0",
         "form_trend": "neutral",
         "news": "",
@@ -128,7 +128,7 @@
         "team_id": 1,
         "position": 1,
         "price": 5.9,
-        "ownership": "33.6",
+        "ownership": "33.7",
         "form": "3.3",
         "form_trend": "neutral",
         "news": "",
@@ -948,124 +948,6 @@
         "data_quality": "approximated"
       },
       {
-        "player_id": 32,
-        "name": "Martinez",
-        "team": "AVL",
-        "team_id": 2,
-        "position": 1,
-        "price": 5.0,
-        "ownership": "3.6",
-        "form": "1.7",
-        "form_trend": "cold",
-        "news": "",
-        "chance_of_playing": 100,
-        "xg_p90": 0.0,
-        "xa_p90": 0.0,
-        "next_gw_pts": 3.31,
-        "next_fixture": "EVE (H)",
-        "next_fixture_diff": 0.98,
-        "has_dgw_soon": false,
-        "dgw_gws": [],
-        "next_4gw_pts": 13.2,
-        "next_6gw_pts": 19.9,
-        "avg_difficulty_4gw": 1.62,
-        "fixtures": [
-          {
-            "gw": 22,
-            "projected_pts": 3.31,
-            "opponent": "EVE (H)",
-            "is_home": true,
-            "difficulty": 0.98,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 23,
-            "projected_pts": 3.31,
-            "opponent": "NEW (A)",
-            "is_home": false,
-            "difficulty": 1.2,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 24,
-            "projected_pts": 3.31,
-            "opponent": "BRE (H)",
-            "is_home": true,
-            "difficulty": 1.11,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 25,
-            "projected_pts": 3.31,
-            "opponent": "BOU (A)",
-            "is_home": false,
-            "difficulty": 1.2,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 26,
-            "projected_pts": 3.31,
-            "opponent": "BHA (H)",
-            "is_home": true,
-            "difficulty": 1.08,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 27,
-            "projected_pts": 3.31,
-            "opponent": "LEE (H)",
-            "is_home": true,
-            "difficulty": 0.9,
-            "is_dgw": false,
-            "is_bgw": false
-          }
-        ],
-        "fixture_preview": [
-          {
-            "gw": 22,
-            "fixture": "EVE (H)",
-            "difficulty": 0.98,
-            "is_dgw": false
-          },
-          {
-            "gw": 23,
-            "fixture": "NEW (A)",
-            "difficulty": 1.2,
-            "is_dgw": false
-          },
-          {
-            "gw": 24,
-            "fixture": "BRE (H)",
-            "difficulty": 1.11,
-            "is_dgw": false
-          },
-          {
-            "gw": 25,
-            "fixture": "BOU (A)",
-            "difficulty": 1.2,
-            "is_dgw": false
-          },
-          {
-            "gw": 26,
-            "fixture": "BHA (H)",
-            "difficulty": 1.08,
-            "is_dgw": false
-          },
-          {
-            "gw": 27,
-            "fixture": "LEE (H)",
-            "difficulty": 0.9,
-            "is_dgw": false
-          }
-        ],
-        "data_quality": "approximated"
-      },
-      {
         "player_id": 502,
         "name": "Sels",
         "team": "NFO",
@@ -1308,7 +1190,7 @@
         "team_id": 13,
         "position": 1,
         "price": 5.7,
-        "ownership": "10.3",
+        "ownership": "10.2",
         "form": "4.3",
         "form_trend": "neutral",
         "news": "",
@@ -1662,7 +1544,7 @@
         "team_id": 17,
         "position": 1,
         "price": 4.9,
-        "ownership": "12.1",
+        "ownership": "12.2",
         "form": "5.2",
         "form_trend": "neutral",
         "news": "",
@@ -1772,6 +1654,124 @@
           }
         ],
         "data_quality": "approximated"
+      },
+      {
+        "player_id": 67,
+        "name": "Petrovi\u0107",
+        "team": "BOU",
+        "team_id": 4,
+        "position": 1,
+        "price": 4.5,
+        "ownership": "4.6",
+        "form": "0.8",
+        "form_trend": "cold",
+        "news": "",
+        "chance_of_playing": null,
+        "xg_p90": 0.0,
+        "xa_p90": 0.0,
+        "next_gw_pts": 3.18,
+        "next_fixture": "BHA (A)",
+        "next_fixture_diff": 1.32,
+        "has_dgw_soon": false,
+        "dgw_gws": [],
+        "next_4gw_pts": 12.7,
+        "next_6gw_pts": 19.1,
+        "avg_difficulty_4gw": 1.79,
+        "fixtures": [
+          {
+            "gw": 22,
+            "projected_pts": 3.18,
+            "opponent": "BHA (A)",
+            "is_home": false,
+            "difficulty": 1.32,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 23,
+            "projected_pts": 3.18,
+            "opponent": "LIV (H)",
+            "is_home": true,
+            "difficulty": 0.77,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 24,
+            "projected_pts": 3.18,
+            "opponent": "WOL (A)",
+            "is_home": false,
+            "difficulty": 1.37,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 25,
+            "projected_pts": 3.18,
+            "opponent": "AVL (H)",
+            "is_home": true,
+            "difficulty": 1.0,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 26,
+            "projected_pts": 3.18,
+            "opponent": "EVE (A)",
+            "is_home": false,
+            "difficulty": 1.19,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 27,
+            "projected_pts": 3.18,
+            "opponent": "WHU (A)",
+            "is_home": false,
+            "difficulty": 1.5,
+            "is_dgw": false,
+            "is_bgw": false
+          }
+        ],
+        "fixture_preview": [
+          {
+            "gw": 22,
+            "fixture": "BHA (A)",
+            "difficulty": 1.32,
+            "is_dgw": false
+          },
+          {
+            "gw": 23,
+            "fixture": "LIV (H)",
+            "difficulty": 0.77,
+            "is_dgw": false
+          },
+          {
+            "gw": 24,
+            "fixture": "WOL (A)",
+            "difficulty": 1.37,
+            "is_dgw": false
+          },
+          {
+            "gw": 25,
+            "fixture": "AVL (H)",
+            "difficulty": 1.0,
+            "is_dgw": false
+          },
+          {
+            "gw": 26,
+            "fixture": "EVE (A)",
+            "difficulty": 1.19,
+            "is_dgw": false
+          },
+          {
+            "gw": 27,
+            "fixture": "WHU (A)",
+            "difficulty": 1.5,
+            "is_dgw": false
+          }
+        ],
+        "data_quality": "approximated"
       }
     ],
     "DEF": [
@@ -1782,7 +1782,7 @@
         "team_id": 12,
         "position": 2,
         "price": 5.7,
-        "ownership": "5.6",
+        "ownership": "5.7",
         "form": "4.2",
         "form_trend": "neutral",
         "news": "",
@@ -2372,7 +2372,7 @@
         "team_id": 1,
         "position": 2,
         "price": 6.7,
-        "ownership": "30.5",
+        "ownership": "31.1",
         "form": "5.2",
         "form_trend": "cold",
         "news": "",
@@ -2490,7 +2490,7 @@
         "team_id": 1,
         "position": 2,
         "price": 6.3,
-        "ownership": "27.2",
+        "ownership": "27.3",
         "form": "4.3",
         "form_trend": "neutral",
         "news": "",
@@ -2844,7 +2844,7 @@
         "team_id": 14,
         "position": 2,
         "price": 4.5,
-        "ownership": "4.4",
+        "ownership": "4.3",
         "form": "3.3",
         "form_trend": "neutral",
         "news": "",
@@ -3198,7 +3198,7 @@
         "team_id": 2,
         "position": 2,
         "price": 4.8,
-        "ownership": "10.6",
+        "ownership": "10.7",
         "form": "2.3",
         "form_trend": "cold",
         "news": "",
@@ -3672,7 +3672,7 @@
         "team_id": 13,
         "position": 3,
         "price": 6.8,
-        "ownership": "16.0",
+        "ownership": "15.8",
         "form": "5.5",
         "form_trend": "neutral",
         "news": "",
@@ -3784,131 +3784,13 @@
         "data_quality": "approximated"
       },
       {
-        "player_id": 82,
-        "name": "Semenyo",
-        "team": "BOU",
-        "team_id": 4,
-        "position": 3,
-        "price": 7.6,
-        "ownership": "43.7",
-        "form": "6.2",
-        "form_trend": "neutral",
-        "news": "",
-        "chance_of_playing": 100,
-        "xg_p90": 0.5,
-        "xa_p90": 0.25,
-        "next_gw_pts": 6.14,
-        "next_fixture": "BHA (A)",
-        "next_fixture_diff": 1.32,
-        "has_dgw_soon": false,
-        "dgw_gws": [],
-        "next_4gw_pts": 28.4,
-        "next_6gw_pts": 40.6,
-        "avg_difficulty_4gw": 1.79,
-        "fixtures": [
-          {
-            "gw": 22,
-            "projected_pts": 6.14,
-            "opponent": "BHA (A)",
-            "is_home": false,
-            "difficulty": 1.32,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 23,
-            "projected_pts": 8.89,
-            "opponent": "LIV (H)",
-            "is_home": true,
-            "difficulty": 0.77,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 24,
-            "projected_pts": 5.98,
-            "opponent": "WOL (A)",
-            "is_home": false,
-            "difficulty": 1.37,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 25,
-            "projected_pts": 7.36,
-            "opponent": "AVL (H)",
-            "is_home": true,
-            "difficulty": 1.0,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 26,
-            "projected_pts": 6.53,
-            "opponent": "EVE (A)",
-            "is_home": false,
-            "difficulty": 1.19,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 27,
-            "projected_pts": 5.66,
-            "opponent": "WHU (A)",
-            "is_home": false,
-            "difficulty": 1.5,
-            "is_dgw": false,
-            "is_bgw": false
-          }
-        ],
-        "fixture_preview": [
-          {
-            "gw": 22,
-            "fixture": "BHA (A)",
-            "difficulty": 1.32,
-            "is_dgw": false
-          },
-          {
-            "gw": 23,
-            "fixture": "LIV (H)",
-            "difficulty": 0.77,
-            "is_dgw": false
-          },
-          {
-            "gw": 24,
-            "fixture": "WOL (A)",
-            "difficulty": 1.37,
-            "is_dgw": false
-          },
-          {
-            "gw": 25,
-            "fixture": "AVL (H)",
-            "difficulty": 1.0,
-            "is_dgw": false
-          },
-          {
-            "gw": 26,
-            "fixture": "EVE (A)",
-            "difficulty": 1.19,
-            "is_dgw": false
-          },
-          {
-            "gw": 27,
-            "fixture": "WHU (A)",
-            "difficulty": 1.5,
-            "is_dgw": false
-          }
-        ],
-        "data_quality": "approximated"
-      },
-      {
         "player_id": 449,
         "name": "B.Fernandes",
         "team": "MUN",
         "team_id": 14,
         "position": 3,
         "price": 9.1,
-        "ownership": "12.1",
+        "ownership": "12.5",
         "form": "3.5",
         "form_trend": "cold",
         "news": "",
@@ -4143,8 +4025,8 @@
         "team": "FUL",
         "team_id": 10,
         "position": 3,
-        "price": 5.8,
-        "ownership": "19.6",
+        "price": 5.9,
+        "ownership": "20.1",
         "form": "6.7",
         "form_trend": "hot",
         "news": "",
@@ -4498,7 +4380,7 @@
         "team_id": 18,
         "position": 3,
         "price": 6.2,
-        "ownership": "0.1",
+        "ownership": "0.2",
         "form": "2.3",
         "form_trend": "neutral",
         "news": "",
@@ -4610,13 +4492,131 @@
         "data_quality": "approximated"
       },
       {
+        "player_id": 82,
+        "name": "Semenyo",
+        "team": "MCI",
+        "team_id": 13,
+        "position": 3,
+        "price": 7.6,
+        "ownership": "43.3",
+        "form": "6.2",
+        "form_trend": "neutral",
+        "news": "",
+        "chance_of_playing": 100,
+        "xg_p90": 0.5,
+        "xa_p90": 0.25,
+        "next_gw_pts": 6.04,
+        "next_fixture": "MUN (A)",
+        "next_fixture_diff": 1.35,
+        "has_dgw_soon": false,
+        "dgw_gws": [],
+        "next_4gw_pts": 26.2,
+        "next_6gw_pts": 41.7,
+        "avg_difficulty_4gw": 1.7,
+        "fixtures": [
+          {
+            "gw": 22,
+            "projected_pts": 6.04,
+            "opponent": "MUN (A)",
+            "is_home": false,
+            "difficulty": 1.35,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 23,
+            "projected_pts": 6.82,
+            "opponent": "WOL (H)",
+            "is_home": true,
+            "difficulty": 1.12,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 24,
+            "projected_pts": 5.67,
+            "opponent": "TOT (A)",
+            "is_home": false,
+            "difficulty": 1.5,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 25,
+            "projected_pts": 7.69,
+            "opponent": "LIV (A)",
+            "is_home": false,
+            "difficulty": 0.94,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 26,
+            "projected_pts": 7.97,
+            "opponent": "FUL (H)",
+            "is_home": true,
+            "difficulty": 0.9,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 27,
+            "projected_pts": 7.46,
+            "opponent": "NEW (H)",
+            "is_home": true,
+            "difficulty": 0.98,
+            "is_dgw": false,
+            "is_bgw": false
+          }
+        ],
+        "fixture_preview": [
+          {
+            "gw": 22,
+            "fixture": "MUN (A)",
+            "difficulty": 1.35,
+            "is_dgw": false
+          },
+          {
+            "gw": 23,
+            "fixture": "WOL (H)",
+            "difficulty": 1.12,
+            "is_dgw": false
+          },
+          {
+            "gw": 24,
+            "fixture": "TOT (A)",
+            "difficulty": 1.5,
+            "is_dgw": false
+          },
+          {
+            "gw": 25,
+            "fixture": "LIV (A)",
+            "difficulty": 0.94,
+            "is_dgw": false
+          },
+          {
+            "gw": 26,
+            "fixture": "FUL (H)",
+            "difficulty": 0.9,
+            "is_dgw": false
+          },
+          {
+            "gw": 27,
+            "fixture": "NEW (H)",
+            "difficulty": 0.98,
+            "is_dgw": false
+          }
+        ],
+        "data_quality": "approximated"
+      },
+      {
         "player_id": 50,
         "name": "Buend\u00eda",
         "team": "AVL",
         "team_id": 2,
         "position": 3,
         "price": 5.3,
-        "ownership": "0.4",
+        "ownership": "0.3",
         "form": "1.7",
         "form_trend": "cold",
         "news": "",
@@ -4734,7 +4734,7 @@
         "team_id": 1,
         "position": 3,
         "price": 10.2,
-        "ownership": "20.3",
+        "ownership": "20.2",
         "form": "5.7",
         "form_trend": "neutral",
         "news": "",
@@ -4852,7 +4852,7 @@
         "team_id": 15,
         "position": 3,
         "price": 7.2,
-        "ownership": "20.8",
+        "ownership": "21.3",
         "form": "6.0",
         "form_trend": "neutral",
         "news": "",
@@ -5206,7 +5206,7 @@
         "team_id": 1,
         "position": 3,
         "price": 7.3,
-        "ownership": "9.4",
+        "ownership": "9.3",
         "form": "0.3",
         "form_trend": "cold",
         "news": "",
@@ -5680,7 +5680,7 @@
         "team_id": 11,
         "position": 4,
         "price": 6.0,
-        "ownership": "12.1",
+        "ownership": "12.4",
         "form": "6.8",
         "form_trend": "hot",
         "news": "",
@@ -5916,7 +5916,7 @@
         "team_id": 5,
         "position": 4,
         "price": 7.1,
-        "ownership": "33.5",
+        "ownership": "34.1",
         "form": "6.7",
         "form_trend": "neutral",
         "news": "",
@@ -6506,7 +6506,7 @@
         "team_id": 15,
         "position": 4,
         "price": 7.3,
-        "ownership": "16.1",
+        "ownership": "16.0",
         "form": "3.7",
         "form_trend": "neutral",
         "news": "",
@@ -6978,7 +6978,7 @@
         "team_id": 10,
         "position": 4,
         "price": 6.2,
-        "ownership": "2.0",
+        "ownership": "2.1",
         "form": "4.7",
         "form_trend": "hot",
         "news": "",
