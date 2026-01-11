@@ -5,8 +5,8 @@
   "bank": 0.6,
   "chips_available": [
     "bench_boost",
-    "triple_captain",
-    "free_hit"
+    "free_hit",
+    "triple_captain"
   ],
   "squad": [
     {
