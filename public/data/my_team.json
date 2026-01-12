@@ -4,8 +4,8 @@
   "next_gw": 22,
   "bank": 0.6,
   "chips_available": [
-    "bench_boost",
     "free_hit",
+    "bench_boost",
     "triple_captain"
   ],
   "squad": [
