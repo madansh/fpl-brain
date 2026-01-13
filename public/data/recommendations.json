@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T06:29:54.929796",
+  "generated_at": "2026-01-13T06:27:17.241274",
   "next_gameweek": 22,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
@@ -26,7 +26,7 @@
       "doubled_pts": 13.3,
       "fixture": "CHE (A)",
       "fixture_difficulty": 1.21,
-      "ownership": 34.5,
+      "ownership": 34.6,
       "form": "6.7",
       "form_trend": "neutral",
       "is_differential": false,
@@ -56,7 +56,7 @@
       "doubled_pts": 9.9,
       "fixture": "MUN (A)",
       "fixture_difficulty": 1.35,
-      "ownership": 33.9,
+      "ownership": 33.7,
       "form": "3.8",
       "form_trend": "neutral",
       "is_differential": false,
@@ -71,7 +71,7 @@
       "doubled_pts": 9.2,
       "fixture": "MCI (H)",
       "fixture_difficulty": 0.96,
-      "ownership": 12.3,
+      "ownership": 12.2,
       "form": "5.3",
       "form_trend": "hot",
       "is_differential": true,
