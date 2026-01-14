@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-13T06:27:17.241274",
+  "generated_at": "2026-01-14T06:27:23.447675",
   "next_gameweek": 22,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
@@ -11,8 +11,8 @@
       "doubled_pts": 15.1,
       "fixture": "MUN (A)",
       "fixture_difficulty": 1.35,
-      "ownership": 74.3,
-      "form": "6.8",
+      "ownership": 74.2,
+      "form": "5.6",
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
@@ -26,9 +26,9 @@
       "doubled_pts": 13.3,
       "fixture": "CHE (A)",
       "fixture_difficulty": 1.21,
-      "ownership": 34.6,
-      "form": "6.7",
-      "form_trend": "neutral",
+      "ownership": 34.7,
+      "form": "7.6",
+      "form_trend": "hot",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -41,9 +41,9 @@
       "doubled_pts": 11.8,
       "fixture": "EVE (H)",
       "fixture_difficulty": 0.98,
-      "ownership": 31.8,
-      "form": "6.7",
-      "form_trend": "hot",
+      "ownership": 31.9,
+      "form": "5.0",
+      "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -56,9 +56,9 @@
       "doubled_pts": 9.9,
       "fixture": "MUN (A)",
       "fixture_difficulty": 1.35,
-      "ownership": 33.7,
-      "form": "3.8",
-      "form_trend": "neutral",
+      "ownership": 33.3,
+      "form": "2.4",
+      "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -71,7 +71,7 @@
       "doubled_pts": 9.2,
       "fixture": "MCI (H)",
       "fixture_difficulty": 0.96,
-      "ownership": 12.2,
+      "ownership": 12.0,
       "form": "5.3",
       "form_trend": "hot",
       "is_differential": true,
@@ -121,6 +121,52 @@
           "gw": 25,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "approximated"
+    },
+    {
+      "priority": 2,
+      "out_id": 414,
+      "out_name": "Foden",
+      "out_reasons": [
+        "cold_form",
+        "hard_fixtures"
+      ],
+      "in_id": 385,
+      "in_name": "Chiesa",
+      "in_team": "LIV",
+      "in_cost": 6.3,
+      "gain_4gw": 20.2,
+      "buy_reasons": [],
+      "worth_hit": true,
+      "hit_value": 14.9,
+      "value_score": 6.57,
+      "position": 3,
+      "fixtures": [
+        {
+          "gw": 22,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 23,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 24,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 25,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
           "is_dgw": false
         }
       ],
