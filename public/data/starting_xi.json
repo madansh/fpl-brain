@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-14T06:27:23.456879",
+  "generated_at": "2026-01-15T06:27:06.122862",
   "team_id": 5033680,
   "next_gameweek": 22,
   "recommendations": [
     {
       "gameweek": 22,
       "formation": "4-3-3",
-      "total_effective_pts": 50.3,
+      "total_effective_pts": 50.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -89,9 +89,9 @@
           "name": "Cunha",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 4.62,
+          "effective_pts": 4.4,
           "projected_pts": 4.62,
-          "xmin": 90,
+          "xmin": 85.8,
           "fixture": "MCI (H)",
           "difficulty": 0.96,
           "is_dgw": false
@@ -184,7 +184,7 @@
     {
       "gameweek": 23,
       "formation": "4-3-3",
-      "total_effective_pts": 50.8,
+      "total_effective_pts": 50.6,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -267,9 +267,9 @@
           "name": "Cunha",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 4.82,
+          "effective_pts": 4.6,
           "projected_pts": 4.82,
-          "xmin": 90,
+          "xmin": 85.8,
           "fixture": "ARS (A)",
           "difficulty": 0.89,
           "is_dgw": false
@@ -362,7 +362,7 @@
     {
       "gameweek": 24,
       "formation": "4-4-2",
-      "total_effective_pts": 49.3,
+      "total_effective_pts": 49.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -445,9 +445,9 @@
           "name": "Cunha",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 4.8,
+          "effective_pts": 4.58,
           "projected_pts": 4.8,
-          "xmin": 90,
+          "xmin": 85.8,
           "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -540,7 +540,7 @@
     {
       "gameweek": 25,
       "formation": "4-4-2",
-      "total_effective_pts": 50.8,
+      "total_effective_pts": 50.7,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -620,17 +620,6 @@
           "is_dgw": false
         },
         {
-          "name": "Cunha",
-          "position": "MID",
-          "team": "MUN",
-          "effective_pts": 4.07,
-          "projected_pts": 4.07,
-          "xmin": 90,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
@@ -639,6 +628,17 @@
           "xmin": 90,
           "fixture": "MCI (H)",
           "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "name": "Cunha",
+          "position": "MID",
+          "team": "MUN",
+          "effective_pts": 3.88,
+          "projected_pts": 4.07,
+          "xmin": 85.8,
+          "fixture": "TOT (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         },
         {
@@ -857,8 +857,8 @@
         {
           "name": "Cunha",
           "position": "MID",
-          "effective_pts": 3.21,
-          "xmin": 90,
+          "effective_pts": 3.06,
+          "xmin": 85.8,
           "status": "available",
           "bench_order": 1
         },
@@ -896,7 +896,7 @@
     {
       "gameweek": 27,
       "formation": "4-3-3",
-      "total_effective_pts": 52.0,
+      "total_effective_pts": 51.8,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -979,9 +979,9 @@
           "name": "Cunha",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 4.15,
+          "effective_pts": 3.96,
           "projected_pts": 4.15,
-          "xmin": 90,
+          "xmin": 85.8,
           "fixture": "EVE (A)",
           "difficulty": 1.19,
           "is_dgw": false

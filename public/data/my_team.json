@@ -212,7 +212,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.6,
+      "selling_price": 7.7,
       "projected_pts": 5.91,
       "projected_4gw": 21.9,
       "form_trend": "neutral",
@@ -290,10 +290,10 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 8.2,
+      "selling_price": 8.1,
       "projected_pts": 4.62,
       "projected_4gw": 18.3,
-      "form_trend": "hot",
+      "form_trend": "neutral",
       "fixture_preview": [
         {
           "gw": 22,
