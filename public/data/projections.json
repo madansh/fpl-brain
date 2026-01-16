@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T06:27:06.113846",
+  "generated_at": "2026-01-16T06:27:41.926347",
   "next_gameweek": 22,
   "top_by_position": {
     "GK": [
@@ -1190,7 +1190,7 @@
         "team_id": 13,
         "position": 1,
         "price": 5.7,
-        "ownership": "10.1",
+        "ownership": "10.0",
         "form": "3.8",
         "form_trend": "neutral",
         "news": "",
@@ -1544,7 +1544,7 @@
         "team_id": 17,
         "position": 1,
         "price": 4.9,
-        "ownership": "12.4",
+        "ownership": "12.5",
         "form": "4.4",
         "form_trend": "neutral",
         "news": "",
@@ -1662,7 +1662,7 @@
         "team_id": 4,
         "position": 1,
         "price": 4.5,
-        "ownership": "4.6",
+        "ownership": "4.5",
         "form": "0.8",
         "form_trend": "cold",
         "news": "",
@@ -1782,7 +1782,7 @@
         "team_id": 12,
         "position": 2,
         "price": 5.7,
-        "ownership": "5.9",
+        "ownership": "6.1",
         "form": "5.0",
         "form_trend": "hot",
         "news": "",
@@ -2248,131 +2248,13 @@
         "data_quality": "approximated"
       },
       {
-        "player_id": 442,
-        "name": "Maguire",
-        "team": "MUN",
-        "team_id": 14,
-        "position": 2,
-        "price": 4.3,
-        "ownership": "0.5",
-        "form": "0.0",
-        "form_trend": "cold",
-        "news": "",
-        "chance_of_playing": 100,
-        "xg_p90": 0.264,
-        "xa_p90": 0.264,
-        "next_gw_pts": 6.39,
-        "next_fixture": "MCI (H)",
-        "next_fixture_diff": 0.96,
-        "has_dgw_soon": false,
-        "dgw_gws": [],
-        "next_4gw_pts": 25.3,
-        "next_6gw_pts": 36.3,
-        "avg_difficulty_4gw": 1.67,
-        "fixtures": [
-          {
-            "gw": 22,
-            "projected_pts": 6.39,
-            "opponent": "MCI (H)",
-            "is_home": true,
-            "difficulty": 0.96,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 23,
-            "projected_pts": 6.66,
-            "opponent": "ARS (A)",
-            "is_home": false,
-            "difficulty": 0.89,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 24,
-            "projected_pts": 6.63,
-            "opponent": "FUL (H)",
-            "is_home": true,
-            "difficulty": 0.9,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 25,
-            "projected_pts": 5.65,
-            "opponent": "TOT (H)",
-            "is_home": true,
-            "difficulty": 1.24,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 26,
-            "projected_pts": 5.21,
-            "opponent": "WHU (A)",
-            "is_home": false,
-            "difficulty": 1.5,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 27,
-            "projected_pts": 5.75,
-            "opponent": "EVE (A)",
-            "is_home": false,
-            "difficulty": 1.19,
-            "is_dgw": false,
-            "is_bgw": false
-          }
-        ],
-        "fixture_preview": [
-          {
-            "gw": 22,
-            "fixture": "MCI (H)",
-            "difficulty": 0.96,
-            "is_dgw": false
-          },
-          {
-            "gw": 23,
-            "fixture": "ARS (A)",
-            "difficulty": 0.89,
-            "is_dgw": false
-          },
-          {
-            "gw": 24,
-            "fixture": "FUL (H)",
-            "difficulty": 0.9,
-            "is_dgw": false
-          },
-          {
-            "gw": 25,
-            "fixture": "TOT (H)",
-            "difficulty": 1.24,
-            "is_dgw": false
-          },
-          {
-            "gw": 26,
-            "fixture": "WHU (A)",
-            "difficulty": 1.5,
-            "is_dgw": false
-          },
-          {
-            "gw": 27,
-            "fixture": "EVE (A)",
-            "difficulty": 1.19,
-            "is_dgw": false
-          }
-        ],
-        "data_quality": "approximated"
-      },
-      {
         "player_id": 5,
         "name": "Gabriel",
         "team": "ARS",
         "team_id": 1,
         "position": 2,
         "price": 6.7,
-        "ownership": "32.2",
+        "ownership": "32.6",
         "form": "6.2",
         "form_trend": "neutral",
         "news": "",
@@ -2726,7 +2608,7 @@
         "team_id": 14,
         "position": 2,
         "price": 4.5,
-        "ownership": "4.2",
+        "ownership": "4.1",
         "form": "3.6",
         "form_trend": "neutral",
         "news": "",
@@ -3198,7 +3080,7 @@
         "team_id": 2,
         "position": 2,
         "price": 4.8,
-        "ownership": "10.8",
+        "ownership": "10.9",
         "form": "2.8",
         "form_trend": "cold",
         "news": "",
@@ -3544,6 +3426,124 @@
           }
         ],
         "data_quality": "approximated"
+      },
+      {
+        "player_id": 260,
+        "name": "Gu\u00e9hi",
+        "team": "CRY",
+        "team_id": 8,
+        "position": 2,
+        "price": 5.3,
+        "ownership": "39.8",
+        "form": "2.6",
+        "form_trend": "cold",
+        "news": "",
+        "chance_of_playing": 100,
+        "xg_p90": 0.1,
+        "xa_p90": 0.2,
+        "next_gw_pts": 4.67,
+        "next_fixture": "SUN (A)",
+        "next_fixture_diff": 1.1,
+        "has_dgw_soon": false,
+        "dgw_gws": [],
+        "next_4gw_pts": 18.4,
+        "next_6gw_pts": 28.1,
+        "avg_difficulty_4gw": 1.67,
+        "fixtures": [
+          {
+            "gw": 22,
+            "projected_pts": 4.67,
+            "opponent": "SUN (A)",
+            "is_home": false,
+            "difficulty": 1.1,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 23,
+            "projected_pts": 4.84,
+            "opponent": "CHE (H)",
+            "is_home": true,
+            "difficulty": 0.99,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 24,
+            "projected_pts": 4.5,
+            "opponent": "NFO (A)",
+            "is_home": false,
+            "difficulty": 1.25,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 25,
+            "projected_pts": 4.42,
+            "opponent": "BHA (A)",
+            "is_home": false,
+            "difficulty": 1.32,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 26,
+            "projected_pts": 5.0,
+            "opponent": "BUR (H)",
+            "is_home": true,
+            "difficulty": 0.9,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 27,
+            "projected_pts": 4.64,
+            "opponent": "WOL (H)",
+            "is_home": true,
+            "difficulty": 1.12,
+            "is_dgw": false,
+            "is_bgw": false
+          }
+        ],
+        "fixture_preview": [
+          {
+            "gw": 22,
+            "fixture": "SUN (A)",
+            "difficulty": 1.1,
+            "is_dgw": false
+          },
+          {
+            "gw": 23,
+            "fixture": "CHE (H)",
+            "difficulty": 0.99,
+            "is_dgw": false
+          },
+          {
+            "gw": 24,
+            "fixture": "NFO (A)",
+            "difficulty": 1.25,
+            "is_dgw": false
+          },
+          {
+            "gw": 25,
+            "fixture": "BHA (A)",
+            "difficulty": 1.32,
+            "is_dgw": false
+          },
+          {
+            "gw": 26,
+            "fixture": "BUR (H)",
+            "difficulty": 0.9,
+            "is_dgw": false
+          },
+          {
+            "gw": 27,
+            "fixture": "WOL (H)",
+            "difficulty": 1.12,
+            "is_dgw": false
+          }
+        ],
+        "data_quality": "approximated"
       }
     ],
     "MID": [
@@ -3672,7 +3672,7 @@
         "team_id": 13,
         "position": 3,
         "price": 6.8,
-        "ownership": "15.4",
+        "ownership": "15.3",
         "form": "5.4",
         "form_trend": "neutral",
         "news": "",
@@ -3790,7 +3790,7 @@
         "team_id": 14,
         "position": 3,
         "price": 9.1,
-        "ownership": "12.9",
+        "ownership": "13.1",
         "form": "1.6",
         "form_trend": "cold",
         "news": "",
@@ -3908,7 +3908,7 @@
         "team_id": 2,
         "position": 3,
         "price": 5.1,
-        "ownership": "0.7",
+        "ownership": "0.6",
         "form": "1.6",
         "form_trend": "cold",
         "news": "",
@@ -4026,7 +4026,7 @@
         "team_id": 10,
         "position": 3,
         "price": 5.9,
-        "ownership": "20.9",
+        "ownership": "21.1",
         "form": "4.8",
         "form_trend": "neutral",
         "news": "",
@@ -4144,7 +4144,7 @@
         "team_id": 11,
         "position": 3,
         "price": 5.4,
-        "ownership": "0.5",
+        "ownership": "0.6",
         "form": "7.0",
         "form_trend": "hot",
         "news": "",
@@ -4498,7 +4498,7 @@
         "team_id": 13,
         "position": 3,
         "price": 7.6,
-        "ownership": "43.9",
+        "ownership": "44.2",
         "form": "6.2",
         "form_trend": "neutral",
         "news": "",
@@ -4734,7 +4734,7 @@
         "team_id": 1,
         "position": 3,
         "price": 10.2,
-        "ownership": "20.0",
+        "ownership": "19.9",
         "form": "4.6",
         "form_trend": "neutral",
         "news": "",
@@ -4852,7 +4852,7 @@
         "team_id": 15,
         "position": 3,
         "price": 7.2,
-        "ownership": "22.1",
+        "ownership": "22.4",
         "form": "7.0",
         "form_trend": "neutral",
         "news": "",
@@ -5680,7 +5680,7 @@
         "team_id": 11,
         "position": 4,
         "price": 6.0,
-        "ownership": "12.9",
+        "ownership": "13.0",
         "form": "6.4",
         "form_trend": "hot",
         "news": "",
@@ -5798,7 +5798,7 @@
         "team_id": 12,
         "position": 4,
         "price": 8.9,
-        "ownership": "26.1",
+        "ownership": "26.2",
         "form": "3.2",
         "form_trend": "cold",
         "news": "",
@@ -5916,7 +5916,7 @@
         "team_id": 5,
         "position": 4,
         "price": 7.1,
-        "ownership": "34.8",
+        "ownership": "34.9",
         "form": "7.6",
         "form_trend": "hot",
         "news": "",
@@ -6506,7 +6506,7 @@
         "team_id": 15,
         "position": 4,
         "price": 7.3,
-        "ownership": "15.9",
+        "ownership": "15.8",
         "form": "4.4",
         "form_trend": "neutral",
         "news": "",
