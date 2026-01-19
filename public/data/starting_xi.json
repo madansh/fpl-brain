@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-18T06:24:51.652902",
+  "generated_at": "2026-01-19T06:31:54.621481",
   "team_id": 5033680,
   "next_gameweek": 23,
   "recommendations": [
     {
       "gameweek": 23,
-      "formation": "4-4-2",
-      "total_effective_pts": 52.6,
+      "formation": "4-3-3",
+      "total_effective_pts": 52.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -78,9 +78,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.17,
-          "projected_pts": 5.23,
-          "xmin": 88.9,
+          "effective_pts": 5.03,
+          "projected_pts": 5.09,
+          "xmin": 89.0,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -108,17 +108,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gordon",
-          "position": "MID",
-          "team": "NEW",
-          "effective_pts": 3.22,
-          "projected_pts": 5.08,
-          "xmin": 57.1,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
-          "is_dgw": false
-        },
-        {
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
@@ -139,14 +128,25 @@
           "fixture": "NFO (H)",
           "difficulty": 1.02,
           "is_dgw": false
+        },
+        {
+          "name": "Marc Guiu",
+          "position": "FWD",
+          "team": "CHE",
+          "effective_pts": 3.18,
+          "projected_pts": 3.53,
+          "xmin": 81.0,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
+          "is_dgw": false
         }
       ],
       "bench": [
         {
-          "name": "Marc Guiu",
-          "position": "FWD",
-          "effective_pts": 3.18,
-          "xmin": 81.0,
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.09,
+          "xmin": 56.8,
           "status": "available",
           "bench_order": 1
         },
@@ -183,8 +183,8 @@
     },
     {
       "gameweek": 24,
-      "formation": "4-4-2",
-      "total_effective_pts": 51.2,
+      "formation": "4-3-3",
+      "total_effective_pts": 51.0,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -256,9 +256,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.41,
-          "projected_pts": 5.48,
-          "xmin": 88.9,
+          "effective_pts": 5.27,
+          "projected_pts": 5.33,
+          "xmin": 89.0,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -286,17 +286,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gordon",
-          "position": "MID",
-          "team": "NEW",
-          "effective_pts": 3.34,
-          "projected_pts": 5.26,
-          "xmin": 57.1,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
-          "is_dgw": false
-        },
-        {
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
@@ -317,14 +306,25 @@
           "fixture": "TOT (A)",
           "difficulty": 1.5,
           "is_dgw": false
+        },
+        {
+          "name": "Marc Guiu",
+          "position": "FWD",
+          "team": "CHE",
+          "effective_pts": 3.26,
+          "projected_pts": 3.62,
+          "xmin": 81.0,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
         }
       ],
       "bench": [
         {
-          "name": "Marc Guiu",
-          "position": "FWD",
-          "effective_pts": 3.26,
-          "xmin": 81.0,
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.2,
+          "xmin": 56.8,
           "status": "available",
           "bench_order": 1
         },
@@ -362,7 +362,7 @@
     {
       "gameweek": 25,
       "formation": "4-4-2",
-      "total_effective_pts": 53.1,
+      "total_effective_pts": 52.9,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -434,9 +434,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.17,
-          "projected_pts": 5.23,
-          "xmin": 88.9,
+          "effective_pts": 5.03,
+          "projected_pts": 5.09,
+          "xmin": 89.0,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -509,8 +509,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.05,
-          "xmin": 57.1,
+          "effective_pts": 2.93,
+          "xmin": 56.8,
           "status": "available",
           "bench_order": 2
         },
@@ -540,7 +540,7 @@
     {
       "gameweek": 26,
       "formation": "4-3-3",
-      "total_effective_pts": 56.8,
+      "total_effective_pts": 56.6,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -623,9 +623,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.5,
-          "projected_pts": 5.57,
-          "xmin": 88.9,
+          "effective_pts": 5.36,
+          "projected_pts": 5.42,
+          "xmin": 89.0,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
           "is_dgw": false
@@ -703,8 +703,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 2.63,
-          "xmin": 57.1,
+          "effective_pts": 2.54,
+          "xmin": 56.8,
           "status": "available",
           "bench_order": 4
         }
@@ -718,7 +718,7 @@
     {
       "gameweek": 27,
       "formation": "4-3-3",
-      "total_effective_pts": 54.0,
+      "total_effective_pts": 53.8,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -790,9 +790,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 6.15,
-          "projected_pts": 6.23,
-          "xmin": 88.9,
+          "effective_pts": 5.97,
+          "projected_pts": 6.04,
+          "xmin": 89.0,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -863,26 +863,26 @@
           "bench_order": 1
         },
         {
-          "name": "Gordon",
-          "position": "MID",
-          "effective_pts": 2.95,
-          "xmin": 57.1,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 2.86,
           "xmin": 81.0,
           "status": "available",
-          "bench_order": 3
+          "bench_order": 2
         },
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
           "effective_pts": 2.86,
           "xmin": 76.2,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 2.84,
+          "xmin": 56.8,
           "status": "available",
           "bench_order": 4
         }
@@ -896,7 +896,7 @@
     {
       "gameweek": 28,
       "formation": "4-3-3",
-      "total_effective_pts": 52.8,
+      "total_effective_pts": 52.7,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -979,9 +979,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.8,
-          "projected_pts": 4.86,
-          "xmin": 88.9,
+          "effective_pts": 4.69,
+          "projected_pts": 4.74,
+          "xmin": 89.0,
           "fixture": "WOL (A)",
           "difficulty": 1.37,
           "is_dgw": false
@@ -1035,8 +1035,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.27,
-          "xmin": 57.1,
+          "effective_pts": 3.14,
+          "xmin": 56.8,
           "status": "available",
           "bench_order": 1
         },
