@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-19T06:31:54.612187",
+  "generated_at": "2026-01-20T06:29:26.640611",
   "next_gameweek": 23,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
@@ -11,8 +11,8 @@
       "doubled_pts": 16.8,
       "fixture": "WOL (H)",
       "fixture_difficulty": 1.12,
-      "ownership": 74.2,
-      "form": "5.0",
+      "ownership": 74.1,
+      "form": "2.8",
       "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
@@ -26,9 +26,9 @@
       "doubled_pts": 14.5,
       "fixture": "NFO (H)",
       "fixture_difficulty": 1.02,
-      "ownership": 36.1,
-      "form": "6.7",
-      "form_trend": "neutral",
+      "ownership": 36.3,
+      "form": "7.6",
+      "form_trend": "hot",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -41,8 +41,8 @@
       "doubled_pts": 11.5,
       "fixture": "MUN (H)",
       "fixture_difficulty": 1.11,
-      "ownership": 35.1,
-      "form": "6.5",
+      "ownership": 35.3,
+      "form": "7.8",
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
@@ -56,8 +56,8 @@
       "doubled_pts": 10.8,
       "fixture": "WOL (H)",
       "fixture_difficulty": 1.12,
-      "ownership": 28.3,
-      "form": "2.2",
+      "ownership": 27.7,
+      "form": "2.0",
       "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
@@ -71,7 +71,7 @@
       "doubled_pts": 10.2,
       "fixture": "NEW (A)",
       "fixture_difficulty": 1.2,
-      "ownership": 32.2,
+      "ownership": 32.0,
       "form": "4.5",
       "form_trend": "neutral",
       "is_differential": false,
@@ -167,6 +167,52 @@
           "gw": 26,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "approximated"
+    },
+    {
+      "priority": 3,
+      "out_id": 430,
+      "out_name": "Haaland",
+      "out_reasons": [
+        "cold_form",
+        "hard_fixtures"
+      ],
+      "in_id": 181,
+      "in_name": "Kostoulas",
+      "in_team": "BHA",
+      "in_cost": 4.8,
+      "gain_4gw": 3.5,
+      "buy_reasons": [],
+      "worth_hit": false,
+      "hit_value": -1.8,
+      "value_score": 7.96,
+      "position": 4,
+      "fixtures": [
+        {
+          "gw": 23,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 24,
+          "fixture": "EVE (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 25,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "AVL (A)",
+          "difficulty": 1.22,
           "is_dgw": false
         }
       ],

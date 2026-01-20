@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-19T06:31:54.621481",
+  "generated_at": "2026-01-20T06:29:26.649835",
   "team_id": 5033680,
   "next_gameweek": 23,
   "recommendations": [
     {
       "gameweek": 23,
       "formation": "4-3-3",
-      "total_effective_pts": 52.4,
+      "total_effective_pts": 52.6,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -16,7 +16,7 @@
       },
       "vice_captain": {
         "name": "Thiago",
-        "effective_pts": 7.06
+        "effective_pts": 7.25
       },
       "starting_xi": [
         {
@@ -122,9 +122,9 @@
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
-          "effective_pts": 7.06,
+          "effective_pts": 7.25,
           "projected_pts": 7.25,
-          "xmin": 87.7,
+          "xmin": 90,
           "fixture": "NFO (H)",
           "difficulty": 1.02,
           "is_dgw": false
@@ -184,12 +184,12 @@
     {
       "gameweek": 24,
       "formation": "4-3-3",
-      "total_effective_pts": 51.0,
+      "total_effective_pts": 51.1,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
-        "effective_pts": 6.21,
-        "xmin": 87.7,
+        "effective_pts": 6.37,
+        "xmin": 90,
         "fixture": "AVL (A)"
       },
       "vice_captain": {
@@ -289,9 +289,9 @@
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
-          "effective_pts": 6.21,
+          "effective_pts": 6.37,
           "projected_pts": 6.37,
-          "xmin": 87.7,
+          "xmin": 90,
           "fixture": "AVL (A)",
           "difficulty": 1.22,
           "is_dgw": false
@@ -362,7 +362,7 @@
     {
       "gameweek": 25,
       "formation": "4-4-2",
-      "total_effective_pts": 52.9,
+      "total_effective_pts": 53.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -372,7 +372,7 @@
       },
       "vice_captain": {
         "name": "Thiago",
-        "effective_pts": 6.29
+        "effective_pts": 6.45
       },
       "starting_xi": [
         {
@@ -489,9 +489,9 @@
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
-          "effective_pts": 6.29,
+          "effective_pts": 6.45,
           "projected_pts": 6.45,
-          "xmin": 87.7,
+          "xmin": 90,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -540,12 +540,12 @@
     {
       "gameweek": 26,
       "formation": "4-3-3",
-      "total_effective_pts": 56.6,
+      "total_effective_pts": 56.9,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
-        "effective_pts": 9.11,
-        "xmin": 87.7,
+        "effective_pts": 9.35,
+        "xmin": 90,
         "fixture": "ARS (H)"
       },
       "vice_captain": {
@@ -645,9 +645,9 @@
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
-          "effective_pts": 9.11,
+          "effective_pts": 9.35,
           "projected_pts": 9.35,
-          "xmin": 87.7,
+          "xmin": 90,
           "fixture": "ARS (H)",
           "difficulty": 0.73,
           "is_dgw": false
@@ -718,7 +718,7 @@
     {
       "gameweek": 27,
       "formation": "4-3-3",
-      "total_effective_pts": 53.8,
+      "total_effective_pts": 54.0,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -728,7 +728,7 @@
       },
       "vice_captain": {
         "name": "Thiago",
-        "effective_pts": 6.79
+        "effective_pts": 6.97
       },
       "starting_xi": [
         {
@@ -834,9 +834,9 @@
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
-          "effective_pts": 6.79,
+          "effective_pts": 6.97,
           "projected_pts": 6.97,
-          "xmin": 87.7,
+          "xmin": 90,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
           "is_dgw": false
@@ -896,7 +896,7 @@
     {
       "gameweek": 28,
       "formation": "4-3-3",
-      "total_effective_pts": 52.7,
+      "total_effective_pts": 52.9,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -906,7 +906,7 @@
       },
       "vice_captain": {
         "name": "Thiago",
-        "effective_pts": 6.68
+        "effective_pts": 6.86
       },
       "starting_xi": [
         {
@@ -1012,9 +1012,9 @@
           "name": "Thiago",
           "position": "FWD",
           "team": "BRE",
-          "effective_pts": 6.68,
+          "effective_pts": 6.86,
           "projected_pts": 6.86,
-          "xmin": 87.7,
+          "xmin": 90,
           "fixture": "BUR (A)",
           "difficulty": 1.1,
           "is_dgw": false
