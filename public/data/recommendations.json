@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-20T06:29:26.640611",
+  "generated_at": "2026-01-21T06:29:35.758706",
   "next_gameweek": 23,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
@@ -26,7 +26,7 @@
       "doubled_pts": 14.5,
       "fixture": "NFO (H)",
       "fixture_difficulty": 1.02,
-      "ownership": 36.3,
+      "ownership": 36.5,
       "form": "7.6",
       "form_trend": "hot",
       "is_differential": false,
@@ -41,7 +41,7 @@
       "doubled_pts": 11.5,
       "fixture": "MUN (H)",
       "fixture_difficulty": 1.11,
-      "ownership": 35.3,
+      "ownership": 35.4,
       "form": "7.8",
       "form_trend": "neutral",
       "is_differential": false,
@@ -56,7 +56,7 @@
       "doubled_pts": 10.8,
       "fixture": "WOL (H)",
       "fixture_difficulty": 1.12,
-      "ownership": 27.7,
+      "ownership": 27.3,
       "form": "2.0",
       "form_trend": "cold",
       "is_differential": false,
@@ -71,9 +71,9 @@
       "doubled_pts": 10.2,
       "fixture": "NEW (A)",
       "fixture_difficulty": 1.2,
-      "ownership": 32.0,
-      "form": "4.5",
-      "form_trend": "neutral",
+      "ownership": 31.9,
+      "form": "2.4",
+      "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -128,6 +128,52 @@
     },
     {
       "priority": 2,
+      "out_id": 47,
+      "out_name": "Rogers",
+      "out_reasons": [
+        "cold_form",
+        "hard_fixtures"
+      ],
+      "in_id": 385,
+      "in_name": "Chiesa",
+      "in_team": "LIV",
+      "in_cost": 6.3,
+      "gain_4gw": 18.8,
+      "buy_reasons": [],
+      "worth_hit": true,
+      "hit_value": 13.5,
+      "value_score": 6.3,
+      "position": 3,
+      "fixtures": [
+        {
+          "gw": 23,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 24,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 25,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "approximated"
+    },
+    {
+      "priority": 3,
       "out_id": 414,
       "out_name": "Foden",
       "out_reasons": [
@@ -167,52 +213,6 @@
           "gw": 26,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "approximated"
-    },
-    {
-      "priority": 3,
-      "out_id": 430,
-      "out_name": "Haaland",
-      "out_reasons": [
-        "cold_form",
-        "hard_fixtures"
-      ],
-      "in_id": 181,
-      "in_name": "Kostoulas",
-      "in_team": "BHA",
-      "in_cost": 4.8,
-      "gain_4gw": 3.5,
-      "buy_reasons": [],
-      "worth_hit": false,
-      "hit_value": -1.8,
-      "value_score": 7.96,
-      "position": 4,
-      "fixtures": [
-        {
-          "gw": 23,
-          "fixture": "FUL (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "gw": 24,
-          "fixture": "EVE (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 25,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "AVL (A)",
-          "difficulty": 1.22,
           "is_dgw": false
         }
       ],

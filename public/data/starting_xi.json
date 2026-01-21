@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-20T06:29:26.649835",
+  "generated_at": "2026-01-21T06:29:35.768208",
   "team_id": 5033680,
   "next_gameweek": 23,
   "recommendations": [
     {
       "gameweek": 23,
       "formation": "4-3-3",
-      "total_effective_pts": 52.6,
+      "total_effective_pts": 52.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -75,17 +75,6 @@
           "is_dgw": false
         },
         {
-          "name": "Rogers",
-          "position": "MID",
-          "team": "AVL",
-          "effective_pts": 5.03,
-          "projected_pts": 5.09,
-          "xmin": 89.0,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
           "name": "Enzo",
           "position": "MID",
           "team": "CHE",
@@ -94,6 +83,17 @@
           "xmin": 89.2,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 4.53,
+          "projected_pts": 5.09,
+          "xmin": 80.1,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
           "is_dgw": false
         },
         {
@@ -184,7 +184,7 @@
     {
       "gameweek": 24,
       "formation": "4-3-3",
-      "total_effective_pts": 51.1,
+      "total_effective_pts": 50.6,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -256,9 +256,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.27,
+          "effective_pts": 4.74,
           "projected_pts": 5.33,
-          "xmin": 89.0,
+          "xmin": 80.1,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -362,7 +362,7 @@
     {
       "gameweek": 25,
       "formation": "4-4-2",
-      "total_effective_pts": 53.1,
+      "total_effective_pts": 52.6,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -434,9 +434,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.03,
+          "effective_pts": 4.53,
           "projected_pts": 5.09,
-          "xmin": 89.0,
+          "xmin": 80.1,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -540,7 +540,7 @@
     {
       "gameweek": 26,
       "formation": "4-3-3",
-      "total_effective_pts": 56.9,
+      "total_effective_pts": 56.3,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -623,9 +623,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.36,
+          "effective_pts": 4.82,
           "projected_pts": 5.42,
-          "xmin": 89.0,
+          "xmin": 80.1,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
           "is_dgw": false
@@ -718,7 +718,7 @@
     {
       "gameweek": 27,
       "formation": "4-3-3",
-      "total_effective_pts": 54.0,
+      "total_effective_pts": 53.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -787,17 +787,6 @@
           "is_dgw": false
         },
         {
-          "name": "Rogers",
-          "position": "MID",
-          "team": "AVL",
-          "effective_pts": 5.97,
-          "projected_pts": 6.04,
-          "xmin": 89.0,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
           "name": "Enzo",
           "position": "MID",
           "team": "CHE",
@@ -805,6 +794,17 @@
           "projected_pts": 5.69,
           "xmin": 89.2,
           "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 5.38,
+          "projected_pts": 6.04,
+          "xmin": 80.1,
+          "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
         },
@@ -896,7 +896,7 @@
     {
       "gameweek": 28,
       "formation": "4-3-3",
-      "total_effective_pts": 52.9,
+      "total_effective_pts": 52.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -979,9 +979,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.69,
+          "effective_pts": 4.22,
           "projected_pts": 4.74,
-          "xmin": 89.0,
+          "xmin": 80.1,
           "fixture": "WOL (A)",
           "difficulty": 1.37,
           "is_dgw": false
