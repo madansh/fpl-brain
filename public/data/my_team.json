@@ -4,9 +4,9 @@
   "next_gw": 23,
   "bank": 1.1,
   "chips_available": [
+    "bench_boost",
     "free_hit",
-    "triple_captain",
-    "bench_boost"
+    "triple_captain"
   ],
   "squad": [
     {
@@ -95,7 +95,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 6.8,
+      "selling_price": 6.9,
       "projected_pts": 5.74,
       "projected_4gw": 23.1,
       "form_trend": "neutral",
