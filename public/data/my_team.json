@@ -1,49 +1,49 @@
 {
   "team_id": 5033680,
-  "current_gw": 22,
-  "next_gw": 23,
-  "bank": 1.1,
+  "current_gw": 23,
+  "next_gw": 24,
+  "bank": 3.0,
   "chips_available": [
+    "triple_captain",
     "bench_boost",
-    "free_hit",
-    "triple_captain"
+    "free_hit"
   ],
   "squad": [
     {
-      "player_id": 67,
-      "name": "Petrovi\u0107",
+      "player_id": 470,
+      "name": "D\u00fabravka",
       "position": 1,
-      "team_id": 4,
+      "team_id": 3,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 4.5,
-      "projected_pts": 3.18,
-      "projected_4gw": 12.7,
-      "form_trend": "cold",
+      "selling_price": 4.0,
+      "projected_pts": 3.38,
+      "projected_4gw": 13.5,
+      "form_trend": "hot",
       "fixture_preview": [
         {
-          "gw": 23,
-          "fixture": "LIV (H)",
-          "difficulty": 0.77,
-          "is_dgw": false
-        },
-        {
           "gw": 24,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
           "gw": 25,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         },
         {
           "gw": 26,
-          "fixture": "EVE (A)",
-          "difficulty": 1.19,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
           "is_dgw": false
         }
       ]
@@ -57,16 +57,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 5.9,
-      "projected_pts": 3.58,
-      "projected_4gw": 14.3,
+      "projected_pts": 3.9,
+      "projected_4gw": 15.5,
       "form_trend": "neutral",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "NEW (H)",
@@ -84,6 +78,12 @@
           "fixture": "SUN (A)",
           "difficulty": 1.1,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
         }
       ]
     },
@@ -96,16 +96,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.9,
-      "projected_pts": 5.74,
-      "projected_4gw": 23.1,
+      "projected_pts": 5.76,
+      "projected_4gw": 22.6,
       "form_trend": "neutral",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "LEE (A)",
@@ -123,6 +117,12 @@
           "fixture": "BRE (A)",
           "difficulty": 1.36,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "TOT (A)",
+          "difficulty": 1.5,
+          "is_dgw": false
         }
       ]
     },
@@ -135,16 +135,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 4.6,
-      "projected_pts": 3.52,
-      "projected_4gw": 14.1,
+      "projected_pts": 3.67,
+      "projected_4gw": 14.8,
       "form_trend": "neutral",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "MUN (A)",
@@ -162,44 +156,50 @@
           "fixture": "MCI (A)",
           "difficulty": 1.18,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
         }
       ]
     },
     {
-      "player_id": 485,
-      "name": "Gordon",
+      "player_id": 708,
+      "name": "M.Fernandes",
       "position": 3,
-      "team_id": 15,
+      "team_id": 19,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.4,
-      "projected_pts": 4.9,
-      "projected_4gw": 18.6,
+      "selling_price": 5.5,
+      "projected_pts": 3.09,
+      "projected_4gw": 13.4,
       "form_trend": "neutral",
       "fixture_preview": [
         {
-          "gw": 23,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
-          "is_dgw": false
-        },
-        {
           "gw": 24,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
           "is_dgw": false
         },
         {
           "gw": 25,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
+          "fixture": "BUR (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
           "gw": 26,
-          "fixture": "TOT (A)",
-          "difficulty": 1.5,
+          "fixture": "MUN (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
           "is_dgw": false
         }
       ]
@@ -213,16 +213,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.7,
-      "projected_pts": 5.09,
-      "projected_4gw": 20.9,
+      "projected_pts": 5.33,
+      "projected_4gw": 21.9,
       "form_trend": "cold",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "BRE (H)",
@@ -240,6 +234,12 @@
           "fixture": "BHA (H)",
           "difficulty": 1.08,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
         }
       ]
     },
@@ -252,16 +252,10 @@
       "is_vice": true,
       "multiplier": 1,
       "selling_price": 8.3,
-      "projected_pts": 4.0,
-      "projected_4gw": 17.0,
+      "projected_pts": 4.26,
+      "projected_4gw": 15.9,
       "form_trend": "hot",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "NEW (H)",
@@ -279,6 +273,12 @@
           "fixture": "SUN (A)",
           "difficulty": 1.1,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
         }
       ]
     },
@@ -291,16 +291,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.6,
-      "projected_pts": 4.61,
-      "projected_4gw": 19.6,
+      "projected_pts": 4.74,
+      "projected_4gw": 20.6,
       "form_trend": "neutral",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "WHU (H)",
@@ -318,6 +312,12 @@
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
         }
       ]
     },
@@ -329,17 +329,11 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 8.6,
-      "projected_pts": 5.41,
-      "projected_4gw": 22.2,
+      "selling_price": 8.5,
+      "projected_pts": 4.57,
+      "projected_4gw": 22.4,
       "form_trend": "cold",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "WOL (H)",
-          "difficulty": 1.12,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "TOT (A)",
@@ -357,6 +351,12 @@
           "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
         }
       ]
     },
@@ -369,16 +369,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.2,
-      "projected_pts": 7.25,
-      "projected_4gw": 29.4,
-      "form_trend": "hot",
+      "projected_pts": 6.37,
+      "projected_4gw": 29.1,
+      "form_trend": "neutral",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "NFO (H)",
-          "difficulty": 1.02,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "AVL (A)",
@@ -396,6 +390,12 @@
           "fixture": "ARS (H)",
           "difficulty": 0.73,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
         }
       ]
     },
@@ -408,16 +408,10 @@
       "is_vice": false,
       "multiplier": 2,
       "selling_price": 15.1,
-      "projected_pts": 8.42,
-      "projected_4gw": 34.7,
+      "projected_pts": 6.75,
+      "projected_4gw": 35.4,
       "form_trend": "cold",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "WOL (H)",
-          "difficulty": 1.12,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "TOT (A)",
@@ -435,44 +429,50 @@
           "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
         }
       ]
     },
     {
-      "player_id": 470,
-      "name": "D\u00fabravka",
+      "player_id": 67,
+      "name": "Petrovi\u0107",
       "position": 1,
-      "team_id": 3,
+      "team_id": 4,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 4.0,
-      "projected_pts": 3.38,
-      "projected_4gw": 13.5,
-      "form_trend": "hot",
+      "selling_price": 4.5,
+      "projected_pts": 3.18,
+      "projected_4gw": 12.7,
+      "form_trend": "cold",
       "fixture_preview": [
         {
-          "gw": 23,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "gw": 24,
-          "fixture": "SUN (A)",
-          "difficulty": 1.1,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         },
         {
           "gw": 25,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
+          "fixture": "AVL (H)",
+          "difficulty": 1.0,
           "is_dgw": false
         },
         {
           "gw": 26,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
           "is_dgw": false
         }
       ]
@@ -486,16 +486,10 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 4.3,
-      "projected_pts": 5.14,
-      "projected_4gw": 19.0,
+      "projected_pts": 5.12,
+      "projected_4gw": 18.5,
       "form_trend": "hot",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "FUL (H)",
@@ -513,6 +507,12 @@
           "fixture": "WHU (A)",
           "difficulty": 1.5,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
+          "is_dgw": false
         }
       ]
     },
@@ -525,16 +525,10 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 4.2,
-      "projected_pts": 3.53,
-      "projected_4gw": 14.8,
+      "projected_pts": 3.62,
+      "projected_4gw": 15.5,
       "form_trend": "cold",
       "fixture_preview": [
-        {
-          "gw": 23,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "WHU (H)",
@@ -550,6 +544,12 @@
         {
           "gw": 26,
           "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
         }
@@ -569,12 +569,6 @@
       "form_trend": "cold",
       "fixture_preview": [
         {
-          "gw": 23,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "gw": 24,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
@@ -591,9 +585,15 @@
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
+          "is_dgw": false
         }
       ]
     }
   ],
-  "total_projected_pts": 64.1
+  "total_projected_pts": 58.6
 }

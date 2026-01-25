@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-01-24T06:25:24.506324",
-  "next_gameweek": 23,
+  "generated_at": "2026-01-25T06:25:19.519150",
+  "next_gameweek": 24,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
     {
       "player_id": 430,
       "name": "Haaland",
       "team": "MCI",
-      "projected_pts": 8.42,
-      "doubled_pts": 16.8,
-      "fixture": "WOL (H)",
-      "fixture_difficulty": 1.12,
-      "ownership": 74.0,
-      "form": "2.8",
+      "projected_pts": 6.75,
+      "doubled_pts": 13.5,
+      "fixture": "TOT (A)",
+      "fixture_difficulty": 1.5,
+      "ownership": 73.7,
+      "form": "2.5",
       "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
@@ -22,13 +22,13 @@
       "player_id": 136,
       "name": "Thiago",
       "team": "BRE",
-      "projected_pts": 7.25,
-      "doubled_pts": 14.5,
-      "fixture": "NFO (H)",
-      "fixture_difficulty": 1.02,
-      "ownership": 37.6,
-      "form": "7.6",
-      "form_trend": "hot",
+      "projected_pts": 6.37,
+      "doubled_pts": 12.7,
+      "fixture": "AVL (A)",
+      "fixture_difficulty": 1.22,
+      "ownership": 38.2,
+      "form": "6.3",
+      "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -37,28 +37,13 @@
       "player_id": 5,
       "name": "Gabriel",
       "team": "ARS",
-      "projected_pts": 5.74,
+      "projected_pts": 5.76,
       "doubled_pts": 11.5,
-      "fixture": "MUN (H)",
-      "fixture_difficulty": 1.11,
-      "ownership": 36.2,
-      "form": "7.8",
+      "fixture": "LEE (A)",
+      "fixture_difficulty": 1.1,
+      "ownership": 36.7,
+      "form": "6.5",
       "form_trend": "neutral",
-      "is_differential": false,
-      "has_dgw": false,
-      "data_quality": "approximated"
-    },
-    {
-      "player_id": 414,
-      "name": "Foden",
-      "team": "MCI",
-      "projected_pts": 5.41,
-      "doubled_pts": 10.8,
-      "fixture": "WOL (H)",
-      "fixture_difficulty": 1.12,
-      "ownership": 25.2,
-      "form": "2.0",
-      "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
@@ -67,14 +52,29 @@
       "player_id": 47,
       "name": "Rogers",
       "team": "AVL",
-      "projected_pts": 5.09,
-      "doubled_pts": 10.2,
-      "fixture": "NEW (A)",
-      "fixture_difficulty": 1.2,
-      "ownership": 31.3,
-      "form": "2.4",
+      "projected_pts": 5.33,
+      "doubled_pts": 10.7,
+      "fixture": "BRE (H)",
+      "fixture_difficulty": 1.11,
+      "ownership": 31.0,
+      "form": "2.0",
       "form_trend": "cold",
       "is_differential": false,
+      "has_dgw": false,
+      "data_quality": "approximated"
+    },
+    {
+      "player_id": 237,
+      "name": "Enzo",
+      "team": "CHE",
+      "projected_pts": 4.74,
+      "doubled_pts": 9.5,
+      "fixture": "WHU (H)",
+      "fixture_difficulty": 1.24,
+      "ownership": 14.1,
+      "form": "4.7",
+      "form_trend": "neutral",
+      "is_differential": true,
       "has_dgw": false,
       "data_quality": "approximated"
     }
@@ -82,52 +82,6 @@
   "transfer_recommendations": [
     {
       "priority": 1,
-      "out_id": 67,
-      "out_name": "Petrovi\u0107",
-      "out_reasons": [
-        "cold_form",
-        "hard_fixtures"
-      ],
-      "in_id": 366,
-      "in_name": "A.Becker",
-      "in_team": "LIV",
-      "in_cost": 5.4,
-      "gain_4gw": 2.4,
-      "buy_reasons": [],
-      "worth_hit": false,
-      "hit_value": -2.9,
-      "value_score": 2.8,
-      "position": 1,
-      "fixtures": [
-        {
-          "gw": 23,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "gw": 24,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 25,
-          "fixture": "MCI (H)",
-          "difficulty": 0.96,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "SUN (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "approximated"
-    },
-    {
-      "priority": 2,
       "out_id": 47,
       "out_name": "Rogers",
       "out_reasons": [
@@ -138,19 +92,13 @@
       "in_name": "Chukwueze",
       "in_team": "FUL",
       "in_cost": 5.3,
-      "gain_4gw": 17.5,
+      "gain_4gw": 19.1,
       "buy_reasons": [],
       "worth_hit": true,
-      "hit_value": 12.2,
-      "value_score": 7.25,
+      "hit_value": 13.8,
+      "value_score": 7.74,
       "position": 3,
       "fixtures": [
-        {
-          "gw": 23,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "MUN (A)",
@@ -168,12 +116,18 @@
           "fixture": "MCI (A)",
           "difficulty": 1.18,
           "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
         }
       ],
       "data_quality": "approximated"
     },
     {
-      "priority": 3,
+      "priority": 2,
       "out_id": 414,
       "out_name": "Foden",
       "out_reasons": [
@@ -184,19 +138,13 @@
       "in_name": "Chukwueze",
       "in_team": "FUL",
       "in_cost": 5.3,
-      "gain_4gw": 16.2,
+      "gain_4gw": 18.6,
       "buy_reasons": [],
       "worth_hit": true,
-      "hit_value": 10.9,
-      "value_score": 7.25,
+      "hit_value": 13.3,
+      "value_score": 7.74,
       "position": 3,
       "fixtures": [
-        {
-          "gw": 23,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
         {
           "gw": 24,
           "fixture": "MUN (A)",
@@ -213,6 +161,58 @@
           "gw": 26,
           "fixture": "MCI (A)",
           "difficulty": 1.18,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "approximated"
+    },
+    {
+      "priority": 3,
+      "out_id": 430,
+      "out_name": "Haaland",
+      "out_reasons": [
+        "cold_form",
+        "hard_fixtures"
+      ],
+      "in_id": 181,
+      "in_name": "Kostoulas",
+      "in_team": "BHA",
+      "in_cost": 4.8,
+      "gain_4gw": 1.5,
+      "buy_reasons": [],
+      "worth_hit": false,
+      "hit_value": -3.8,
+      "value_score": 7.69,
+      "position": 4,
+      "fixtures": [
+        {
+          "gw": 24,
+          "fixture": "EVE (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 25,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "AVL (A)",
+          "difficulty": 1.22,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
           "is_dgw": false
         }
       ],
