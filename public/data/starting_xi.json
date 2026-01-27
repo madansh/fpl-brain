@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-26T06:30:37.277654",
+  "generated_at": "2026-01-27T06:28:41.058504",
   "team_id": 5033680,
   "next_gameweek": 24,
   "recommendations": [
     {
       "gameweek": 24,
       "formation": "4-3-3",
-      "total_effective_pts": 49.0,
+      "total_effective_pts": 49.6,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -75,25 +75,25 @@
           "is_dgw": false
         },
         {
-          "name": "Enzo",
-          "position": "MID",
-          "team": "CHE",
-          "effective_pts": 4.87,
-          "projected_pts": 4.91,
-          "xmin": 89.2,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.81,
+          "effective_pts": 5.35,
           "projected_pts": 5.41,
-          "xmin": 80.1,
+          "xmin": 89.0,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "name": "Enzo",
+          "position": "MID",
+          "team": "CHE",
+          "effective_pts": 4.91,
+          "projected_pts": 4.91,
+          "xmin": 90,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         },
         {
@@ -184,7 +184,7 @@
     {
       "gameweek": 25,
       "formation": "3-4-3",
-      "total_effective_pts": 51.3,
+      "total_effective_pts": 51.9,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -242,25 +242,25 @@
           "is_dgw": false
         },
         {
-          "name": "Enzo",
-          "position": "MID",
-          "team": "CHE",
-          "effective_pts": 4.62,
-          "projected_pts": 4.66,
-          "xmin": 89.2,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
-          "is_dgw": false
-        },
-        {
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.59,
+          "effective_pts": 5.1,
           "projected_pts": 5.16,
-          "xmin": 80.1,
+          "xmin": 89.0,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "name": "Enzo",
+          "position": "MID",
+          "team": "CHE",
+          "effective_pts": 4.66,
+          "projected_pts": 4.66,
+          "xmin": 90,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         },
         {
@@ -362,7 +362,7 @@
     {
       "gameweek": 26,
       "formation": "3-4-3",
-      "total_effective_pts": 55.6,
+      "total_effective_pts": 56.2,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -423,9 +423,9 @@
           "name": "Enzo",
           "position": "MID",
           "team": "CHE",
-          "effective_pts": 5.87,
+          "effective_pts": 5.92,
           "projected_pts": 5.92,
-          "xmin": 89.2,
+          "xmin": 90,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -434,9 +434,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.89,
+          "effective_pts": 5.44,
           "projected_pts": 5.5,
-          "xmin": 80.1,
+          "xmin": 89.0,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
           "is_dgw": false
@@ -540,7 +540,7 @@
     {
       "gameweek": 27,
       "formation": "3-4-3",
-      "total_effective_pts": 52.8,
+      "total_effective_pts": 53.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -598,24 +598,24 @@
           "is_dgw": false
         },
         {
-          "name": "Enzo",
+          "name": "Rogers",
           "position": "MID",
-          "team": "CHE",
-          "effective_pts": 5.87,
-          "projected_pts": 5.92,
-          "xmin": 89.2,
-          "fixture": "BUR (H)",
+          "team": "AVL",
+          "effective_pts": 6.08,
+          "projected_pts": 6.15,
+          "xmin": 89.0,
+          "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
         },
         {
-          "name": "Rogers",
+          "name": "Enzo",
           "position": "MID",
-          "team": "AVL",
-          "effective_pts": 5.47,
-          "projected_pts": 6.15,
-          "xmin": 80.1,
-          "fixture": "LEE (H)",
+          "team": "CHE",
+          "effective_pts": 5.92,
+          "projected_pts": 5.92,
+          "xmin": 90,
+          "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
         },
@@ -718,7 +718,7 @@
     {
       "gameweek": 28,
       "formation": "3-4-3",
-      "total_effective_pts": 51.6,
+      "total_effective_pts": 52.1,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -779,9 +779,9 @@
           "name": "Enzo",
           "position": "MID",
           "team": "CHE",
-          "effective_pts": 5.92,
+          "effective_pts": 5.97,
           "projected_pts": 5.97,
-          "xmin": 89.2,
+          "xmin": 90,
           "fixture": "ARS (A)",
           "difficulty": 0.89,
           "is_dgw": false
@@ -790,9 +790,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.27,
+          "effective_pts": 4.75,
           "projected_pts": 4.8,
-          "xmin": 80.1,
+          "xmin": 89.0,
           "fixture": "WOL (A)",
           "difficulty": 1.37,
           "is_dgw": false
@@ -896,7 +896,7 @@
     {
       "gameweek": 29,
       "formation": "3-4-3",
-      "total_effective_pts": 49.8,
+      "total_effective_pts": 50.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -957,9 +957,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.16,
+          "effective_pts": 5.74,
           "projected_pts": 5.8,
-          "xmin": 80.1,
+          "xmin": 89.0,
           "fixture": "CHE (H)",
           "difficulty": 0.99,
           "is_dgw": false
@@ -968,9 +968,9 @@
           "name": "Enzo",
           "position": "MID",
           "team": "CHE",
-          "effective_pts": 4.91,
+          "effective_pts": 4.95,
           "projected_pts": 4.95,
-          "xmin": 89.2,
+          "xmin": 90,
           "fixture": "AVL (A)",
           "difficulty": 1.22,
           "is_dgw": false
