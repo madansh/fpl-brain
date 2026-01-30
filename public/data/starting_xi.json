@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-01-29T06:40:17.016388",
+  "generated_at": "2026-01-30T06:41:31.564471",
   "team_id": 5033680,
   "next_gameweek": 24,
   "recommendations": [
     {
       "gameweek": 24,
-      "formation": "3-4-3",
-      "total_effective_pts": 49.1,
+      "formation": "4-3-3",
+      "total_effective_pts": 49.4,
       "captain": {
         "name": "Thiago",
         "team": "BRE",
@@ -64,6 +64,17 @@
           "is_dgw": false
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.19,
+          "projected_pts": 3.38,
+          "xmin": 85.0,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
@@ -94,17 +105,6 @@
           "xmin": 90,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "name": "M.Fernandes",
-          "position": "MID",
-          "team": "WHU",
-          "effective_pts": 2.87,
-          "projected_pts": 3.09,
-          "xmin": 83.7,
-          "fixture": "CHE (A)",
-          "difficulty": 1.21,
           "is_dgw": false
         },
         {
@@ -143,10 +143,10 @@
       ],
       "bench": [
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 2.87,
-          "xmin": 76.5,
+          "name": "M.Fernandes",
+          "position": "MID",
+          "effective_pts": 3.01,
+          "xmin": 87.8,
           "status": "available",
           "bench_order": 1
         },
@@ -183,8 +183,8 @@
     },
     {
       "gameweek": 25,
-      "formation": "3-4-3",
-      "total_effective_pts": 51.9,
+      "formation": "4-4-2",
+      "total_effective_pts": 52.0,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -239,6 +239,17 @@
           "xmin": 87.8,
           "fixture": "EVE (H)",
           "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.19,
+          "projected_pts": 3.38,
+          "xmin": 85.0,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         },
         {
@@ -306,33 +317,22 @@
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
-        },
-        {
-          "name": "Marc Guiu",
-          "position": "FWD",
-          "team": "CHE",
-          "effective_pts": 3.11,
-          "projected_pts": 3.46,
-          "xmin": 81.0,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
-          "is_dgw": false
         }
       ],
       "bench": [
         {
-          "name": "M.Fernandes",
-          "position": "MID",
-          "effective_pts": 2.96,
-          "xmin": 83.7,
+          "name": "Marc Guiu",
+          "position": "FWD",
+          "effective_pts": 3.11,
+          "xmin": 81.0,
           "status": "available",
           "bench_order": 1
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 2.87,
-          "xmin": 76.5,
+          "name": "M.Fernandes",
+          "position": "MID",
+          "effective_pts": 3.1,
+          "xmin": 87.8,
           "status": "available",
           "bench_order": 2
         },
@@ -499,18 +499,18 @@
       ],
       "bench": [
         {
-          "name": "M.Fernandes",
-          "position": "MID",
-          "effective_pts": 2.95,
-          "xmin": 83.7,
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 3.19,
+          "xmin": 85.0,
           "status": "available",
           "bench_order": 1
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 2.87,
-          "xmin": 76.5,
+          "name": "M.Fernandes",
+          "position": "MID",
+          "effective_pts": 3.09,
+          "xmin": 87.8,
           "status": "available",
           "bench_order": 2
         },
@@ -540,7 +540,7 @@
     {
       "gameweek": 27,
       "formation": "3-4-3",
-      "total_effective_pts": 53.4,
+      "total_effective_pts": 53.6,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -623,9 +623,9 @@
           "name": "M.Fernandes",
           "position": "MID",
           "team": "WHU",
-          "effective_pts": 3.7,
+          "effective_pts": 3.88,
           "projected_pts": 3.98,
-          "xmin": 83.7,
+          "xmin": 87.8,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -687,8 +687,8 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 2.87,
-          "xmin": 76.5,
+          "effective_pts": 3.19,
+          "xmin": 85.0,
           "status": "available",
           "bench_order": 2
         },
@@ -718,7 +718,7 @@
     {
       "gameweek": 28,
       "formation": "3-4-3",
-      "total_effective_pts": 52.1,
+      "total_effective_pts": 52.3,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -801,9 +801,9 @@
           "name": "M.Fernandes",
           "position": "MID",
           "team": "WHU",
-          "effective_pts": 3.78,
+          "effective_pts": 3.96,
           "projected_pts": 4.06,
-          "xmin": 83.7,
+          "xmin": 87.8,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -855,18 +855,18 @@
       ],
       "bench": [
         {
-          "name": "Foden",
-          "position": "MID",
-          "effective_pts": 3.04,
-          "xmin": 50.5,
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 3.19,
+          "xmin": 85.0,
           "status": "available",
           "bench_order": 1
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 2.87,
-          "xmin": 76.5,
+          "name": "Foden",
+          "position": "MID",
+          "effective_pts": 3.04,
+          "xmin": 50.5,
           "status": "available",
           "bench_order": 2
         },
@@ -895,7 +895,7 @@
     },
     {
       "gameweek": 29,
-      "formation": "3-4-3",
+      "formation": "4-3-3",
       "total_effective_pts": 50.4,
       "captain": {
         "name": "Haaland",
@@ -954,6 +954,17 @@
           "is_dgw": false
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.19,
+          "projected_pts": 3.38,
+          "xmin": 85.0,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
+          "is_dgw": false
+        },
+        {
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
@@ -984,17 +995,6 @@
           "xmin": 90,
           "fixture": "WOL (A)",
           "difficulty": 1.37,
-          "is_dgw": false
-        },
-        {
-          "name": "Foden",
-          "position": "MID",
-          "team": "MCI",
-          "effective_pts": 3.18,
-          "projected_pts": 5.67,
-          "xmin": 50.5,
-          "fixture": "NFO (H)",
-          "difficulty": 1.02,
           "is_dgw": false
         },
         {
@@ -1033,18 +1033,18 @@
       ],
       "bench": [
         {
-          "name": "M.Fernandes",
+          "name": "Foden",
           "position": "MID",
-          "effective_pts": 2.96,
-          "xmin": 83.7,
+          "effective_pts": 3.18,
+          "xmin": 50.5,
           "status": "available",
           "bench_order": 1
         },
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 2.87,
-          "xmin": 76.5,
+          "name": "M.Fernandes",
+          "position": "MID",
+          "effective_pts": 3.1,
+          "xmin": 87.8,
           "status": "available",
           "bench_order": 2
         },
