@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-30T06:41:31.555312",
+  "generated_at": "2026-01-31T06:32:10.484334",
   "next_gameweek": 24,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
@@ -11,7 +11,7 @@
       "doubled_pts": 13.5,
       "fixture": "TOT (A)",
       "fixture_difficulty": 1.5,
-      "ownership": 72.5,
+      "ownership": 72.0,
       "form": "2.6",
       "form_trend": "cold",
       "is_differential": false,
@@ -26,7 +26,7 @@
       "doubled_pts": 12.3,
       "fixture": "AVL (A)",
       "fixture_difficulty": 1.22,
-      "ownership": 37.0,
+      "ownership": 36.3,
       "form": "7.0",
       "form_trend": "neutral",
       "is_differential": false,
@@ -41,7 +41,7 @@
       "doubled_pts": 11.3,
       "fixture": "LEE (A)",
       "fixture_difficulty": 1.1,
-      "ownership": 37.9,
+      "ownership": 38.5,
       "form": "6.0",
       "form_trend": "neutral",
       "is_differential": false,
@@ -56,7 +56,7 @@
       "doubled_pts": 10.8,
       "fixture": "BRE (H)",
       "fixture_difficulty": 1.11,
-      "ownership": 31.4,
+      "ownership": 31.5,
       "form": "4.5",
       "form_trend": "neutral",
       "is_differential": false,
@@ -71,7 +71,7 @@
       "doubled_pts": 9.8,
       "fixture": "WHU (H)",
       "fixture_difficulty": 1.24,
-      "ownership": 17.0,
+      "ownership": 18.2,
       "form": "6.5",
       "form_trend": "hot",
       "is_differential": false,
@@ -88,39 +88,39 @@
         "cold_form",
         "hard_fixtures"
       ],
-      "in_id": 727,
-      "in_name": "Chukwueze",
-      "in_team": "FUL",
-      "in_cost": 5.3,
-      "gain_4gw": 18.6,
+      "in_id": 385,
+      "in_name": "Chiesa",
+      "in_team": "LIV",
+      "in_cost": 6.3,
+      "gain_4gw": 17.0,
       "buy_reasons": [],
       "worth_hit": true,
-      "hit_value": 13.3,
-      "value_score": 7.74,
+      "hit_value": 11.7,
+      "value_score": 6.25,
       "position": 3,
       "fixtures": [
         {
           "gw": 24,
-          "fixture": "MUN (A)",
-          "difficulty": 1.35,
-          "is_dgw": false
-        },
-        {
-          "gw": 25,
-          "fixture": "EVE (H)",
+          "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
         },
         {
+          "gw": 25,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
           "gw": 26,
-          "fixture": "MCI (A)",
-          "difficulty": 1.18,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
           "gw": 27,
-          "fixture": "SUN (A)",
-          "difficulty": 1.1,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
           "is_dgw": false
         }
       ],
