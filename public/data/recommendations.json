@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-01-31T06:32:10.484334",
-  "next_gameweek": 24,
+  "generated_at": "2026-02-01T06:42:47.668175",
+  "next_gameweek": 25,
   "data_source": "Understat (0 players matched)",
   "captain_picks": [
     {
       "player_id": 430,
       "name": "Haaland",
       "team": "MCI",
-      "projected_pts": 6.75,
-      "doubled_pts": 13.5,
-      "fixture": "TOT (A)",
-      "fixture_difficulty": 1.5,
-      "ownership": 72.0,
-      "form": "2.6",
+      "projected_pts": 9.57,
+      "doubled_pts": 19.1,
+      "fixture": "LIV (A)",
+      "fixture_difficulty": 0.94,
+      "ownership": 71.7,
+      "form": "2.2",
       "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
     },
     {
-      "player_id": 136,
-      "name": "Thiago",
-      "team": "BRE",
-      "projected_pts": 6.17,
-      "doubled_pts": 12.3,
-      "fixture": "AVL (A)",
-      "fixture_difficulty": 1.22,
-      "ownership": 36.3,
-      "form": "7.0",
-      "form_trend": "neutral",
-      "is_differential": false,
+      "player_id": 414,
+      "name": "Foden",
+      "team": "MCI",
+      "projected_pts": 5.95,
+      "doubled_pts": 11.9,
+      "fixture": "LIV (A)",
+      "fixture_difficulty": 0.94,
+      "ownership": 14.7,
+      "form": "1.2",
+      "form_trend": "cold",
+      "is_differential": true,
       "has_dgw": false,
       "data_quality": "approximated"
     },
@@ -37,12 +37,12 @@
       "player_id": 5,
       "name": "Gabriel",
       "team": "ARS",
-      "projected_pts": 5.64,
-      "doubled_pts": 11.3,
-      "fixture": "LEE (A)",
-      "fixture_difficulty": 1.1,
-      "ownership": 38.5,
-      "form": "6.0",
+      "projected_pts": 5.91,
+      "doubled_pts": 11.8,
+      "fixture": "SUN (H)",
+      "fixture_difficulty": 0.9,
+      "ownership": 39.0,
+      "form": "6.4",
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
@@ -52,27 +52,27 @@
       "player_id": 47,
       "name": "Rogers",
       "team": "AVL",
-      "projected_pts": 5.41,
-      "doubled_pts": 10.8,
-      "fixture": "BRE (H)",
-      "fixture_difficulty": 1.11,
-      "ownership": 31.5,
-      "form": "4.5",
+      "projected_pts": 5.16,
+      "doubled_pts": 10.3,
+      "fixture": "BOU (A)",
+      "fixture_difficulty": 1.2,
+      "ownership": 31.6,
+      "form": "3.6",
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
     },
     {
-      "player_id": 237,
-      "name": "Enzo",
+      "player_id": 249,
+      "name": "Jo\u00e3o Pedro",
       "team": "CHE",
-      "projected_pts": 4.91,
-      "doubled_pts": 9.8,
-      "fixture": "WHU (H)",
-      "fixture_difficulty": 1.24,
-      "ownership": 18.2,
-      "form": "6.5",
+      "projected_pts": 5.01,
+      "doubled_pts": 10.0,
+      "fixture": "WOL (A)",
+      "fixture_difficulty": 1.37,
+      "ownership": 36.5,
+      "form": "6.6",
       "form_trend": "hot",
       "is_differential": false,
       "has_dgw": false,
@@ -82,6 +82,53 @@
   "transfer_recommendations": [
     {
       "priority": 1,
+      "out_id": 441,
+      "out_name": "Dorgu",
+      "out_reasons": [
+        "low_projection",
+        "injury_doubt",
+        "hard_fixtures"
+      ],
+      "in_id": 197,
+      "in_name": "Sonne",
+      "in_team": "BUR",
+      "in_cost": 3.8,
+      "gain_4gw": 25.7,
+      "buy_reasons": [],
+      "worth_hit": true,
+      "hit_value": 20.4,
+      "value_score": 6.76,
+      "position": 2,
+      "fixtures": [
+        {
+          "gw": 25,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "BRE (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "approximated"
+    },
+    {
+      "priority": 2,
       "out_id": 414,
       "out_name": "Foden",
       "out_reasons": [
@@ -92,19 +139,13 @@
       "in_name": "Chiesa",
       "in_team": "LIV",
       "in_cost": 6.3,
-      "gain_4gw": 17.0,
+      "gain_4gw": 13.8,
       "buy_reasons": [],
       "worth_hit": true,
-      "hit_value": 11.7,
-      "value_score": 6.25,
+      "hit_value": 8.5,
+      "value_score": 5.89,
       "position": 3,
       "fixtures": [
-        {
-          "gw": 24,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
         {
           "gw": 25,
           "fixture": "MCI (H)",
@@ -122,53 +163,11 @@
           "fixture": "NFO (A)",
           "difficulty": 1.25,
           "is_dgw": false
-        }
-      ],
-      "data_quality": "approximated"
-    },
-    {
-      "priority": 2,
-      "out_id": 430,
-      "out_name": "Haaland",
-      "out_reasons": [
-        "cold_form",
-        "hard_fixtures"
-      ],
-      "in_id": 181,
-      "in_name": "Kostoulas",
-      "in_team": "BHA",
-      "in_cost": 4.8,
-      "gain_4gw": 1.5,
-      "buy_reasons": [
-        "hot_form"
-      ],
-      "worth_hit": false,
-      "hit_value": -3.8,
-      "value_score": 7.69,
-      "position": 4,
-      "fixtures": [
-        {
-          "gw": 24,
-          "fixture": "EVE (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
         },
         {
-          "gw": 25,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "AVL (A)",
-          "difficulty": 1.22,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
+          "gw": 28,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         }
       ],
