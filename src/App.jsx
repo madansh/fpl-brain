@@ -235,14 +235,16 @@ function SquadView({ squad }) {
 // ===================== NEW: STARTING XI COMPONENTS =====================
 
 function XIPlayerCard({ player, isCaptain, isVice }) {
+  const isNew = player.isNew;
   return (
-    <div className={`relative flex flex-col items-center p-2 rounded-lg bg-white border-2 ${isCaptain ? 'border-yellow-400 shadow-md' : isVice ? 'border-gray-400' : 'border-gray-200'}`}>
+    <div className={`relative flex flex-col items-center p-2 rounded-lg border-2 ${isNew ? 'bg-green-50 border-green-400' : 'bg-white'} ${isCaptain ? 'border-yellow-400 shadow-md' : isVice ? 'border-gray-400' : isNew ? 'border-green-400' : 'border-gray-200'}`}>
       {isCaptain && <span className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 text-black text-xs font-bold rounded-full flex items-center justify-center shadow">C</span>}
       {isVice && !isCaptain && <span className="absolute -top-2 -right-2 w-5 h-5 bg-gray-400 text-white text-xs font-bold rounded-full flex items-center justify-center">V</span>}
+      {isNew && <span className="absolute -top-2 -left-2 px-1.5 py-0.5 bg-green-500 text-white text-xs font-bold rounded shadow">NEW</span>}
       <span className={`text-xs px-1.5 py-0.5 rounded ${POS_COLORS_BY_NAME[player.position]} text-white font-medium`}>{player.position}</span>
       <span className="text-sm font-semibold text-gray-800 mt-1 truncate max-w-20 text-center">{player.name}</span>
       <span className="text-xs text-gray-500">{player.team}</span>
-      <span className="text-lg font-bold text-green-600">{player.effective_pts?.toFixed(1)}</span>
+      <span className={`text-lg font-bold ${isNew ? 'text-green-700' : 'text-green-600'}`}>{player.effective_pts?.toFixed(1)}</span>
       <div className="flex items-center gap-1 mt-1">
         <XminBar xmin={player.xmin} />
         <span className="text-xs text-gray-400">{player.xmin}</span>
@@ -280,11 +282,12 @@ function BenchRow({ bench }) {
       <div className="text-xs text-gray-500 mb-2 font-medium uppercase tracking-wide">Bench (auto-sub order)</div>
       <div className="flex gap-2 overflow-x-auto pb-1">
         {bench?.map((p, i) => (
-          <div key={p.name} className={`flex-shrink-0 flex items-center gap-2 bg-white rounded-lg px-3 py-2 border ${p.status === 'blank' ? 'border-yellow-400 bg-yellow-50' : p.status === 'unlikely' ? 'border-red-300 bg-red-50' : 'border-gray-200'}`}>
+          <div key={p.name} className={`flex-shrink-0 flex items-center gap-2 rounded-lg px-3 py-2 border ${p.isNew ? 'bg-green-50 border-green-400' : p.status === 'blank' ? 'border-yellow-400 bg-yellow-50' : p.status === 'unlikely' ? 'border-red-300 bg-red-50' : 'bg-white border-gray-200'}`}>
             <span className="text-xs text-gray-400 font-mono w-4">{p.bench_order}</span>
             <span className={`text-xs px-1 py-0.5 rounded ${POS_COLORS_BY_NAME[p.position]} text-white`}>{p.position}</span>
             <span className="text-sm text-gray-700">{p.name}</span>
-            <span className="text-sm text-green-600 font-semibold">{p.effective_pts?.toFixed(1)}</span>
+            {p.isNew && <span className="px-1 py-0.5 bg-green-500 text-white text-xs rounded font-medium">NEW</span>}
+            <span className={`text-sm font-semibold ${p.isNew ? 'text-green-700' : 'text-green-600'}`}>{p.effective_pts?.toFixed(1)}</span>
             <XminBar xmin={p.xmin} />
             {p.status === 'blank' && <span className="text-xs text-yellow-600">BGW</span>}
             {p.status === 'unlikely' && <span className="text-xs text-red-500">Low xMin</span>}
@@ -307,8 +310,9 @@ function GWSelector({ gws, selected, onChange }) {
   );
 }
 
-function StartingXIView({ data }) {
+function StartingXIView({ data, plannedTransfers = [], projections }) {
   const [selectedGW, setSelectedGW] = useState(null);
+  const [viewMode, setViewMode] = useState('current'); // 'current' or 'planned'
 
   useEffect(() => {
     if (data?.recommendations?.length && !selectedGW) {
@@ -316,43 +320,149 @@ function StartingXIView({ data }) {
     }
   }, [data, selectedGW]);
 
+  // Auto-switch to planned view when transfers are added
+  useEffect(() => {
+    if (plannedTransfers.length > 0 && viewMode === 'current') {
+      setViewMode('planned');
+    }
+  }, [plannedTransfers.length]);
+
   if (!data?.recommendations?.length) {
     return <div className="bg-white p-6 rounded-lg border text-center text-gray-500">No Starting XI data available yet.</div>;
   }
 
   const gws = data.recommendations.map(r => r.gameweek);
-  const current = data.recommendations.find(r => r.gameweek === selectedGW);
+  const currentData = data.recommendations.find(r => r.gameweek === selectedGW);
 
-  if (!current) return null;
+  if (!currentData) return null;
+
+  // Apply planned transfers to the XI
+  const applyTransfersToXI = (xi) => {
+    if (!plannedTransfers.length || viewMode === 'current') return xi;
+
+    return xi.map(player => {
+      const transfer = plannedTransfers.find(t => t.out_name === player.name);
+      if (transfer) {
+        // Find incoming player data from projections
+        const allPlayers = Object.values(projections?.top_by_position || {}).flat();
+        const incomingPlayer = allPlayers.find(p => p.player_id === transfer.in_id);
+
+        if (incomingPlayer) {
+          // Get fixture for this GW
+          const gwFixture = incomingPlayer.fixture_preview?.find(f => f.gw === selectedGW);
+
+          return {
+            ...player,
+            name: transfer.in_name,
+            team: incomingPlayer.team,
+            effective_pts: incomingPlayer.next_gw_pts * 0.9, // Approximate effective pts
+            projected_pts: incomingPlayer.next_gw_pts,
+            xmin: 80, // Assume good xmin for recommended players
+            fixture: gwFixture?.fixture || incomingPlayer.next_fixture,
+            difficulty: gwFixture?.difficulty || incomingPlayer.next_fixture_diff,
+            is_dgw: gwFixture?.is_dgw || false,
+            isNew: true,
+          };
+        }
+      }
+      return { ...player, isNew: false };
+    });
+  };
+
+  const applyTransfersToBench = (bench) => {
+    if (!plannedTransfers.length || viewMode === 'current') return bench;
+
+    return bench.map(player => {
+      const transfer = plannedTransfers.find(t => t.out_name === player.name);
+      if (transfer) {
+        const allPlayers = Object.values(projections?.top_by_position || {}).flat();
+        const incomingPlayer = allPlayers.find(p => p.player_id === transfer.in_id);
+
+        if (incomingPlayer) {
+          return {
+            ...player,
+            name: transfer.in_name,
+            effective_pts: incomingPlayer.next_gw_pts * 0.9,
+            xmin: 80,
+            isNew: true,
+          };
+        }
+      }
+      return { ...player, isNew: false };
+    });
+  };
+
+  const displayXI = applyTransfersToXI(currentData.starting_xi);
+  const displayBench = applyTransfersToBench(currentData.bench);
+
+  // Calculate totals
+  const currentTotal = currentData.total_effective_pts;
+  const plannedTotal = displayXI.reduce((sum, p) => sum + (p.effective_pts || 0), 0);
+  const ptsDiff = plannedTotal - currentTotal;
+
+  // Update captain if needed
+  const displayCaptain = displayXI.find(p => p.name === currentData.captain?.name) || displayXI[0];
+  const displayVice = displayXI.find(p => p.name === currentData.vice_captain?.name) || displayXI[1];
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-3">
         <h2 className="text-xl font-bold">📋 Starting XI</h2>
-        <GWSelector gws={gws} selected={selectedGW} onChange={setSelectedGW} />
+        <div className="flex items-center gap-3">
+          {plannedTransfers.length > 0 && (
+            <div className="flex bg-gray-100 p-1 rounded-lg">
+              <button
+                onClick={() => setViewMode('current')}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${viewMode === 'current' ? 'bg-white shadow text-gray-800' : 'text-gray-600 hover:text-gray-900'}`}
+              >
+                Current
+              </button>
+              <button
+                onClick={() => setViewMode('planned')}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${viewMode === 'planned' ? 'bg-green-500 text-white shadow' : 'text-gray-600 hover:text-gray-900'}`}
+              >
+                Planned ✨
+              </button>
+            </div>
+          )}
+          <GWSelector gws={gws} selected={selectedGW} onChange={setSelectedGW} />
+        </div>
       </div>
 
-      {current.alerts?.needs_attention && (
-        <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 text-sm">
-          ⚠️ GW{current.gameweek} needs attention: {current.alerts.blank_count > 0 && `${current.alerts.blank_count} players blanking`}
-          {current.alerts.blank_count > 0 && current.alerts.low_xmin_count > 0 && ', '}
-          {current.alerts.low_xmin_count > 0 && `${current.alerts.low_xmin_count} with low xMin`}
+      {plannedTransfers.length > 0 && viewMode === 'planned' && (
+        <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm flex items-center justify-between">
+          <span>
+            🔄 Showing XI with {plannedTransfers.length} planned transfer{plannedTransfers.length > 1 ? 's' : ''} applied
+          </span>
+          <span className={`font-bold ${ptsDiff >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            {ptsDiff >= 0 ? '+' : ''}{ptsDiff.toFixed(1)} eff pts
+          </span>
         </div>
       )}
 
-      <div className="flex items-center justify-between bg-white p-4 rounded-lg border">
+      {currentData.alerts?.needs_attention && viewMode === 'current' && (
+        <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 text-sm">
+          ⚠️ GW{currentData.gameweek} needs attention: {currentData.alerts.blank_count > 0 && `${currentData.alerts.blank_count} players blanking`}
+          {currentData.alerts.blank_count > 0 && currentData.alerts.low_xmin_count > 0 && ', '}
+          {currentData.alerts.low_xmin_count > 0 && `${currentData.alerts.low_xmin_count} with low xMin`}
+        </div>
+      )}
+
+      <div className={`flex items-center justify-between p-4 rounded-lg border ${viewMode === 'planned' && plannedTransfers.length > 0 ? 'bg-green-50 border-green-200' : 'bg-white'}`}>
         <div className="flex items-center gap-4">
-          <span className="text-3xl font-bold text-gray-800">{current.formation}</span>
+          <span className="text-3xl font-bold text-gray-800">{currentData.formation}</span>
           <span className="text-sm text-gray-500">Formation</span>
         </div>
         <div className="text-right">
-          <span className="text-3xl font-bold text-green-600">{current.total_effective_pts}</span>
+          <span className={`text-3xl font-bold ${viewMode === 'planned' && plannedTransfers.length > 0 ? 'text-green-600' : 'text-green-600'}`}>
+            {viewMode === 'planned' ? plannedTotal.toFixed(1) : currentTotal}
+          </span>
           <span className="text-sm text-gray-500 ml-1">eff pts</span>
         </div>
       </div>
 
-      <PitchFormation xi={current.starting_xi} captain={current.captain} viceCapt={current.vice_captain} />
-      <BenchRow bench={current.bench} />
+      <PitchFormation xi={displayXI} captain={displayCaptain} viceCapt={displayVice} />
+      <BenchRow bench={displayBench} />
 
       <div className="p-4 bg-gray-50 rounded-lg text-sm text-gray-600">
         <div className="font-medium text-gray-700 mb-2">Legend</div>
@@ -772,7 +882,7 @@ export default function App() {
           />
         )}
 
-        {activeTab === 'xi' && <StartingXIView data={startingXI} />}
+        {activeTab === 'xi' && <StartingXIView data={startingXI} plannedTransfers={plannedTransfers} projections={projections} />}
 
         {activeTab === 'chips' && (
           <section>
