@@ -104,9 +104,9 @@ function CaptainCard({ pick, rank }) {
   );
 }
 
-function TransferCard({ transfer }) {
+function TransferCard({ transfer, onTryTransfer, isApplied, onRemove }) {
   return (
-    <div className="p-4 rounded-lg border border-gray-200 bg-white hover:shadow-md transition-shadow">
+    <div className={`p-4 rounded-lg border-2 transition-shadow ${isApplied ? 'border-green-400 bg-green-50' : 'border-gray-200 bg-white hover:shadow-md'}`}>
       <div className="flex items-center gap-4">
         <div className="flex-1 min-w-0">
           <p className="text-red-500 text-xs font-medium">OUT</p>
@@ -130,11 +130,28 @@ function TransferCard({ transfer }) {
       </div>
       <div className="mt-3 flex items-center justify-between">
         <FixtureRun fixtures={transfer.fixtures} />
-        {transfer.worth_hit && (
-          <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-medium">
-            ⚡ Worth -4 (net +{transfer.hit_value})
-          </span>
-        )}
+        <div className="flex items-center gap-2">
+          {transfer.worth_hit && (
+            <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-medium">
+              ⚡ Worth -4 (net +{transfer.hit_value})
+            </span>
+          )}
+          {isApplied ? (
+            <button
+              onClick={() => onRemove(transfer)}
+              className="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors"
+            >
+              ✕ Remove
+            </button>
+          ) : (
+            <button
+              onClick={() => onTryTransfer(transfer)}
+              className="px-3 py-1.5 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+            >
+              Try This →
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -354,6 +371,178 @@ function StartingXIView({ data }) {
 
 // ===================== END STARTING XI COMPONENTS =====================
 
+// ===================== SQUAD PLANNER COMPONENTS =====================
+
+function SquadPlannerView({ currentSquad, plannedTransfers, projections, onRemoveTransfer, onClearAll }) {
+  // Build the planned squad by applying transfers
+  const plannedSquad = currentSquad?.map(player => {
+    const transferOut = plannedTransfers.find(t => t.out_id === player.player_id);
+    if (transferOut) {
+      // Find the incoming player's projection data
+      const incomingProj = Object.values(projections?.top_by_position || {})
+        .flat()
+        .find(p => p.player_id === transferOut.in_id);
+
+      if (incomingProj) {
+        return {
+          ...player,
+          player_id: transferOut.in_id,
+          name: transferOut.in_name,
+          projected_pts: incomingProj.next_gw_pts || 0,
+          projected_4gw: incomingProj.next_4gw_pts || 0,
+          form_trend: incomingProj.form_trend,
+          fixture_preview: incomingProj.fixture_preview,
+          isNew: true,
+          transferCost: transferOut.in_cost,
+        };
+      }
+    }
+    return { ...player, isNew: false };
+  }) || [];
+
+  // Calculate totals
+  const currentTotal = currentSquad?.reduce((sum, p) => sum + (p.multiplier > 0 ? (p.projected_pts || 0) : 0), 0) || 0;
+  const plannedTotal = plannedSquad.reduce((sum, p) => sum + (p.multiplier > 0 ? (p.projected_pts || 0) : 0), 0);
+  const currentTotal4GW = currentSquad?.reduce((sum, p) => sum + (p.multiplier > 0 ? (p.projected_4gw || 0) : 0), 0) || 0;
+  const plannedTotal4GW = plannedSquad.reduce((sum, p) => sum + (p.multiplier > 0 ? (p.projected_4gw || 0) : 0), 0);
+
+  const gwDiff = plannedTotal - currentTotal;
+  const fourGWDiff = plannedTotal4GW - currentTotal4GW;
+  const hitCost = plannedTransfers.length > 1 ? (plannedTransfers.length - 1) * 4 : 0;
+  const netGain4GW = fourGWDiff - hitCost;
+
+  if (plannedTransfers.length === 0) {
+    return (
+      <div className="bg-white p-8 rounded-lg border text-center">
+        <p className="text-4xl mb-4">🔄</p>
+        <h3 className="font-bold text-lg text-gray-800 mb-2">Squad Planner</h3>
+        <p className="text-gray-600">Click "Try This" on any transfer recommendation to see how it affects your squad.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      {/* Summary Card */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 text-white">
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <p className="text-purple-200 text-sm">Planned Changes</p>
+            <p className="text-2xl font-bold">{plannedTransfers.length} transfer{plannedTransfers.length > 1 ? 's' : ''}</p>
+          </div>
+          <button
+            onClick={onClearAll}
+            className="px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium transition-colors"
+          >
+            Clear All
+          </button>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="bg-white/10 rounded-lg p-3">
+            <p className="text-purple-200 text-xs">Next GW</p>
+            <p className={`text-2xl font-bold ${gwDiff >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+              {gwDiff >= 0 ? '+' : ''}{gwDiff.toFixed(1)}
+            </p>
+            <p className="text-xs text-purple-200">pts</p>
+          </div>
+          <div className="bg-white/10 rounded-lg p-3">
+            <p className="text-purple-200 text-xs">4GW Total</p>
+            <p className={`text-2xl font-bold ${fourGWDiff >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+              {fourGWDiff >= 0 ? '+' : ''}{fourGWDiff.toFixed(1)}
+            </p>
+            <p className="text-xs text-purple-200">pts</p>
+          </div>
+          <div className="bg-white/10 rounded-lg p-3">
+            <p className="text-purple-200 text-xs">Net Gain</p>
+            <p className={`text-2xl font-bold ${netGain4GW >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+              {netGain4GW >= 0 ? '+' : ''}{netGain4GW.toFixed(1)}
+            </p>
+            <p className="text-xs text-purple-200">{hitCost > 0 ? `(-${hitCost} hit)` : 'pts'}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Applied Transfers */}
+      <div className="bg-white rounded-lg border p-4">
+        <h3 className="font-bold text-gray-700 mb-3">Applied Transfers</h3>
+        <div className="space-y-2">
+          {plannedTransfers.map((t, i) => (
+            <div key={i} className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+              <div className="flex items-center gap-3">
+                <span className="text-red-500 font-medium">{t.out_name}</span>
+                <span className="text-gray-400">→</span>
+                <span className="text-green-600 font-medium">{t.in_name}</span>
+                <span className="text-gray-500 text-sm">(£{t.in_cost}m)</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-green-600 font-bold">+{t.gain_4gw} pts/4GW</span>
+                <button
+                  onClick={() => onRemoveTransfer(t)}
+                  className="text-red-500 hover:text-red-700 text-sm font-medium"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Side by Side Comparison */}
+      <div className="grid md:grid-cols-2 gap-4">
+        {/* Current Squad */}
+        <div className="bg-white rounded-lg border">
+          <div className="p-4 border-b bg-gray-50">
+            <h3 className="font-bold text-gray-700">Current Squad</h3>
+            <p className="text-sm text-gray-500">GW: {currentTotal.toFixed(1)} pts • 4GW: {currentTotal4GW.toFixed(1)} pts</p>
+          </div>
+          <div className="p-4 space-y-2 max-h-96 overflow-y-auto">
+            {currentSquad?.filter(p => p.multiplier > 0).sort((a, b) => a.position - b.position).map(player => {
+              const isBeingReplaced = plannedTransfers.some(t => t.out_id === player.player_id);
+              return (
+                <div key={player.player_id} className={`flex items-center justify-between p-2 rounded ${isBeingReplaced ? 'bg-red-50 line-through opacity-60' : 'bg-gray-50'}`}>
+                  <div className="flex items-center gap-2">
+                    <span className={`w-8 h-8 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center`}>
+                      {POS_LABELS[player.position]}
+                    </span>
+                    <span className="font-medium text-sm">{player.name}</span>
+                  </div>
+                  <span className="font-bold text-gray-700">{player.projected_pts?.toFixed(1)}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Planned Squad */}
+        <div className="bg-white rounded-lg border border-green-200">
+          <div className="p-4 border-b bg-green-50">
+            <h3 className="font-bold text-green-700">Planned Squad</h3>
+            <p className="text-sm text-green-600">GW: {plannedTotal.toFixed(1)} pts • 4GW: {plannedTotal4GW.toFixed(1)} pts</p>
+          </div>
+          <div className="p-4 space-y-2 max-h-96 overflow-y-auto">
+            {plannedSquad?.filter(p => p.multiplier > 0).sort((a, b) => a.position - b.position).map(player => (
+              <div key={player.player_id} className={`flex items-center justify-between p-2 rounded ${player.isNew ? 'bg-green-100 border border-green-300' : 'bg-gray-50'}`}>
+                <div className="flex items-center gap-2">
+                  <span className={`w-8 h-8 rounded-full ${POS_COLORS[player.position]} text-white text-xs flex items-center justify-center`}>
+                    {POS_LABELS[player.position]}
+                  </span>
+                  <span className="font-medium text-sm">{player.name}</span>
+                  {player.isNew && <span className="px-1.5 py-0.5 bg-green-500 text-white text-xs rounded">NEW</span>}
+                </div>
+                <span className={`font-bold ${player.isNew ? 'text-green-700' : 'text-gray-700'}`}>{player.projected_pts?.toFixed(1)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ===================== END SQUAD PLANNER COMPONENTS =====================
+
 function TopPlayersTable({ players, title }) {
   if (!players?.length) return null;
   return (
@@ -408,6 +597,10 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('overview');
   const [loading, setLoading] = useState(true);
 
+  // Squad Planner state
+  const [plannedTransfers, setPlannedTransfers] = useState([]);
+  const [showPlanner, setShowPlanner] = useState(false);
+
   useEffect(() => {
     Promise.all([
       fetch('/data/recommendations.json').then(r => r.ok ? r.json() : null),
@@ -434,8 +627,31 @@ export default function App() {
     );
   }
 
+  // Squad Planner functions
+  const handleTryTransfer = (transfer) => {
+    // Check if this transfer is already applied
+    if (plannedTransfers.some(t => t.out_id === transfer.out_id)) {
+      return; // Already applied
+    }
+    // Check if the outgoing player is already being transferred out
+    if (plannedTransfers.some(t => t.in_id === transfer.out_id)) {
+      return; // Can't transfer out a player we're bringing in
+    }
+    setPlannedTransfers([...plannedTransfers, transfer]);
+    setShowPlanner(true);
+  };
+
+  const handleRemoveTransfer = (transfer) => {
+    setPlannedTransfers(plannedTransfers.filter(t => t.out_id !== transfer.out_id));
+  };
+
+  const handleClearAllTransfers = () => {
+    setPlannedTransfers([]);
+  };
+
   const tabs = [
     { id: 'overview', label: '🎯 Overview' },
+    { id: 'planner', label: `🔄 Planner${plannedTransfers.length > 0 ? ` (${plannedTransfers.length})` : ''}` },
     { id: 'xi', label: '📋 Starting XI' },
     { id: 'chips', label: '🎮 Chips' },
     { id: 'squad', label: '👥 Squad' },
@@ -513,10 +729,28 @@ export default function App() {
               </div>
             </section>
             <section>
-              <h2 className="text-xl font-bold mb-4">📈 Transfer Recommendations</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold">📈 Transfer Recommendations</h2>
+                {plannedTransfers.length > 0 && (
+                  <button
+                    onClick={() => setActiveTab('planner')}
+                    className="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-200 transition-colors"
+                  >
+                    View Planner ({plannedTransfers.length})
+                  </button>
+                )}
+              </div>
               <div className="space-y-3">
                 {recommendations?.transfer_recommendations?.length > 0 ? (
-                  recommendations.transfer_recommendations.map((t, i) => <TransferCard key={i} transfer={t} />)
+                  recommendations.transfer_recommendations.map((t, i) => (
+                    <TransferCard
+                      key={i}
+                      transfer={t}
+                      onTryTransfer={handleTryTransfer}
+                      onRemove={handleRemoveTransfer}
+                      isApplied={plannedTransfers.some(pt => pt.out_id === t.out_id)}
+                    />
+                  ))
                 ) : (
                   <div className="bg-white p-6 rounded-lg border text-center">
                     <p className="text-2xl mb-2">💪</p>
@@ -526,6 +760,16 @@ export default function App() {
               </div>
             </section>
           </>
+        )}
+
+        {activeTab === 'planner' && (
+          <SquadPlannerView
+            currentSquad={myTeam?.squad}
+            plannedTransfers={plannedTransfers}
+            projections={projections}
+            onRemoveTransfer={handleRemoveTransfer}
+            onClearAll={handleClearAllTransfers}
+          />
         )}
 
         {activeTab === 'xi' && <StartingXIView data={startingXI} />}
