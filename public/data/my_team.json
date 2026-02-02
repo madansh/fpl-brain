@@ -5,8 +5,8 @@
   "bank": 2.5,
   "chips_available": [
     "bench_boost",
-    "free_hit",
-    "triple_captain"
+    "triple_captain",
+    "free_hit"
   ],
   "squad": [
     {
@@ -213,8 +213,8 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.7,
-      "projected_pts": 5.16,
-      "projected_4gw": 21.6,
+      "projected_pts": 5.04,
+      "projected_4gw": 21.1,
       "form_trend": "neutral",
       "fixture_preview": [
         {
@@ -330,7 +330,7 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 8.3,
-      "projected_pts": 5.95,
+      "projected_pts": 5.94,
       "projected_4gw": 23.3,
       "form_trend": "cold",
       "fixture_preview": [
@@ -408,8 +408,8 @@
       "is_vice": false,
       "multiplier": 2,
       "selling_price": 15.0,
-      "projected_pts": 9.57,
-      "projected_4gw": 37.1,
+      "projected_pts": 9.49,
+      "projected_4gw": 36.8,
       "form_trend": "cold",
       "fixture_preview": [
         {
@@ -525,7 +525,7 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 4.6,
-      "projected_pts": 3.73,
+      "projected_pts": 3.72,
       "projected_4gw": 14.8,
       "form_trend": "neutral",
       "fixture_preview": [
@@ -595,5 +595,5 @@
       ]
     }
   ],
-  "total_projected_pts": 61.3
+  "total_projected_pts": 61.0
 }
