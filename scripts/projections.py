@@ -1,9 +1,16 @@
 """
-FPL Brain - Projection Engine v3.1
+FPL Brain - Projection Engine v4.0
 - Real xG from Understat
 - Smarter transfer logic with form, fixtures, DGW awareness
 - Chip strategy optimizer (BB/TC/FH/WC timing)
-- xMin calculation + Starting XI recommendations (NEW)
+- xMin calculation + Starting XI recommendations
+
+v4.0 Changes:
+- Fixed Understat matching (>= 0.6 threshold, team_title key, multi-name matching)
+- Improved transfer logic (MIN_BUY_PROJECTION, higher gain threshold, ownership penalty)
+- Added rolling 5-match form calculation
+- Enhanced injury news parsing
+- Chip strategy works without DGW (fixture-based triggers)
 """
 
 import requests
@@ -23,6 +30,12 @@ PLANNING_HORIZON = 4
 HIT_THRESHOLD_GWS = 3
 FORM_WEIGHT = 0.6
 DECAY_FACTOR = 0.85
+
+# Transfer logic thresholds (v4.0)
+MIN_BUY_PROJECTION = 15       # Don't recommend players under 15 pts/4GW
+SELL_THRESHOLD_4GW = 10       # Only sell if < 10 pts/4GW (was 12)
+MIN_GAIN_THRESHOLD = 3        # Only recommend if gain > 3 pts (was 1)
+OWNERSHIP_WEIGHT = 0.1        # Small penalty for template players (>30% owned)
 
 BASE_URL = "https://fantasy.premierleague.com/api"
 BOOTSTRAP_URL = f"{BASE_URL}/bootstrap-static/"
@@ -75,28 +88,212 @@ def get_understat_data():
         return None, None
 
 
-def match_player_names(fpl_name, fpl_team, understat_players, team_mapping):
-    fpl_name_clean = fpl_name.lower().strip()
+def match_player_names(fpl_player, understat_players, team_name_map):
+    """
+    Improved matching using multiple name fields and team normalization.
+    Fixes: threshold >= 0.6, team_title key, multi-name matching.
+    """
+    # Use all available name fields
+    web_name = fpl_player.get('web_name', '').lower().strip()
+    first_name = fpl_player.get('first_name', '').lower().strip()
+    second_name = fpl_player.get('second_name', '').lower().strip()
+    full_name = f"{first_name} {second_name}".strip()
+    fpl_team_id = fpl_player.get('team')
+
+    # Normalize team names (FPL -> Understat)
+    TEAM_NORMALIZE = {
+        'man city': 'manchester city',
+        'man utd': 'manchester united',
+        'spurs': 'tottenham',
+        'newcastle': 'newcastle united',
+        "nott'm forest": 'nottingham forest',
+    }
+    fpl_team = team_name_map.get(fpl_team_id, '').lower()
+    normalized_team = TEAM_NORMALIZE.get(fpl_team, fpl_team)
+
     best_match = None
     best_score = 0
-    
+
     for us_player in understat_players:
         us_name = us_player.get('player_name', '').lower()
-        us_team = us_player.get('team_name', '')
-        
-        fpl_team_name = team_mapping.get(fpl_team, '').lower()
-        if fpl_team_name and fpl_team_name not in us_team.lower():
+        us_team = us_player.get('team_title', '').lower()  # Fix: was 'team_name'
+
+        # Team filter with normalization
+        if normalized_team and normalized_team not in us_team:
             continue
-        
-        score = SequenceMatcher(None, fpl_name_clean, us_name).ratio()
-        if fpl_name_clean in us_name or us_name.split()[-1] == fpl_name_clean:
-            score = max(score, 0.85)
-        
-        if score > best_score and score > 0.6:
+
+        # Try multiple matching strategies
+        scores = [
+            SequenceMatcher(None, full_name, us_name).ratio(),      # Full name
+            SequenceMatcher(None, web_name, us_name).ratio(),       # Web name
+        ]
+
+        # Surname matching
+        if second_name:
+            us_name_parts = us_name.split()
+            if us_name_parts:
+                scores.append(SequenceMatcher(None, second_name, us_name_parts[-1]).ratio())
+
+        # Boost if surname matches exactly (handles "Salah" in "Mohamed Salah")
+        if second_name and second_name in us_name:
+            scores.append(0.85)
+
+        # Boost for substring matches
+        if web_name in us_name or (us_name.split() and us_name.split()[-1] == web_name):
+            scores.append(0.85)
+
+        score = max(scores)
+
+        if score >= 0.6 and score > best_score:  # Fix: >= not >
             best_score = score
             best_match = us_player
-    
+
     return best_match
+
+
+# =============================================================================
+# ENHANCED DATA SOURCES (v4.0)
+# =============================================================================
+
+def get_player_history(player_id):
+    """Fetch detailed player history from FPL API."""
+    url = PLAYER_URL.format(player_id=player_id)
+    return fetch_json(url)
+
+
+def calculate_rolling_form(history, matches=5):
+    """Calculate rolling xGI-equivalent from recent FPL match history."""
+    if not history:
+        return {'rolling_form': 0, 'trend': 'neutral', 'matches_used': 0}
+
+    recent = history[-matches:] if len(history) >= matches else history
+    if not recent:
+        return {'rolling_form': 0, 'trend': 'neutral', 'matches_used': 0}
+
+    # Calculate weighted recent performance
+    total_pts = 0
+    total_xgi_proxy = 0
+    weights = [1.0, 0.95, 0.85, 0.75, 0.65]  # More recent = higher weight
+
+    for i, match in enumerate(reversed(recent)):
+        weight = weights[i] if i < len(weights) else 0.5
+        pts = float(match.get('total_points', 0))
+        goals = int(match.get('goals_scored', 0))
+        assists = int(match.get('assists', 0))
+        xgi_proxy = goals * 0.9 + assists * 0.6  # Rough xGI approximation
+
+        total_pts += pts * weight
+        total_xgi_proxy += xgi_proxy * weight
+
+    weighted_avg = total_pts / len(recent)
+
+    # Determine trend by comparing recent half to older half
+    if len(recent) >= 4:
+        recent_half = sum(m.get('total_points', 0) for m in recent[-2:]) / 2
+        older_half = sum(m.get('total_points', 0) for m in recent[:2]) / 2
+        if recent_half > older_half * 1.25:
+            trend = 'rising'
+        elif recent_half < older_half * 0.75:
+            trend = 'falling'
+        else:
+            trend = 'stable'
+    else:
+        trend = 'neutral'
+
+    return {
+        'rolling_form': round(weighted_avg, 2),
+        'rolling_xgi': round(total_xgi_proxy / len(recent), 3),
+        'trend': trend,
+        'matches_used': len(recent),
+    }
+
+
+def parse_injury_news(news):
+    """
+    Parse FPL news field to determine injury severity.
+    Returns: severity score (0=healthy, 1=minor, 2=moderate, 3=severe)
+    """
+    if not news:
+        return {'severity': 0, 'category': 'healthy', 'parsed': None}
+
+    news_lower = news.lower()
+
+    # Severe - likely out for extended period
+    severe_keywords = ['surgery', 'acl', 'mcl', 'broken', 'fracture', 'season',
+                       'months', 'long-term', 'ruled out']
+    for kw in severe_keywords:
+        if kw in news_lower:
+            return {'severity': 3, 'category': 'severe', 'parsed': news}
+
+    # Moderate - likely out for a few weeks
+    moderate_keywords = ['hamstring', 'groin', 'muscle', 'strain', 'weeks',
+                         'scan', 'assessment', 'knock']
+    for kw in moderate_keywords:
+        if kw in news_lower:
+            return {'severity': 2, 'category': 'moderate', 'parsed': news}
+
+    # Minor - doubtful but might play
+    minor_keywords = ['doubt', 'fitness', 'ill', 'sick', 'minor', 'dead leg',
+                      'precaution', 'managed']
+    for kw in minor_keywords:
+        if kw in news_lower:
+            return {'severity': 1, 'category': 'minor', 'parsed': news}
+
+    # Unknown news - treat as minor concern
+    return {'severity': 1, 'category': 'unknown', 'parsed': news}
+
+
+def calculate_price_trend(history):
+    """Analyze recent price changes to detect risers/fallers."""
+    if not history or 'history' not in history:
+        return {'trend': 'stable', 'recent_change': 0}
+
+    matches = history['history']
+    if len(matches) < 3:
+        return {'trend': 'stable', 'recent_change': 0}
+
+    # Get price from last 5 matches
+    recent_prices = [m.get('value', 0) for m in matches[-5:]]
+    if not recent_prices or recent_prices[0] == 0:
+        return {'trend': 'stable', 'recent_change': 0}
+
+    price_change = recent_prices[-1] - recent_prices[0]
+
+    if price_change >= 3:  # 0.3m rise
+        trend = 'rising_fast'
+    elif price_change >= 1:
+        trend = 'rising'
+    elif price_change <= -3:
+        trend = 'falling_fast'
+    elif price_change <= -1:
+        trend = 'falling'
+    else:
+        trend = 'stable'
+
+    return {'trend': trend, 'recent_change': price_change / 10}
+
+
+def get_enhanced_player_data(player_id, player):
+    """Fetch and calculate additional real-time data for a player."""
+    history_data = get_player_history(player_id)
+
+    if not history_data:
+        return {
+            'rolling_5_form': {'rolling_form': 0, 'trend': 'neutral'},
+            'news_severity': parse_injury_news(player.get('news', '')),
+            'price_trend': {'trend': 'stable', 'recent_change': 0},
+        }
+
+    match_history = history_data.get('history', [])
+    rolling_form = calculate_rolling_form(match_history, matches=5)
+    news_severity = parse_injury_news(player.get('news', ''))
+    price_trend = calculate_price_trend(history_data)
+
+    return {
+        'rolling_5_form': rolling_form,
+        'news_severity': news_severity,
+        'price_trend': price_trend,
+    }
 
 
 # =============================================================================
@@ -581,7 +778,7 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
         reasons = []
         
         proj_4gw = proj.get('next_4gw_pts', 0)
-        if proj_4gw < 12:
+        if proj_4gw < SELL_THRESHOLD_4GW:
             sell_score += 3
             reasons.append('low_projection')
         
@@ -648,15 +845,27 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             proj = projections.get(p['id'], {})
             if not proj:
                 continue
-            
+
             proj_4gw = proj.get('next_4gw_pts', 0)
-            gain_4gw = proj_4gw - weak['proj_4gw']
-            
-            if gain_4gw < 1:
+
+            # Skip low quality players (v4.0)
+            if proj_4gw < MIN_BUY_PROJECTION:
                 continue
-            
+
+            gain_4gw = proj_4gw - weak['proj_4gw']
+
+            # Skip marginal gains (v4.0)
+            if gain_4gw < MIN_GAIN_THRESHOLD:
+                continue
+
             buy_score = gain_4gw
             buy_reasons = []
+
+            # Ownership penalty for template players (v4.0)
+            player_ownership = float(p.get('selected_by_percent', 0) or 0)
+            if player_ownership > 30:
+                buy_score -= OWNERSHIP_WEIGHT * player_ownership
+                buy_reasons.append('template_risk')
             
             if proj.get('form_trend') == 'hot':
                 buy_score += 1.5
@@ -721,224 +930,342 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
 
 
 # =============================================================================
-# CHIP STRATEGY OPTIMIZER
+# CHIP STRATEGY OPTIMIZER (v4.0 - Fixture-based triggers without DGW dependency)
 # =============================================================================
 
-def analyze_chip_strategy(my_squad, projections, fixture_data, team_strengths, 
+def analyze_chip_strategy(my_squad, projections, fixture_data, team_strengths,
                           current_gw, chips_available):
+    """
+    Enhanced chip strategy that works even without confirmed DGW/BGW.
+    Uses fixture difficulty and player projections to recommend optimal chip timing.
+    """
     recommendations = []
-    
+
     dgw_gws = fixture_data['dgw_gws']
     bgw_gws = fixture_data['bgw_gws']
     team_dgws = fixture_data['team_dgws']
     team_bgws = fixture_data['team_bgws']
-    
-    # BENCH BOOST
+    team_fixtures = fixture_data['team_fixtures']
+
+    # Analyze all upcoming GWs for fixture-based triggers
+    gw_range = range(current_gw, current_gw + 6)
+
+    # ==========================================================================
+    # BENCH BOOST - Works without DGW by analyzing bench quality + fixtures
+    # ==========================================================================
     if 'bench_boost' in chips_available:
         best_bb_gw = None
         best_bb_score = 0
         bb_analysis = []
-        
-        for gw in dgw_gws:
-            if gw < current_gw:
-                continue
-            
+
+        # Analyze ALL gameweeks, not just DGWs
+        for gw in gw_range:
             dgw_players = 0
-            bench_dgw_players = 0
             total_bench_proj = 0
-            
+            total_bench_xmin = 0
+            fixture_ease_score = 0
+
             for pick in my_squad:
                 team_id = pick.get('team_id', 0)
                 is_bench = pick.get('multiplier', 0) == 0
                 player_proj = projections.get(pick['element'], {})
-                
+
                 has_dgw = gw in team_dgws.get(team_id, [])
-                
+                gw_fixtures = team_fixtures.get(team_id, {}).get(gw, [])
+
                 if has_dgw:
                     dgw_players += 1
-                    if is_bench:
-                        bench_dgw_players += 1
-                        base_pts = player_proj.get('next_gw_pts', 2)
-                        total_bench_proj += base_pts * 1.8
-                elif is_bench:
-                    total_bench_proj += player_proj.get('next_gw_pts', 2)
-            
-            bb_score = total_bench_proj + (dgw_players * 2)
-            
+
+                if is_bench and gw_fixtures:
+                    # Get projected points for this specific GW
+                    gw_proj = next((f for f in player_proj.get('fixtures', [])
+                                   if f.get('gw') == gw), {})
+                    pts = gw_proj.get('projected_pts', 2)
+                    difficulty = gw_proj.get('difficulty', 1.0)
+
+                    # Calculate fixture ease (lower difficulty = easier)
+                    ease = max(0.5, 2.0 - difficulty)
+                    total_bench_proj += pts
+                    fixture_ease_score += ease
+
+                    # Estimate xMin from player data
+                    xmin = player_proj.get('xmin', 60) if player_proj else 60
+                    total_bench_xmin += xmin
+
+            # Score: bench points * fixture ease * (xMin factor) * DGW bonus
+            xmin_factor = min(1.2, total_bench_xmin / 240)  # 4 bench players * 60 avg mins
+            dgw_bonus = 1 + (dgw_players * 0.15)
+            bb_score = total_bench_proj * (1 + fixture_ease_score / 4) * xmin_factor * dgw_bonus
+
             bb_analysis.append({
                 'gw': gw,
                 'dgw_players': dgw_players,
-                'bench_dgw': bench_dgw_players,
                 'bench_proj': round(total_bench_proj, 1),
+                'bench_xmin': round(total_bench_xmin, 0),
+                'fixture_ease': round(fixture_ease_score, 2),
                 'score': round(bb_score, 1),
+                'is_dgw': gw in dgw_gws,
             })
-            
+
             if bb_score > best_bb_score:
                 best_bb_score = bb_score
                 best_bb_gw = gw
-        
-        if best_bb_gw:
-            best_analysis = next(a for a in bb_analysis if a['gw'] == best_bb_gw)
+
+        if best_bb_gw and best_bb_score > 8:  # Minimum threshold
+            best = next(a for a in bb_analysis if a['gw'] == best_bb_gw)
+            is_dgw = best['is_dgw']
+            reasoning = f"GW{best_bb_gw} "
+            if is_dgw:
+                reasoning += f"is a DGW with {best['dgw_players']} players doubling. "
+            else:
+                reasoning += f"has favorable fixtures (ease: {best['fixture_ease']:.1f}). "
+            reasoning += f"Projected bench value: {best['bench_proj']} pts."
+
             recommendations.append({
                 'chip': 'Bench Boost',
                 'recommended_gw': best_bb_gw,
-                'confidence': 'HIGH' if best_analysis['dgw_players'] >= 10 else 'MEDIUM',
-                'reasoning': f"GW{best_bb_gw} is a DGW with {best_analysis['dgw_players']} of your players doubling. Projected bench value: {best_analysis['bench_proj']} pts.",
-                'action_needed': f"Ensure bench has playing DGW players by GW{best_bb_gw}.",
-                'analysis': bb_analysis,
+                'confidence': 'HIGH' if (is_dgw and best['dgw_players'] >= 10) or best['score'] > 15 else 'MEDIUM',
+                'reasoning': reasoning,
+                'action_needed': f"Ensure bench has high xMin players with easy fixtures by GW{best_bb_gw}.",
+                'analysis': sorted(bb_analysis, key=lambda x: -x['score'])[:5],
             })
-    
-    # TRIPLE CAPTAIN
+
+    # ==========================================================================
+    # TRIPLE CAPTAIN - Works without DGW by finding best premium fixture
+    # ==========================================================================
     if 'triple_captain' in chips_available:
         best_tc_gw = None
         best_tc_player = None
         best_tc_score = 0
         tc_analysis = []
-        
+
         premiums = [p for p in my_squad if p.get('selling_price', 0) / 10 >= 10]
-        
-        for gw in dgw_gws:
-            if gw < current_gw:
-                continue
-            
+
+        # Analyze ALL gameweeks for premium players
+        for gw in gw_range:
             for pick in premiums:
                 team_id = pick.get('team_id', 0)
                 player_id = pick['element']
-                
-                if gw not in team_dgws.get(team_id, []):
-                    continue
-                
-                proj = projections.get(player_id, {})
                 player_name = pick.get('web_name', 'Unknown')
-                
-                gw_fixtures = fixture_data['team_fixtures'].get(team_id, {}).get(gw, [])
-                
+                proj = projections.get(player_id, {})
+
+                gw_fixtures = team_fixtures.get(team_id, {}).get(gw, [])
+                if not gw_fixtures:
+                    continue
+
+                # Calculate fixture quality
                 total_diff = 0
                 fixture_strs = []
+                home_bonus = 0
+
                 for fix in gw_fixtures:
                     diff = get_fixture_difficulty(team_strengths, fix['opponent_id'], fix['is_home'])
                     total_diff += diff
                     h_a = '(H)' if fix['is_home'] else '(A)'
                     fixture_strs.append(f"{fix['opponent']} {h_a}")
-                
+                    if fix['is_home']:
+                        home_bonus += 0.1
+
                 avg_diff = total_diff / len(gw_fixtures) if gw_fixtures else 1.0
-                
-                base_pts = proj.get('next_gw_pts', 4)
-                tc_score = (base_pts * 2 / avg_diff) * 3
-                
+                is_dgw = len(gw_fixtures) >= 2
+
+                # Get projected points
+                gw_proj = next((f for f in proj.get('fixtures', [])
+                               if f.get('gw') == gw), {})
+                base_pts = gw_proj.get('projected_pts', proj.get('next_gw_pts', 4))
+
+                # xMin factor - higher xMin = more reliable captain
+                xmin = proj.get('xmin', 85) if proj else 85
+                xmin_factor = min(1.1, xmin / 85)
+
+                # TC score: projected * 3 * ease * home_bonus * xmin_factor * dgw_bonus
+                ease_mult = max(0.7, 2.0 - avg_diff)
+                dgw_mult = 1.8 if is_dgw else 1.0
+                tc_score = base_pts * 3 * ease_mult * (1 + home_bonus) * xmin_factor * dgw_mult
+
                 tc_analysis.append({
                     'gw': gw,
                     'player': player_name,
                     'player_id': player_id,
                     'fixtures': fixture_strs,
                     'avg_difficulty': round(avg_diff, 2),
+                    'is_home': any(f['is_home'] for f in gw_fixtures),
+                    'is_dgw': is_dgw,
                     'projected_tc_pts': round(tc_score, 1),
+                    'xmin': xmin,
                 })
-                
+
                 if tc_score > best_tc_score:
                     best_tc_score = tc_score
                     best_tc_gw = gw
                     best_tc_player = player_name
-        
-        if best_tc_gw:
+
+        if best_tc_gw and best_tc_score > 15:  # Minimum threshold
             best = next(a for a in tc_analysis if a['gw'] == best_tc_gw and a['player'] == best_tc_player)
+            reasoning = f"TC {best_tc_player} in GW{best_tc_gw} ({', '.join(best['fixtures'])})"
+            if best['is_dgw']:
+                reasoning += " - DOUBLE GAMEWEEK"
+            elif best['is_home']:
+                reasoning += " - HOME fixture"
+            reasoning += f". Projected: {best['projected_tc_pts']:.0f} pts."
+
             recommendations.append({
                 'chip': 'Triple Captain',
                 'recommended_gw': best_tc_gw,
                 'recommended_player': best_tc_player,
-                'confidence': 'HIGH' if best['avg_difficulty'] < 0.95 else 'MEDIUM',
-                'reasoning': f"TC {best_tc_player} in GW{best_tc_gw} ({', '.join(best['fixtures'])}). Projected: {best['projected_tc_pts']} pts.",
+                'confidence': 'HIGH' if best['is_dgw'] or (best['avg_difficulty'] < 0.85 and best['is_home']) else 'MEDIUM',
+                'reasoning': reasoning,
                 'action_needed': f"Ensure {best_tc_player} is in your squad for GW{best_tc_gw}.",
                 'analysis': sorted(tc_analysis, key=lambda x: -x['projected_tc_pts'])[:5],
             })
-    
-    # FREE HIT
+
+    # ==========================================================================
+    # FREE HIT - Triggers on BGW OR fixture swings (hard -> easy for opponents)
+    # ==========================================================================
     if 'free_hit' in chips_available:
         best_fh_gw = None
-        worst_coverage = 15
+        best_fh_score = 0
         fh_analysis = []
-        
-        for gw in bgw_gws:
-            if gw < current_gw:
-                continue
-            
+
+        for gw in gw_range:
             players_with_fixtures = 0
             players_blanking = []
-            
+            squad_difficulty = 0
+            hard_fixture_count = 0
+
             for pick in my_squad:
                 team_id = pick.get('team_id', 0)
-                gw_fixtures = fixture_data['team_fixtures'].get(team_id, {}).get(gw, [])
-                
+                gw_fixtures = team_fixtures.get(team_id, {}).get(gw, [])
+
                 if gw_fixtures:
                     players_with_fixtures += 1
+                    # Sum up fixture difficulties
+                    for fix in gw_fixtures:
+                        diff = get_fixture_difficulty(team_strengths, fix['opponent_id'], fix['is_home'])
+                        squad_difficulty += diff
+                        if diff > 1.1:  # Hard fixture
+                            hard_fixture_count += 1
                 else:
                     players_blanking.append(pick.get('web_name', 'Unknown'))
-            
+
+            # FH score: low coverage + high difficulty = good FH week
+            blanking_penalty = (15 - players_with_fixtures) * 3
+            difficulty_penalty = (squad_difficulty / max(1, players_with_fixtures) - 1.0) * 10
+            fh_score = blanking_penalty + difficulty_penalty
+
             fh_analysis.append({
                 'gw': gw,
                 'players_with_fixtures': players_with_fixtures,
                 'players_blanking': len(players_blanking),
                 'blanking_names': players_blanking[:5],
+                'avg_difficulty': round(squad_difficulty / max(1, players_with_fixtures), 2),
+                'hard_fixtures': hard_fixture_count,
+                'score': round(fh_score, 1),
+                'is_bgw': gw in bgw_gws,
             })
-            
-            if players_with_fixtures < worst_coverage:
-                worst_coverage = players_with_fixtures
+
+            if fh_score > best_fh_score:
+                best_fh_score = fh_score
                 best_fh_gw = gw
-        
-        if best_fh_gw and worst_coverage < 9:
+
+        if best_fh_gw and best_fh_score > 5:  # Minimum threshold
             best = next(a for a in fh_analysis if a['gw'] == best_fh_gw)
+            is_bgw = best['is_bgw']
+
+            if is_bgw:
+                reasoning = f"GW{best_fh_gw} is a BGW where only {best['players_with_fixtures']} of your players have fixtures."
+            else:
+                reasoning = f"GW{best_fh_gw} has difficult fixtures for your squad (avg difficulty: {best['avg_difficulty']:.2f}, {best['hard_fixtures']} hard games)."
+
             recommendations.append({
                 'chip': 'Free Hit',
                 'recommended_gw': best_fh_gw,
-                'confidence': 'HIGH' if worst_coverage < 7 else 'MEDIUM',
-                'reasoning': f"GW{best_fh_gw} is a BGW where only {worst_coverage} of your players have fixtures.",
+                'confidence': 'HIGH' if is_bgw and best['players_with_fixtures'] < 7 else 'MEDIUM',
+                'reasoning': reasoning,
                 'action_needed': f"Save Free Hit for GW{best_fh_gw}. Don't waste transfers preparing.",
-                'players_blanking': best['blanking_names'],
-                'analysis': fh_analysis,
+                'players_blanking': best['blanking_names'] if best['blanking_names'] else None,
+                'analysis': sorted(fh_analysis, key=lambda x: -x['score'])[:5],
             })
-    
-    # WILDCARD
+
+    # ==========================================================================
+    # WILDCARD - Triggers on value bleeding, cold players, or fixture swings
+    # ==========================================================================
     if 'wildcard' in chips_available:
         wc_triggers = []
         wc_score = 0
-        
+
+        # Count cold/out-of-form players
+        cold_players = []
         for pick in my_squad:
             proj = projections.get(pick['element'], {})
             if proj.get('form_trend') == 'cold':
                 wc_score += 1
-                wc_triggers.append('cold_player')
-        
+                cold_players.append(pick.get('web_name', 'Unknown'))
+
+        if len(cold_players) >= 3:
+            wc_triggers.append(f'{len(cold_players)}_cold_players')
+
+        # Check DGW coverage (if DGWs exist)
         dgw_coverage = 0
-        for pick in my_squad:
-            team_id = pick.get('team_id', 0)
-            if any(gw in team_dgws.get(team_id, []) for gw in dgw_gws if gw > current_gw):
-                dgw_coverage += 1
-        
-        if dgw_coverage < 8 and dgw_gws:
-            wc_score += 3
-            wc_triggers.append('poor_dgw_coverage')
-        
-        injured = sum(1 for p in my_squad 
+        if dgw_gws:
+            for pick in my_squad:
+                team_id = pick.get('team_id', 0)
+                if any(gw in team_dgws.get(team_id, []) for gw in dgw_gws if gw > current_gw):
+                    dgw_coverage += 1
+
+            if dgw_coverage < 8:
+                wc_score += 3
+                wc_triggers.append('poor_dgw_coverage')
+
+        # Count injuries/doubts
+        injured = sum(1 for p in my_squad
                      if projections.get(p['element'], {}).get('chance_of_playing') is not None
                      and projections.get(p['element'], {}).get('chance_of_playing') < 75)
         if injured >= 3:
             wc_score += 2
             wc_triggers.append(f'{injured}_injuries')
-        
+
+        # Check for value bleeding (players losing value)
+        value_loss = 0
+        for pick in my_squad:
+            proj = projections.get(pick['element'], {})
+            price_trend = proj.get('price_trend', {})
+            if isinstance(price_trend, dict) and price_trend.get('trend') in ['falling', 'falling_fast']:
+                value_loss += 1
+
+        if value_loss >= 4:
+            wc_score += 2
+            wc_triggers.append(f'{value_loss}_falling_prices')
+
+        # Check for overall squad fixture difficulty in next 4 GWs
+        total_4gw_difficulty = 0
+        for pick in my_squad:
+            proj = projections.get(pick['element'], {})
+            total_4gw_difficulty += proj.get('avg_difficulty_4gw', 1.0)
+
+        avg_squad_difficulty = total_4gw_difficulty / len(my_squad) if my_squad else 1.0
+        if avg_squad_difficulty > 1.15:  # Hard upcoming fixtures
+            wc_score += 2
+            wc_triggers.append('hard_fixtures_ahead')
+
         if wc_score >= 3:
+            # Find best WC timing
             best_wc_gw = current_gw + 1
             if dgw_gws:
-                best_wc_gw = min(dgw_gws) - 1 if min(dgw_gws) > current_gw else current_gw + 1
-            
+                upcoming_dgws = [gw for gw in dgw_gws if gw > current_gw]
+                if upcoming_dgws:
+                    best_wc_gw = min(upcoming_dgws) - 1
+
             recommendations.append({
                 'chip': 'Wildcard',
                 'recommended_gw': best_wc_gw,
                 'confidence': 'HIGH' if wc_score >= 5 else 'MEDIUM',
                 'reasoning': f"Consider WC in GW{best_wc_gw} to fix squad issues: {', '.join(set(wc_triggers))}",
-                'action_needed': "Restructure squad for upcoming DGWs and fixture swings.",
+                'action_needed': "Restructure squad for better fixtures and form.",
                 'triggers': wc_triggers,
+                'cold_players': cold_players[:5] if cold_players else None,
             })
-    
+
     return recommendations
 
 
@@ -991,7 +1318,7 @@ def get_captain_picks(my_squad, projections, all_players, fixture_data, current_
 
 def run_projections():
     print("=" * 60)
-    print("FPL BRAIN v3.1 - Projection Engine")
+    print("FPL BRAIN v4.0 - Projection Engine")
     print("=" * 60)
     
     print("\nFetching FPL data...")
@@ -1033,7 +1360,7 @@ def run_projections():
         us_match = None
         if understat_players:
             us_match = match_player_names(
-                player['web_name'], team_id, understat_players, team_name_map
+                player, understat_players, team_name_map
             )
             if us_match:
                 matched_count += 1
