@@ -85,6 +85,7 @@ function CaptainCard({ pick, rank }) {
             <h3 className="font-bold text-lg">{pick.name}</h3>
             <FormBadge trend={pick.form_trend} />
             {pick.has_dgw && <span className="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">DGW</span>}
+            {pick.is_template && <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-full">Template</span>}
             {pick.is_differential && <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded-full">Diff</span>}
           </div>
           <p className="text-gray-600 text-sm">{pick.team} • {pick.fixture}</p>
@@ -96,6 +97,7 @@ function CaptainCard({ pick, rank }) {
       </div>
       <div className="mt-3 flex flex-wrap gap-3 text-sm items-center">
         <span className="text-gray-600">Own: {pick.ownership}%</span>
+        {pick.estimated_captain_pct > 0 && <span className="text-gray-500">Est Cap: {pick.estimated_captain_pct}%</span>}
         <DifficultyBadge difficulty={pick.fixture_difficulty} />
       </div>
     </div>
@@ -485,8 +487,29 @@ export default function App() {
             )}
             <section>
               <h2 className="text-xl font-bold mb-4">👑 Captain Picks</h2>
+              {recommendations?.captain_picks?.differential_pick && (
+                <div className="mb-4 p-4 rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">🎯</span>
+                    <h3 className="font-bold text-blue-800">Differential Option</h3>
+                    <span className={`px-2 py-0.5 text-xs rounded-full font-medium ${
+                      recommendations.captain_picks.differential_pick.risk_level === 'low_risk' ? 'bg-green-100 text-green-700' :
+                      recommendations.captain_picks.differential_pick.risk_level === 'medium_risk' ? 'bg-yellow-100 text-yellow-700' :
+                      'bg-red-100 text-red-700'
+                    }`}>{recommendations.captain_picks.differential_pick.risk_level?.replace('_', ' ')}</span>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    <span className="font-semibold">{recommendations.captain_picks.differential_pick.name}</span>
+                    {' '}({recommendations.captain_picks.differential_pick.ownership}% owned) vs safe pick:
+                    {' '}<span className={recommendations.captain_picks.differential_pick.vs_safe_diff >= 0 ? 'text-green-600' : 'text-red-600'}>
+                      {recommendations.captain_picks.differential_pick.vs_safe_diff >= 0 ? '+' : ''}{recommendations.captain_picks.differential_pick.vs_safe_diff} pts
+                    </span>
+                    {' '}• EO advantage: {recommendations.captain_picks.differential_pick.eo_advantage}%
+                  </p>
+                </div>
+              )}
               <div className="space-y-3">
-                {recommendations?.captain_picks?.map((pick, i) => <CaptainCard key={pick.player_id} pick={pick} rank={i + 1} />)}
+                {recommendations?.captain_picks?.picks?.map((pick, i) => <CaptainCard key={pick.player_id} pick={pick} rank={i + 1} />)}
               </div>
             </section>
             <section>
