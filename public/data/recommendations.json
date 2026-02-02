@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T08:44:27.940349",
+  "generated_at": "2026-02-02T09:02:32.777537",
   "next_gameweek": 25,
   "data_source": "Understat (379 players matched)",
   "captain_picks": {
@@ -297,7 +297,55 @@
           "is_dgw": false
         }
       ],
-      "data_quality": "understat"
+      "data_quality": "understat",
+      "alternatives": {
+        "budget": {
+          "player_id": 37,
+          "name": "Digne",
+          "team": "AVL",
+          "cost": 4.5,
+          "gain_4gw": 18.2,
+          "value_score": 4.04,
+          "reasons": [],
+          "fixtures": [
+            {
+              "gw": 25,
+              "fixture": "BOU (A)",
+              "difficulty": 1.2,
+              "is_dgw": false
+            },
+            {
+              "gw": 26,
+              "fixture": "BHA (H)",
+              "difficulty": 1.08,
+              "is_dgw": false
+            }
+          ]
+        },
+        "value": {
+          "player_id": 37,
+          "name": "Digne",
+          "team": "AVL",
+          "cost": 4.5,
+          "gain_4gw": 18.2,
+          "value_score": 4.04,
+          "reasons": [],
+          "fixtures": [
+            {
+              "gw": 25,
+              "fixture": "BOU (A)",
+              "difficulty": 1.2,
+              "is_dgw": false
+            },
+            {
+              "gw": 26,
+              "fixture": "BHA (H)",
+              "difficulty": 1.08,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
     },
     {
       "priority": 2,
@@ -312,10 +360,12 @@
       "in_team": "MCI",
       "in_cost": 8.3,
       "gain_4gw": 4.2,
-      "buy_reasons": [],
+      "buy_reasons": [
+        "easy_next_2"
+      ],
       "worth_hit": false,
       "hit_value": -1.1,
-      "value_score": 3.2,
+      "value_score": 3.24,
       "position": 3,
       "fixtures": [
         {
@@ -343,7 +393,8 @@
           "is_dgw": false
         }
       ],
-      "data_quality": "understat"
+      "data_quality": "understat",
+      "alternatives": {}
     }
   ],
   "chip_strategy": [
