@@ -846,6 +846,20 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             if not proj:
                 continue
 
+            # Skip players not getting minutes (v4.0 fix)
+            recent_mins = int(p.get('minutes', 0) or 0)
+            starts = int(p.get('starts', 0) or 0)
+            if starts < 3 or recent_mins < 200:
+                continue  # Not a regular starter
+
+            # Skip cold form players - they're out of favor (v4.0 fix)
+            if proj.get('form_trend') == 'cold':
+                continue
+
+            # Skip approximated data for transfers - unreliable (v4.0 fix)
+            if proj.get('data_quality') == 'approximated':
+                continue
+
             proj_4gw = proj.get('next_4gw_pts', 0)
 
             # Skip low quality players (v4.0)
