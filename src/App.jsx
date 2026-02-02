@@ -56,10 +56,16 @@ function ReasonTags({ reasons, type }) {
     'hard_fixtures': 'bg-red-100 text-red-700',
     'injury_doubt': 'bg-red-100 text-red-700',
     'low_projection': 'bg-gray-100 text-gray-600',
+    'low_xmin': 'bg-red-100 text-red-700',
+    'rotation_risk': 'bg-yellow-100 text-yellow-700',
+    'nailed': 'bg-green-100 text-green-700',
+    'easy_next_2': 'bg-green-100 text-green-700',
   };
   const labelMap = {
     'hot_form': '🔥 Hot', 'cold_form': '🥶 Cold', 'easy_fixtures': '📅 Easy run',
     'hard_fixtures': '📅 Hard run', 'injury_doubt': '🏥 Injury', 'low_projection': '📉 Low pts',
+    'low_xmin': '⏱️ Low mins', 'rotation_risk': '🔄 Rotation', 'nailed': '🔒 Nailed',
+    'easy_next_2': '📅 Easy 2GW',
   };
   return (
     <div className="flex flex-wrap gap-1">
@@ -168,7 +174,13 @@ function TransferCard({ transfer, onTryTransfer, isApplied, onRemove }) {
             <p className="font-semibold truncate">{transfer.in_name}</p>
             <div className="flex items-center gap-2 mt-1">
               <span className="text-gray-500 text-sm">£{transfer.in_cost}m</span>
-              <span className="text-gray-400 text-xs">({transfer.value_score} pts/£m)</span>
+              {transfer.in_xmin && (
+                <span className={`text-xs px-1.5 py-0.5 rounded ${
+                  transfer.in_xmin >= 80 ? 'bg-green-100 text-green-700' :
+                  transfer.in_xmin >= 60 ? 'bg-yellow-100 text-yellow-700' :
+                  'bg-red-100 text-red-700'
+                }`}>{transfer.in_xmin} xMin</span>
+              )}
             </div>
             <ReasonTags reasons={transfer.buy_reasons} type="in" />
           </div>

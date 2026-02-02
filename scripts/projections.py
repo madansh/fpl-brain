@@ -817,24 +817,33 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
         if proj_4gw < SELL_THRESHOLD_4GW:
             sell_score += 3
             reasons.append('low_projection')
-        
+
         if proj.get('form_trend') == 'cold':
             sell_score += 2
             reasons.append('cold_form')
-        
+
         chance = proj.get('chance_of_playing')
         if chance is not None and chance < 75:
             sell_score += 3
             reasons.append('injury_doubt')
-        
+
+        # v4.2: Check xMin - rotation risk
+        xmin = proj.get('xmin', 90)
+        if xmin < 50:
+            sell_score += 3
+            reasons.append('low_xmin')
+        elif xmin < 65:
+            sell_score += 1
+            reasons.append('rotation_risk')
+
         team_id = pick.get('team_id', 0)
         if team_id in fixture_data['team_bgws']:
-            upcoming_blanks = [gw for gw in fixture_data['team_bgws'][team_id] 
+            upcoming_blanks = [gw for gw in fixture_data['team_bgws'][team_id]
                              if gw <= current_gw + 4]
             if upcoming_blanks:
                 sell_score += 2
                 reasons.append(f'blank_gw{upcoming_blanks[0]}')
-        
+
         avg_difficulty = proj.get('avg_difficulty_4gw', 1.0)
         if avg_difficulty > 1.15:
             sell_score += 1
@@ -896,15 +905,28 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             if proj.get('data_quality') == 'approximated':
                 continue
 
+            # v4.2: Calculate xMin for the candidate
+            candidate_xmin = calculate_xmin(p, proj)
+
+            # Skip players with very low xMin - rotation risk (v4.2)
+            if candidate_xmin < 50:
+                continue
+
             # Use weighted projection (v4.1) - near-term fixtures matter more
             proj_4gw_weighted = calculate_weighted_projection(proj)
             proj_4gw_raw = proj.get('next_4gw_pts', 0)
 
-            # Skip low quality players (v4.0)
-            if proj_4gw_weighted < MIN_BUY_PROJECTION:
+            # v4.2: Calculate effective 4GW points (projection × xMin/90)
+            # This accounts for rotation risk in the gain calculation
+            xmin_factor = candidate_xmin / 90
+            effective_4gw = proj_4gw_weighted * xmin_factor
+
+            # Skip low quality players (v4.0) - use effective pts
+            if effective_4gw < MIN_BUY_PROJECTION * 0.85:  # Slightly lower threshold for effective
                 continue
 
-            gain_4gw = proj_4gw_weighted - weak['proj_4gw']
+            # Use effective points for gain calculation (v4.2)
+            gain_4gw = effective_4gw - weak['proj_4gw']
 
             # Skip marginal gains (v4.0)
             if gain_4gw < MIN_GAIN_THRESHOLD:
@@ -912,6 +934,14 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
 
             buy_score = gain_4gw
             buy_reasons = []
+
+            # v4.2: xMin bonus/penalty
+            if candidate_xmin >= 85:
+                buy_score += 1
+                buy_reasons.append('nailed')
+            elif candidate_xmin < 65:
+                buy_score -= 1.5
+                buy_reasons.append('rotation_risk')
 
             # Ownership penalty for template players (v4.0)
             player_ownership = float(p.get('selected_by_percent', 0) or 0)
@@ -942,12 +972,15 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
                 buy_score += 1.5
                 buy_reasons.append('easy_next_2')
 
-            value = proj_4gw_weighted / cost if cost > 0 else 0
+            # Use effective pts for value calculation (v4.2)
+            value = effective_4gw / cost if cost > 0 else 0
 
             candidates.append({
                 'player': p,
                 'proj_4gw': proj_4gw_weighted,
                 'proj_4gw_raw': proj_4gw_raw,
+                'effective_4gw': round(effective_4gw, 1),  # v4.2
+                'xmin': candidate_xmin,  # v4.2
                 'gain_4gw': round(gain_4gw, 1),
                 'buy_score': buy_score,
                 'buy_reasons': buy_reasons,
@@ -1036,6 +1069,8 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
                 'in_team': team_strengths.get(p['team'], {}).get('short_name', '?'),
                 'in_cost': best['cost'],
                 'gain_4gw': best['gain_4gw'],
+                'effective_4gw': best.get('effective_4gw', best['gain_4gw']),  # v4.2
+                'in_xmin': best.get('xmin', 90),  # v4.2: Expected minutes
                 'buy_reasons': best['buy_reasons'],
                 'worth_hit': worth_hit,
                 'hit_value': round(hit_value, 1),
