@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-02-02T06:57:11.225132",
+  "generated_at": "2026-02-02T08:32:11.902535",
   "next_gameweek": 25,
-  "data_source": "Understat (0 players matched)",
+  "data_source": "Understat (379 players matched)",
   "captain_picks": [
     {
       "player_id": 430,
       "name": "Haaland",
       "team": "MCI",
-      "projected_pts": 9.49,
-      "doubled_pts": 19.0,
+      "projected_pts": 8.09,
+      "doubled_pts": 16.2,
       "fixture": "LIV (A)",
       "fixture_difficulty": 0.94,
       "ownership": 71.3,
@@ -16,14 +16,14 @@
       "form_trend": "cold",
       "is_differential": false,
       "has_dgw": false,
-      "data_quality": "approximated"
+      "data_quality": "understat"
     },
     {
       "player_id": 414,
       "name": "Foden",
       "team": "MCI",
-      "projected_pts": 5.94,
-      "doubled_pts": 11.9,
+      "projected_pts": 5.74,
+      "doubled_pts": 11.5,
       "fixture": "LIV (A)",
       "fixture_difficulty": 0.94,
       "ownership": 14.0,
@@ -31,14 +31,14 @@
       "form_trend": "cold",
       "is_differential": true,
       "has_dgw": false,
-      "data_quality": "approximated"
+      "data_quality": "understat"
     },
     {
       "player_id": 5,
       "name": "Gabriel",
       "team": "ARS",
-      "projected_pts": 5.91,
-      "doubled_pts": 11.8,
+      "projected_pts": 5.44,
+      "doubled_pts": 10.9,
       "fixture": "SUN (H)",
       "fixture_difficulty": 0.9,
       "ownership": 39.3,
@@ -46,22 +46,7 @@
       "form_trend": "neutral",
       "is_differential": false,
       "has_dgw": false,
-      "data_quality": "approximated"
-    },
-    {
-      "player_id": 47,
-      "name": "Rogers",
-      "team": "AVL",
-      "projected_pts": 5.04,
-      "doubled_pts": 10.1,
-      "fixture": "BOU (A)",
-      "fixture_difficulty": 1.2,
-      "ownership": 31.2,
-      "form": "4.0",
-      "form_trend": "neutral",
-      "is_differential": false,
-      "has_dgw": false,
-      "data_quality": "approximated"
+      "data_quality": "understat"
     },
     {
       "player_id": 249,
@@ -77,6 +62,21 @@
       "is_differential": false,
       "has_dgw": false,
       "data_quality": "approximated"
+    },
+    {
+      "player_id": 382,
+      "name": "Wirtz",
+      "team": "LIV",
+      "projected_pts": 4.92,
+      "doubled_pts": 9.8,
+      "fixture": "MCI (H)",
+      "fixture_difficulty": 0.96,
+      "ownership": 13.2,
+      "form": "7.4",
+      "form_trend": "hot",
+      "is_differential": true,
+      "has_dgw": false,
+      "data_quality": "approximated"
     }
   ],
   "transfer_recommendations": [
@@ -89,43 +89,43 @@
         "injury_doubt",
         "hard_fixtures"
       ],
-      "in_id": 197,
-      "in_name": "Sonne",
-      "in_team": "BUR",
-      "in_cost": 3.8,
-      "gain_4gw": 25.7,
+      "in_id": 6,
+      "in_name": "Saliba",
+      "in_team": "ARS",
+      "in_cost": 6.0,
+      "gain_4gw": 18.3,
       "buy_reasons": [],
       "worth_hit": true,
-      "hit_value": 20.4,
-      "value_score": 6.76,
+      "hit_value": 13.0,
+      "value_score": 3.05,
       "position": 2,
       "fixtures": [
         {
           "gw": 25,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
+          "fixture": "SUN (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         },
         {
           "gw": 26,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
           "is_dgw": false
         },
         {
           "gw": 27,
-          "fixture": "CHE (A)",
-          "difficulty": 1.21,
+          "fixture": "TOT (A)",
+          "difficulty": 1.5,
           "is_dgw": false
         },
         {
           "gw": 28,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
+          "fixture": "CHE (H)",
+          "difficulty": 0.99,
           "is_dgw": false
         }
       ],
-      "data_quality": "approximated"
+      "data_quality": "understat"
     },
     {
       "priority": 2,
@@ -135,46 +135,176 @@
         "cold_form",
         "hard_fixtures"
       ],
-      "in_id": 55,
-      "in_name": "Barkley",
-      "in_team": "AVL",
-      "in_cost": 4.8,
-      "gain_4gw": 20.3,
+      "in_id": 413,
+      "in_name": "Marmoush",
+      "in_team": "MCI",
+      "in_cost": 8.3,
+      "gain_4gw": 4.2,
       "buy_reasons": [],
-      "worth_hit": true,
-      "hit_value": 15.0,
-      "value_score": 9.08,
+      "worth_hit": false,
+      "hit_value": -1.1,
+      "value_score": 3.2,
       "position": 3,
       "fixtures": [
         {
           "gw": 25,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
           "is_dgw": false
         },
         {
           "gw": 26,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "fixture": "LEE (H)",
+          "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
         },
         {
+          "gw": 27,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
           "gw": 28,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
+          "fixture": "LEE (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         }
       ],
-      "data_quality": "approximated"
+      "data_quality": "understat"
     }
   ],
-  "chip_strategy": [],
+  "chip_strategy": [
+    {
+      "chip": "Bench Boost",
+      "recommended_gw": 25,
+      "confidence": "HIGH",
+      "reasoning": "GW25 has favorable fixtures (ease: 3.8). Projected bench value: 12.4 pts.",
+      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW25.",
+      "analysis": [
+        {
+          "gw": 25,
+          "dgw_players": 0,
+          "bench_proj": 12.4,
+          "bench_xmin": 240,
+          "fixture_ease": 3.78,
+          "score": 24.0,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "dgw_players": 0,
+          "bench_proj": 12.3,
+          "bench_xmin": 240,
+          "fixture_ease": 3.75,
+          "score": 23.8,
+          "is_dgw": false
+        },
+        {
+          "gw": 30,
+          "dgw_players": 0,
+          "bench_proj": 12.3,
+          "bench_xmin": 240,
+          "fixture_ease": 3.67,
+          "score": 23.6,
+          "is_dgw": false
+        },
+        {
+          "gw": 29,
+          "dgw_players": 0,
+          "bench_proj": 12.3,
+          "bench_xmin": 240,
+          "fixture_ease": 3.46,
+          "score": 22.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "dgw_players": 0,
+          "bench_proj": 12.3,
+          "bench_xmin": 240,
+          "fixture_ease": 3.32,
+          "score": 22.5,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "chip": "Triple Captain",
+      "recommended_gw": 26,
+      "recommended_player": "Haaland",
+      "confidence": "MEDIUM",
+      "reasoning": "TC Haaland in GW26 (FUL (H)) - HOME fixture. Projected: 31 pts.",
+      "action_needed": "Ensure Haaland is in your squad for GW26.",
+      "analysis": [
+        {
+          "gw": 26,
+          "player": "Haaland",
+          "player_id": 430,
+          "fixtures": [
+            "FUL (H)"
+          ],
+          "avg_difficulty": 0.9,
+          "is_home": true,
+          "is_dgw": false,
+          "projected_tc_pts": 30.6,
+          "xmin": 85
+        },
+        {
+          "gw": 27,
+          "player": "Haaland",
+          "player_id": 430,
+          "fixtures": [
+            "NEW (H)"
+          ],
+          "avg_difficulty": 0.98,
+          "is_home": true,
+          "is_dgw": false,
+          "projected_tc_pts": 26.3,
+          "xmin": 85
+        },
+        {
+          "gw": 25,
+          "player": "Haaland",
+          "player_id": 430,
+          "fixtures": [
+            "LIV (A)"
+          ],
+          "avg_difficulty": 0.94,
+          "is_home": false,
+          "is_dgw": false,
+          "projected_tc_pts": 25.7,
+          "xmin": 85
+        },
+        {
+          "gw": 29,
+          "player": "Haaland",
+          "player_id": 430,
+          "fixtures": [
+            "NFO (H)"
+          ],
+          "avg_difficulty": 1.02,
+          "is_home": true,
+          "is_dgw": false,
+          "projected_tc_pts": 24.7,
+          "xmin": 85
+        },
+        {
+          "gw": 28,
+          "player": "Haaland",
+          "player_id": 430,
+          "fixtures": [
+            "LEE (A)"
+          ],
+          "avg_difficulty": 1.1,
+          "is_home": false,
+          "is_dgw": false,
+          "projected_tc_pts": 19.5,
+          "xmin": 85
+        }
+      ]
+    }
+  ],
   "fixture_alerts": {
     "dgw_gws": [],
     "bgw_gws": []
