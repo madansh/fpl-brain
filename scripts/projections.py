@@ -1284,28 +1284,83 @@ def analyze_chip_strategy(my_squad, projections, fixture_data, team_strengths,
 
 
 # =============================================================================
-# CAPTAIN SELECTION
+# CAPTAIN SELECTION + DIFFERENTIAL ANALYSIS (v4.0)
 # =============================================================================
 
 def get_captain_picks(my_squad, projections, all_players, fixture_data, current_gw):
+    """
+    Enhanced captain selection with differential analysis.
+    Calculates EO impact and risk/reward for each captain choice.
+    """
     captain_options = []
     player_lookup = {p['id']: p for p in all_players}
-    
+
+    # Find template captains (highest owned premiums in the game)
+    all_sorted_by_ownership = sorted(
+        [(p['id'], float(p.get('selected_by_percent', 0)), p.get('web_name', ''))
+         for p in all_players if p['now_cost'] >= 100],  # 10.0m+
+        key=lambda x: -x[1]
+    )
+    template_captain_ids = [p[0] for p in all_sorted_by_ownership[:3]]
+    template_captains = {p[0]: {'ownership': p[1], 'name': p[2]} for p in all_sorted_by_ownership[:3]}
+
+    # Get template captain's projected points (for differential calc)
+    template_proj_pts = max(
+        projections.get(pid, {}).get('next_gw_pts', 0)
+        for pid in template_captain_ids
+    ) if template_captain_ids else 6.0
+
     for pick in my_squad:
         if pick.get('multiplier', 0) == 0:
             continue
-        
+
         player_id = pick['element']
         proj = projections.get(player_id, {})
         player = player_lookup.get(player_id, {})
-        
+
         proj_pts = proj.get('next_gw_pts', 0)
         if proj_pts > 2:
             ownership = float(player.get('selected_by_percent', 0))
-            
+
             team_id = pick.get('team_id', player.get('team', 0))
             has_dgw = (current_gw + 1) in fixture_data['team_dgws'].get(team_id, [])
-            
+
+            # Calculate Effective Ownership (EO) - estimate of captain ownership
+            # Higher owned players are more likely to be captained
+            if ownership > 50:
+                estimated_captain_pct = ownership * 0.6  # ~60% of owners captain
+            elif ownership > 30:
+                estimated_captain_pct = ownership * 0.4
+            elif ownership > 15:
+                estimated_captain_pct = ownership * 0.25
+            else:
+                estimated_captain_pct = ownership * 0.1
+
+            # Differential value: points gained/lost vs template
+            is_template = player_id in template_captain_ids
+            diff_vs_template = proj_pts - template_proj_pts
+
+            # Risk/reward calculation
+            # Upside: If differential scores more than template
+            # Downside: If template scores more than differential
+            if is_template:
+                upside = 0
+                downside = 0
+                risk_category = 'safe'
+            else:
+                # Upside = extra points * (100 - your EO)% of managers don't have this captain
+                upside = max(0, diff_vs_template * 2) * (100 - estimated_captain_pct) / 100
+                # Downside = lost points * template EO%
+                template_eo = max(tc['ownership'] for tc in template_captains.values()) * 0.5
+                downside = max(0, -diff_vs_template * 2) * template_eo / 100
+
+                if upside > downside * 1.5:
+                    risk_category = 'high_upside'
+                elif downside > upside * 1.5:
+                    risk_category = 'risky'
+                else:
+                    risk_category = 'balanced'
+
             captain_options.append({
                 'player_id': player_id,
                 'name': player.get('web_name', 'Unknown'),
@@ -1315,15 +1370,74 @@ def get_captain_picks(my_squad, projections, all_players, fixture_data, current_
                 'fixture': proj.get('next_fixture', ''),
                 'fixture_difficulty': proj.get('next_fixture_diff', 1.0),
                 'ownership': ownership,
+                'estimated_captain_pct': round(estimated_captain_pct, 1),
                 'form': player.get('form', '0'),
                 'form_trend': proj.get('form_trend', 'neutral'),
                 'is_differential': ownership < 15,
+                'is_template': is_template,
                 'has_dgw': has_dgw,
                 'data_quality': proj.get('data_quality', 'unknown'),
+                # Differential analysis
+                'diff_vs_template': round(diff_vs_template, 2),
+                'upside_pts': round(upside, 1),
+                'downside_pts': round(downside, 1),
+                'risk_category': risk_category,
             })
-    
+
     captain_options.sort(key=lambda x: (-x['has_dgw'], -x['projected_pts']))
-    return captain_options[:5]
+
+    # Generate differential recommendation
+    safe_pick = captain_options[0] if captain_options else None
+
+    # Find best differential: low ownership with analysis vs safe pick
+    differential_picks = []
+    if safe_pick:
+        safe_pts = safe_pick['projected_pts']
+        safe_eo = safe_pick['estimated_captain_pct']
+
+        for c in captain_options[1:]:  # Skip safe pick
+            if c['ownership'] < 20:  # Low ownership = differential
+                pts_diff = c['projected_pts'] - safe_pts
+                eo_advantage = safe_eo - c['estimated_captain_pct']
+
+                # Calculate risk/reward
+                # If diff hauls (2x expected): you gain eo_advantage % on field
+                # If safe hauls (2x expected): you lose eo_advantage % on field
+                haul_scenario = c['projected_pts'] * 2  # If they score double projected
+                safe_haul = safe_pts * 2
+
+                # Risk assessment
+                if pts_diff >= 0:
+                    risk_level = 'low_risk'  # Diff projects same or better
+                elif pts_diff >= -2:
+                    risk_level = 'medium_risk'  # Within 2 pts
+                else:
+                    risk_level = 'high_risk'  # More than 2 pts behind
+
+                differential_picks.append({
+                    **c,
+                    'vs_safe_diff': round(pts_diff, 2),
+                    'eo_advantage': round(eo_advantage, 1),
+                    'risk_level': risk_level,
+                    'haul_upside': round(eo_advantage * 0.15, 1),  # Approx rank gain if diff hauls
+                })
+
+    # Best differential: highest projected among low ownership
+    best_differential = None
+    if differential_picks:
+        differential_picks.sort(key=lambda x: -x['projected_pts'])
+        best_differential = differential_picks[0]
+
+    return {
+        'picks': captain_options[:5],
+        'safe_pick': safe_pick,
+        'differential_pick': best_differential,
+        'all_differentials': differential_picks[:3],  # Top 3 differential options
+        'template_captains': [
+            {'name': tc['name'], 'ownership': tc['ownership'], 'projected': projections.get(pid, {}).get('next_gw_pts', 0)}
+            for pid, tc in template_captains.items()
+        ],
+    }
 
 
 # =============================================================================
@@ -1632,10 +1746,14 @@ def run_projections():
     print('=' * 60)
     print(f"Files written to {output_dir}/")
     
-    if captains:
-        c = captains[0]
+    if captains and captains.get('picks'):
+        c = captains['safe_pick']
         dgw_flag = " 🎯 DGW!" if c.get('has_dgw') else ""
-        print(f"\n👑 Top Captain: {c['name']} ({c['projected_pts']:.1f} pts){dgw_flag}")
+        print(f"\n👑 Safe Captain: {c['name']} ({c['projected_pts']:.1f} pts, {c['ownership']:.1f}% EO){dgw_flag}")
+        diff = captains.get('differential_pick')
+        if diff and diff['name'] != c['name']:
+            print(f"   🎯 Differential: {diff['name']} ({diff['projected_pts']:.1f} pts, {diff['ownership']:.1f}% owned)")
+            print(f"      → {diff['vs_safe_diff']:+.1f} pts vs safe, {diff['eo_advantage']:.0f}% EO advantage")
     
     if transfers:
         print(f"\n📈 Transfer Recommendations:")
