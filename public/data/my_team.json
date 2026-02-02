@@ -4,9 +4,9 @@
   "next_gw": 25,
   "bank": 2.5,
   "chips_available": [
-    "free_hit",
     "triple_captain",
-    "bench_boost"
+    "bench_boost",
+    "free_hit"
   ],
   "squad": [
     {
@@ -21,6 +21,11 @@
       "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "neutral",
+      "rolling_form": 2.38,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -60,6 +65,11 @@
       "projected_pts": 4.29,
       "projected_4gw": 16.8,
       "form_trend": "neutral",
+      "rolling_form": 3.88,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -99,6 +109,11 @@
       "projected_pts": 5.44,
       "projected_4gw": 20.5,
       "form_trend": "neutral",
+      "rolling_form": 5.22,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -138,6 +153,11 @@
       "projected_pts": 0,
       "projected_4gw": 0,
       "form_trend": "hot",
+      "rolling_form": 4.95,
+      "form_direction": "rising",
+      "news": "Hamstring injury - Unknown return date",
+      "news_severity": 2,
+      "news_category": "moderate",
       "fixture_preview": [
         {
           "gw": 25,
@@ -177,6 +197,11 @@
       "projected_pts": 3.13,
       "projected_4gw": 14.1,
       "form_trend": "hot",
+      "rolling_form": 4.41,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -216,6 +241,11 @@
       "projected_pts": 4.73,
       "projected_4gw": 19.8,
       "form_trend": "neutral",
+      "rolling_form": 3.36,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -255,6 +285,11 @@
       "projected_pts": 4.92,
       "projected_4gw": 18.2,
       "form_trend": "hot",
+      "rolling_form": 6.23,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -294,6 +329,11 @@
       "projected_pts": 4.22,
       "projected_4gw": 20.0,
       "form_trend": "hot",
+      "rolling_form": 5.72,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -333,6 +373,11 @@
       "projected_pts": 5.74,
       "projected_4gw": 22.4,
       "form_trend": "cold",
+      "rolling_form": 1.12,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -372,6 +417,11 @@
       "projected_pts": 5.01,
       "projected_4gw": 25.0,
       "form_trend": "hot",
+      "rolling_form": 6.05,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -411,6 +461,11 @@
       "projected_pts": 8.09,
       "projected_4gw": 31.6,
       "form_trend": "cold",
+      "rolling_form": 2.69,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -450,6 +505,11 @@
       "projected_pts": 3.18,
       "projected_4gw": 12.7,
       "form_trend": "neutral",
+      "rolling_form": 2.81,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -489,6 +549,11 @@
       "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "cold",
+      "rolling_form": 1.36,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -528,6 +593,11 @@
       "projected_pts": 3.79,
       "projected_4gw": 15.0,
       "form_trend": "neutral",
+      "rolling_form": 2.55,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 25,
@@ -567,6 +637,11 @@
       "projected_pts": 0,
       "projected_4gw": 0,
       "form_trend": "neutral",
+      "rolling_form": null,
+      "form_direction": null,
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": []
     }
   ],

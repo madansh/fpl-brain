@@ -1448,6 +1448,9 @@ def run_projections():
         non_blank_gws = [g for g in gw_projections[:4] if not g.get('is_bgw')]
         avg_difficulty_4gw = (total_difficulty / len(non_blank_gws)) if non_blank_gws else 1.0
         
+        # Parse injury news for severity (v4.0 quick win)
+        injury_info = parse_injury_news(player.get('news', ''))
+
         projections[player_id] = {
             'player_id': player_id,
             'name': player['web_name'],
@@ -1459,6 +1462,8 @@ def run_projections():
             'form': player['form'],
             'form_trend': form_data['trend'],
             'news': player.get('news', ''),
+            'news_severity': injury_info['severity'],
+            'news_category': injury_info['category'],
             'chance_of_playing': player.get('chance_of_playing_next_round'),
             'xg_p90': round(xgi_stats.get('xg_p90', 0), 3),
             'xa_p90': round(xgi_stats.get('xa_p90', 0), 3),
@@ -1492,13 +1497,26 @@ def run_projections():
     
     if my_team_data and my_entry:
         my_picks = my_team_data.get('picks', [])
-        
+
+        # Fetch rolling form for user's squad (v4.0 quick win)
+        print("Fetching rolling form for your squad...")
         for pick in my_picks:
-            p = next((pl for pl in players if pl['id'] == pick['element']), {})
+            player_id = pick['element']
+            p = next((pl for pl in players if pl['id'] == player_id), {})
             pick['element_type'] = p.get('element_type', 0)
             pick['web_name'] = p.get('web_name', 'Unknown')
             pick['selling_price'] = pick.get('selling_price', p.get('now_cost', 0))
             pick['team_id'] = p.get('team', 0)
+
+            # Get detailed history and calculate rolling form
+            history_data = get_player_history(player_id)
+            if history_data and 'history' in history_data:
+                rolling = calculate_rolling_form(history_data['history'], matches=5)
+                # Update projection with rolling form data
+                if player_id in projections:
+                    projections[player_id]['rolling_form'] = rolling['rolling_form']
+                    projections[player_id]['rolling_xgi'] = rolling.get('rolling_xgi', 0)
+                    projections[player_id]['form_direction'] = rolling['trend']
         
         bank = my_entry.get('last_deadline_bank', 0) / 10
         
@@ -1548,6 +1566,11 @@ def run_projections():
                 'projected_pts': projections.get(p['element'], {}).get('next_gw_pts', 0),
                 'projected_4gw': projections.get(p['element'], {}).get('next_4gw_pts', 0),
                 'form_trend': projections.get(p['element'], {}).get('form_trend', 'neutral'),
+                'rolling_form': projections.get(p['element'], {}).get('rolling_form'),
+                'form_direction': projections.get(p['element'], {}).get('form_direction'),
+                'news': projections.get(p['element'], {}).get('news', ''),
+                'news_severity': projections.get(p['element'], {}).get('news_severity', 0),
+                'news_category': projections.get(p['element'], {}).get('news_category', 'healthy'),
                 'fixture_preview': projections.get(p['element'], {}).get('fixture_preview', [])[:4],
             } for p in my_picks],
             'total_projected_pts': round(sum(
