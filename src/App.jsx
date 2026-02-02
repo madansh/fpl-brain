@@ -104,55 +104,129 @@ function CaptainCard({ pick, rank }) {
   );
 }
 
-function TransferCard({ transfer, onTryTransfer, isApplied, onRemove }) {
+function AlternativeOption({ alt, tier, onTry }) {
+  const tierColors = {
+    budget: 'bg-blue-50 border-blue-200 text-blue-700',
+    value: 'bg-green-50 border-green-200 text-green-700',
+    premium: 'bg-purple-50 border-purple-200 text-purple-700',
+  };
+  const tierLabels = { budget: '💰 Budget', value: '⚖️ Value', premium: '👑 Premium' };
+
+  if (!alt) return null;
+
   return (
-    <div className={`p-4 rounded-lg border-2 transition-shadow ${isApplied ? 'border-green-400 bg-green-50' : 'border-gray-200 bg-white hover:shadow-md'}`}>
-      <div className="flex items-center gap-4">
-        <div className="flex-1 min-w-0">
-          <p className="text-red-500 text-xs font-medium">OUT</p>
-          <p className="font-semibold text-gray-700 truncate">{transfer.out_name}</p>
-          <ReasonTags reasons={transfer.out_reasons} type="out" />
-        </div>
-        <div className="text-2xl text-gray-300">→</div>
-        <div className="flex-1 min-w-0">
-          <p className="text-green-500 text-xs font-medium">IN</p>
-          <p className="font-semibold truncate">{transfer.in_name}</p>
-          <div className="flex items-center gap-2 mt-1">
-            <span className="text-gray-500 text-sm">£{transfer.in_cost}m</span>
-            <span className="text-gray-400 text-xs">({transfer.value_score} pts/£m)</span>
+    <div className={`flex items-center justify-between p-2 rounded-lg border ${tierColors[tier]}`}>
+      <div className="flex items-center gap-3">
+        <span className="text-xs font-medium opacity-70">{tierLabels[tier]}</span>
+        <span className="font-semibold">{alt.name}</span>
+        <span className="text-sm opacity-70">£{alt.cost}m</span>
+      </div>
+      <div className="flex items-center gap-3">
+        <span className="font-bold">+{alt.gain_4gw}</span>
+        <button
+          onClick={() => onTry(alt)}
+          className="px-2 py-1 bg-white/50 hover:bg-white rounded text-xs font-medium transition-colors"
+        >
+          Try
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function TransferCard({ transfer, onTryTransfer, isApplied, onRemove }) {
+  const [showAlternatives, setShowAlternatives] = useState(false);
+  const hasAlternatives = transfer.alternatives && (
+    transfer.alternatives.budget || transfer.alternatives.value || transfer.alternatives.premium
+  );
+
+  const handleTryAlternative = (alt) => {
+    // Create a modified transfer object with the alternative player
+    const altTransfer = {
+      ...transfer,
+      in_id: alt.player_id,
+      in_name: alt.name,
+      in_cost: alt.cost,
+      gain_4gw: alt.gain_4gw,
+      value_score: alt.value_score,
+    };
+    onTryTransfer(altTransfer);
+  };
+
+  return (
+    <div className={`rounded-lg border-2 transition-shadow ${isApplied ? 'border-green-400 bg-green-50' : 'border-gray-200 bg-white hover:shadow-md'}`}>
+      <div className="p-4">
+        <div className="flex items-center gap-4">
+          <div className="flex-1 min-w-0">
+            <p className="text-red-500 text-xs font-medium">OUT</p>
+            <p className="font-semibold text-gray-700 truncate">{transfer.out_name}</p>
+            <ReasonTags reasons={transfer.out_reasons} type="out" />
           </div>
-          <ReasonTags reasons={transfer.buy_reasons} type="in" />
+          <div className="text-2xl text-gray-300">→</div>
+          <div className="flex-1 min-w-0">
+            <p className="text-green-500 text-xs font-medium">IN</p>
+            <p className="font-semibold truncate">{transfer.in_name}</p>
+            <div className="flex items-center gap-2 mt-1">
+              <span className="text-gray-500 text-sm">£{transfer.in_cost}m</span>
+              <span className="text-gray-400 text-xs">({transfer.value_score} pts/£m)</span>
+            </div>
+            <ReasonTags reasons={transfer.buy_reasons} type="in" />
+          </div>
+          <div className="text-right pl-4 border-l">
+            <p className="text-2xl font-bold text-green-600">+{transfer.gain_4gw}</p>
+            <p className="text-xs text-gray-500">pts / 4GW</p>
+          </div>
         </div>
-        <div className="text-right pl-4 border-l">
-          <p className="text-2xl font-bold text-green-600">+{transfer.gain_4gw}</p>
-          <p className="text-xs text-gray-500">pts / 4GW</p>
+        <div className="mt-3 flex items-center justify-between">
+          <FixtureRun fixtures={transfer.fixtures} />
+          <div className="flex items-center gap-2">
+            {transfer.worth_hit && (
+              <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-medium">
+                ⚡ Worth -4 (net +{transfer.hit_value})
+              </span>
+            )}
+            {hasAlternatives && !isApplied && (
+              <button
+                onClick={() => setShowAlternatives(!showAlternatives)}
+                className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium hover:bg-gray-200 transition-colors"
+              >
+                {showAlternatives ? '▲ Hide' : '▼ Alts'}
+              </button>
+            )}
+            {isApplied ? (
+              <button
+                onClick={() => onRemove(transfer)}
+                className="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors"
+              >
+                ✕ Remove
+              </button>
+            ) : (
+              <button
+                onClick={() => onTryTransfer(transfer)}
+                className="px-3 py-1.5 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+              >
+                Try This →
+              </button>
+            )}
+          </div>
         </div>
       </div>
-      <div className="mt-3 flex items-center justify-between">
-        <FixtureRun fixtures={transfer.fixtures} />
-        <div className="flex items-center gap-2">
-          {transfer.worth_hit && (
-            <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-medium">
-              ⚡ Worth -4 (net +{transfer.hit_value})
-            </span>
+
+      {/* Alternatives Section */}
+      {showAlternatives && hasAlternatives && (
+        <div className="border-t border-gray-200 bg-gray-50 p-3 space-y-2">
+          <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">Alternative Options</p>
+          {transfer.alternatives.budget && (
+            <AlternativeOption alt={transfer.alternatives.budget} tier="budget" onTry={handleTryAlternative} />
           )}
-          {isApplied ? (
-            <button
-              onClick={() => onRemove(transfer)}
-              className="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors"
-            >
-              ✕ Remove
-            </button>
-          ) : (
-            <button
-              onClick={() => onTryTransfer(transfer)}
-              className="px-3 py-1.5 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
-            >
-              Try This →
-            </button>
+          {transfer.alternatives.value && (
+            <AlternativeOption alt={transfer.alternatives.value} tier="value" onTry={handleTryAlternative} />
+          )}
+          {transfer.alternatives.premium && (
+            <AlternativeOption alt={transfer.alternatives.premium} tier="premium" onTry={handleTryAlternative} />
           )}
         </div>
-      </div>
+      )}
     </div>
   );
 }

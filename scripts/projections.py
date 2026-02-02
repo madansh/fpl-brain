@@ -37,6 +37,10 @@ SELL_THRESHOLD_4GW = 10       # Only sell if < 10 pts/4GW (was 12)
 MIN_GAIN_THRESHOLD = 3        # Only recommend if gain > 3 pts (was 1)
 OWNERSHIP_WEIGHT = 0.1        # Small penalty for template players (>30% owned)
 
+# Fixture weighting for transfer decisions (v4.1)
+# Near-term fixtures matter more - decay weights for GW1-4
+FIXTURE_WEIGHTS = [1.0, 0.85, 0.65, 0.50]  # GW1 = full weight, GW4 = 50%
+
 BASE_URL = "https://fantasy.premierleague.com/api"
 BOOTSTRAP_URL = f"{BASE_URL}/bootstrap-static/"
 FIXTURES_URL = f"{BASE_URL}/fixtures/"
@@ -755,29 +759,61 @@ def generate_starting_xi_recommendations(my_picks, players, projections,
 
 
 # =============================================================================
-# TRANSFER LOGIC v2
+# TRANSFER LOGIC v3 (with fixture weighting + alternatives)
 # =============================================================================
 
-def get_transfer_recommendations(my_squad, all_players, projections, bank, 
+def calculate_weighted_projection(proj, weights=FIXTURE_WEIGHTS):
+    """
+    Calculate weighted projection giving more importance to near-term fixtures.
+    GW1 gets full weight, GW4 gets 50% weight.
+    """
+    fixtures = proj.get('fixtures', [])[:4]
+    if not fixtures:
+        return proj.get('next_4gw_pts', 0)
+
+    weighted_total = 0
+    weight_sum = 0
+
+    for i, fix in enumerate(fixtures):
+        if fix.get('is_bgw'):
+            continue  # Skip blank GWs
+        weight = weights[i] if i < len(weights) else 0.5
+        pts = fix.get('projected_pts', 0)
+        weighted_total += pts * weight
+        weight_sum += weight
+
+    # Normalize to be comparable to raw 4GW totals
+    if weight_sum > 0:
+        # Scale back up to approximate 4GW total for comparison
+        normalized = weighted_total * (len(fixtures) / weight_sum)
+        return round(normalized, 1)
+
+    return proj.get('next_4gw_pts', 0)
+
+
+def get_transfer_recommendations(my_squad, all_players, projections, bank,
                                   fixture_data, team_strengths, current_gw):
     recommendations = []
-    
+
     squad_ids = {p['element'] for p in my_squad}
     squad_team_counts = defaultdict(int)
     for p in my_squad:
         squad_team_counts[p.get('team_id', 0)] += 1
-    
+
     starters = [p for p in my_squad if p.get('multiplier', 0) > 0]
-    
+
     starter_scores = []
     for pick in starters:
         player_id = pick['element']
         proj = projections.get(player_id, {})
-        
+
         sell_score = 0
         reasons = []
-        
-        proj_4gw = proj.get('next_4gw_pts', 0)
+
+        # Use weighted projection for sell decisions (v4.1)
+        proj_4gw = calculate_weighted_projection(proj)
+        proj_4gw_raw = proj.get('next_4gw_pts', 0)
+
         if proj_4gw < SELL_THRESHOLD_4GW:
             sell_score += 3
             reasons.append('low_projection')
@@ -860,13 +896,15 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             if proj.get('data_quality') == 'approximated':
                 continue
 
-            proj_4gw = proj.get('next_4gw_pts', 0)
+            # Use weighted projection (v4.1) - near-term fixtures matter more
+            proj_4gw_weighted = calculate_weighted_projection(proj)
+            proj_4gw_raw = proj.get('next_4gw_pts', 0)
 
             # Skip low quality players (v4.0)
-            if proj_4gw < MIN_BUY_PROJECTION:
+            if proj_4gw_weighted < MIN_BUY_PROJECTION:
                 continue
 
-            gain_4gw = proj_4gw - weak['proj_4gw']
+            gain_4gw = proj_4gw_weighted - weak['proj_4gw']
 
             # Skip marginal gains (v4.0)
             if gain_4gw < MIN_GAIN_THRESHOLD:
@@ -880,47 +918,114 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             if player_ownership > 30:
                 buy_score -= OWNERSHIP_WEIGHT * player_ownership
                 buy_reasons.append('template_risk')
-            
+
             if proj.get('form_trend') == 'hot':
                 buy_score += 1.5
                 buy_reasons.append('hot_form')
-            
+
             p_team_id = p['team']
             upcoming_dgws = fixture_data['team_dgws'].get(p_team_id, [])
             dgw_in_range = [gw for gw in upcoming_dgws if gw <= current_gw + 6]
             if dgw_in_range:
                 buy_score += 2
                 buy_reasons.append(f'dgw{dgw_in_range[0]}')
-            
+
             avg_diff = proj.get('avg_difficulty_4gw', 1.0)
             if avg_diff < 0.9:
                 buy_score += 1
                 buy_reasons.append('easy_fixtures')
-            
-            value = proj_4gw / cost if cost > 0 else 0
-            
+
+            # Bonus for good near-term fixtures (GW1-2)
+            fixtures = proj.get('fixtures', [])[:2]
+            near_term_easy = sum(1 for f in fixtures if f.get('difficulty', 1.0) < 0.95)
+            if near_term_easy >= 2:
+                buy_score += 1.5
+                buy_reasons.append('easy_next_2')
+
+            value = proj_4gw_weighted / cost if cost > 0 else 0
+
             candidates.append({
                 'player': p,
-                'proj_4gw': proj_4gw,
+                'proj_4gw': proj_4gw_weighted,
+                'proj_4gw_raw': proj_4gw_raw,
                 'gain_4gw': round(gain_4gw, 1),
                 'buy_score': buy_score,
                 'buy_reasons': buy_reasons,
                 'cost': cost,
                 'value': round(value, 2),
                 'fixtures': proj.get('fixture_preview', [])[:4],
+                'form_trend': proj.get('form_trend', 'neutral'),
             })
-        
+
+        # Sort by buy_score
         candidates.sort(key=lambda x: -x['buy_score'])
-        
+
         if candidates:
+            # Get best overall pick
             best = candidates[0]
+
+            # Generate alternatives at different price tiers (v4.1)
+            # Budget: cheapest good option (saves money)
+            # Mid: best value (pts per million)
+            # Premium: highest points potential
+
+            alternatives = {}
+
+            # Budget option: best among cheapest third of candidates
+            budget_candidates = sorted([c for c in candidates if c['cost'] <= budget * 0.7], key=lambda x: -x['buy_score'])
+            if budget_candidates and budget_candidates[0]['player']['id'] != best['player']['id']:
+                bc = budget_candidates[0]
+                alternatives['budget'] = {
+                    'player_id': bc['player']['id'],
+                    'name': bc['player']['web_name'],
+                    'team': team_strengths.get(bc['player']['team'], {}).get('short_name', '?'),
+                    'cost': bc['cost'],
+                    'gain_4gw': bc['gain_4gw'],
+                    'value_score': bc['value'],
+                    'reasons': bc['buy_reasons'][:2],
+                    'fixtures': bc['fixtures'][:2],
+                }
+
+            # Value option: best pts per million
+            value_sorted = sorted(candidates, key=lambda x: -x['value'])
+            if value_sorted and value_sorted[0]['player']['id'] != best['player']['id']:
+                vc = value_sorted[0]
+                # Only include if meaningfully different from best
+                if vc['cost'] < best['cost'] - 0.5:
+                    alternatives['value'] = {
+                        'player_id': vc['player']['id'],
+                        'name': vc['player']['web_name'],
+                        'team': team_strengths.get(vc['player']['team'], {}).get('short_name', '?'),
+                        'cost': vc['cost'],
+                        'gain_4gw': vc['gain_4gw'],
+                        'value_score': vc['value'],
+                        'reasons': vc['buy_reasons'][:2],
+                        'fixtures': vc['fixtures'][:2],
+                    }
+
+            # Premium option: highest raw projection (if different from best)
+            premium_sorted = sorted(candidates, key=lambda x: -x['proj_4gw_raw'])
+            if premium_sorted and premium_sorted[0]['player']['id'] != best['player']['id']:
+                pc = premium_sorted[0]
+                if pc['cost'] > best['cost'] + 0.5:
+                    alternatives['premium'] = {
+                        'player_id': pc['player']['id'],
+                        'name': pc['player']['web_name'],
+                        'team': team_strengths.get(pc['player']['team'], {}).get('short_name', '?'),
+                        'cost': pc['cost'],
+                        'gain_4gw': pc['gain_4gw'],
+                        'value_score': pc['value'],
+                        'reasons': pc['buy_reasons'][:2],
+                        'fixtures': pc['fixtures'][:2],
+                    }
+
             p = best['player']
             proj = projections.get(p['id'], {})
-            
+
             gain_4gw = best['gain_4gw']
             hit_value = gain_4gw - (4 * PLANNING_HORIZON / HIT_THRESHOLD_GWS)
             worth_hit = hit_value > 0
-            
+
             recommendations.append({
                 'priority': len(recommendations) + 1,
                 'out_id': weak['player_id'],
@@ -938,8 +1043,9 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
                 'position': pos,
                 'fixtures': best['fixtures'],
                 'data_quality': proj.get('data_quality', 'unknown'),
+                'alternatives': alternatives,  # v4.1: Alternative suggestions
             })
-    
+
     return recommendations
 
 
