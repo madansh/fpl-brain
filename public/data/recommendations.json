@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T17:25:39.099251",
+  "generated_at": "2026-02-02T18:08:18.715886",
   "next_gameweek": 25,
   "data_source": "Understat (379 players matched)",
   "captain_picks": {
@@ -56,7 +56,7 @@
         "fixture_difficulty": 0.9,
         "ownership": 39.4,
         "estimated_captain_pct": 15.8,
-        "form": "6.4",
+        "form": "5.8",
         "form_trend": "neutral",
         "is_differential": false,
         "is_template": false,
@@ -259,6 +259,8 @@
       "out_reasons": [
         "low_projection",
         "injury_doubt",
+        "rotation_risk",
+        "mins_declining",
         "hard_fixtures"
       ],
       "in_id": 6,
@@ -269,7 +271,8 @@
       "effective_4gw": 18.3,
       "in_xmin": 90,
       "buy_reasons": [
-        "nailed"
+        "nailed",
+        "hot_form"
       ],
       "worth_hit": true,
       "hit_value": 13.0,
@@ -350,6 +353,109 @@
               "gw": 26,
               "fixture": "MCI (A)",
               "difficulty": 1.18,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "priority": 2,
+      "out_id": 414,
+      "out_name": "Foden",
+      "out_reasons": [
+        "cold_form",
+        "low_xmin",
+        "mins_declining",
+        "low_mins_played",
+        "hard_fixtures"
+      ],
+      "in_id": 387,
+      "in_name": "Szoboszlai",
+      "in_team": "LIV",
+      "in_cost": 6.7,
+      "gain_4gw": 14.0,
+      "effective_4gw": 21.8,
+      "in_xmin": 90,
+      "buy_reasons": [
+        "nailed"
+      ],
+      "worth_hit": true,
+      "hit_value": 8.7,
+      "value_score": 3.25,
+      "position": 3,
+      "fixtures": [
+        {
+          "gw": 25,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {
+        "value": {
+          "player_id": 157,
+          "name": "Mitoma",
+          "team": "BHA",
+          "cost": 6.1,
+          "gain_4gw": 12.1,
+          "value_score": 3.27,
+          "reasons": [],
+          "fixtures": [
+            {
+              "gw": 25,
+              "fixture": "CRY (H)",
+              "difficulty": 1.07,
+              "is_dgw": false
+            },
+            {
+              "gw": 26,
+              "fixture": "AVL (A)",
+              "difficulty": 1.22,
+              "is_dgw": false
+            }
+          ]
+        },
+        "premium": {
+          "player_id": 449,
+          "name": "B.Fernandes",
+          "team": "MUN",
+          "cost": 9.6,
+          "gain_4gw": 4.6,
+          "value_score": 1.29,
+          "reasons": [
+            "rotation_risk"
+          ],
+          "fixtures": [
+            {
+              "gw": 25,
+              "fixture": "TOT (H)",
+              "difficulty": 1.24,
+              "is_dgw": false
+            },
+            {
+              "gw": 26,
+              "fixture": "WHU (A)",
+              "difficulty": 1.5,
               "is_dgw": false
             }
           ]

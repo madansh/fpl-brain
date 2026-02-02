@@ -873,14 +873,32 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             sell_score += 3
             reasons.append('injury_doubt')
 
-        # v4.2: Check xMin - rotation risk
-        xmin = proj.get('xmin', 90)
+        # v4.3: Fetch player history and calculate rolling xMin
+        player_history = get_player_history(player_id)
+        xmin = calculate_xmin(pick, proj, player_history)
+
         if xmin < 50:
             sell_score += 3
             reasons.append('low_xmin')
         elif xmin < 65:
             sell_score += 1
             reasons.append('rotation_risk')
+
+        # v4.3: Check for declining minutes pattern (e.g., 90→45→2 mins)
+        if player_history and 'history' in player_history:
+            recent = player_history['history'][-5:]
+            if len(recent) >= 3:
+                mins_list = [int(m.get('minutes', 0)) for m in recent]
+                # Check if last 3 games show consistent decline
+                last3 = mins_list[-3:]
+                if last3[0] > last3[1] > last3[2] and last3[2] < 30:
+                    sell_score += 2
+                    reasons.append('mins_declining')
+                # Check if recent minutes are very low despite playing
+                avg_recent = sum(mins_list[-3:]) / 3
+                if avg_recent < 40 and all(m > 0 for m in mins_list[-3:]):
+                    sell_score += 2
+                    reasons.append('low_mins_played')
 
         team_id = pick.get('team_id', 0)
         if team_id in fixture_data['team_bgws']:
@@ -894,7 +912,11 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
         if avg_difficulty > 1.15:
             sell_score += 1
             reasons.append('hard_fixtures')
-        
+
+        # v4.4: Calculate effective 4GW for fair comparison with replacements
+        xmin_factor = xmin / 90
+        effective_4gw_sell = proj_4gw * xmin_factor
+
         starter_scores.append({
             'player_id': player_id,
             'name': pick.get('web_name', 'Unknown'),
@@ -902,6 +924,8 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             'team_id': team_id,
             'selling_price': pick.get('selling_price', 0) / 10,
             'proj_4gw': proj_4gw,
+            'effective_4gw': round(effective_4gw_sell, 1),  # v4.4: xMin-adjusted
+            'xmin': xmin,  # v4.4: Store xMin for display
             'sell_score': sell_score,
             'sell_reasons': reasons,
         })
@@ -968,6 +992,7 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
 
             # Use weighted projection (v4.1) - near-term fixtures matter more
             proj_4gw_weighted = calculate_weighted_projection(proj)
+
             proj_4gw_raw = proj.get('next_4gw_pts', 0)
 
             # v4.2: Calculate effective 4GW points (projection × xMin/90)
@@ -976,11 +1001,13 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             effective_4gw = proj_4gw_weighted * xmin_factor
 
             # Skip low quality players (v4.0) - use effective pts
-            if effective_4gw < MIN_BUY_PROJECTION * 0.85:  # Slightly lower threshold for effective
+            # v4.4: Lower threshold to 0.80 to catch good players with moderate xMin (e.g., Bruno at 12.6)
+            if effective_4gw < MIN_BUY_PROJECTION * 0.80:  # 15 * 0.80 = 12.0 pts minimum
                 continue
 
-            # Use effective points for gain calculation (v4.2)
-            gain_4gw = effective_4gw - weak['proj_4gw']
+            # v4.4: Use effective points for BOTH sides (fair apples-to-apples comparison)
+            # This fixes bug where high-raw-projection but low-xMin players weren't being replaced
+            gain_4gw = effective_4gw - weak['effective_4gw']
 
             # Skip marginal gains (v4.0)
             if gain_4gw < MIN_GAIN_THRESHOLD:
@@ -1092,19 +1119,23 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
 
             # Premium option: highest raw projection (if different from best)
             premium_sorted = sorted(candidates, key=lambda x: -x['proj_4gw_raw'])
-            if premium_sorted and premium_sorted[0]['player']['id'] != best['player']['id']:
-                pc = premium_sorted[0]
-                if pc['cost'] > best['cost'] + 0.5:
-                    alternatives['premium'] = {
-                        'player_id': pc['player']['id'],
-                        'name': pc['player']['web_name'],
-                        'team': team_strengths.get(pc['player']['team'], {}).get('short_name', '?'),
-                        'cost': pc['cost'],
-                        'gain_4gw': pc['gain_4gw'],
-                        'value_score': pc['value'],
-                        'reasons': pc['buy_reasons'][:2],
-                        'fixtures': pc['fixtures'][:2],
-                    }
+
+            # v4.4: Premium option should find the best candidate that costs more than best
+            # Filter to candidates that cost more than best, then sort by raw projection
+            premium_candidates = [c for c in candidates if c['cost'] > best['cost'] + 0.5]
+            if premium_candidates:
+                premium_candidates.sort(key=lambda x: -x['proj_4gw_raw'])
+                pc = premium_candidates[0]
+                alternatives['premium'] = {
+                    'player_id': pc['player']['id'],
+                    'name': pc['player']['web_name'],
+                    'team': team_strengths.get(pc['player']['team'], {}).get('short_name', '?'),
+                    'cost': pc['cost'],
+                    'gain_4gw': pc['gain_4gw'],
+                    'value_score': pc['value'],
+                    'reasons': pc['buy_reasons'][:2],
+                    'fixtures': pc['fixtures'][:2],
+                }
 
             p = best['player']
             proj = projections.get(p['id'], {})

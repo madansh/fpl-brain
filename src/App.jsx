@@ -65,7 +65,7 @@ function ReasonTags({ reasons, type }) {
     'hot_form': '🔥 Hot', 'cold_form': '🥶 Cold', 'easy_fixtures': '📅 Easy run',
     'hard_fixtures': '📅 Hard run', 'injury_doubt': '🏥 Injury', 'low_projection': '📉 Low pts',
     'low_xmin': '⏱️ Low mins', 'rotation_risk': '🔄 Rotation', 'nailed': '🔒 Nailed',
-    'easy_next_2': '📅 Easy 2GW',
+    'easy_next_2': '📅 Easy 2GW', 'mins_declining': '📉 Mins dropping', 'low_mins_played': '⏱️ Few mins',
   };
   return (
     <div className="flex flex-wrap gap-1">
@@ -140,7 +140,7 @@ function AlternativeOption({ alt, tier, onTry }) {
   );
 }
 
-function TransferCard({ transfer, onTryTransfer, isApplied, onRemove }) {
+function TransferCard({ transfer, onTryTransfer, isApplied, onRemove, priority = 1 }) {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const hasAlternatives = transfer.alternatives && (
     transfer.alternatives.budget || transfer.alternatives.value || transfer.alternatives.premium
@@ -192,7 +192,7 @@ function TransferCard({ transfer, onTryTransfer, isApplied, onRemove }) {
         <div className="mt-3 flex items-center justify-between">
           <FixtureRun fixtures={transfer.fixtures} />
           <div className="flex items-center gap-2">
-            {transfer.worth_hit && (
+            {transfer.worth_hit && priority > 1 && (
               <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-medium">
                 ⚡ Worth -4 (net +{transfer.hit_value})
               </span>
@@ -1020,6 +1020,7 @@ export default function App() {
                       onTryTransfer={handleTryTransfer}
                       onRemove={handleRemoveTransfer}
                       isApplied={plannedTransfers.some(pt => pt.out_id === t.out_id)}
+                      priority={t.priority || i + 1}
                     />
                   ))
                 ) : (
