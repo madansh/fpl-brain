@@ -542,14 +542,17 @@ def project_gameweek_points(player, xgi_stats, fixture_difficulty,
 def calculate_rolling_minutes(player_history, last_n=5):
     """
     Calculate rolling average minutes from last N gameweeks.
-    Returns (avg_mins, games_played, games_missed) tuple.
+    v4.4: Also returns recent_misses (last 2 GWs) for smarter recency penalty.
+
+    Returns (avg_mins, games_played, games_missed, recent_misses) tuple.
+    - recent_misses: games missed in last 2 GWs (more concerning than older misses)
     """
     if not player_history or 'history' not in player_history:
-        return (0, 0, last_n)
+        return (0, 0, last_n, last_n)
 
     history = player_history.get('history', [])
     if not history:
-        return (0, 0, last_n)
+        return (0, 0, last_n, last_n)
 
     # Get last N games
     recent = history[-last_n:] if len(history) >= last_n else history
@@ -563,11 +566,18 @@ def calculate_rolling_minutes(player_history, last_n=5):
         if mins > 0:
             games_played += 1
 
+    # v4.4: Check last 2 games specifically for recent misses
+    recent_misses = 0
+    last_2 = recent[-2:] if len(recent) >= 2 else recent
+    for match in last_2:
+        if int(match.get('minutes', 0)) == 0:
+            recent_misses += 1
+
     games_in_range = len(recent)
     games_missed = games_in_range - games_played
     avg_mins = total_mins / games_in_range if games_in_range > 0 else 0
 
-    return (avg_mins, games_played, games_missed)
+    return (avg_mins, games_played, games_missed, recent_misses)
 
 
 def calculate_xmin(player, player_proj, player_history=None):
@@ -580,10 +590,11 @@ def calculate_xmin(player, player_proj, player_history=None):
     has_history = player_history is not None and player_history.get('history')
 
     # v4.3: Use rolling minutes from recent games (primary signal)
+    # v4.4: Also get recent_misses (last 2 GWs) for smarter recency penalty
     if has_history:
-        rolling_mins, games_played, games_missed = calculate_rolling_minutes(player_history, last_n=5)
+        rolling_mins, games_played, games_missed, recent_misses = calculate_rolling_minutes(player_history, last_n=5)
     else:
-        rolling_mins, games_played, games_missed = 0, 0, 0
+        rolling_mins, games_played, games_missed, recent_misses = 0, 0, 0, 0
 
     # Fallback to season average if no history data
     if rolling_mins == 0 and games_played == 0:
@@ -615,17 +626,18 @@ def calculate_xmin(player, player_proj, player_history=None):
     else:
         rotation_factor = 1.0
 
-    # v4.3: Recency factor - penalize players missing recent games
-    # Only apply if we have actual history data
+    # v4.4: Recency factor - penalize players missing RECENT games (last 2 GWs)
+    # Old logic penalized Bruno (0.8) for missing GW20 despite playing 90 mins in last 3
+    # New logic only penalizes if misses are in the last 2 games
     if has_history:
-        if games_missed >= 3:
-            recency_factor = 0.3  # Missed most recent games - big red flag
-        elif games_missed >= 2:
-            recency_factor = 0.5  # Missed 2 games - concerning
-        elif games_missed >= 1:
-            recency_factor = 0.8  # Missed 1 game - slight concern
+        if recent_misses >= 2:
+            recency_factor = 0.3  # Missed both recent games - big red flag
+        elif recent_misses >= 1:
+            recency_factor = 0.6  # Missed 1 of last 2 - concerning
+        elif games_missed >= 3:
+            recency_factor = 0.8  # Missed 3+ older games - slight concern
         else:
-            recency_factor = 1.0  # Played all recent games
+            recency_factor = 1.0  # Playing regularly
     else:
         recency_factor = 1.0  # No history data, don't penalize
 
@@ -980,11 +992,13 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             candidate_xmin = calculate_xmin(p, proj, player_history)
 
             # v4.3: Also get games missed info for filtering
-            _, games_played, games_missed = calculate_rolling_minutes(player_history, last_n=5)
+            # v4.4: Now returns 4-tuple with recent_misses
+            _, games_played, games_missed, recent_misses = calculate_rolling_minutes(player_history, last_n=5)
 
-            # Skip players who missed 2+ of last 5 games - unreliable (v4.3)
-            if games_missed >= 2:
-                continue
+            # v4.4: Filter by recent misses (last 2 GWs) not total misses
+            # This allows Bruno (missed GW20 but played 90 in last 3) to pass
+            if recent_misses >= 2:
+                continue  # Missed both recent games - unreliable
 
             # Skip players with very low xMin - rotation risk (v4.2)
             if candidate_xmin < 50:
