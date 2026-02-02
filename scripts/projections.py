@@ -539,24 +539,65 @@ def project_gameweek_points(player, xgi_stats, fixture_difficulty,
 # xMIN CALCULATION + STARTING XI (NEW in v3.1)
 # =============================================================================
 
+def calculate_rolling_minutes(player_history, last_n=5):
+    """
+    Calculate rolling average minutes from last N gameweeks.
+    Returns (avg_mins, games_played, games_missed) tuple.
+    """
+    if not player_history or 'history' not in player_history:
+        return (0, 0, last_n)
+
+    history = player_history.get('history', [])
+    if not history:
+        return (0, 0, last_n)
+
+    # Get last N games
+    recent = history[-last_n:] if len(history) >= last_n else history
+
+    total_mins = 0
+    games_played = 0
+
+    for match in recent:
+        mins = int(match.get('minutes', 0))
+        total_mins += mins
+        if mins > 0:
+            games_played += 1
+
+    games_in_range = len(recent)
+    games_missed = games_in_range - games_played
+    avg_mins = total_mins / games_in_range if games_in_range > 0 else 0
+
+    return (avg_mins, games_played, games_missed)
+
+
 def calculate_xmin(player, player_proj, player_history=None):
     """
     Calculate expected minutes (xMin) for a player.
-    xMin = base_minutes × availability × rotation_factor × form_factor
+    v4.3: Uses rolling minutes from last 5 games instead of season averages.
+
+    xMin = rolling_minutes × availability × rotation_factor × recency_factor
     """
-    mins = float(player.get('minutes', 0) or 0)
-    starts = int(player.get('starts', 0) or 0)
-    
-    # Base xMin from season average
-    if starts > 0:
-        avg_mins_per_start = mins / starts
-    elif mins > 0:
-        avg_mins_per_start = min(90, mins / max(1, mins // 60))
+    has_history = player_history is not None and player_history.get('history')
+
+    # v4.3: Use rolling minutes from recent games (primary signal)
+    if has_history:
+        rolling_mins, games_played, games_missed = calculate_rolling_minutes(player_history, last_n=5)
     else:
-        avg_mins_per_start = 0
-    
-    base_xmin = min(90, avg_mins_per_start)
-    
+        rolling_mins, games_played, games_missed = 0, 0, 0
+
+    # Fallback to season average if no history data
+    if rolling_mins == 0 and games_played == 0:
+        mins = float(player.get('minutes', 0) or 0)
+        starts = int(player.get('starts', 0) or 0)
+        if starts > 0:
+            rolling_mins = mins / starts
+        elif mins > 0:
+            rolling_mins = min(90, mins / max(1, mins // 60))
+        else:
+            rolling_mins = 0
+
+    base_xmin = min(90, rolling_mins)
+
     # Availability multiplier from FPL API
     chance = player.get('chance_of_playing_next_round')
     if chance is not None:
@@ -564,8 +605,8 @@ def calculate_xmin(player, player_proj, player_history=None):
     else:
         status = player.get('status', 'a')
         availability = 1.0 if status == 'a' else 0.5 if status == 'd' else 0.0
-    
-    # Rotation risk factor
+
+    # Rotation risk factor (known rotation-prone players)
     name = player.get('web_name', '')
     if name in ROTATION_RISKS['high']:
         rotation_factor = 0.65
@@ -573,17 +614,22 @@ def calculate_xmin(player, player_proj, player_history=None):
         rotation_factor = 0.80
     else:
         rotation_factor = 1.0
-    
-    # Form factor
-    form_trend = player_proj.get('form_trend', 'neutral') if player_proj else 'neutral'
-    if form_trend == 'hot':
-        form_factor = 1.05
-    elif form_trend == 'cold':
-        form_factor = 0.90
+
+    # v4.3: Recency factor - penalize players missing recent games
+    # Only apply if we have actual history data
+    if has_history:
+        if games_missed >= 3:
+            recency_factor = 0.3  # Missed most recent games - big red flag
+        elif games_missed >= 2:
+            recency_factor = 0.5  # Missed 2 games - concerning
+        elif games_missed >= 1:
+            recency_factor = 0.8  # Missed 1 game - slight concern
+        else:
+            recency_factor = 1.0  # Played all recent games
     else:
-        form_factor = 1.0
-    
-    xmin = base_xmin * availability * rotation_factor * form_factor
+        recency_factor = 1.0  # No history data, don't penalize
+
+    xmin = base_xmin * availability * rotation_factor * recency_factor
     return round(min(90, max(0, xmin)), 1)
 
 
@@ -905,8 +951,16 @@ def get_transfer_recommendations(my_squad, all_players, projections, bank,
             if proj.get('data_quality') == 'approximated':
                 continue
 
-            # v4.2: Calculate xMin for the candidate
-            candidate_xmin = calculate_xmin(p, proj)
+            # v4.3: Fetch player history and calculate xMin with rolling minutes
+            player_history = get_player_history(p['id'])
+            candidate_xmin = calculate_xmin(p, proj, player_history)
+
+            # v4.3: Also get games missed info for filtering
+            _, games_played, games_missed = calculate_rolling_minutes(player_history, last_n=5)
+
+            # Skip players who missed 2+ of last 5 games - unreliable (v4.3)
+            if games_missed >= 2:
+                continue
 
             # Skip players with very low xMin - rotation risk (v4.2)
             if candidate_xmin < 50:
