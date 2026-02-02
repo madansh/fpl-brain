@@ -410,28 +410,33 @@ function StartingXIView({ data, plannedTransfers = [], projections }) {
 
   if (!currentData) return null;
 
-  // Apply planned transfers to the XI
-  const applyTransfersToXI = (xi) => {
-    if (!plannedTransfers.length || viewMode === 'current') return xi;
+  // Recalculate optimal XI with planned transfers
+  const calculateOptimalXI = () => {
+    if (!plannedTransfers.length || viewMode === 'current') {
+      return {
+        xi: currentData.starting_xi.map(p => ({ ...p, isNew: false })),
+        bench: currentData.bench.map(p => ({ ...p, isNew: false })),
+      };
+    }
 
-    return xi.map(player => {
+    // Combine all players (XI + bench)
+    const allSquadPlayers = [...currentData.starting_xi, ...currentData.bench];
+    const allProjections = Object.values(projections?.top_by_position || {}).flat();
+
+    // Apply transfers to get new squad
+    const newSquad = allSquadPlayers.map(player => {
       const transfer = plannedTransfers.find(t => t.out_name === player.name);
       if (transfer) {
-        // Find incoming player data from projections
-        const allPlayers = Object.values(projections?.top_by_position || {}).flat();
-        const incomingPlayer = allPlayers.find(p => p.player_id === transfer.in_id);
-
+        const incomingPlayer = allProjections.find(p => p.player_id === transfer.in_id);
         if (incomingPlayer) {
-          // Get fixture for this GW
           const gwFixture = incomingPlayer.fixture_preview?.find(f => f.gw === selectedGW);
-
           return {
             ...player,
             name: transfer.in_name,
             team: incomingPlayer.team,
-            effective_pts: incomingPlayer.next_gw_pts * 0.9, // Approximate effective pts
-            projected_pts: incomingPlayer.next_gw_pts,
-            xmin: 80, // Assume good xmin for recommended players
+            effective_pts: (incomingPlayer.next_gw_pts || 0) * 0.9,
+            projected_pts: incomingPlayer.next_gw_pts || 0,
+            xmin: 80,
             fixture: gwFixture?.fixture || incomingPlayer.next_fixture,
             difficulty: gwFixture?.difficulty || incomingPlayer.next_fixture_diff,
             is_dgw: gwFixture?.is_dgw || false,
@@ -441,42 +446,78 @@ function StartingXIView({ data, plannedTransfers = [], projections }) {
       }
       return { ...player, isNew: false };
     });
-  };
 
-  const applyTransfersToBench = (bench) => {
-    if (!plannedTransfers.length || viewMode === 'current') return bench;
+    // Group by position
+    const byPosition = { GK: [], DEF: [], MID: [], FWD: [] };
+    newSquad.forEach(p => byPosition[p.position]?.push(p));
 
-    return bench.map(player => {
-      const transfer = plannedTransfers.find(t => t.out_name === player.name);
-      if (transfer) {
-        const allPlayers = Object.values(projections?.top_by_position || {}).flat();
-        const incomingPlayer = allPlayers.find(p => p.player_id === transfer.in_id);
+    // Sort each position by effective_pts
+    Object.keys(byPosition).forEach(pos => {
+      byPosition[pos].sort((a, b) => (b.effective_pts || 0) - (a.effective_pts || 0));
+    });
 
-        if (incomingPlayer) {
-          return {
-            ...player,
-            name: transfer.in_name,
-            effective_pts: incomingPlayer.next_gw_pts * 0.9,
-            xmin: 80,
-            isNew: true,
-          };
+    // Select optimal XI respecting formation rules (1 GK, 3-5 DEF, 2-5 MID, 1-3 FWD)
+    const xi = [];
+    const bench = [];
+
+    // Always 1 GK
+    xi.push(byPosition.GK[0]);
+    if (byPosition.GK[1]) bench.push(byPosition.GK[1]);
+
+    // Find best formation by trying common ones
+    const formations = [
+      { def: 3, mid: 5, fwd: 2 },
+      { def: 3, mid: 4, fwd: 3 },
+      { def: 4, mid: 4, fwd: 2 },
+      { def: 4, mid: 3, fwd: 3 },
+      { def: 5, mid: 3, fwd: 2 },
+      { def: 5, mid: 4, fwd: 1 },
+    ];
+
+    let bestFormation = formations[0];
+    let bestTotal = 0;
+
+    formations.forEach(f => {
+      if (byPosition.DEF.length >= f.def && byPosition.MID.length >= f.mid && byPosition.FWD.length >= f.fwd) {
+        const total =
+          byPosition.DEF.slice(0, f.def).reduce((s, p) => s + (p.effective_pts || 0), 0) +
+          byPosition.MID.slice(0, f.mid).reduce((s, p) => s + (p.effective_pts || 0), 0) +
+          byPosition.FWD.slice(0, f.fwd).reduce((s, p) => s + (p.effective_pts || 0), 0);
+        if (total > bestTotal) {
+          bestTotal = total;
+          bestFormation = f;
         }
       }
-      return { ...player, isNew: false };
     });
+
+    // Build XI with best formation
+    xi.push(...byPosition.DEF.slice(0, bestFormation.def));
+    xi.push(...byPosition.MID.slice(0, bestFormation.mid));
+    xi.push(...byPosition.FWD.slice(0, bestFormation.fwd));
+
+    // Remaining go to bench
+    bench.push(...byPosition.DEF.slice(bestFormation.def));
+    bench.push(...byPosition.MID.slice(bestFormation.mid));
+    bench.push(...byPosition.FWD.slice(bestFormation.fwd));
+
+    // Sort bench by effective_pts and assign bench_order
+    bench.sort((a, b) => (b.effective_pts || 0) - (a.effective_pts || 0));
+    bench.forEach((p, i) => p.bench_order = i + 1);
+
+    return { xi, bench };
   };
 
-  const displayXI = applyTransfersToXI(currentData.starting_xi);
-  const displayBench = applyTransfersToBench(currentData.bench);
+  const { xi: displayXI, bench: displayBench } = calculateOptimalXI();
 
   // Calculate totals
   const currentTotal = currentData.total_effective_pts;
   const plannedTotal = displayXI.reduce((sum, p) => sum + (p.effective_pts || 0), 0);
   const ptsDiff = plannedTotal - currentTotal;
 
-  // Update captain if needed
-  const displayCaptain = displayXI.find(p => p.name === currentData.captain?.name) || displayXI[0];
-  const displayVice = displayXI.find(p => p.name === currentData.vice_captain?.name) || displayXI[1];
+  // Best captain = highest effective_pts in XI
+  const sortedByPts = [...displayXI].sort((a, b) => (b.effective_pts || 0) - (a.effective_pts || 0));
+  const displayCaptain = sortedByPts[0] || displayXI[0];
+  const displayVice = sortedByPts[1] || displayXI[1];
 
   return (
     <div className="space-y-4">
@@ -887,6 +928,11 @@ export default function App() {
             )}
             <section>
               <h2 className="text-xl font-bold mb-4">👑 Captain Picks</h2>
+              {plannedTransfers.length > 0 && (
+                <div className="mb-4 p-3 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
+                  <span className="font-medium">🔄 With planned transfers:</span> Check if incoming players could be better captain options below.
+                </div>
+              )}
               {recommendations?.captain_picks?.differential_pick && (
                 <div className="mb-4 p-4 rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
                   <div className="flex items-center gap-2 mb-2">
@@ -909,6 +955,35 @@ export default function App() {
                 </div>
               )}
               <div className="space-y-3">
+                {/* Show incoming players from transfers as potential captain options */}
+                {plannedTransfers.map(transfer => {
+                  const allPlayers = Object.values(projections?.top_by_position || {}).flat();
+                  const incomingPlayer = allPlayers.find(p => p.player_id === transfer.in_id);
+                  if (incomingPlayer && incomingPlayer.next_gw_pts >= 5) {
+                    return (
+                      <div key={`new-${transfer.in_id}`} className="p-4 rounded-lg border-2 border-green-400 bg-green-50">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <span className="px-2 py-0.5 bg-green-500 text-white text-xs rounded font-medium">NEW</span>
+                              <h3 className="font-bold text-lg">{incomingPlayer.name}</h3>
+                              {incomingPlayer.form_trend === 'hot' && <span className="text-orange-500">🔥</span>}
+                            </div>
+                            <p className="text-gray-600 text-sm">{incomingPlayer.team} • {incomingPlayer.next_fixture}</p>
+                          </div>
+                          <div className="text-right">
+                            <p className="text-3xl font-bold text-green-600">{incomingPlayer.next_gw_pts?.toFixed(1)}</p>
+                            <p className="text-sm text-gray-500">×2 = {(incomingPlayer.next_gw_pts * 2).toFixed(1)}</p>
+                          </div>
+                        </div>
+                        <div className="mt-2 text-xs text-green-700">
+                          Incoming from transfer - consider for captain if projected higher than current options
+                        </div>
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
                 {recommendations?.captain_picks?.picks?.map((pick, i) => <CaptainCard key={pick.player_id} pick={pick} rank={i + 1} />)}
               </div>
             </section>
