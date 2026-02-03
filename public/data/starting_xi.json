@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T18:22:47.317654",
+  "generated_at": "2026-02-03T06:43:37.465978",
   "team_id": 5033680,
   "next_gameweek": 25,
   "recommendations": [
@@ -67,9 +67,9 @@
           "name": "Est\u00e8ve",
           "position": "DEF",
           "team": "BUR",
-          "effective_pts": 3.19,
+          "effective_pts": 3.2,
           "projected_pts": 3.38,
-          "xmin": 85.0,
+          "xmin": 85.2,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -245,9 +245,9 @@
           "name": "Est\u00e8ve",
           "position": "DEF",
           "team": "BUR",
-          "effective_pts": 3.19,
+          "effective_pts": 3.2,
           "projected_pts": 3.38,
-          "xmin": 85.0,
+          "xmin": 85.2,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false
@@ -501,8 +501,8 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 3.19,
-          "xmin": 85.0,
+          "effective_pts": 3.2,
+          "xmin": 85.2,
           "status": "available",
           "bench_order": 1
         },
@@ -679,8 +679,8 @@
         {
           "name": "Est\u00e8ve",
           "position": "DEF",
-          "effective_pts": 3.19,
-          "xmin": 85.0,
+          "effective_pts": 3.2,
+          "xmin": 85.2,
           "status": "available",
           "bench_order": 1
         },
@@ -779,9 +779,9 @@
           "name": "Est\u00e8ve",
           "position": "DEF",
           "team": "BUR",
-          "effective_pts": 3.19,
+          "effective_pts": 3.2,
           "projected_pts": 3.38,
-          "xmin": 85.0,
+          "xmin": 85.2,
           "fixture": "EVE (A)",
           "difficulty": 1.19,
           "is_dgw": false
@@ -957,9 +957,9 @@
           "name": "Est\u00e8ve",
           "position": "DEF",
           "team": "BUR",
-          "effective_pts": 3.19,
+          "effective_pts": 3.2,
           "projected_pts": 3.38,
-          "xmin": 85.0,
+          "xmin": 85.2,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false

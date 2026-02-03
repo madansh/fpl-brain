@@ -21,8 +21,96 @@
       "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "neutral",
-      "rolling_form": 2.38,
-      "form_direction": "stable",
+      "rolling_form": 2.58,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 25,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "BRE (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 5,
+      "name": "Gabriel",
+      "position": 2,
+      "team_id": 1,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 7.0,
+      "projected_pts": 5.44,
+      "projected_4gw": 20.5,
+      "form_trend": "neutral",
+      "rolling_form": 5.22,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 25,
+          "fixture": "SUN (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "TOT (A)",
+          "difficulty": 1.5,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "CHE (H)",
+          "difficulty": 0.99,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 191,
+      "name": "Est\u00e8ve",
+      "position": 2,
+      "team_id": 3,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 3.9,
+      "projected_pts": 3.38,
+      "projected_4gw": 13.5,
+      "form_trend": "neutral",
+      "rolling_form": 1.96,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
@@ -93,182 +181,6 @@
           "gw": 28,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 5,
-      "name": "Gabriel",
-      "position": 2,
-      "team_id": 1,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 7.0,
-      "projected_pts": 5.44,
-      "projected_4gw": 20.5,
-      "form_trend": "neutral",
-      "rolling_form": 5.22,
-      "form_direction": "falling",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 25,
-          "fixture": "SUN (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "fixture": "TOT (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 28,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 441,
-      "name": "Dorgu",
-      "position": 2,
-      "team_id": 14,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 4.4,
-      "projected_pts": 0,
-      "projected_4gw": 0,
-      "form_trend": "hot",
-      "rolling_form": 4.95,
-      "form_direction": "rising",
-      "news": "Hamstring injury - Unknown return date",
-      "news_severity": 2,
-      "news_category": "moderate",
-      "fixture_preview": [
-        {
-          "gw": 25,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "fixture": "EVE (A)",
-          "difficulty": 1.19,
-          "is_dgw": false
-        },
-        {
-          "gw": 28,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 708,
-      "name": "M.Fernandes",
-      "position": 3,
-      "team_id": 19,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 5.5,
-      "projected_pts": 3.13,
-      "projected_4gw": 14.1,
-      "form_trend": "hot",
-      "rolling_form": 4.41,
-      "form_direction": "rising",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 25,
-          "fixture": "BUR (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 28,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 47,
-      "name": "Rogers",
-      "position": 3,
-      "team_id": 2,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 7.7,
-      "projected_pts": 4.73,
-      "projected_4gw": 19.8,
-      "form_trend": "neutral",
-      "rolling_form": 3.36,
-      "form_direction": "stable",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 25,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "gw": 26,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 28,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
           "is_dgw": false
         }
       ]
@@ -371,7 +283,7 @@
       "multiplier": 1,
       "selling_price": 8.3,
       "projected_pts": 5.74,
-      "projected_4gw": 22.4,
+      "projected_4gw": 22.5,
       "form_trend": "cold",
       "rolling_form": 1.12,
       "form_direction": "falling",
@@ -401,6 +313,94 @@
           "gw": 28,
           "fixture": "LEE (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 708,
+      "name": "M.Fernandes",
+      "position": 3,
+      "team_id": 19,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 5.5,
+      "projected_pts": 3.13,
+      "projected_4gw": 14.1,
+      "form_trend": "hot",
+      "rolling_form": 4.41,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 25,
+          "fixture": "BUR (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "MUN (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 47,
+      "name": "Rogers",
+      "position": 3,
+      "team_id": 2,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 7.7,
+      "projected_pts": 4.73,
+      "projected_4gw": 19.8,
+      "form_trend": "neutral",
+      "rolling_form": 3.36,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 25,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 26,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
+          "gw": 27,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         }
       ]
@@ -538,45 +538,45 @@
       ]
     },
     {
-      "player_id": 191,
-      "name": "Est\u00e8ve",
+      "player_id": 441,
+      "name": "Dorgu",
       "position": 2,
-      "team_id": 3,
+      "team_id": 14,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 3.9,
-      "projected_pts": 3.38,
-      "projected_4gw": 13.5,
-      "form_trend": "neutral",
-      "rolling_form": 1.36,
-      "form_direction": "stable",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
+      "selling_price": 4.4,
+      "projected_pts": 0,
+      "projected_4gw": 0,
+      "form_trend": "hot",
+      "rolling_form": 4.95,
+      "form_direction": "rising",
+      "news": "Hamstring injury - Unknown return date",
+      "news_severity": 2,
+      "news_category": "moderate",
       "fixture_preview": [
         {
           "gw": 25,
-          "fixture": "WHU (H)",
+          "fixture": "TOT (H)",
           "difficulty": 1.24,
           "is_dgw": false
         },
         {
           "gw": 26,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
           "is_dgw": false
         },
         {
           "gw": 27,
-          "fixture": "CHE (A)",
-          "difficulty": 1.21,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
           "is_dgw": false
         },
         {
           "gw": 28,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
           "is_dgw": false
         }
       ]
@@ -645,5 +645,5 @@
       "fixture_preview": []
     }
   ],
-  "total_projected_pts": 57.0
+  "total_projected_pts": 60.4
 }
