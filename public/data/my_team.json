@@ -4,9 +4,9 @@
   "next_gw": 25,
   "bank": 2.5,
   "chips_available": [
-    "free_hit",
+    "bench_boost",
     "triple_captain",
-    "bench_boost"
+    "free_hit"
   ],
   "squad": [
     {
@@ -63,7 +63,7 @@
       "multiplier": 1,
       "selling_price": 7.0,
       "projected_pts": 5.44,
-      "projected_4gw": 20.5,
+      "projected_4gw": 25.4,
       "form_trend": "neutral",
       "rolling_form": 5.22,
       "form_direction": "falling",
@@ -79,9 +79,9 @@
         },
         {
           "gw": 26,
-          "fixture": "BRE (A)",
+          "fixture": "BRE (A), WOL (A)",
           "difficulty": 1.36,
-          "is_dgw": false
+          "is_dgw": true
         },
         {
           "gw": 27,
@@ -413,7 +413,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.4,
+      "selling_price": 7.5,
       "projected_pts": 5.01,
       "projected_4gw": 25.0,
       "form_trend": "hot",

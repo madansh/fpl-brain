@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-04T06:43:54.152597",
+  "generated_at": "2026-02-05T06:52:25.161744",
   "next_gameweek": 25,
   "data_source": "Understat (379 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 16.2,
         "fixture": "LIV (A)",
         "fixture_difficulty": 0.94,
-        "ownership": 70.8,
-        "estimated_captain_pct": 42.5,
+        "ownership": 70.5,
+        "estimated_captain_pct": 42.3,
         "form": "3.5",
         "form_trend": "cold",
         "is_differential": false,
@@ -33,7 +33,7 @@
         "doubled_pts": 11.5,
         "fixture": "LIV (A)",
         "fixture_difficulty": 0.94,
-        "ownership": 13.3,
+        "ownership": 13.1,
         "estimated_captain_pct": 1.3,
         "form": "1.2",
         "form_trend": "cold",
@@ -54,8 +54,8 @@
         "doubled_pts": 10.9,
         "fixture": "SUN (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 39.7,
-        "estimated_captain_pct": 15.9,
+        "ownership": 40.0,
+        "estimated_captain_pct": 16.0,
         "form": "5.8",
         "form_trend": "neutral",
         "is_differential": false,
@@ -75,8 +75,8 @@
         "doubled_pts": 10.0,
         "fixture": "WOL (A)",
         "fixture_difficulty": 1.37,
-        "ownership": 39.2,
-        "estimated_captain_pct": 15.7,
+        "ownership": 39.7,
+        "estimated_captain_pct": 15.9,
         "form": "7.8",
         "form_trend": "hot",
         "is_differential": false,
@@ -96,7 +96,7 @@
         "doubled_pts": 9.8,
         "fixture": "MCI (H)",
         "fixture_difficulty": 0.96,
-        "ownership": 13.6,
+        "ownership": 13.7,
         "estimated_captain_pct": 1.4,
         "form": "6.8",
         "form_trend": "hot",
@@ -118,8 +118,8 @@
       "doubled_pts": 16.2,
       "fixture": "LIV (A)",
       "fixture_difficulty": 0.94,
-      "ownership": 70.8,
-      "estimated_captain_pct": 42.5,
+      "ownership": 70.5,
+      "estimated_captain_pct": 42.3,
       "form": "3.5",
       "form_trend": "cold",
       "is_differential": false,
@@ -139,7 +139,7 @@
       "doubled_pts": 11.5,
       "fixture": "LIV (A)",
       "fixture_difficulty": 0.94,
-      "ownership": 13.3,
+      "ownership": 13.1,
       "estimated_captain_pct": 1.3,
       "form": "1.2",
       "form_trend": "cold",
@@ -152,9 +152,9 @@
       "downside_pts": 3.3,
       "risk_category": "risky",
       "vs_safe_diff": -2.35,
-      "eo_advantage": 41.2,
+      "eo_advantage": 41.0,
       "risk_level": "high_risk",
-      "haul_upside": 6.2
+      "haul_upside": 6.1
     },
     "all_differentials": [
       {
@@ -165,7 +165,7 @@
         "doubled_pts": 11.5,
         "fixture": "LIV (A)",
         "fixture_difficulty": 0.94,
-        "ownership": 13.3,
+        "ownership": 13.1,
         "estimated_captain_pct": 1.3,
         "form": "1.2",
         "form_trend": "cold",
@@ -178,9 +178,9 @@
         "downside_pts": 3.3,
         "risk_category": "risky",
         "vs_safe_diff": -2.35,
-        "eo_advantage": 41.2,
+        "eo_advantage": 41.0,
         "risk_level": "high_risk",
-        "haul_upside": 6.2
+        "haul_upside": 6.1
       },
       {
         "player_id": 382,
@@ -190,7 +190,7 @@
         "doubled_pts": 9.8,
         "fixture": "MCI (H)",
         "fixture_difficulty": 0.96,
-        "ownership": 13.6,
+        "ownership": 13.7,
         "estimated_captain_pct": 1.4,
         "form": "6.8",
         "form_trend": "hot",
@@ -203,9 +203,9 @@
         "downside_pts": 3.9,
         "risk_category": "risky",
         "vs_safe_diff": -3.17,
-        "eo_advantage": 41.1,
+        "eo_advantage": 40.9,
         "risk_level": "high_risk",
-        "haul_upside": 6.2
+        "haul_upside": 6.1
       },
       {
         "player_id": 191,
@@ -228,15 +228,15 @@
         "downside_pts": 5.0,
         "risk_category": "risky",
         "vs_safe_diff": -4.71,
-        "eo_advantage": 41.7,
+        "eo_advantage": 41.5,
         "risk_level": "high_risk",
-        "haul_upside": 6.3
+        "haul_upside": 6.2
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 70.8,
+        "ownership": 70.5,
         "projected": 8.09
       },
       {
@@ -245,9 +245,9 @@
         "projected": 10.44
       },
       {
-        "name": "Saka",
-        "ownership": 13.2,
-        "projected": 7.32
+        "name": "Palmer",
+        "ownership": 12.0,
+        "projected": 6.1
       }
     ]
   },
@@ -437,11 +437,20 @@
   "chip_strategy": [
     {
       "chip": "Bench Boost",
-      "recommended_gw": 25,
+      "recommended_gw": 26,
       "confidence": "HIGH",
-      "reasoning": "GW25 has favorable fixtures (ease: 3.8). Projected bench value: 9.0 pts.",
-      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW25.",
+      "reasoning": "GW26 is a DGW with 1 players doubling. Projected bench value: 8.9 pts.",
+      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW26.",
       "analysis": [
+        {
+          "gw": 26,
+          "dgw_players": 1,
+          "bench_proj": 8.9,
+          "bench_xmin": 240,
+          "fixture_ease": 3.13,
+          "score": 18.3,
+          "is_dgw": true
+        },
         {
           "gw": 25,
           "dgw_players": 0,
@@ -476,15 +485,6 @@
           "bench_xmin": 240,
           "fixture_ease": 3.45,
           "score": 16.6,
-          "is_dgw": false
-        },
-        {
-          "gw": 27,
-          "dgw_players": 0,
-          "bench_proj": 8.9,
-          "bench_xmin": 240,
-          "fixture_ease": 3.21,
-          "score": 16.1,
           "is_dgw": false
         }
       ]
@@ -566,7 +566,11 @@
     }
   ],
   "fixture_alerts": {
-    "dgw_gws": [],
-    "bgw_gws": []
+    "dgw_gws": [
+      26
+    ],
+    "bgw_gws": [
+      31
+    ]
   }
 }
