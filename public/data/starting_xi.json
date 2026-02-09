@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-02-08T06:43:04.953483",
+  "generated_at": "2026-02-09T06:59:17.310519",
   "team_id": 5033680,
   "next_gameweek": 26,
   "recommendations": [
     {
       "gameweek": 26,
       "formation": "3-5-2",
-      "total_effective_pts": 63.0,
+      "total_effective_pts": 62.9,
       "captain": {
         "name": "Gabriel",
         "team": "ARS",
@@ -100,9 +100,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.49,
-          "projected_pts": 4.6,
-          "xmin": 87.9,
+          "effective_pts": 4.38,
+          "projected_pts": 4.48,
+          "xmin": 88.0,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -122,9 +122,9 @@
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 8.15,
+          "effective_pts": 8.16,
           "projected_pts": 8.4,
-          "xmin": 87.3,
+          "xmin": 87.4,
           "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -184,12 +184,12 @@
     {
       "gameweek": 27,
       "formation": "3-5-2",
-      "total_effective_pts": 54.3,
+      "total_effective_pts": 54.2,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
-        "effective_pts": 7.6,
-        "xmin": 87.3,
+        "effective_pts": 7.61,
+        "xmin": 87.4,
         "fixture": "NEW (H)"
       },
       "vice_captain": {
@@ -278,9 +278,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.23,
-          "projected_pts": 4.33,
-          "xmin": 87.9,
+          "effective_pts": 4.14,
+          "projected_pts": 4.23,
+          "xmin": 88.0,
           "fixture": "NFO (A)",
           "difficulty": 1.25,
           "is_dgw": false
@@ -300,9 +300,9 @@
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 7.6,
+          "effective_pts": 7.61,
           "projected_pts": 7.84,
-          "xmin": 87.3,
+          "xmin": 87.4,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -366,8 +366,8 @@
       "captain": {
         "name": "Haaland",
         "team": "MCI",
-        "effective_pts": 7.0,
-        "xmin": 87.3,
+        "effective_pts": 7.01,
+        "xmin": 87.4,
         "fixture": "LEE (A)"
       },
       "vice_captain": {
@@ -456,9 +456,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.24,
-          "projected_pts": 4.34,
-          "xmin": 87.9,
+          "effective_pts": 4.15,
+          "projected_pts": 4.24,
+          "xmin": 88.0,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -478,9 +478,9 @@
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 7.0,
+          "effective_pts": 7.01,
           "projected_pts": 7.22,
-          "xmin": 87.3,
+          "xmin": 87.4,
           "fixture": "LEE (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -544,8 +544,8 @@
       "captain": {
         "name": "Haaland",
         "team": "MCI",
-        "effective_pts": 7.41,
-        "xmin": 87.3,
+        "effective_pts": 7.42,
+        "xmin": 87.4,
         "fixture": "NFO (H)"
       },
       "vice_captain": {
@@ -634,9 +634,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.05,
-          "projected_pts": 4.15,
-          "xmin": 87.9,
+          "effective_pts": 3.97,
+          "projected_pts": 4.06,
+          "xmin": 88.0,
           "fixture": "WOL (A)",
           "difficulty": 1.37,
           "is_dgw": false
@@ -656,9 +656,9 @@
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 7.41,
+          "effective_pts": 7.42,
           "projected_pts": 7.64,
-          "xmin": 87.3,
+          "xmin": 87.4,
           "fixture": "NFO (H)",
           "difficulty": 1.02,
           "is_dgw": false
@@ -718,7 +718,7 @@
     {
       "gameweek": 30,
       "formation": "3-5-2",
-      "total_effective_pts": 52.0,
+      "total_effective_pts": 51.9,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -812,9 +812,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.24,
-          "projected_pts": 4.34,
-          "xmin": 87.9,
+          "effective_pts": 4.14,
+          "projected_pts": 4.23,
+          "xmin": 88.0,
           "fixture": "TOT (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -847,7 +847,7 @@
           "team": "MCI",
           "effective_pts": 5.66,
           "projected_pts": 5.83,
-          "xmin": 87.3,
+          "xmin": 87.4,
           "fixture": "WHU (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -990,9 +990,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 4.13,
-          "projected_pts": 4.23,
-          "xmin": 87.9,
+          "effective_pts": 4.04,
+          "projected_pts": 4.13,
+          "xmin": 88.0,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
@@ -1052,7 +1052,7 @@
           "name": "Haaland",
           "position": "FWD",
           "effective_pts": 0.0,
-          "xmin": 87.3,
+          "xmin": 87.4,
           "status": "blank",
           "bench_order": 3
         },
