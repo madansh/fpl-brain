@@ -1,30 +1,9 @@
 {
-  "generated_at": "2026-02-14T06:38:23.361038",
+  "generated_at": "2026-02-15T06:44:52.157326",
   "next_gameweek": 27,
   "data_source": "Understat (379 players matched)",
   "captain_picks": {
     "picks": [
-      {
-        "player_id": 430,
-        "name": "Haaland",
-        "team": "MCI",
-        "projected_pts": 7.84,
-        "doubled_pts": 15.7,
-        "fixture": "NEW (H)",
-        "fixture_difficulty": 0.98,
-        "ownership": 68.7,
-        "estimated_captain_pct": 41.2,
-        "form": "4.8",
-        "form_trend": "cold",
-        "is_differential": false,
-        "is_template": true,
-        "has_dgw": false,
-        "data_quality": "understat",
-        "diff_vs_template": -0.77,
-        "upside_pts": 0,
-        "downside_pts": 0,
-        "risk_category": "safe"
-      },
       {
         "player_id": 249,
         "name": "Jo\u00e3o Pedro",
@@ -33,7 +12,7 @@
         "doubled_pts": 14.8,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 45.4,
+        "ownership": 45.5,
         "estimated_captain_pct": 18.2,
         "form": "9.6",
         "form_trend": "hot",
@@ -66,6 +45,27 @@
         "upside_pts": 0.0,
         "downside_pts": 1.4,
         "risk_category": "risky"
+      },
+      {
+        "player_id": 430,
+        "name": "Haaland",
+        "team": "MCI",
+        "projected_pts": 5.88,
+        "doubled_pts": 11.8,
+        "fixture": "NEW (H)",
+        "fixture_difficulty": 0.98,
+        "ownership": 68.7,
+        "estimated_captain_pct": 41.2,
+        "form": "4.8",
+        "form_trend": "cold",
+        "is_differential": false,
+        "is_template": true,
+        "has_dgw": false,
+        "data_quality": "understat",
+        "diff_vs_template": -2.73,
+        "upside_pts": 0,
+        "downside_pts": 0,
+        "risk_category": "safe"
       },
       {
         "player_id": 47,
@@ -111,25 +111,25 @@
       }
     ],
     "safe_pick": {
-      "player_id": 430,
-      "name": "Haaland",
-      "team": "MCI",
-      "projected_pts": 7.84,
-      "doubled_pts": 15.7,
-      "fixture": "NEW (H)",
-      "fixture_difficulty": 0.98,
-      "ownership": 68.7,
-      "estimated_captain_pct": 41.2,
-      "form": "4.8",
-      "form_trend": "cold",
+      "player_id": 249,
+      "name": "Jo\u00e3o Pedro",
+      "team": "CHE",
+      "projected_pts": 7.39,
+      "doubled_pts": 14.8,
+      "fixture": "BUR (H)",
+      "fixture_difficulty": 0.9,
+      "ownership": 45.5,
+      "estimated_captain_pct": 18.2,
+      "form": "9.6",
+      "form_trend": "hot",
       "is_differential": false,
-      "is_template": true,
+      "is_template": false,
       "has_dgw": false,
-      "data_quality": "understat",
-      "diff_vs_template": -0.77,
-      "upside_pts": 0,
-      "downside_pts": 0,
-      "risk_category": "safe"
+      "data_quality": "approximated",
+      "diff_vs_template": -1.22,
+      "upside_pts": 0.0,
+      "downside_pts": 0.8,
+      "risk_category": "risky"
     },
     "differential_pick": {
       "player_id": 267,
@@ -151,10 +151,10 @@
       "upside_pts": 0.0,
       "downside_pts": 1.4,
       "risk_category": "risky",
-      "vs_safe_diff": -1.3,
-      "eo_advantage": 40.8,
+      "vs_safe_diff": -0.85,
+      "eo_advantage": 17.8,
       "risk_level": "medium_risk",
-      "haul_upside": 6.1
+      "haul_upside": 2.7
     },
     "all_differentials": [
       {
@@ -177,10 +177,10 @@
         "upside_pts": 0.0,
         "downside_pts": 1.4,
         "risk_category": "risky",
-        "vs_safe_diff": -1.3,
-        "eo_advantage": 40.8,
+        "vs_safe_diff": -0.85,
+        "eo_advantage": 17.8,
         "risk_level": "medium_risk",
-        "haul_upside": 6.1
+        "haul_upside": 2.7
       },
       {
         "player_id": 6,
@@ -202,10 +202,10 @@
         "upside_pts": 0.0,
         "downside_pts": 2.9,
         "risk_category": "risky",
-        "vs_safe_diff": -3.45,
-        "eo_advantage": 39.8,
+        "vs_safe_diff": -3.0,
+        "eo_advantage": 16.8,
         "risk_level": "high_risk",
-        "haul_upside": 6.0
+        "haul_upside": 2.5
       },
       {
         "player_id": 382,
@@ -227,21 +227,21 @@
         "upside_pts": 0.0,
         "downside_pts": 3.1,
         "risk_category": "risky",
-        "vs_safe_diff": -3.7,
-        "eo_advantage": 39.8,
+        "vs_safe_diff": -3.25,
+        "eo_advantage": 16.8,
         "risk_level": "high_risk",
-        "haul_upside": 6.0
+        "haul_upside": 2.5
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
         "ownership": 68.7,
-        "projected": 7.84
+        "projected": 5.88
       },
       {
         "name": "Palmer",
-        "ownership": 14.9,
+        "ownership": 15.0,
         "projected": 8.12
       },
       {
@@ -464,6 +464,84 @@
           ]
         }
       }
+    },
+    {
+      "priority": 3,
+      "out_id": 430,
+      "out_name": "Haaland",
+      "out_reasons": [
+        "cold_form",
+        "rotation_risk",
+        "blank_gw31",
+        "hard_fixtures"
+      ],
+      "in_id": 624,
+      "in_name": "Bowen",
+      "in_team": "WHU",
+      "in_cost": 7.6,
+      "gain_4gw": 3.7,
+      "effective_4gw": 19.3,
+      "in_xmin": 87.8,
+      "buy_reasons": [
+        "nailed",
+        "hot_form"
+      ],
+      "worth_hit": false,
+      "hit_value": -1.6,
+      "value_score": 2.54,
+      "position": 4,
+      "fixtures": [
+        {
+          "gw": 27,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 28,
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
+          "is_dgw": false
+        },
+        {
+          "gw": 29,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 30,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {
+        "premium": {
+          "player_id": 64,
+          "name": "Watkins",
+          "team": "AVL",
+          "cost": 8.6,
+          "gain_4gw": 3.7,
+          "value_score": 2.24,
+          "reasons": [],
+          "fixtures": [
+            {
+              "gw": 27,
+              "fixture": "LEE (H)",
+              "difficulty": 0.9,
+              "is_dgw": false
+            },
+            {
+              "gw": 28,
+              "fixture": "WOL (A)",
+              "difficulty": 1.37,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
     }
   ],
   "chip_strategy": [
@@ -526,7 +604,7 @@
       "recommended_gw": 27,
       "recommended_player": "Haaland",
       "confidence": "MEDIUM",
-      "reasoning": "TC Haaland in GW27 (NEW (H)) - HOME fixture. Projected: 26 pts.",
+      "reasoning": "TC Haaland in GW27 (NEW (H)) - HOME fixture. Projected: 20 pts.",
       "action_needed": "Ensure Haaland is in your squad for GW27.",
       "analysis": [
         {
@@ -539,7 +617,7 @@
           "avg_difficulty": 0.98,
           "is_home": true,
           "is_dgw": false,
-          "projected_tc_pts": 26.3,
+          "projected_tc_pts": 19.7,
           "xmin": 85
         },
         {
@@ -552,7 +630,7 @@
           "avg_difficulty": 1.02,
           "is_home": true,
           "is_dgw": false,
-          "projected_tc_pts": 24.7,
+          "projected_tc_pts": 18.6,
           "xmin": 85
         },
         {
@@ -565,7 +643,7 @@
           "avg_difficulty": 1.1,
           "is_home": false,
           "is_dgw": false,
-          "projected_tc_pts": 19.5,
+          "projected_tc_pts": 14.6,
           "xmin": 85
         },
         {
@@ -578,7 +656,7 @@
           "avg_difficulty": 1.21,
           "is_home": false,
           "is_dgw": false,
-          "projected_tc_pts": 16.0,
+          "projected_tc_pts": 12.0,
           "xmin": 85
         },
         {
@@ -591,7 +669,7 @@
           "avg_difficulty": 1.5,
           "is_home": false,
           "is_dgw": false,
-          "projected_tc_pts": 12.2,
+          "projected_tc_pts": 9.2,
           "xmin": 85
         }
       ]
