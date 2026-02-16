@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-15T06:44:52.157326",
+  "generated_at": "2026-02-16T06:57:43.012578",
   "next_gameweek": 27,
   "data_source": "Understat (379 players matched)",
   "captain_picks": {
@@ -12,7 +12,7 @@
         "doubled_pts": 14.8,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 45.5,
+        "ownership": 45.6,
         "estimated_captain_pct": 18.2,
         "form": "9.6",
         "form_trend": "hot",
@@ -54,8 +54,8 @@
         "doubled_pts": 11.8,
         "fixture": "NEW (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 68.7,
-        "estimated_captain_pct": 41.2,
+        "ownership": 68.5,
+        "estimated_captain_pct": 41.1,
         "form": "4.8",
         "form_trend": "cold",
         "is_differential": false,
@@ -75,7 +75,7 @@
         "doubled_pts": 11.1,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 30.5,
+        "ownership": 30.6,
         "estimated_captain_pct": 12.2,
         "form": "4.8",
         "form_trend": "neutral",
@@ -96,8 +96,8 @@
         "doubled_pts": 10.9,
         "fixture": "EVE (A)",
         "fixture_difficulty": 1.19,
-        "ownership": 36.6,
-        "estimated_captain_pct": 14.6,
+        "ownership": 36.7,
+        "estimated_captain_pct": 14.7,
         "form": "7.4",
         "form_trend": "neutral",
         "is_differential": false,
@@ -118,7 +118,7 @@
       "doubled_pts": 14.8,
       "fixture": "BUR (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 45.5,
+      "ownership": 45.6,
       "estimated_captain_pct": 18.2,
       "form": "9.6",
       "form_trend": "hot",
@@ -236,12 +236,12 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 68.7,
+        "ownership": 68.5,
         "projected": 5.88
       },
       {
         "name": "Palmer",
-        "ownership": 15.0,
+        "ownership": 15.1,
         "projected": 8.12
       },
       {
