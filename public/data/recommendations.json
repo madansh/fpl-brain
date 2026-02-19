@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T06:56:17.755946",
+  "generated_at": "2026-02-19T06:54:52.015292",
   "next_gameweek": 27,
   "data_source": "Understat (379 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 14.8,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 45.8,
-        "estimated_captain_pct": 18.3,
+        "ownership": 46.1,
+        "estimated_captain_pct": 18.4,
         "form": "10.0",
         "form_trend": "hot",
         "is_differential": false,
@@ -54,8 +54,8 @@
         "doubled_pts": 11.8,
         "fixture": "NEW (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 68.3,
-        "estimated_captain_pct": 41.0,
+        "ownership": 68.0,
+        "estimated_captain_pct": 40.8,
         "form": "5.5",
         "form_trend": "neutral",
         "is_differential": false,
@@ -75,7 +75,7 @@
         "doubled_pts": 11.1,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 30.7,
+        "ownership": 30.8,
         "estimated_captain_pct": 12.3,
         "form": "5.5",
         "form_trend": "neutral",
@@ -96,7 +96,7 @@
         "doubled_pts": 10.9,
         "fixture": "EVE (A)",
         "fixture_difficulty": 1.19,
-        "ownership": 36.7,
+        "ownership": 36.8,
         "estimated_captain_pct": 14.7,
         "form": "6.8",
         "form_trend": "neutral",
@@ -118,8 +118,8 @@
       "doubled_pts": 14.8,
       "fixture": "BUR (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 45.8,
-      "estimated_captain_pct": 18.3,
+      "ownership": 46.1,
+      "estimated_captain_pct": 18.4,
       "form": "10.0",
       "form_trend": "hot",
       "is_differential": false,
@@ -152,7 +152,7 @@
       "downside_pts": 1.4,
       "risk_category": "risky",
       "vs_safe_diff": -0.85,
-      "eo_advantage": 17.9,
+      "eo_advantage": 18.0,
       "risk_level": "medium_risk",
       "haul_upside": 2.7
     },
@@ -178,7 +178,7 @@
         "downside_pts": 1.4,
         "risk_category": "risky",
         "vs_safe_diff": -0.85,
-        "eo_advantage": 17.9,
+        "eo_advantage": 18.0,
         "risk_level": "medium_risk",
         "haul_upside": 2.7
       },
@@ -192,7 +192,7 @@
         "fixture_difficulty": 1.5,
         "ownership": 14.3,
         "estimated_captain_pct": 1.4,
-        "form": "2.8",
+        "form": "3.0",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -203,7 +203,7 @@
         "downside_pts": 2.9,
         "risk_category": "risky",
         "vs_safe_diff": -3.0,
-        "eo_advantage": 16.9,
+        "eo_advantage": 17.0,
         "risk_level": "high_risk",
         "haul_upside": 2.5
       },
@@ -225,10 +225,10 @@
         "data_quality": "approximated",
         "diff_vs_template": -4.47,
         "upside_pts": 0.0,
-        "downside_pts": 3.1,
+        "downside_pts": 3.0,
         "risk_category": "risky",
         "vs_safe_diff": -3.25,
-        "eo_advantage": 16.9,
+        "eo_advantage": 17.0,
         "risk_level": "high_risk",
         "haul_upside": 2.5
       }
@@ -236,12 +236,12 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 68.3,
+        "ownership": 68.0,
         "projected": 5.88
       },
       {
         "name": "Palmer",
-        "ownership": 15.3,
+        "ownership": 15.5,
         "projected": 8.12
       },
       {
@@ -254,10 +254,9 @@
   "transfer_recommendations": [
     {
       "priority": 1,
-      "out_id": 5,
-      "out_name": "Gabriel",
+      "out_id": 6,
+      "out_name": "Saliba",
       "out_reasons": [
-        "cold_form",
         "low_xmin",
         "blank_gw31",
         "hard_fixtures"
@@ -266,7 +265,7 @@
       "in_name": "Virgil",
       "in_team": "LIV",
       "in_cost": 5.9,
-      "gain_4gw": 6.8,
+      "gain_4gw": 7.8,
       "effective_4gw": 16.5,
       "in_xmin": 90,
       "buy_reasons": [
@@ -274,7 +273,7 @@
         "hot_form"
       ],
       "worth_hit": true,
-      "hit_value": 1.5,
+      "hit_value": 2.5,
       "value_score": 2.8,
       "position": 2,
       "fixtures": [
@@ -306,12 +305,12 @@
       "data_quality": "understat",
       "alternatives": {
         "budget": {
-          "player_id": 505,
-          "name": "Milenkovi\u0107",
-          "team": "NFO",
-          "cost": 5.1,
-          "gain_4gw": 6.8,
-          "value_score": 3.24,
+          "player_id": 610,
+          "name": "Wan-Bissaka",
+          "team": "WHU",
+          "cost": 4.1,
+          "gain_4gw": 5.9,
+          "value_score": 3.56,
           "reasons": [
             "nailed",
             "hot_form"
@@ -319,14 +318,14 @@
           "fixtures": [
             {
               "gw": 27,
-              "fixture": "LIV (H)",
-              "difficulty": 0.77,
+              "fixture": "BOU (H)",
+              "difficulty": 0.98,
               "is_dgw": false
             },
             {
               "gw": 28,
-              "fixture": "BHA (A)",
-              "difficulty": 1.32,
+              "fixture": "LIV (A)",
+              "difficulty": 0.94,
               "is_dgw": false
             }
           ]
@@ -336,7 +335,7 @@
           "name": "Wan-Bissaka",
           "team": "WHU",
           "cost": 4.1,
-          "gain_4gw": 4.9,
+          "gain_4gw": 5.9,
           "value_score": 3.56,
           "reasons": [
             "nailed",
@@ -361,112 +360,6 @@
     },
     {
       "priority": 2,
-      "out_id": 6,
-      "out_name": "Saliba",
-      "out_reasons": [
-        "low_xmin",
-        "blank_gw31",
-        "hard_fixtures"
-      ],
-      "in_id": 373,
-      "in_name": "Virgil",
-      "in_team": "LIV",
-      "in_cost": 5.9,
-      "gain_4gw": 13.2,
-      "effective_4gw": 16.5,
-      "in_xmin": 90,
-      "buy_reasons": [
-        "nailed",
-        "hot_form"
-      ],
-      "worth_hit": true,
-      "hit_value": 7.9,
-      "value_score": 2.8,
-      "position": 2,
-      "fixtures": [
-        {
-          "gw": 27,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
-          "is_dgw": false
-        },
-        {
-          "gw": 28,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
-          "gw": 29,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
-          "is_dgw": false
-        },
-        {
-          "gw": 30,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {
-        "budget": {
-          "player_id": 610,
-          "name": "Wan-Bissaka",
-          "team": "WHU",
-          "cost": 4.1,
-          "gain_4gw": 11.3,
-          "value_score": 3.56,
-          "reasons": [
-            "nailed",
-            "hot_form"
-          ],
-          "fixtures": [
-            {
-              "gw": 27,
-              "fixture": "BOU (H)",
-              "difficulty": 0.98,
-              "is_dgw": false
-            },
-            {
-              "gw": 28,
-              "fixture": "LIV (A)",
-              "difficulty": 0.94,
-              "is_dgw": false
-            }
-          ]
-        },
-        "value": {
-          "player_id": 610,
-          "name": "Wan-Bissaka",
-          "team": "WHU",
-          "cost": 4.1,
-          "gain_4gw": 11.3,
-          "value_score": 3.56,
-          "reasons": [
-            "nailed",
-            "hot_form"
-          ],
-          "fixtures": [
-            {
-              "gw": 27,
-              "fixture": "BOU (H)",
-              "difficulty": 0.98,
-              "is_dgw": false
-            },
-            {
-              "gw": 28,
-              "fixture": "LIV (A)",
-              "difficulty": 0.94,
-              "is_dgw": false
-            }
-          ]
-        }
-      }
-    },
-    {
-      "priority": 3,
       "out_id": 430,
       "out_name": "Haaland",
       "out_reasons": [

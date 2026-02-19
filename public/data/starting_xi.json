@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T06:56:17.766528",
+  "generated_at": "2026-02-19T06:54:52.025371",
   "team_id": 5033680,
   "next_gameweek": 27,
   "recommendations": [
@@ -45,9 +45,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.18,
+          "effective_pts": 4.19,
           "projected_pts": 4.39,
-          "xmin": 85.7,
+          "xmin": 85.9,
           "fixture": "TOT (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -223,9 +223,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.45,
+          "effective_pts": 4.46,
           "projected_pts": 4.67,
-          "xmin": 85.7,
+          "xmin": 85.9,
           "fixture": "CHE (H)",
           "difficulty": 0.99,
           "is_dgw": false
@@ -401,9 +401,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.26,
+          "effective_pts": 4.27,
           "projected_pts": 4.47,
-          "xmin": 85.7,
+          "xmin": 85.9,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
@@ -579,9 +579,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.46,
+          "effective_pts": 4.47,
           "projected_pts": 4.68,
-          "xmin": 85.7,
+          "xmin": 85.9,
           "fixture": "EVE (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -855,7 +855,7 @@
           "name": "Saliba",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 85.7,
+          "xmin": 85.9,
           "status": "blank",
           "bench_order": 2
         },
@@ -924,9 +924,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.46,
+          "effective_pts": 4.47,
           "projected_pts": 4.68,
-          "xmin": 85.7,
+          "xmin": 85.9,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false
