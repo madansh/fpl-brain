@@ -4,8 +4,8 @@
   "next_gw": 27,
   "bank": 0.3,
   "chips_available": [
-    "free_hit",
     "triple_captain",
+    "free_hit",
     "bench_boost"
   ],
   "squad": [
@@ -237,7 +237,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.6,
+      "selling_price": 7.7,
       "projected_pts": 5.57,
       "projected_4gw": 19.7,
       "form_trend": "neutral",
@@ -457,15 +457,15 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 14.9,
-      "projected_pts": 5.88,
-      "projected_4gw": 21.4,
+      "selling_price": 14.8,
+      "projected_pts": 7.84,
+      "projected_4gw": 28.5,
       "form_trend": "neutral",
       "rolling_form": 4.35,
       "form_direction": "rising",
-      "news": "Knee injury - 75% chance of playing",
-      "news_severity": 1,
-      "news_category": "unknown",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 27,
@@ -645,5 +645,5 @@
       "fixture_preview": []
     }
   ],
-  "total_projected_pts": 61.1
+  "total_projected_pts": 63.1
 }
