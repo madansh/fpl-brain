@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-02-22T06:40:39.808153",
+  "generated_at": "2026-02-23T06:59:03.575740",
   "team_id": 5033680,
   "next_gameweek": 28,
   "recommendations": [
     {
       "gameweek": 28,
-      "formation": "3-5-2",
-      "total_effective_pts": 55.7,
+      "formation": "4-4-2",
+      "total_effective_pts": 54.9,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -45,9 +45,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.46,
+          "effective_pts": 4.47,
           "projected_pts": 4.67,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "CHE (H)",
           "difficulty": 0.99,
           "is_dgw": false
@@ -61,6 +61,17 @@
           "xmin": 87.6,
           "fixture": "CRY (H)",
           "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "BRE (H)",
+          "difficulty": 1.11,
           "is_dgw": false
         },
         {
@@ -78,9 +89,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.5,
+          "effective_pts": 5.52,
           "projected_pts": 5.8,
-          "xmin": 85.4,
+          "xmin": 85.6,
           "fixture": "MUN (A)",
           "difficulty": 1.35,
           "is_dgw": false
@@ -108,17 +119,6 @@
           "is_dgw": false
         },
         {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 4.06,
-          "projected_pts": 4.15,
-          "xmin": 88.1,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
@@ -143,18 +143,18 @@
       ],
       "bench": [
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "effective_pts": 2.28,
+          "xmin": 66.1,
           "status": "available",
           "bench_order": 2
         },
@@ -183,7 +183,7 @@
     },
     {
       "gameweek": 29,
-      "formation": "3-5-2",
+      "formation": "4-4-2",
       "total_effective_pts": 52.5,
       "captain": {
         "name": "Haaland",
@@ -223,9 +223,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.27,
+          "effective_pts": 4.28,
           "projected_pts": 4.47,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
@@ -239,6 +239,17 @@
           "xmin": 87.6,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
           "is_dgw": false
         },
         {
@@ -267,9 +278,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.17,
+          "effective_pts": 5.18,
           "projected_pts": 5.45,
-          "xmin": 85.4,
+          "xmin": 85.6,
           "fixture": "TOT (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -283,17 +294,6 @@
           "xmin": 89.4,
           "fixture": "AVL (A)",
           "difficulty": 1.22,
-          "is_dgw": false
-        },
-        {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 3.28,
-          "projected_pts": 3.35,
-          "xmin": 88.1,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
           "is_dgw": false
         },
         {
@@ -321,18 +321,18 @@
       ],
       "bench": [
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "effective_pts": 1.84,
+          "xmin": 66.1,
           "status": "available",
           "bench_order": 2
         },
@@ -361,13 +361,13 @@
     },
     {
       "gameweek": 30,
-      "formation": "3-5-2",
-      "total_effective_pts": 55.6,
+      "formation": "4-4-2",
+      "total_effective_pts": 54.8,
       "captain": {
         "name": "Sarr",
         "team": "CRY",
-        "effective_pts": 7.21,
-        "xmin": 85.4,
+        "effective_pts": 7.23,
+        "xmin": 85.6,
         "fixture": "LEE (H)"
       },
       "vice_captain": {
@@ -401,9 +401,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.47,
+          "effective_pts": 4.48,
           "projected_pts": 4.68,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "EVE (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -420,12 +420,23 @@
           "is_dgw": false
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 7.21,
+          "effective_pts": 7.23,
           "projected_pts": 7.6,
-          "xmin": 85.4,
+          "xmin": 85.6,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -464,17 +475,6 @@
           "is_dgw": false
         },
         {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 4.05,
-          "projected_pts": 4.14,
-          "xmin": 88.1,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
@@ -499,18 +499,18 @@
       ],
       "bench": [
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "effective_pts": 2.28,
+          "xmin": 66.1,
           "status": "available",
           "bench_order": 2
         },
@@ -634,9 +634,9 @@
           "name": "Wirtz",
           "position": "MID",
           "team": "LIV",
-          "effective_pts": 3.95,
-          "projected_pts": 4.04,
-          "xmin": 88.1,
+          "effective_pts": 2.23,
+          "projected_pts": 3.03,
+          "xmin": 66.1,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
@@ -677,7 +677,7 @@
           "name": "Saliba",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "status": "blank",
           "bench_order": 2
         },
@@ -685,7 +685,7 @@
           "name": "Sarr",
           "position": "MID",
           "effective_pts": 0.0,
-          "xmin": 85.4,
+          "xmin": 85.6,
           "status": "blank",
           "bench_order": 3
         },
@@ -706,13 +706,13 @@
     },
     {
       "gameweek": 32,
-      "formation": "3-5-2",
-      "total_effective_pts": 57.6,
+      "formation": "4-4-2",
+      "total_effective_pts": 56.1,
       "captain": {
         "name": "Sarr",
         "team": "CRY",
-        "effective_pts": 6.78,
-        "xmin": 85.4,
+        "effective_pts": 6.8,
+        "xmin": 85.6,
         "fixture": "NEW (H)"
       },
       "vice_captain": {
@@ -746,9 +746,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.47,
+          "effective_pts": 4.48,
           "projected_pts": 4.68,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -765,12 +765,23 @@
           "is_dgw": false
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 6.78,
+          "effective_pts": 6.8,
           "projected_pts": 7.15,
-          "xmin": 85.4,
+          "xmin": 85.6,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -795,17 +806,6 @@
           "xmin": 89.4,
           "fixture": "MCI (H)",
           "difficulty": 0.96,
-          "is_dgw": false
-        },
-        {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 4.74,
-          "projected_pts": 4.84,
-          "xmin": 88.1,
-          "fixture": "FUL (H)",
-          "difficulty": 0.9,
           "is_dgw": false
         },
         {
@@ -844,18 +844,18 @@
       ],
       "bench": [
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "effective_pts": 2.67,
+          "xmin": 66.1,
           "status": "available",
           "bench_order": 2
         },
@@ -884,8 +884,8 @@
     },
     {
       "gameweek": 33,
-      "formation": "3-5-2",
-      "total_effective_pts": 57.2,
+      "formation": "4-4-2",
+      "total_effective_pts": 56.3,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -924,9 +924,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.33,
+          "effective_pts": 4.34,
           "projected_pts": 4.54,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "MCI (A)",
           "difficulty": 1.18,
           "is_dgw": false
@@ -943,12 +943,23 @@
           "is_dgw": false
         },
         {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.81,
+          "effective_pts": 5.82,
           "projected_pts": 6.12,
-          "xmin": 85.4,
+          "xmin": 85.6,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -987,17 +998,6 @@
           "is_dgw": false
         },
         {
-          "name": "Wirtz",
-          "position": "MID",
-          "team": "LIV",
-          "effective_pts": 4.13,
-          "projected_pts": 4.22,
-          "xmin": 88.1,
-          "fixture": "EVE (A)",
-          "difficulty": 1.19,
-          "is_dgw": false
-        },
-        {
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
@@ -1022,18 +1022,18 @@
       ],
       "bench": [
         {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Wirtz",
+          "position": "MID",
+          "effective_pts": 2.32,
+          "xmin": 66.1,
           "status": "available",
           "bench_order": 2
         },
