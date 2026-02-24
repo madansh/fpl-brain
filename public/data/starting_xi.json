@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-23T06:59:03.575740",
+  "generated_at": "2026-02-24T06:54:31.196683",
   "team_id": 5033680,
   "next_gameweek": 28,
   "recommendations": [
@@ -58,7 +58,7 @@
           "team": "MUN",
           "effective_pts": 3.72,
           "projected_pts": 3.82,
-          "xmin": 87.6,
+          "xmin": 87.7,
           "fixture": "CRY (H)",
           "difficulty": 1.07,
           "is_dgw": false
@@ -78,9 +78,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.57,
+          "effective_pts": 5.58,
           "projected_pts": 5.81,
-          "xmin": 86.3,
+          "xmin": 86.5,
           "fixture": "CRY (H)",
           "difficulty": 1.07,
           "is_dgw": false
@@ -236,7 +236,7 @@
           "team": "MUN",
           "effective_pts": 3.65,
           "projected_pts": 3.75,
-          "xmin": 87.6,
+          "xmin": 87.7,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -267,9 +267,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.2,
+          "effective_pts": 5.21,
           "projected_pts": 5.42,
-          "xmin": 86.3,
+          "xmin": 86.5,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -414,7 +414,7 @@
           "team": "MUN",
           "effective_pts": 3.78,
           "projected_pts": 3.88,
-          "xmin": 87.6,
+          "xmin": 87.7,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -445,9 +445,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.81,
+          "effective_pts": 5.82,
           "projected_pts": 6.06,
-          "xmin": 86.3,
+          "xmin": 86.5,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -550,7 +550,7 @@
       },
       "vice_captain": {
         "name": "B.Fernandes",
-        "effective_pts": 5.2
+        "effective_pts": 5.21
       },
       "starting_xi": [
         {
@@ -581,7 +581,7 @@
           "team": "MUN",
           "effective_pts": 3.65,
           "projected_pts": 3.75,
-          "xmin": 87.6,
+          "xmin": 87.7,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -601,9 +601,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.2,
+          "effective_pts": 5.21,
           "projected_pts": 5.42,
-          "xmin": 86.3,
+          "xmin": 86.5,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -757,9 +757,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.85,
+          "effective_pts": 3.86,
           "projected_pts": 3.96,
-          "xmin": 87.6,
+          "xmin": 87.7,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -790,9 +790,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 6.23,
+          "effective_pts": 6.25,
           "projected_pts": 6.5,
-          "xmin": 86.3,
+          "xmin": 86.5,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -937,7 +937,7 @@
           "team": "MUN",
           "effective_pts": 3.64,
           "projected_pts": 3.74,
-          "xmin": 87.6,
+          "xmin": 87.7,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -979,9 +979,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.18,
+          "effective_pts": 5.19,
           "projected_pts": 5.4,
-          "xmin": 86.3,
+          "xmin": 86.5,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
