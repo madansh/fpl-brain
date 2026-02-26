@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-25T07:00:45.912702",
+  "generated_at": "2026-02-26T06:54:39.411188",
   "next_gameweek": 28,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 15.1,
         "fixture": "ARS (A)",
         "fixture_difficulty": 0.89,
-        "ownership": 47.4,
-        "estimated_captain_pct": 19.0,
+        "ownership": 47.3,
+        "estimated_captain_pct": 18.9,
         "form": "8.8",
         "form_trend": "hot",
         "is_differential": false,
@@ -54,7 +54,7 @@
         "doubled_pts": 11.6,
         "fixture": "CRY (H)",
         "fixture_difficulty": 1.07,
-        "ownership": 37.2,
+        "ownership": 37.3,
         "estimated_captain_pct": 14.9,
         "form": "6.0",
         "form_trend": "neutral",
@@ -96,7 +96,7 @@
         "doubled_pts": 10.6,
         "fixture": "CHE (H)",
         "fixture_difficulty": 0.99,
-        "ownership": 42.8,
+        "ownership": 42.7,
         "estimated_captain_pct": 17.1,
         "form": "4.6",
         "form_trend": "neutral",
@@ -118,8 +118,8 @@
       "doubled_pts": 15.1,
       "fixture": "ARS (A)",
       "fixture_difficulty": 0.89,
-      "ownership": 47.4,
-      "estimated_captain_pct": 19.0,
+      "ownership": 47.3,
+      "estimated_captain_pct": 18.9,
       "form": "8.8",
       "form_trend": "hot",
       "is_differential": false,
@@ -152,7 +152,7 @@
       "downside_pts": 1.9,
       "risk_category": "risky",
       "vs_safe_diff": -1.74,
-      "eo_advantage": 18.6,
+      "eo_advantage": 18.5,
       "risk_level": "medium_risk",
       "haul_upside": 2.8
     },
@@ -178,7 +178,7 @@
         "downside_pts": 1.9,
         "risk_category": "risky",
         "vs_safe_diff": -1.74,
-        "eo_advantage": 18.6,
+        "eo_advantage": 18.5,
         "risk_level": "medium_risk",
         "haul_upside": 2.8
       },
@@ -203,7 +203,7 @@
         "downside_pts": 2.7,
         "risk_category": "risky",
         "vs_safe_diff": -2.87,
-        "eo_advantage": 17.6,
+        "eo_advantage": 17.5,
         "risk_level": "high_risk",
         "haul_upside": 2.6
       },
@@ -228,7 +228,7 @@
         "downside_pts": 3.2,
         "risk_category": "risky",
         "vs_safe_diff": -3.72,
-        "eo_advantage": 18.5,
+        "eo_advantage": 18.4,
         "risk_level": "high_risk",
         "haul_upside": 2.8
       }
@@ -241,7 +241,7 @@
       },
       {
         "name": "Palmer",
-        "ownership": 16.9,
+        "ownership": 16.8,
         "projected": 8.18
       },
       {
