@@ -1,12 +1,12 @@
 {
   "team_id": 5033680,
-  "current_gw": 27,
-  "next_gw": 28,
-  "bank": 0.3,
+  "current_gw": 28,
+  "next_gw": 29,
+  "bank": 3.6,
   "chips_available": [
+    "triple_captain",
     "free_hit",
-    "bench_boost",
-    "triple_captain"
+    "bench_boost"
   ],
   "squad": [
     {
@@ -21,18 +21,12 @@
       "projected_pts": 3.18,
       "projected_4gw": 12.7,
       "form_trend": "hot",
-      "rolling_form": 4.51,
-      "form_direction": "stable",
+      "rolling_form": 3.97,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "SUN (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "BRE (H)",
@@ -50,6 +44,12 @@
           "fixture": "MUN (H)",
           "difficulty": 1.11,
           "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
         }
       ]
     },
@@ -61,22 +61,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 4.5,
-      "projected_pts": 3.82,
-      "projected_4gw": 15.2,
-      "form_trend": "hot",
-      "rolling_form": 4.06,
-      "form_direction": "rising",
+      "selling_price": 4.6,
+      "projected_pts": 3.75,
+      "projected_4gw": 15.3,
+      "form_trend": "neutral",
+      "rolling_form": 3.56,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "NEW (A)",
@@ -93,6 +87,12 @@
           "gw": 31,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         }
       ]
@@ -106,21 +106,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.1,
-      "projected_pts": 5.3,
+      "projected_pts": 4.94,
       "projected_4gw": 15.6,
-      "form_trend": "neutral",
-      "rolling_form": 3.61,
+      "form_trend": "cold",
+      "rolling_form": 2.29,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "BHA (A)",
@@ -137,6 +131,12 @@
           "gw": 31,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 32,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
         }
       ]
     },
@@ -149,21 +149,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.1,
-      "projected_pts": 4.67,
+      "projected_pts": 4.47,
       "projected_4gw": 13.8,
       "form_trend": "neutral",
-      "rolling_form": 2.42,
+      "rolling_form": 1.46,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "BHA (A)",
@@ -180,137 +174,11 @@
           "gw": 31,
           "fixture": "BLANK",
           "difficulty": 0
-        }
-      ]
-    },
-    {
-      "player_id": 191,
-      "name": "Est\u00e8ve",
-      "position": 2,
-      "team_id": 3,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 3.9,
-      "projected_pts": 3.38,
-      "projected_4gw": 13.5,
-      "form_trend": "neutral",
-      "rolling_form": 1.98,
-      "form_direction": "stable",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
         },
         {
-          "gw": 29,
-          "fixture": "EVE (A)",
-          "difficulty": 1.19,
-          "is_dgw": false
-        },
-        {
-          "gw": 30,
+          "gw": 32,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 31,
-          "fixture": "FUL (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 237,
-      "name": "Enzo",
-      "position": 3,
-      "team_id": 7,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 6.8,
-      "projected_pts": 5.29,
-      "projected_4gw": 19.3,
-      "form_trend": "neutral",
-      "rolling_form": 3.36,
-      "form_direction": "falling",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
-        {
-          "gw": 29,
-          "fixture": "AVL (A)",
-          "difficulty": 1.22,
-          "is_dgw": false
-        },
-        {
-          "gw": 30,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 31,
-          "fixture": "EVE (A)",
-          "difficulty": 1.19,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 449,
-      "name": "B.Fernandes",
-      "position": 3,
-      "team_id": 14,
-      "is_captain": false,
-      "is_vice": true,
-      "multiplier": 1,
-      "selling_price": 9.9,
-      "projected_pts": 5.81,
-      "projected_4gw": 22.7,
-      "form_trend": "neutral",
-      "rolling_form": 4.63,
-      "form_direction": "falling",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        },
-        {
-          "gw": 29,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "gw": 30,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
-          "is_dgw": false
-        },
-        {
-          "gw": 31,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
           "is_dgw": false
         }
       ]
@@ -324,21 +192,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.4,
-      "projected_pts": 5.8,
-      "projected_4gw": 18.9,
+      "projected_pts": 5.45,
+      "projected_4gw": 20.2,
       "form_trend": "neutral",
-      "rolling_form": 3.45,
+      "rolling_form": 2.83,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "MUN (A)",
-          "difficulty": 1.35,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "TOT (A)",
@@ -355,6 +217,12 @@
           "gw": 31,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 32,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
         }
       ]
     },
@@ -367,21 +235,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.7,
-      "projected_pts": 4.43,
-      "projected_4gw": 18.8,
+      "projected_pts": 5.27,
+      "projected_4gw": 19.0,
       "form_trend": "neutral",
-      "rolling_form": 3.82,
+      "rolling_form": 2.88,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "CHE (H)",
@@ -399,6 +261,144 @@
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 83,
+      "name": "O.Dango",
+      "position": 3,
+      "team_id": 5,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 5.9,
+      "projected_pts": 5.54,
+      "projected_4gw": 23.5,
+      "form_trend": "neutral",
+      "rolling_form": 3.39,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 29,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 30,
+          "fixture": "WOL (H)",
+          "difficulty": 1.12,
+          "is_dgw": false
+        },
+        {
+          "gw": 31,
+          "fixture": "LEE (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "EVE (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 807,
+      "name": "Rayan",
+      "position": 3,
+      "team_id": 4,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 5.6,
+      "projected_pts": 7.62,
+      "projected_4gw": 31.9,
+      "form_trend": "neutral",
+      "rolling_form": 3.46,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 29,
+          "fixture": "BRE (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "gw": 30,
+          "fixture": "BUR (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 31,
+          "fixture": "MUN (H)",
+          "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 449,
+      "name": "B.Fernandes",
+      "position": 3,
+      "team_id": 14,
+      "is_captain": false,
+      "is_vice": true,
+      "multiplier": 1,
+      "selling_price": 9.9,
+      "projected_pts": 5.42,
+      "projected_4gw": 23.4,
+      "form_trend": "neutral",
+      "rolling_form": 3.52,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 29,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 30,
+          "fixture": "AVL (H)",
+          "difficulty": 1.0,
+          "is_dgw": false
+        },
+        {
+          "gw": 31,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
         }
       ]
     },
@@ -407,25 +407,19 @@
       "name": "Jo\u00e3o Pedro",
       "position": 4,
       "team_id": 7,
-      "is_captain": true,
+      "is_captain": false,
       "is_vice": false,
-      "multiplier": 2,
-      "selling_price": 7.7,
-      "projected_pts": 7.54,
-      "projected_4gw": 26.6,
+      "multiplier": 1,
+      "selling_price": 7.6,
+      "projected_pts": 6.0,
+      "projected_4gw": 26.2,
       "form_trend": "hot",
-      "rolling_form": 7.72,
-      "form_direction": "stable",
+      "rolling_form": 5.53,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "AVL (A)",
@@ -443,6 +437,12 @@
           "fixture": "EVE (A)",
           "difficulty": 1.19,
           "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
         }
       ]
     },
@@ -451,25 +451,19 @@
       "name": "Haaland",
       "position": 4,
       "team_id": 13,
-      "is_captain": false,
+      "is_captain": true,
       "is_vice": false,
-      "multiplier": 1,
+      "multiplier": 2,
       "selling_price": 14.8,
-      "projected_pts": 7.22,
-      "projected_4gw": 20.7,
+      "projected_pts": 7.64,
+      "projected_4gw": 20.2,
       "form_trend": "neutral",
-      "rolling_form": 4.9,
-      "form_direction": "rising",
+      "rolling_form": 4.29,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "LEE (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "NFO (H)",
@@ -486,6 +480,12 @@
           "gw": 31,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 32,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
+          "is_dgw": false
         }
       ]
     },
@@ -501,18 +501,12 @@
       "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "cold",
-      "rolling_form": 1.56,
-      "form_direction": "falling",
+      "rolling_form": 0.83,
+      "form_direction": "stable",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "EVE (A)",
@@ -530,49 +524,55 @@
           "fixture": "FUL (A)",
           "difficulty": 1.1,
           "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
         }
       ]
     },
     {
-      "player_id": 382,
-      "name": "Wirtz",
-      "position": 3,
-      "team_id": 12,
+      "player_id": 191,
+      "name": "Est\u00e8ve",
+      "position": 2,
+      "team_id": 3,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 8.4,
-      "projected_pts": 3.11,
-      "projected_4gw": 11.8,
+      "selling_price": 3.9,
+      "projected_pts": 3.38,
+      "projected_4gw": 13.5,
       "form_trend": "neutral",
-      "rolling_form": 2.97,
+      "rolling_form": 1.43,
       "form_direction": "falling",
-      "news": "Back injury - 75% chance of playing",
-      "news_severity": 1,
-      "news_category": "unknown",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
-          "gw": 28,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
           "gw": 29,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
+          "fixture": "EVE (A)",
+          "difficulty": 1.19,
           "is_dgw": false
         },
         {
           "gw": 30,
-          "fixture": "TOT (H)",
-          "difficulty": 1.24,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
           "is_dgw": false
         },
         {
           "gw": 31,
-          "fixture": "BHA (A)",
-          "difficulty": 1.32,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
           "is_dgw": false
         }
       ]
@@ -589,18 +589,12 @@
       "projected_pts": 0,
       "projected_4gw": 0,
       "form_trend": "cold",
-      "rolling_form": 1.04,
-      "form_direction": "falling",
+      "rolling_form": 0.0,
+      "form_direction": "stable",
       "news": "Hamstring injury - Unknown return date",
       "news_severity": 2,
       "news_category": "moderate",
       "fixture_preview": [
-        {
-          "gw": 28,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        },
         {
           "gw": 29,
           "fixture": "NEW (A)",
@@ -617,6 +611,12 @@
           "gw": 31,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         }
       ]
@@ -641,5 +641,5 @@
       "fixture_preview": []
     }
   ],
-  "total_projected_pts": 64.0
+  "total_projected_pts": 66.9
 }
