@@ -1,49 +1,28 @@
 {
-  "generated_at": "2026-02-28T06:31:39.534990",
+  "generated_at": "2026-03-01T06:39:38.210563",
   "next_gameweek": 29,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
     "picks": [
       {
-        "player_id": 430,
-        "name": "Haaland",
-        "team": "MCI",
-        "projected_pts": 7.64,
-        "doubled_pts": 15.3,
-        "fixture": "NFO (H)",
-        "fixture_difficulty": 1.02,
-        "ownership": 67.4,
-        "estimated_captain_pct": 40.4,
-        "form": "5.4",
-        "form_trend": "neutral",
-        "is_differential": false,
-        "is_template": true,
-        "has_dgw": false,
-        "data_quality": "understat",
-        "diff_vs_template": -0.39,
-        "upside_pts": 0,
-        "downside_pts": 0,
-        "risk_category": "safe"
-      },
-      {
         "player_id": 807,
         "name": "Rayan",
         "team": "BOU",
-        "projected_pts": 7.62,
-        "doubled_pts": 15.2,
+        "projected_pts": 6.31,
+        "doubled_pts": 12.6,
         "fixture": "BRE (H)",
         "fixture_difficulty": 1.11,
-        "ownership": 2.6,
+        "ownership": 2.7,
         "estimated_captain_pct": 0.3,
-        "form": "4.4",
+        "form": "4.8",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "approximated",
-        "diff_vs_template": -0.41,
+        "diff_vs_template": -1.72,
         "upside_pts": 0.0,
-        "downside_pts": 0.3,
+        "downside_pts": 1.2,
         "risk_category": "risky"
       },
       {
@@ -68,24 +47,45 @@
         "risk_category": "risky"
       },
       {
+        "player_id": 430,
+        "name": "Haaland",
+        "team": "MCI",
+        "projected_pts": 5.73,
+        "doubled_pts": 11.5,
+        "fixture": "NFO (H)",
+        "fixture_difficulty": 1.02,
+        "ownership": 67.2,
+        "estimated_captain_pct": 40.3,
+        "form": "5.4",
+        "form_trend": "neutral",
+        "is_differential": false,
+        "is_template": true,
+        "has_dgw": false,
+        "data_quality": "understat",
+        "diff_vs_template": -2.3,
+        "upside_pts": 0,
+        "downside_pts": 0,
+        "risk_category": "safe"
+      },
+      {
         "player_id": 83,
         "name": "O.Dango",
         "team": "BRE",
-        "projected_pts": 5.54,
-        "doubled_pts": 11.1,
+        "projected_pts": 5.66,
+        "doubled_pts": 11.3,
         "fixture": "BOU (A)",
         "fixture_difficulty": 1.2,
-        "ownership": 2.8,
+        "ownership": 2.9,
         "estimated_captain_pct": 0.3,
-        "form": "4.6",
-        "form_trend": "neutral",
+        "form": "5.6",
+        "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "approximated",
-        "diff_vs_template": -2.49,
+        "diff_vs_template": -2.37,
         "upside_pts": 0.0,
-        "downside_pts": 1.7,
+        "downside_pts": 1.6,
         "risk_category": "risky"
       },
       {
@@ -111,101 +111,76 @@
       }
     ],
     "safe_pick": {
-      "player_id": 430,
-      "name": "Haaland",
-      "team": "MCI",
-      "projected_pts": 7.64,
-      "doubled_pts": 15.3,
-      "fixture": "NFO (H)",
-      "fixture_difficulty": 1.02,
-      "ownership": 67.4,
-      "estimated_captain_pct": 40.4,
-      "form": "5.4",
-      "form_trend": "neutral",
-      "is_differential": false,
-      "is_template": true,
-      "has_dgw": false,
-      "data_quality": "understat",
-      "diff_vs_template": -0.39,
-      "upside_pts": 0,
-      "downside_pts": 0,
-      "risk_category": "safe"
-    },
-    "differential_pick": {
       "player_id": 807,
       "name": "Rayan",
       "team": "BOU",
-      "projected_pts": 7.62,
-      "doubled_pts": 15.2,
+      "projected_pts": 6.31,
+      "doubled_pts": 12.6,
       "fixture": "BRE (H)",
       "fixture_difficulty": 1.11,
-      "ownership": 2.6,
+      "ownership": 2.7,
       "estimated_captain_pct": 0.3,
-      "form": "4.4",
+      "form": "4.8",
       "form_trend": "neutral",
       "is_differential": true,
       "is_template": false,
       "has_dgw": false,
       "data_quality": "approximated",
-      "diff_vs_template": -0.41,
+      "diff_vs_template": -1.72,
       "upside_pts": 0.0,
-      "downside_pts": 0.3,
+      "downside_pts": 1.2,
+      "risk_category": "risky"
+    },
+    "differential_pick": {
+      "player_id": 83,
+      "name": "O.Dango",
+      "team": "BRE",
+      "projected_pts": 5.66,
+      "doubled_pts": 11.3,
+      "fixture": "BOU (A)",
+      "fixture_difficulty": 1.2,
+      "ownership": 2.9,
+      "estimated_captain_pct": 0.3,
+      "form": "5.6",
+      "form_trend": "hot",
+      "is_differential": true,
+      "is_template": false,
+      "has_dgw": false,
+      "data_quality": "approximated",
+      "diff_vs_template": -2.37,
+      "upside_pts": 0.0,
+      "downside_pts": 1.6,
       "risk_category": "risky",
-      "vs_safe_diff": -0.02,
-      "eo_advantage": 40.1,
+      "vs_safe_diff": -0.65,
+      "eo_advantage": 0.0,
       "risk_level": "medium_risk",
-      "haul_upside": 6.0
+      "haul_upside": 0.0
     },
     "all_differentials": [
-      {
-        "player_id": 807,
-        "name": "Rayan",
-        "team": "BOU",
-        "projected_pts": 7.62,
-        "doubled_pts": 15.2,
-        "fixture": "BRE (H)",
-        "fixture_difficulty": 1.11,
-        "ownership": 2.6,
-        "estimated_captain_pct": 0.3,
-        "form": "4.4",
-        "form_trend": "neutral",
-        "is_differential": true,
-        "is_template": false,
-        "has_dgw": false,
-        "data_quality": "approximated",
-        "diff_vs_template": -0.41,
-        "upside_pts": 0.0,
-        "downside_pts": 0.3,
-        "risk_category": "risky",
-        "vs_safe_diff": -0.02,
-        "eo_advantage": 40.1,
-        "risk_level": "medium_risk",
-        "haul_upside": 6.0
-      },
       {
         "player_id": 83,
         "name": "O.Dango",
         "team": "BRE",
-        "projected_pts": 5.54,
-        "doubled_pts": 11.1,
+        "projected_pts": 5.66,
+        "doubled_pts": 11.3,
         "fixture": "BOU (A)",
         "fixture_difficulty": 1.2,
-        "ownership": 2.8,
+        "ownership": 2.9,
         "estimated_captain_pct": 0.3,
-        "form": "4.6",
-        "form_trend": "neutral",
+        "form": "5.6",
+        "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "approximated",
-        "diff_vs_template": -2.49,
+        "diff_vs_template": -2.37,
         "upside_pts": 0.0,
-        "downside_pts": 1.7,
+        "downside_pts": 1.6,
         "risk_category": "risky",
-        "vs_safe_diff": -2.1,
-        "eo_advantage": 40.1,
-        "risk_level": "high_risk",
-        "haul_upside": 6.0
+        "vs_safe_diff": -0.65,
+        "eo_advantage": 0.0,
+        "risk_level": "medium_risk",
+        "haul_upside": 0.0
       },
       {
         "player_id": 267,
@@ -227,21 +202,46 @@
         "upside_pts": 0.0,
         "downside_pts": 1.7,
         "risk_category": "risky",
-        "vs_safe_diff": -2.19,
-        "eo_advantage": 40.0,
-        "risk_level": "high_risk",
-        "haul_upside": 6.0
+        "vs_safe_diff": -0.86,
+        "eo_advantage": -0.1,
+        "risk_level": "medium_risk",
+        "haul_upside": -0.0
+      },
+      {
+        "player_id": 6,
+        "name": "Saliba",
+        "team": "ARS",
+        "projected_pts": 4.47,
+        "doubled_pts": 8.9,
+        "fixture": "BHA (A)",
+        "fixture_difficulty": 1.32,
+        "ownership": 13.4,
+        "estimated_captain_pct": 1.3,
+        "form": "2.7",
+        "form_trend": "neutral",
+        "is_differential": true,
+        "is_template": false,
+        "has_dgw": false,
+        "data_quality": "understat",
+        "diff_vs_template": -3.56,
+        "upside_pts": 0.0,
+        "downside_pts": 2.4,
+        "risk_category": "risky",
+        "vs_safe_diff": -1.84,
+        "eo_advantage": -1.0,
+        "risk_level": "medium_risk",
+        "haul_upside": -0.1
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 67.4,
-        "projected": 7.64
+        "ownership": 67.2,
+        "projected": 5.73
       },
       {
         "name": "Palmer",
-        "ownership": 16.2,
+        "ownership": 16.3,
         "projected": 6.56
       },
       {
@@ -262,48 +262,102 @@
         "blank_gw31",
         "hard_fixtures"
       ],
-      "in_id": 38,
-      "in_name": "Konsa",
-      "in_team": "AVL",
-      "in_cost": 4.4,
-      "gain_4gw": 4.4,
-      "effective_4gw": 14.3,
+      "in_id": 374,
+      "in_name": "Konat\u00e9",
+      "in_team": "LIV",
+      "in_cost": 5.5,
+      "gain_4gw": 7.3,
+      "effective_4gw": 17.2,
       "in_xmin": 90,
       "buy_reasons": [
-        "nailed"
+        "nailed",
+        "hot_form"
       ],
-      "worth_hit": false,
-      "hit_value": -0.9,
-      "value_score": 3.25,
+      "worth_hit": true,
+      "hit_value": 2.0,
+      "value_score": 3.13,
       "position": 2,
       "fixtures": [
         {
           "gw": 29,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         },
         {
           "gw": 30,
-          "fixture": "MUN (A)",
-          "difficulty": 1.35,
-          "is_dgw": false
-        },
-        {
-          "gw": 31,
-          "fixture": "WHU (H)",
+          "fixture": "TOT (H)",
           "difficulty": 1.24,
           "is_dgw": false
         },
         {
+          "gw": 31,
+          "fixture": "BHA (A)",
+          "difficulty": 1.32,
+          "is_dgw": false
+        },
+        {
           "gw": 32,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
+          "fixture": "FUL (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         }
       ],
       "data_quality": "understat",
-      "alternatives": {}
+      "alternatives": {
+        "value": {
+          "player_id": 610,
+          "name": "Wan-Bissaka",
+          "team": "WHU",
+          "cost": 4.1,
+          "gain_4gw": 4.5,
+          "value_score": 3.51,
+          "reasons": [
+            "nailed",
+            "hot_form"
+          ],
+          "fixtures": [
+            {
+              "gw": 29,
+              "fixture": "FUL (A)",
+              "difficulty": 1.1,
+              "is_dgw": false
+            },
+            {
+              "gw": 30,
+              "fixture": "MCI (H)",
+              "difficulty": 0.96,
+              "is_dgw": false
+            }
+          ]
+        },
+        "premium": {
+          "player_id": 373,
+          "name": "Virgil",
+          "team": "LIV",
+          "cost": 6.1,
+          "gain_4gw": 6.7,
+          "value_score": 2.72,
+          "reasons": [
+            "nailed",
+            "hot_form"
+          ],
+          "fixtures": [
+            {
+              "gw": 29,
+              "fixture": "WOL (A)",
+              "difficulty": 1.37,
+              "is_dgw": false
+            },
+            {
+              "gw": 30,
+              "fixture": "TOT (H)",
+              "difficulty": 1.24,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
     },
     {
       "priority": 2,
@@ -314,43 +368,149 @@
         "blank_gw31",
         "hard_fixtures"
       ],
-      "in_id": 38,
-      "in_name": "Konsa",
-      "in_team": "AVL",
-      "in_cost": 4.4,
-      "gain_4gw": 7.7,
-      "effective_4gw": 14.3,
+      "in_id": 374,
+      "in_name": "Konat\u00e9",
+      "in_team": "LIV",
+      "in_cost": 5.5,
+      "gain_4gw": 10.6,
+      "effective_4gw": 17.2,
       "in_xmin": 90,
       "buy_reasons": [
-        "nailed"
+        "nailed",
+        "hot_form"
       ],
       "worth_hit": true,
-      "hit_value": 2.4,
-      "value_score": 3.25,
+      "hit_value": 5.3,
+      "value_score": 3.13,
       "position": 2,
       "fixtures": [
         {
           "gw": 29,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         },
         {
           "gw": 30,
-          "fixture": "MUN (A)",
-          "difficulty": 1.35,
-          "is_dgw": false
-        },
-        {
-          "gw": 31,
-          "fixture": "WHU (H)",
+          "fixture": "TOT (H)",
           "difficulty": 1.24,
           "is_dgw": false
         },
         {
+          "gw": 31,
+          "fixture": "BHA (A)",
+          "difficulty": 1.32,
+          "is_dgw": false
+        },
+        {
           "gw": 32,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
+          "fixture": "FUL (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {
+        "value": {
+          "player_id": 610,
+          "name": "Wan-Bissaka",
+          "team": "WHU",
+          "cost": 4.1,
+          "gain_4gw": 7.8,
+          "value_score": 3.51,
+          "reasons": [
+            "nailed",
+            "hot_form"
+          ],
+          "fixtures": [
+            {
+              "gw": 29,
+              "fixture": "FUL (A)",
+              "difficulty": 1.1,
+              "is_dgw": false
+            },
+            {
+              "gw": 30,
+              "fixture": "MCI (H)",
+              "difficulty": 0.96,
+              "is_dgw": false
+            }
+          ]
+        },
+        "premium": {
+          "player_id": 373,
+          "name": "Virgil",
+          "team": "LIV",
+          "cost": 6.1,
+          "gain_4gw": 10.0,
+          "value_score": 2.72,
+          "reasons": [
+            "nailed",
+            "hot_form"
+          ],
+          "fixtures": [
+            {
+              "gw": 29,
+              "fixture": "WOL (A)",
+              "difficulty": 1.37,
+              "is_dgw": false
+            },
+            {
+              "gw": 30,
+              "fixture": "TOT (H)",
+              "difficulty": 1.24,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "priority": 3,
+      "out_id": 430,
+      "out_name": "Haaland",
+      "out_reasons": [
+        "low_xmin",
+        "blank_gw31",
+        "hard_fixtures"
+      ],
+      "in_id": 624,
+      "in_name": "Bowen",
+      "in_team": "WHU",
+      "in_cost": 7.5,
+      "gain_4gw": 9.7,
+      "effective_4gw": 18.3,
+      "in_xmin": 87.8,
+      "buy_reasons": [
+        "nailed"
+      ],
+      "worth_hit": true,
+      "hit_value": 4.4,
+      "value_score": 2.45,
+      "position": 4,
+      "fixtures": [
+        {
+          "gw": 29,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 30,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "gw": 31,
+          "fixture": "AVL (A)",
+          "difficulty": 1.22,
+          "is_dgw": false
+        },
+        {
+          "gw": 32,
+          "fixture": "WOL (H)",
+          "difficulty": 1.12,
           "is_dgw": false
         }
       ],
@@ -418,7 +578,7 @@
       "recommended_gw": 33,
       "recommended_player": "Haaland",
       "confidence": "HIGH",
-      "reasoning": "TC Haaland in GW33 (ARS (H)) - HOME fixture. Projected: 41 pts.",
+      "reasoning": "TC Haaland in GW33 (ARS (H)) - HOME fixture. Projected: 31 pts.",
       "action_needed": "Ensure Haaland is in your squad for GW33.",
       "analysis": [
         {
@@ -431,7 +591,7 @@
           "avg_difficulty": 0.73,
           "is_home": true,
           "is_dgw": false,
-          "projected_tc_pts": 41.1,
+          "projected_tc_pts": 30.8,
           "xmin": 85
         },
         {
@@ -444,7 +604,7 @@
           "avg_difficulty": 1.02,
           "is_home": true,
           "is_dgw": false,
-          "projected_tc_pts": 24.7,
+          "projected_tc_pts": 18.6,
           "xmin": 85
         },
         {
@@ -457,7 +617,7 @@
           "avg_difficulty": 1.1,
           "is_home": false,
           "is_dgw": false,
-          "projected_tc_pts": 19.5,
+          "projected_tc_pts": 14.6,
           "xmin": 85
         },
         {
@@ -470,7 +630,7 @@
           "avg_difficulty": 1.21,
           "is_home": false,
           "is_dgw": false,
-          "projected_tc_pts": 16.0,
+          "projected_tc_pts": 12.0,
           "xmin": 85
         },
         {
@@ -483,7 +643,7 @@
           "avg_difficulty": 1.5,
           "is_home": false,
           "is_dgw": false,
-          "projected_tc_pts": 12.2,
+          "projected_tc_pts": 9.2,
           "xmin": 85
         }
       ]
