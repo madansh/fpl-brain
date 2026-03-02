@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-01T06:39:38.220979",
+  "generated_at": "2026-03-02T06:51:39.182599",
   "team_id": 5033680,
   "next_gameweek": 29,
   "recommendations": [
     {
       "gameweek": 29,
       "formation": "3-5-2",
-      "total_effective_pts": 53.6,
+      "total_effective_pts": 53.5,
       "captain": {
         "name": "Rayan",
         "team": "BOU",
@@ -15,8 +15,8 @@
         "fixture": "BRE (H)"
       },
       "vice_captain": {
-        "name": "Jo\u00e3o Pedro",
-        "effective_pts": 5.7
+        "name": "O.Dango",
+        "effective_pts": 5.65
       },
       "starting_xi": [
         {
@@ -45,9 +45,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.28,
+          "effective_pts": 4.29,
           "projected_pts": 4.47,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
@@ -56,9 +56,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.65,
+          "effective_pts": 3.66,
           "projected_pts": 3.75,
-          "xmin": 87.7,
+          "xmin": 87.8,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -86,6 +86,17 @@
           "is_dgw": false
         },
         {
+          "name": "B.Fernandes",
+          "position": "MID",
+          "team": "MUN",
+          "effective_pts": 5.22,
+          "projected_pts": 5.42,
+          "xmin": 86.6,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
@@ -97,23 +108,12 @@
           "is_dgw": false
         },
         {
-          "name": "B.Fernandes",
-          "position": "MID",
-          "team": "MUN",
-          "effective_pts": 5.21,
-          "projected_pts": 5.42,
-          "xmin": 86.5,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.18,
+          "effective_pts": 5.2,
           "projected_pts": 5.45,
-          "xmin": 85.6,
+          "xmin": 85.9,
           "fixture": "TOT (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -122,9 +122,9 @@
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 5.7,
-          "projected_pts": 6.0,
-          "xmin": 85.5,
+          "effective_pts": 5.54,
+          "projected_pts": 5.82,
+          "xmin": 85.7,
           "fixture": "AVL (A)",
           "difficulty": 1.22,
           "is_dgw": false
@@ -184,17 +184,17 @@
     {
       "gameweek": 30,
       "formation": "4-5-1",
-      "total_effective_pts": 56.6,
+      "total_effective_pts": 56.4,
       "captain": {
         "name": "Sarr",
         "team": "CRY",
-        "effective_pts": 7.23,
-        "xmin": 85.6,
+        "effective_pts": 7.25,
+        "xmin": 85.9,
         "fixture": "LEE (H)"
       },
       "vice_captain": {
         "name": "Jo\u00e3o Pedro",
-        "effective_pts": 6.66
+        "effective_pts": 6.46
       },
       "starting_xi": [
         {
@@ -223,9 +223,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.48,
+          "effective_pts": 4.49,
           "projected_pts": 4.68,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "EVE (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -234,9 +234,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.78,
+          "effective_pts": 3.79,
           "projected_pts": 3.88,
-          "xmin": 87.7,
+          "xmin": 87.8,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -256,9 +256,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 7.23,
+          "effective_pts": 7.25,
           "projected_pts": 7.6,
-          "xmin": 85.6,
+          "xmin": 85.9,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -289,9 +289,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.82,
+          "effective_pts": 5.83,
           "projected_pts": 6.06,
-          "xmin": 86.5,
+          "xmin": 86.6,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -311,9 +311,9 @@
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 6.66,
-          "projected_pts": 7.01,
-          "xmin": 85.5,
+          "effective_pts": 6.46,
+          "projected_pts": 6.78,
+          "xmin": 85.7,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -401,9 +401,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.65,
+          "effective_pts": 3.66,
           "projected_pts": 3.75,
-          "xmin": 87.7,
+          "xmin": 87.8,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -445,9 +445,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.21,
+          "effective_pts": 5.22,
           "projected_pts": 5.42,
-          "xmin": 86.5,
+          "xmin": 86.6,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -467,9 +467,9 @@
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 5.79,
-          "projected_pts": 6.1,
-          "xmin": 85.5,
+          "effective_pts": 5.64,
+          "projected_pts": 5.92,
+          "xmin": 85.7,
           "fixture": "EVE (A)",
           "difficulty": 1.19,
           "is_dgw": false
@@ -499,7 +499,7 @@
           "name": "Saliba",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "status": "blank",
           "bench_order": 2
         },
@@ -507,7 +507,7 @@
           "name": "Sarr",
           "position": "MID",
           "effective_pts": 0.0,
-          "xmin": 85.6,
+          "xmin": 85.9,
           "status": "blank",
           "bench_order": 3
         },
@@ -529,7 +529,7 @@
     {
       "gameweek": 32,
       "formation": "3-5-2",
-      "total_effective_pts": 58.8,
+      "total_effective_pts": 58.7,
       "captain": {
         "name": "Rayan",
         "team": "BOU",
@@ -539,7 +539,7 @@
       },
       "vice_captain": {
         "name": "Sarr",
-        "effective_pts": 6.8
+        "effective_pts": 6.82
       },
       "starting_xi": [
         {
@@ -568,9 +568,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.48,
+          "effective_pts": 4.49,
           "projected_pts": 4.68,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -581,7 +581,7 @@
           "team": "MUN",
           "effective_pts": 3.86,
           "projected_pts": 3.96,
-          "xmin": 87.7,
+          "xmin": 87.8,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -601,9 +601,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 6.8,
+          "effective_pts": 6.82,
           "projected_pts": 7.15,
-          "xmin": 85.6,
+          "xmin": 85.9,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -625,7 +625,7 @@
           "team": "MUN",
           "effective_pts": 6.25,
           "projected_pts": 6.5,
-          "xmin": 86.5,
+          "xmin": 86.6,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -645,9 +645,9 @@
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 6.75,
-          "projected_pts": 7.11,
-          "xmin": 85.5,
+          "effective_pts": 6.55,
+          "projected_pts": 6.88,
+          "xmin": 85.7,
           "fixture": "MCI (H)",
           "difficulty": 0.96,
           "is_dgw": false
@@ -707,7 +707,7 @@
     {
       "gameweek": 33,
       "formation": "3-5-2",
-      "total_effective_pts": 57.1,
+      "total_effective_pts": 57.0,
       "captain": {
         "name": "O.Dango",
         "team": "BRE",
@@ -716,8 +716,8 @@
         "fixture": "FUL (H)"
       },
       "vice_captain": {
-        "name": "Jo\u00e3o Pedro",
-        "effective_pts": 6.12
+        "name": "Rayan",
+        "effective_pts": 5.99
       },
       "starting_xi": [
         {
@@ -746,9 +746,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.34,
+          "effective_pts": 4.35,
           "projected_pts": 4.54,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "MCI (A)",
           "difficulty": 1.18,
           "is_dgw": false
@@ -757,9 +757,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.64,
+          "effective_pts": 3.65,
           "projected_pts": 3.74,
-          "xmin": 87.7,
+          "xmin": 87.8,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -790,9 +790,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.82,
+          "effective_pts": 5.84,
           "projected_pts": 6.12,
-          "xmin": 85.6,
+          "xmin": 85.9,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -812,9 +812,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.19,
+          "effective_pts": 5.2,
           "projected_pts": 5.4,
-          "xmin": 86.5,
+          "xmin": 86.6,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -823,9 +823,9 @@
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 6.12,
-          "projected_pts": 6.44,
-          "xmin": 85.5,
+          "effective_pts": 5.94,
+          "projected_pts": 6.24,
+          "xmin": 85.7,
           "fixture": "MUN (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -885,7 +885,7 @@
     {
       "gameweek": 34,
       "formation": "3-5-2",
-      "total_effective_pts": 56.1,
+      "total_effective_pts": 56.0,
       "captain": {
         "name": "Rayan",
         "team": "BOU",
@@ -895,7 +895,7 @@
       },
       "vice_captain": {
         "name": "Sarr",
-        "effective_pts": 7.0
+        "effective_pts": 7.02
       },
       "starting_xi": [
         {
@@ -924,9 +924,9 @@
           "name": "Saliba",
           "position": "DEF",
           "team": "ARS",
-          "effective_pts": 4.48,
+          "effective_pts": 4.49,
           "projected_pts": 4.68,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -935,9 +935,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.7,
+          "effective_pts": 3.71,
           "projected_pts": 3.8,
-          "xmin": 87.7,
+          "xmin": 87.8,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -957,9 +957,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 7.0,
+          "effective_pts": 7.02,
           "projected_pts": 7.36,
-          "xmin": 85.6,
+          "xmin": 85.9,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -968,9 +968,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.47,
+          "effective_pts": 5.48,
           "projected_pts": 5.69,
-          "xmin": 86.5,
+          "xmin": 86.6,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -1001,9 +1001,9 @@
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 5.43,
-          "projected_pts": 5.72,
-          "xmin": 85.5,
+          "effective_pts": 5.28,
+          "projected_pts": 5.55,
+          "xmin": 85.7,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
