@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-05T06:44:05.823610",
+  "generated_at": "2026-03-06T06:40:28.629415",
   "team_id": 5033680,
   "next_gameweek": 30,
   "recommendations": [
     {
       "gameweek": 30,
       "formation": "3-4-3",
-      "total_effective_pts": 58.7,
+      "total_effective_pts": 58.8,
       "captain": {
         "name": "Sarr",
         "team": "CRY",
-        "effective_pts": 7.25,
-        "xmin": 85.9,
+        "effective_pts": 7.27,
+        "xmin": 86.1,
         "fixture": "LEE (H)"
       },
       "vice_captain": {
@@ -67,9 +67,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 7.25,
+          "effective_pts": 7.27,
           "projected_pts": 7.6,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -329,26 +329,26 @@
           "bench_order": 1
         },
         {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 0.0,
-          "xmin": 86.3,
-          "status": "blank",
-          "bench_order": 2
-        },
-        {
           "name": "Sarr",
           "position": "MID",
           "effective_pts": 0.0,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "status": "blank",
-          "bench_order": 3
+          "bench_order": 2
         },
         {
           "name": "Haaland",
           "position": "FWD",
           "effective_pts": 0.0,
           "xmin": 86.0,
+          "status": "blank",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 0.0,
+          "xmin": 86.3,
           "status": "blank",
           "bench_order": 4
         }
@@ -372,7 +372,7 @@
       },
       "vice_captain": {
         "name": "Sarr",
-        "effective_pts": 6.82
+        "effective_pts": 6.84
       },
       "starting_xi": [
         {
@@ -423,9 +423,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 6.82,
+          "effective_pts": 6.84,
           "projected_pts": 7.15,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -612,9 +612,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.84,
+          "effective_pts": 5.85,
           "projected_pts": 6.12,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -722,8 +722,8 @@
       "captain": {
         "name": "Sarr",
         "team": "CRY",
-        "effective_pts": 7.02,
-        "xmin": 85.9,
+        "effective_pts": 7.04,
+        "xmin": 86.1,
         "fixture": "LIV (A)"
       },
       "vice_captain": {
@@ -779,9 +779,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 7.02,
+          "effective_pts": 7.04,
           "projected_pts": 7.36,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -968,9 +968,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.97,
+          "effective_pts": 5.98,
           "projected_pts": 6.25,
-          "xmin": 85.9,
+          "xmin": 86.1,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
