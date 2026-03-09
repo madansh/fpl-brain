@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T06:36:31.290024",
+  "generated_at": "2026-03-09T06:55:56.092698",
   "next_gameweek": 30,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,7 +12,7 @@
         "doubled_pts": 15.2,
         "fixture": "NEW (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 47.2,
+        "ownership": 47.3,
         "estimated_captain_pct": 18.9,
         "form": "9.2",
         "form_trend": "hot",
@@ -75,8 +75,8 @@
         "doubled_pts": 11.7,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 61.5,
-        "estimated_captain_pct": 36.9,
+        "ownership": 61.4,
+        "estimated_captain_pct": 36.8,
         "form": "4.8",
         "form_trend": "cold",
         "is_differential": false,
@@ -118,7 +118,7 @@
       "doubled_pts": 15.2,
       "fixture": "NEW (H)",
       "fixture_difficulty": 0.98,
-      "ownership": 47.2,
+      "ownership": 47.3,
       "estimated_captain_pct": 18.9,
       "form": "9.2",
       "form_trend": "hot",
@@ -236,7 +236,7 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 61.5,
+        "ownership": 61.4,
         "projected": 5.83
       },
       {
