@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-10T06:41:34.563382",
+  "generated_at": "2026-03-11T06:45:15.888945",
   "team_id": 5033680,
   "next_gameweek": 30,
   "recommendations": [
     {
       "gameweek": 30,
       "formation": "3-4-3",
-      "total_effective_pts": 57.9,
+      "total_effective_pts": 58.8,
       "captain": {
         "name": "Sarr",
         "team": "CRY",
@@ -42,6 +42,17 @@
           "is_dgw": false
         },
         {
+          "name": "Saliba",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 4.49,
+          "projected_pts": 4.68,
+          "xmin": 86.3,
+          "fixture": "EVE (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -50,17 +61,6 @@
           "xmin": 89.1,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.65,
-          "projected_pts": 3.73,
-          "xmin": 88.1,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
           "is_dgw": false
         },
         {
@@ -151,26 +151,26 @@
           "bench_order": 1
         },
         {
+          "name": "Andersen",
+          "position": "DEF",
+          "effective_pts": 3.65,
+          "xmin": 88.1,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Est\u00e8ve",
           "position": "DEF",
           "effective_pts": 3.23,
           "xmin": 86.1,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 2.52,
-          "xmin": 64.7,
           "status": "available",
           "bench_order": 4
         }
@@ -348,7 +348,7 @@
           "name": "Saliba",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 64.7,
+          "xmin": 86.3,
           "status": "blank",
           "bench_order": 4
         }
@@ -362,7 +362,7 @@
     {
       "gameweek": 32,
       "formation": "3-4-3",
-      "total_effective_pts": 61.3,
+      "total_effective_pts": 62.0,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -398,6 +398,17 @@
           "is_dgw": false
         },
         {
+          "name": "Saliba",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 4.49,
+          "projected_pts": 4.68,
+          "xmin": 86.3,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -406,17 +417,6 @@
           "xmin": 89.1,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.72,
-          "projected_pts": 3.8,
-          "xmin": 88.1,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
           "is_dgw": false
         },
         {
@@ -507,26 +507,26 @@
           "bench_order": 1
         },
         {
+          "name": "Andersen",
+          "position": "DEF",
+          "effective_pts": 3.72,
+          "xmin": 88.1,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Est\u00e8ve",
           "position": "DEF",
           "effective_pts": 3.23,
           "xmin": 86.1,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 2.52,
-          "xmin": 64.7,
           "status": "available",
           "bench_order": 4
         }
@@ -540,7 +540,7 @@
     {
       "gameweek": 33,
       "formation": "3-5-2",
-      "total_effective_pts": 60.3,
+      "total_effective_pts": 61.0,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -576,6 +576,17 @@
           "is_dgw": false
         },
         {
+          "name": "Saliba",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 4.35,
+          "projected_pts": 4.54,
+          "xmin": 86.3,
+          "fixture": "MCI (A)",
+          "difficulty": 1.18,
+          "is_dgw": false
+        },
+        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -584,17 +595,6 @@
           "xmin": 89.1,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.63,
-          "projected_pts": 3.71,
-          "xmin": 88.1,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
           "is_dgw": false
         },
         {
@@ -685,26 +685,26 @@
           "bench_order": 1
         },
         {
+          "name": "Andersen",
+          "position": "DEF",
+          "effective_pts": 3.63,
+          "xmin": 88.1,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Est\u00e8ve",
           "position": "DEF",
           "effective_pts": 3.23,
           "xmin": 86.1,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 2.45,
-          "xmin": 64.7,
           "status": "available",
           "bench_order": 4
         }
@@ -718,7 +718,7 @@
     {
       "gameweek": 34,
       "formation": "3-4-3",
-      "total_effective_pts": 58.1,
+      "total_effective_pts": 58.9,
       "captain": {
         "name": "Sarr",
         "team": "CRY",
@@ -754,6 +754,17 @@
           "is_dgw": false
         },
         {
+          "name": "Saliba",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 4.49,
+          "projected_pts": 4.68,
+          "xmin": 86.3,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -762,17 +773,6 @@
           "xmin": 89.1,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.7,
-          "projected_pts": 3.78,
-          "xmin": 88.1,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
           "is_dgw": false
         },
         {
@@ -863,26 +863,26 @@
           "bench_order": 1
         },
         {
+          "name": "Andersen",
+          "position": "DEF",
+          "effective_pts": 3.7,
+          "xmin": 88.1,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Est\u00e8ve",
           "position": "DEF",
           "effective_pts": 3.23,
           "xmin": 86.1,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 2.52,
-          "xmin": 64.7,
           "status": "available",
           "bench_order": 4
         }
@@ -896,7 +896,7 @@
     {
       "gameweek": 35,
       "formation": "3-4-3",
-      "total_effective_pts": 59.8,
+      "total_effective_pts": 60.6,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -932,6 +932,17 @@
           "is_dgw": false
         },
         {
+          "name": "Saliba",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 4.56,
+          "projected_pts": 4.76,
+          "xmin": 86.3,
+          "fixture": "FUL (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -940,17 +951,6 @@
           "xmin": 89.1,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.74,
-          "projected_pts": 3.82,
-          "xmin": 88.1,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
           "is_dgw": false
         },
         {
@@ -1041,26 +1041,26 @@
           "bench_order": 1
         },
         {
+          "name": "Andersen",
+          "position": "DEF",
+          "effective_pts": 3.74,
+          "xmin": 88.1,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
           "name": "Est\u00e8ve",
           "position": "DEF",
           "effective_pts": 3.23,
           "xmin": 86.1,
           "status": "available",
-          "bench_order": 2
+          "bench_order": 3
         },
         {
           "name": "Petrovi\u0107",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 2.57,
-          "xmin": 64.7,
           "status": "available",
           "bench_order": 4
         }

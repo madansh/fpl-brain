@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T06:41:34.553490",
+  "generated_at": "2026-03-11T06:45:15.878230",
   "next_gameweek": 30,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,7 +12,7 @@
         "doubled_pts": 15.2,
         "fixture": "NEW (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 47.4,
+        "ownership": 47.5,
         "estimated_captain_pct": 19.0,
         "form": "9.5",
         "form_trend": "hot",
@@ -33,9 +33,9 @@
         "doubled_pts": 15.2,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 3.7,
+        "ownership": 3.8,
         "estimated_captain_pct": 0.4,
-        "form": "5.8",
+        "form": "5.2",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -54,7 +54,7 @@
         "doubled_pts": 12.1,
         "fixture": "AVL (H)",
         "fixture_difficulty": 1.0,
-        "ownership": 40.5,
+        "ownership": 40.6,
         "estimated_captain_pct": 16.2,
         "form": "6.2",
         "form_trend": "neutral",
@@ -77,7 +77,7 @@
         "fixture_difficulty": 1.5,
         "ownership": 61.4,
         "estimated_captain_pct": 36.8,
-        "form": "4.8",
+        "form": "3.2",
         "form_trend": "cold",
         "is_differential": false,
         "is_template": true,
@@ -118,7 +118,7 @@
       "doubled_pts": 15.2,
       "fixture": "NEW (H)",
       "fixture_difficulty": 0.98,
-      "ownership": 47.4,
+      "ownership": 47.5,
       "estimated_captain_pct": 19.0,
       "form": "9.5",
       "form_trend": "hot",
@@ -139,9 +139,9 @@
       "doubled_pts": 15.2,
       "fixture": "LEE (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 3.7,
+      "ownership": 3.8,
       "estimated_captain_pct": 0.4,
-      "form": "5.8",
+      "form": "5.2",
       "form_trend": "neutral",
       "is_differential": true,
       "is_template": false,
@@ -165,9 +165,9 @@
         "doubled_pts": 15.2,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 3.7,
+        "ownership": 3.8,
         "estimated_captain_pct": 0.4,
-        "form": "5.8",
+        "form": "5.2",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -241,12 +241,12 @@
       },
       {
         "name": "B.Fernandes",
-        "ownership": 40.5,
+        "ownership": 40.6,
         "projected": 6.06
       },
       {
         "name": "Palmer",
-        "ownership": 16.2,
+        "ownership": 16.3,
         "projected": 7.62
       }
     ]
@@ -362,52 +362,52 @@
       "chip": "Bench Boost",
       "recommended_gw": 34,
       "confidence": "HIGH",
-      "reasoning": "GW34 has favorable fixtures (ease: 4.0). Projected bench value: 15.5 pts.",
+      "reasoning": "GW34 has favorable fixtures (ease: 4.0). Projected bench value: 16.6 pts.",
       "action_needed": "Ensure bench has high xMin players with easy fixtures by GW34.",
       "analysis": [
         {
           "gw": 34,
           "dgw_players": 0,
-          "bench_proj": 15.5,
+          "bench_proj": 16.6,
           "bench_xmin": 240,
           "fixture_ease": 4.02,
-          "score": 31.0,
+          "score": 33.3,
           "is_dgw": false
         },
         {
           "gw": 32,
           "dgw_players": 0,
-          "bench_proj": 15.1,
+          "bench_proj": 16.3,
           "bench_xmin": 240,
           "fixture_ease": 3.94,
-          "score": 30.1,
+          "score": 32.4,
           "is_dgw": false
         },
         {
           "gw": 35,
           "dgw_players": 0,
-          "bench_proj": 15.2,
+          "bench_proj": 16.4,
           "bench_xmin": 240,
           "fixture_ease": 3.9,
-          "score": 30.1,
+          "score": 32.4,
           "is_dgw": false
         },
         {
           "gw": 33,
           "dgw_players": 0,
-          "bench_proj": 15.9,
+          "bench_proj": 17.0,
           "bench_xmin": 240,
           "fixture_ease": 3.36,
-          "score": 29.2,
+          "score": 31.3,
           "is_dgw": false
         },
         {
           "gw": 30,
           "dgw_players": 0,
-          "bench_proj": 14.9,
+          "bench_proj": 16.1,
           "bench_xmin": 240,
           "fixture_ease": 3.32,
-          "score": 27.2,
+          "score": 29.4,
           "is_dgw": false
         }
       ]
