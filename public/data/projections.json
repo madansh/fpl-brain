@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T06:45:15.878791",
+  "generated_at": "2026-03-12T06:47:47.330308",
   "next_gameweek": 30,
   "top_by_position": {
     "GK": [
@@ -2778,7 +2778,7 @@
         "team_id": 17,
         "position": 2,
         "price": 4.6,
-        "ownership": "3.7",
+        "ownership": "3.8",
         "form": "5.2",
         "form_trend": "neutral",
         "news": "",
@@ -4707,7 +4707,7 @@
         "team_id": 14,
         "position": 3,
         "price": 8.7,
-        "ownership": "23.3",
+        "ownership": "23.2",
         "form": "3.8",
         "form_trend": "neutral",
         "news": "",
@@ -5429,7 +5429,7 @@
         "team_id": 7,
         "position": 4,
         "price": 7.7,
-        "ownership": "47.5",
+        "ownership": "47.6",
         "form": "9.5",
         "form_trend": "hot",
         "news": "",
@@ -6632,7 +6632,7 @@
         "team_id": 13,
         "position": 4,
         "price": 14.6,
-        "ownership": "61.4",
+        "ownership": "61.3",
         "form": "3.2",
         "form_trend": "cold",
         "news": "",
