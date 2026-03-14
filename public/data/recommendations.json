@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13T06:44:58.985053",
+  "generated_at": "2026-03-14T06:40:00.981966",
   "next_gameweek": 30,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 15.2,
         "fixture": "NEW (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 47.8,
-        "estimated_captain_pct": 19.1,
+        "ownership": 48.5,
+        "estimated_captain_pct": 19.4,
         "form": "9.3",
         "form_trend": "hot",
         "is_differential": false,
@@ -33,10 +33,10 @@
         "doubled_pts": 15.2,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 3.8,
+        "ownership": 4.1,
         "estimated_captain_pct": 0.4,
-        "form": "5.2",
-        "form_trend": "neutral",
+        "form": "6.3",
+        "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
@@ -54,8 +54,8 @@
         "doubled_pts": 12.1,
         "fixture": "AVL (H)",
         "fixture_difficulty": 1.0,
-        "ownership": 40.7,
-        "estimated_captain_pct": 16.3,
+        "ownership": 41.0,
+        "estimated_captain_pct": 16.4,
         "form": "7.7",
         "form_trend": "neutral",
         "is_differential": false,
@@ -75,9 +75,9 @@
         "doubled_pts": 11.7,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 61.2,
-        "estimated_captain_pct": 36.7,
-        "form": "3.2",
+        "ownership": 60.7,
+        "estimated_captain_pct": 36.4,
+        "form": "2.7",
         "form_trend": "cold",
         "is_differential": false,
         "is_template": true,
@@ -118,8 +118,8 @@
       "doubled_pts": 15.2,
       "fixture": "NEW (H)",
       "fixture_difficulty": 0.98,
-      "ownership": 47.8,
-      "estimated_captain_pct": 19.1,
+      "ownership": 48.5,
+      "estimated_captain_pct": 19.4,
       "form": "9.3",
       "form_trend": "hot",
       "is_differential": false,
@@ -139,10 +139,10 @@
       "doubled_pts": 15.2,
       "fixture": "LEE (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 3.8,
+      "ownership": 4.1,
       "estimated_captain_pct": 0.4,
-      "form": "5.2",
-      "form_trend": "neutral",
+      "form": "6.3",
+      "form_trend": "hot",
       "is_differential": true,
       "is_template": false,
       "has_dgw": false,
@@ -152,9 +152,9 @@
       "downside_pts": 0.0,
       "risk_category": "risky",
       "vs_safe_diff": -0.01,
-      "eo_advantage": 18.7,
+      "eo_advantage": 19.0,
       "risk_level": "medium_risk",
-      "haul_upside": 2.8
+      "haul_upside": 2.9
     },
     "all_differentials": [
       {
@@ -165,10 +165,10 @@
         "doubled_pts": 15.2,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 3.8,
+        "ownership": 4.1,
         "estimated_captain_pct": 0.4,
-        "form": "5.2",
-        "form_trend": "neutral",
+        "form": "6.3",
+        "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
@@ -178,9 +178,9 @@
         "downside_pts": 0.0,
         "risk_category": "risky",
         "vs_safe_diff": -0.01,
-        "eo_advantage": 18.7,
+        "eo_advantage": 19.0,
         "risk_level": "medium_risk",
-        "haul_upside": 2.8
+        "haul_upside": 2.9
       },
       {
         "player_id": 83,
@@ -203,9 +203,9 @@
         "downside_pts": 1.2,
         "risk_category": "risky",
         "vs_safe_diff": -1.9,
-        "eo_advantage": 18.7,
+        "eo_advantage": 19.0,
         "risk_level": "medium_risk",
-        "haul_upside": 2.8
+        "haul_upside": 2.9
       },
       {
         "player_id": 807,
@@ -228,20 +228,20 @@
         "downside_pts": 1.2,
         "risk_category": "risky",
         "vs_safe_diff": -1.94,
-        "eo_advantage": 18.8,
+        "eo_advantage": 19.1,
         "risk_level": "medium_risk",
-        "haul_upside": 2.8
+        "haul_upside": 2.9
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 61.2,
+        "ownership": 60.7,
         "projected": 5.83
       },
       {
         "name": "B.Fernandes",
-        "ownership": 40.7,
+        "ownership": 41.0,
         "projected": 6.06
       },
       {
