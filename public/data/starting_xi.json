@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T06:50:47.917078",
+  "generated_at": "2026-03-16T07:10:07.741853",
   "team_id": 5033680,
   "next_gameweek": 31,
   "recommendations": [
@@ -47,7 +47,7 @@
           "team": "FUL",
           "effective_pts": 3.73,
           "projected_pts": 3.81,
-          "xmin": 88.1,
+          "xmin": 88.2,
           "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -89,9 +89,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.22,
+          "effective_pts": 5.23,
           "projected_pts": 5.42,
-          "xmin": 86.7,
+          "xmin": 86.9,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -133,9 +133,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.52,
+          "effective_pts": 5.48,
           "projected_pts": 6.27,
-          "xmin": 79.3,
+          "xmin": 78.6,
           "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -162,7 +162,7 @@
           "name": "Sarr",
           "position": "MID",
           "effective_pts": 0.0,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "status": "blank",
           "bench_order": 3
         },
@@ -194,7 +194,7 @@
       },
       "vice_captain": {
         "name": "Sarr",
-        "effective_pts": 6.84
+        "effective_pts": 6.86
       },
       "starting_xi": [
         {
@@ -245,9 +245,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 6.84,
+          "effective_pts": 6.86,
           "projected_pts": 7.15,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -256,9 +256,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 6.26,
+          "effective_pts": 6.28,
           "projected_pts": 6.5,
-          "xmin": 86.7,
+          "xmin": 86.9,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -311,9 +311,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.35,
+          "effective_pts": 5.3,
           "projected_pts": 6.07,
-          "xmin": 79.3,
+          "xmin": 78.6,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -332,7 +332,7 @@
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.72,
-          "xmin": 88.1,
+          "xmin": 88.2,
           "status": "available",
           "bench_order": 2
         },
@@ -434,9 +434,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.85,
+          "effective_pts": 5.87,
           "projected_pts": 6.12,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -456,9 +456,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.2,
+          "effective_pts": 5.21,
           "projected_pts": 5.4,
-          "xmin": 86.7,
+          "xmin": 86.9,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -501,16 +501,16 @@
         {
           "name": "Ra\u00fal",
           "position": "FWD",
-          "effective_pts": 4.23,
-          "xmin": 79.3,
+          "effective_pts": 4.19,
+          "xmin": 78.6,
           "status": "available",
           "bench_order": 1
         },
         {
           "name": "Andersen",
           "position": "DEF",
-          "effective_pts": 3.63,
-          "xmin": 88.1,
+          "effective_pts": 3.64,
+          "xmin": 88.2,
           "status": "available",
           "bench_order": 2
         },
@@ -544,8 +544,8 @@
       "captain": {
         "name": "Sarr",
         "team": "CRY",
-        "effective_pts": 7.04,
-        "xmin": 86.1,
+        "effective_pts": 7.06,
+        "xmin": 86.3,
         "fixture": "LIV (A)"
       },
       "vice_captain": {
@@ -601,9 +601,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 7.04,
+          "effective_pts": 7.06,
           "projected_pts": 7.36,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
           "is_dgw": false
@@ -623,9 +623,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.48,
+          "effective_pts": 5.49,
           "projected_pts": 5.69,
-          "xmin": 86.7,
+          "xmin": 86.9,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -667,9 +667,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.13,
+          "effective_pts": 5.08,
           "projected_pts": 5.82,
-          "xmin": 79.3,
+          "xmin": 78.6,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -688,7 +688,7 @@
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.7,
-          "xmin": 88.1,
+          "xmin": 88.2,
           "status": "available",
           "bench_order": 2
         },
@@ -722,8 +722,8 @@
       "captain": {
         "name": "B.Fernandes",
         "team": "MUN",
-        "effective_pts": 6.96,
-        "xmin": 86.7,
+        "effective_pts": 6.97,
+        "xmin": 86.9,
         "fixture": "LIV (H)"
       },
       "vice_captain": {
@@ -779,9 +779,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 6.96,
+          "effective_pts": 6.97,
           "projected_pts": 7.22,
-          "xmin": 86.7,
+          "xmin": 86.9,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
           "is_dgw": false
@@ -790,9 +790,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 5.98,
+          "effective_pts": 5.99,
           "projected_pts": 6.25,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -845,9 +845,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.56,
+          "effective_pts": 5.51,
           "projected_pts": 6.31,
-          "xmin": 79.3,
+          "xmin": 78.6,
           "fixture": "ARS (A)",
           "difficulty": 0.89,
           "is_dgw": false
@@ -866,7 +866,7 @@
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.74,
-          "xmin": 88.1,
+          "xmin": 88.2,
           "status": "available",
           "bench_order": 2
         },
@@ -905,7 +905,7 @@
         "fixture": "LIV (A)"
       },
       "vice_captain": {
-        "name": "Haaland",
+        "name": "Sarr",
         "effective_pts": 6.88
       },
       "starting_xi": [
@@ -957,9 +957,9 @@
           "name": "Sarr",
           "position": "MID",
           "team": "CRY",
-          "effective_pts": 6.87,
+          "effective_pts": 6.88,
           "projected_pts": 7.18,
-          "xmin": 86.1,
+          "xmin": 86.3,
           "fixture": "EVE (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -979,9 +979,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.51,
+          "effective_pts": 5.52,
           "projected_pts": 5.72,
-          "xmin": 86.7,
+          "xmin": 86.9,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -1023,9 +1023,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.2,
+          "effective_pts": 5.15,
           "projected_pts": 5.9,
-          "xmin": 79.3,
+          "xmin": 78.6,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -1044,7 +1044,7 @@
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.71,
-          "xmin": 88.1,
+          "xmin": 88.2,
           "status": "available",
           "bench_order": 2
         },
