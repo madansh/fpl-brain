@@ -4,9 +4,9 @@
   "next_gw": 31,
   "bank": 1.3,
   "chips_available": [
-    "free_hit",
     "triple_captain",
-    "bench_boost"
+    "bench_boost",
+    "free_hit"
   ],
   "squad": [
     {
@@ -279,11 +279,11 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.0,
-      "projected_pts": 5.78,
-      "projected_4gw": 23.7,
-      "form_trend": "cold",
-      "rolling_form": 1.85,
-      "form_direction": "stable",
+      "projected_pts": 5.86,
+      "projected_4gw": 24.1,
+      "form_trend": "neutral",
+      "rolling_form": 3.45,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
@@ -666,5 +666,5 @@
       ]
     }
   ],
-  "total_projected_pts": 38.8
+  "total_projected_pts": 38.9
 }
