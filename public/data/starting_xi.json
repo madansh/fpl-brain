@@ -1,190 +1,12 @@
 {
-  "generated_at": "2026-03-20T06:48:11.112298",
+  "generated_at": "2026-03-21T06:36:30.134273",
   "team_id": 5033680,
-  "next_gameweek": 31,
+  "next_gameweek": 32,
   "recommendations": [
-    {
-      "gameweek": 31,
-      "formation": "?",
-      "total_effective_pts": -1,
-      "captain": {
-        "name": "Jo\u00e3o Pedro",
-        "team": "CHE",
-        "effective_pts": 6.11,
-        "xmin": 85.8,
-        "fixture": "EVE (A)"
-      },
-      "vice_captain": {
-        "name": "O.Dango",
-        "effective_pts": 5.81
-      },
-      "starting_xi": [
-        {
-          "name": "D\u00fabravka",
-          "position": "GK",
-          "team": "BUR",
-          "effective_pts": 3.38,
-          "projected_pts": 3.38,
-          "xmin": 90,
-          "fixture": "FUL (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "name": "Petrovi\u0107",
-          "position": "GK",
-          "team": "BOU",
-          "effective_pts": 3.18,
-          "projected_pts": 3.18,
-          "xmin": 90,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "name": "Andersen",
-          "position": "DEF",
-          "team": "FUL",
-          "effective_pts": 3.73,
-          "projected_pts": 3.81,
-          "xmin": 88.2,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Dalot",
-          "position": "DEF",
-          "team": "MUN",
-          "effective_pts": 3.71,
-          "projected_pts": 3.75,
-          "xmin": 89.1,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "team": "BUR",
-          "effective_pts": 3.21,
-          "projected_pts": 3.38,
-          "xmin": 85.6,
-          "fixture": "FUL (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "name": "O.Dango",
-          "position": "MID",
-          "team": "BRE",
-          "effective_pts": 5.81,
-          "projected_pts": 5.86,
-          "xmin": 89.3,
-          "fixture": "LEE (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "name": "B.Fernandes",
-          "position": "MID",
-          "team": "MUN",
-          "effective_pts": 5.23,
-          "projected_pts": 5.42,
-          "xmin": 86.9,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "name": "Rayan",
-          "position": "MID",
-          "team": "BOU",
-          "effective_pts": 5.05,
-          "projected_pts": 5.08,
-          "xmin": 89.5,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "name": "Rogers",
-          "position": "MID",
-          "team": "AVL",
-          "effective_pts": 4.62,
-          "projected_pts": 4.66,
-          "xmin": 89.2,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
-          "name": "Jo\u00e3o Pedro",
-          "position": "FWD",
-          "team": "CHE",
-          "effective_pts": 6.11,
-          "projected_pts": 6.41,
-          "xmin": 85.8,
-          "fixture": "EVE (A)",
-          "difficulty": 1.19,
-          "is_dgw": false
-        },
-        {
-          "name": "Ra\u00fal",
-          "position": "FWD",
-          "team": "FUL",
-          "effective_pts": 5.48,
-          "projected_pts": 6.27,
-          "xmin": 78.6,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        }
-      ],
-      "bench": [
-        {
-          "name": "Gabriel",
-          "position": "DEF",
-          "effective_pts": 0.0,
-          "xmin": 90,
-          "status": "blank",
-          "bench_order": 1
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "effective_pts": 0.0,
-          "xmin": 86.4,
-          "status": "blank",
-          "bench_order": 2
-        },
-        {
-          "name": "Sarr",
-          "position": "MID",
-          "effective_pts": 0.0,
-          "xmin": 86.3,
-          "status": "blank",
-          "bench_order": 3
-        },
-        {
-          "name": "Haaland",
-          "position": "FWD",
-          "effective_pts": 0.0,
-          "xmin": 86.2,
-          "status": "blank",
-          "bench_order": 4
-        }
-      ],
-      "alerts": {
-        "blank_count": 4,
-        "low_xmin_count": 0,
-        "needs_attention": true
-      }
-    },
     {
       "gameweek": 32,
       "formation": "3-4-3",
-      "total_effective_pts": 61.2,
+      "total_effective_pts": 58.4,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -193,8 +15,8 @@
         "fixture": "MCI (H)"
       },
       "vice_captain": {
-        "name": "Sarr",
-        "effective_pts": 6.86
+        "name": "Haaland",
+        "effective_pts": 6.47
       },
       "starting_xi": [
         {
@@ -236,20 +58,9 @@
           "team": "MUN",
           "effective_pts": 3.92,
           "projected_pts": 3.96,
-          "xmin": 89.1,
+          "xmin": 89.2,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Sarr",
-          "position": "MID",
-          "team": "CRY",
-          "effective_pts": 6.86,
-          "projected_pts": 7.15,
-          "xmin": 86.3,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
           "is_dgw": false
         },
         {
@@ -258,7 +69,7 @@
           "team": "MUN",
           "effective_pts": 6.28,
           "projected_pts": 6.5,
-          "xmin": 86.9,
+          "xmin": 87.0,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -278,11 +89,22 @@
           "name": "Rayan",
           "position": "MID",
           "team": "BOU",
-          "effective_pts": 5.77,
-          "projected_pts": 5.8,
-          "xmin": 89.5,
+          "effective_pts": 5.23,
+          "projected_pts": 5.29,
+          "xmin": 89.0,
           "fixture": "ARS (A)",
           "difficulty": 0.89,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 4.61,
+          "projected_pts": 4.65,
+          "xmin": 89.2,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
           "is_dgw": false
         },
         {
@@ -321,18 +143,18 @@
       ],
       "bench": [
         {
-          "name": "Rogers",
-          "position": "MID",
-          "effective_pts": 4.61,
-          "xmin": 89.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.72,
           "xmin": 88.2,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.24,
+          "xmin": 59.6,
           "status": "available",
           "bench_order": 2
         },
@@ -345,7 +167,7 @@
           "bench_order": 3
         },
         {
-          "name": "Petrovi\u0107",
+          "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
@@ -355,14 +177,14 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 0,
+        "low_xmin_count": 1,
         "needs_attention": false
       }
     },
     {
       "gameweek": 33,
-      "formation": "3-5-2",
-      "total_effective_pts": 60.4,
+      "formation": "3-4-3",
+      "total_effective_pts": 58.3,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -412,9 +234,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.7,
+          "effective_pts": 3.71,
           "projected_pts": 3.74,
-          "xmin": 89.1,
+          "xmin": 89.2,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -428,17 +250,6 @@
           "xmin": 89.3,
           "fixture": "FUL (H)",
           "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Sarr",
-          "position": "MID",
-          "team": "CRY",
-          "effective_pts": 5.87,
-          "projected_pts": 6.12,
-          "xmin": 86.3,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
           "is_dgw": false
         },
         {
@@ -456,9 +267,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.21,
+          "effective_pts": 5.22,
           "projected_pts": 5.4,
-          "xmin": 86.9,
+          "xmin": 87.0,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -467,9 +278,9 @@
           "name": "Rayan",
           "position": "MID",
           "team": "BOU",
-          "effective_pts": 4.82,
-          "projected_pts": 4.85,
-          "xmin": 89.5,
+          "effective_pts": 4.42,
+          "projected_pts": 4.47,
+          "xmin": 89.0,
           "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -495,14 +306,25 @@
           "fixture": "MUN (H)",
           "difficulty": 1.11,
           "is_dgw": false
+        },
+        {
+          "name": "Ra\u00fal",
+          "position": "FWD",
+          "team": "FUL",
+          "effective_pts": 4.19,
+          "projected_pts": 4.8,
+          "xmin": 78.6,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
+          "is_dgw": false
         }
       ],
       "bench": [
         {
-          "name": "Ra\u00fal",
-          "position": "FWD",
-          "effective_pts": 4.19,
-          "xmin": 78.6,
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.83,
+          "xmin": 59.6,
           "status": "available",
           "bench_order": 1
         },
@@ -523,7 +345,7 @@
           "bench_order": 3
         },
         {
-          "name": "Petrovi\u0107",
+          "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
@@ -533,24 +355,24 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 0,
+        "low_xmin_count": 1,
         "needs_attention": false
       }
     },
     {
       "gameweek": 34,
       "formation": "3-4-3",
-      "total_effective_pts": 58.1,
+      "total_effective_pts": 55.4,
       "captain": {
-        "name": "Sarr",
-        "team": "CRY",
-        "effective_pts": 7.06,
-        "xmin": 86.3,
-        "fixture": "LIV (A)"
+        "name": "Haaland",
+        "team": "MCI",
+        "effective_pts": 6.92,
+        "xmin": 86.2,
+        "fixture": "BUR (A)"
       },
       "vice_captain": {
-        "name": "Haaland",
-        "effective_pts": 6.92
+        "name": "Jo\u00e3o Pedro",
+        "effective_pts": 5.71
       },
       "starting_xi": [
         {
@@ -590,44 +412,33 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.76,
+          "effective_pts": 3.77,
           "projected_pts": 3.8,
-          "xmin": 89.1,
+          "xmin": 89.2,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
-          "is_dgw": false
-        },
-        {
-          "name": "Sarr",
-          "position": "MID",
-          "team": "CRY",
-          "effective_pts": 7.06,
-          "projected_pts": 7.36,
-          "xmin": 86.3,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
-          "is_dgw": false
-        },
-        {
-          "name": "Rayan",
-          "position": "MID",
-          "team": "BOU",
-          "effective_pts": 5.73,
-          "projected_pts": 5.76,
-          "xmin": 89.5,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
           "is_dgw": false
         },
         {
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.49,
+          "effective_pts": 5.5,
           "projected_pts": 5.69,
-          "xmin": 86.9,
+          "xmin": 87.0,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "name": "Rayan",
+          "position": "MID",
+          "team": "BOU",
+          "effective_pts": 5.2,
+          "projected_pts": 5.26,
+          "xmin": 89.0,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         },
         {
@@ -639,6 +450,17 @@
           "xmin": 89.3,
           "fixture": "MUN (A)",
           "difficulty": 1.35,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 4.94,
+          "projected_pts": 4.98,
+          "xmin": 89.2,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
@@ -677,10 +499,10 @@
       ],
       "bench": [
         {
-          "name": "Rogers",
+          "name": "Gordon",
           "position": "MID",
-          "effective_pts": 4.94,
-          "xmin": 89.2,
+          "effective_pts": 4.07,
+          "xmin": 59.6,
           "status": "available",
           "bench_order": 1
         },
@@ -701,7 +523,7 @@
           "bench_order": 3
         },
         {
-          "name": "Petrovi\u0107",
+          "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
@@ -711,19 +533,19 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 0,
+        "low_xmin_count": 1,
         "needs_attention": false
       }
     },
     {
       "gameweek": 35,
       "formation": "3-4-3",
-      "total_effective_pts": 59.9,
+      "total_effective_pts": 58.1,
       "captain": {
         "name": "B.Fernandes",
         "team": "MUN",
-        "effective_pts": 6.97,
-        "xmin": 86.9,
+        "effective_pts": 6.98,
+        "xmin": 87.0,
         "fixture": "LIV (H)"
       },
       "vice_captain": {
@@ -770,7 +592,7 @@
           "team": "MUN",
           "effective_pts": 4.07,
           "projected_pts": 4.11,
-          "xmin": 89.1,
+          "xmin": 89.2,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
           "is_dgw": false
@@ -779,22 +601,11 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 6.97,
+          "effective_pts": 6.98,
           "projected_pts": 7.22,
-          "xmin": 86.9,
+          "xmin": 87.0,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
-          "is_dgw": false
-        },
-        {
-          "name": "Sarr",
-          "position": "MID",
-          "team": "CRY",
-          "effective_pts": 5.99,
-          "projected_pts": 6.25,
-          "xmin": 86.3,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
           "is_dgw": false
         },
         {
@@ -812,11 +623,22 @@
           "name": "Rayan",
           "position": "MID",
           "team": "BOU",
-          "effective_pts": 5.15,
-          "projected_pts": 5.18,
-          "xmin": 89.5,
+          "effective_pts": 4.71,
+          "projected_pts": 4.76,
+          "xmin": 89.0,
           "fixture": "CRY (H)",
           "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 4.61,
+          "projected_pts": 4.65,
+          "xmin": 89.2,
+          "fixture": "TOT (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         },
         {
@@ -855,18 +677,18 @@
       ],
       "bench": [
         {
-          "name": "Rogers",
-          "position": "MID",
-          "effective_pts": 4.61,
-          "xmin": 89.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.74,
           "xmin": 88.2,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.62,
+          "xmin": 59.6,
           "status": "available",
           "bench_order": 2
         },
@@ -879,7 +701,7 @@
           "bench_order": 3
         },
         {
-          "name": "Petrovi\u0107",
+          "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
@@ -889,14 +711,14 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 0,
+        "low_xmin_count": 1,
         "needs_attention": false
       }
     },
     {
       "gameweek": 36,
       "formation": "3-4-3",
-      "total_effective_pts": 58.5,
+      "total_effective_pts": 56.2,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -905,7 +727,7 @@
         "fixture": "LIV (A)"
       },
       "vice_captain": {
-        "name": "Sarr",
+        "name": "Haaland",
         "effective_pts": 6.88
       },
       "starting_xi": [
@@ -946,22 +768,11 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.77,
+          "effective_pts": 3.78,
           "projected_pts": 3.81,
-          "xmin": 89.1,
+          "xmin": 89.2,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "name": "Sarr",
-          "position": "MID",
-          "team": "CRY",
-          "effective_pts": 6.88,
-          "projected_pts": 7.18,
-          "xmin": 86.3,
-          "fixture": "EVE (H)",
-          "difficulty": 0.98,
           "is_dgw": false
         },
         {
@@ -979,10 +790,21 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.52,
+          "effective_pts": 5.53,
           "projected_pts": 5.72,
-          "xmin": 86.9,
+          "xmin": 87.0,
           "fixture": "SUN (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 4.93,
+          "projected_pts": 4.97,
+          "xmin": 89.2,
+          "fixture": "BUR (A)",
           "difficulty": 1.1,
           "is_dgw": false
         },
@@ -990,9 +812,9 @@
           "name": "Rayan",
           "position": "MID",
           "team": "BOU",
-          "effective_pts": 5.08,
-          "projected_pts": 5.11,
-          "xmin": 89.5,
+          "effective_pts": 4.65,
+          "projected_pts": 4.7,
+          "xmin": 89.0,
           "fixture": "FUL (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -1033,18 +855,18 @@
       ],
       "bench": [
         {
-          "name": "Rogers",
-          "position": "MID",
-          "effective_pts": 4.93,
-          "xmin": 89.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Andersen",
           "position": "DEF",
           "effective_pts": 3.71,
           "xmin": 88.2,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.34,
+          "xmin": 59.6,
           "status": "available",
           "bench_order": 2
         },
@@ -1057,7 +879,7 @@
           "bench_order": 3
         },
         {
-          "name": "Petrovi\u0107",
+          "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
@@ -1067,7 +889,185 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 0,
+        "low_xmin_count": 1,
+        "needs_attention": false
+      }
+    },
+    {
+      "gameweek": 37,
+      "formation": "3-4-3",
+      "total_effective_pts": 56.6,
+      "captain": {
+        "name": "Haaland",
+        "team": "MCI",
+        "effective_pts": 6.49,
+        "xmin": 86.2,
+        "fixture": "BOU (A)"
+      },
+      "vice_captain": {
+        "name": "Rogers",
+        "effective_pts": 6.08
+      },
+      "starting_xi": [
+        {
+          "name": "D\u00fabravka",
+          "position": "GK",
+          "team": "BUR",
+          "effective_pts": 3.38,
+          "projected_pts": 3.38,
+          "xmin": 90,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 5.44,
+          "projected_pts": 5.44,
+          "xmin": 90,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "team": "ARS",
+          "effective_pts": 4.56,
+          "projected_pts": 4.75,
+          "xmin": 86.4,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "name": "Dalot",
+          "position": "DEF",
+          "team": "MUN",
+          "effective_pts": 3.83,
+          "projected_pts": 3.86,
+          "xmin": 89.2,
+          "fixture": "NFO (H)",
+          "difficulty": 1.02,
+          "is_dgw": false
+        },
+        {
+          "name": "Rogers",
+          "position": "MID",
+          "team": "AVL",
+          "effective_pts": 6.08,
+          "projected_pts": 6.13,
+          "xmin": 89.2,
+          "fixture": "LIV (H)",
+          "difficulty": 0.77,
+          "is_dgw": false
+        },
+        {
+          "name": "O.Dango",
+          "position": "MID",
+          "team": "BRE",
+          "effective_pts": 5.91,
+          "projected_pts": 5.96,
+          "xmin": 89.3,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
+          "name": "B.Fernandes",
+          "position": "MID",
+          "team": "MUN",
+          "effective_pts": 5.8,
+          "projected_pts": 6.0,
+          "xmin": 87.0,
+          "fixture": "NFO (H)",
+          "difficulty": 1.02,
+          "is_dgw": false
+        },
+        {
+          "name": "Rayan",
+          "position": "MID",
+          "team": "BOU",
+          "effective_pts": 4.99,
+          "projected_pts": 5.05,
+          "xmin": 89.0,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "name": "Haaland",
+          "position": "FWD",
+          "team": "MCI",
+          "effective_pts": 6.49,
+          "projected_pts": 6.78,
+          "xmin": 86.2,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "name": "Jo\u00e3o Pedro",
+          "position": "FWD",
+          "team": "CHE",
+          "effective_pts": 5.94,
+          "projected_pts": 6.23,
+          "xmin": 85.8,
+          "fixture": "TOT (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "name": "Ra\u00fal",
+          "position": "FWD",
+          "team": "FUL",
+          "effective_pts": 4.17,
+          "projected_pts": 4.77,
+          "xmin": 78.6,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
+          "is_dgw": false
+        }
+      ],
+      "bench": [
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "effective_pts": 3.64,
+          "xmin": 88.2,
+          "status": "available",
+          "bench_order": 1
+        },
+        {
+          "name": "Gordon",
+          "position": "MID",
+          "effective_pts": 3.34,
+          "xmin": 59.6,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "effective_pts": 3.21,
+          "xmin": 85.6,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Ramsdale",
+          "position": "GK",
+          "effective_pts": 3.18,
+          "xmin": 90,
+          "status": "available",
+          "bench_order": 4
+        }
+      ],
+      "alerts": {
+        "blank_count": 0,
+        "low_xmin_count": 1,
         "needs_attention": false
       }
     }
