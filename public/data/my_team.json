@@ -5,8 +5,8 @@
   "bank": 0.0,
   "chips_available": [
     "triple_captain",
-    "bench_boost",
-    "free_hit"
+    "free_hit",
+    "bench_boost"
   ],
   "squad": [
     {
@@ -64,8 +64,8 @@
       "selling_price": 4.6,
       "projected_pts": 3.8,
       "projected_4gw": 15.1,
-      "form_trend": "cold",
-      "rolling_form": 1.85,
+      "form_trend": "neutral",
+      "rolling_form": 2.65,
       "form_direction": "rising",
       "news": "",
       "news_severity": 0,
@@ -153,7 +153,7 @@
       "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "neutral",
-      "rolling_form": 1.57,
+      "rolling_form": 2.17,
       "form_direction": "rising",
       "news": "",
       "news_severity": 0,
@@ -282,11 +282,11 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.0,
-      "projected_pts": 6.32,
-      "projected_4gw": 23.6,
+      "projected_pts": 6.29,
+      "projected_4gw": 23.5,
       "form_trend": "neutral",
-      "rolling_form": 3.04,
-      "form_direction": "stable",
+      "rolling_form": 3.24,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
@@ -414,10 +414,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.8,
-      "projected_pts": 7.49,
-      "projected_4gw": 27.4,
+      "projected_pts": 7.3,
+      "projected_4gw": 26.8,
       "form_trend": "neutral",
-      "rolling_form": 4.82,
+      "rolling_form": 5.22,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
@@ -461,7 +461,7 @@
       "projected_pts": 6.07,
       "projected_4gw": 23.0,
       "form_trend": "neutral",
-      "rolling_form": 2.28,
+      "rolling_form": 3.28,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
@@ -504,8 +504,8 @@
       "selling_price": 4.0,
       "projected_pts": 3.38,
       "projected_4gw": 13.5,
-      "form_trend": "cold",
-      "rolling_form": 1.74,
+      "form_trend": "neutral",
+      "rolling_form": 2.14,
       "form_direction": "rising",
       "news": "",
       "news_severity": 0,
@@ -670,5 +670,5 @@
       ]
     }
   ],
-  "total_projected_pts": 60.4
+  "total_projected_pts": 60.2
 }
