@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22T06:43:42.166709",
+  "generated_at": "2026-03-23T07:03:43.807624",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 14.6,
         "fixture": "MCI (H)",
         "fixture_difficulty": 0.96,
-        "ownership": 50.8,
-        "estimated_captain_pct": 30.5,
+        "ownership": 50.6,
+        "estimated_captain_pct": 30.4,
         "form": "6.4",
         "form_trend": "neutral",
         "is_differential": false,
@@ -33,8 +33,8 @@
         "doubled_pts": 13.0,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 43.8,
-        "estimated_captain_pct": 17.5,
+        "ownership": 44.0,
+        "estimated_captain_pct": 17.6,
         "form": "9.2",
         "form_trend": "hot",
         "is_differential": false,
@@ -96,7 +96,7 @@
         "doubled_pts": 10.6,
         "fixture": "ARS (A)",
         "fixture_difficulty": 0.89,
-        "ownership": 2.3,
+        "ownership": 2.2,
         "estimated_captain_pct": 0.2,
         "form": "2.6",
         "form_trend": "cold",
@@ -118,8 +118,8 @@
       "doubled_pts": 14.6,
       "fixture": "MCI (H)",
       "fixture_difficulty": 0.96,
-      "ownership": 50.8,
-      "estimated_captain_pct": 30.5,
+      "ownership": 50.6,
+      "estimated_captain_pct": 30.4,
       "form": "6.4",
       "form_trend": "neutral",
       "is_differential": false,
@@ -152,7 +152,7 @@
       "downside_pts": 0.8,
       "risk_category": "risky",
       "vs_safe_diff": -1.01,
-      "eo_advantage": 30.1,
+      "eo_advantage": 30.0,
       "risk_level": "medium_risk",
       "haul_upside": 4.5
     },
@@ -178,7 +178,7 @@
         "downside_pts": 0.8,
         "risk_category": "risky",
         "vs_safe_diff": -1.01,
-        "eo_advantage": 30.1,
+        "eo_advantage": 30.0,
         "risk_level": "medium_risk",
         "haul_upside": 4.5
       },
@@ -203,7 +203,7 @@
         "downside_pts": 0.9,
         "risk_category": "risky",
         "vs_safe_diff": -1.23,
-        "eo_advantage": 30.2,
+        "eo_advantage": 30.1,
         "risk_level": "medium_risk",
         "haul_upside": 4.5
       },
@@ -215,7 +215,7 @@
         "doubled_pts": 10.6,
         "fixture": "ARS (A)",
         "fixture_difficulty": 0.89,
-        "ownership": 2.3,
+        "ownership": 2.2,
         "estimated_captain_pct": 0.2,
         "form": "2.6",
         "form_trend": "cold",
@@ -228,7 +228,7 @@
         "downside_pts": 1.3,
         "risk_category": "risky",
         "vs_safe_diff": -2.01,
-        "eo_advantage": 30.3,
+        "eo_advantage": 30.2,
         "risk_level": "high_risk",
         "haul_upside": 4.5
       }
@@ -241,12 +241,12 @@
       },
       {
         "name": "B.Fernandes",
-        "ownership": 43.8,
+        "ownership": 44.0,
         "projected": 6.5
       },
       {
         "name": "Palmer",
-        "ownership": 16.6,
+        "ownership": 16.5,
         "projected": 7.73
       }
     ]
@@ -258,21 +258,20 @@
       "out_name": "Rogers",
       "out_reasons": [
         "cold_form",
-        "low_xmin",
         "hard_fixtures"
       ],
       "in_id": 267,
       "in_name": "Sarr",
       "in_team": "CRY",
       "in_cost": 6.3,
-      "gain_4gw": 17.4,
+      "gain_4gw": 7.7,
       "effective_4gw": 27.0,
       "in_xmin": 90,
       "buy_reasons": [
         "nailed"
       ],
       "worth_hit": true,
-      "hit_value": 12.1,
+      "hit_value": 2.4,
       "value_score": 4.29,
       "position": 3,
       "fixtures": [
@@ -297,167 +296,12 @@
         {
           "gw": 35,
           "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {
-        "premium": {
-          "player_id": 387,
-          "name": "Szoboszlai",
-          "team": "LIV",
-          "cost": 7.0,
-          "gain_4gw": 12.5,
-          "value_score": 3.16,
-          "reasons": [
-            "nailed"
-          ],
-          "fixtures": [
-            {
-              "gw": 32,
-              "fixture": "FUL (H)",
-              "difficulty": 0.9,
-              "is_dgw": false
-            },
-            {
-              "gw": 33,
-              "fixture": "EVE (A)",
-              "difficulty": 1.19,
-              "is_dgw": false
-            }
-          ]
-        }
-      }
-    },
-    {
-      "priority": 2,
-      "out_id": 674,
-      "out_name": "Ramsdale",
-      "out_reasons": [
-        "low_xmin",
-        "hard_fixtures"
-      ],
-      "in_id": 139,
-      "in_name": "Verbruggen",
-      "in_team": "BHA",
-      "in_cost": 4.5,
-      "gain_4gw": 9.0,
-      "effective_4gw": 12.0,
-      "in_xmin": 90,
-      "buy_reasons": [
-        "nailed",
-        "hot_form"
-      ],
-      "worth_hit": true,
-      "hit_value": 3.7,
-      "value_score": 2.67,
-      "position": 1,
-      "fixtures": [
-        {
-          "gw": 32,
-          "fixture": "BUR (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "gw": 33,
-          "fixture": "TOT (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
-          "is_dgw": false
-        },
-        {
-          "gw": 35,
-          "fixture": "NEW (A)",
           "difficulty": 1.2,
           "is_dgw": false
         }
       ],
       "data_quality": "understat",
       "alternatives": {}
-    },
-    {
-      "priority": 3,
-      "out_id": 485,
-      "out_name": "Gordon",
-      "out_reasons": [
-        "low_xmin",
-        "hard_fixtures"
-      ],
-      "in_id": 267,
-      "in_name": "Sarr",
-      "in_team": "CRY",
-      "in_cost": 6.3,
-      "gain_4gw": 19.1,
-      "effective_4gw": 27.0,
-      "in_xmin": 90,
-      "buy_reasons": [
-        "nailed"
-      ],
-      "worth_hit": true,
-      "hit_value": 13.8,
-      "value_score": 4.29,
-      "position": 3,
-      "fixtures": [
-        {
-          "gw": 32,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 33,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
-          "is_dgw": false
-        },
-        {
-          "gw": 35,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {
-        "premium": {
-          "player_id": 387,
-          "name": "Szoboszlai",
-          "team": "LIV",
-          "cost": 7.0,
-          "gain_4gw": 14.2,
-          "value_score": 3.16,
-          "reasons": [
-            "nailed"
-          ],
-          "fixtures": [
-            {
-              "gw": 32,
-              "fixture": "FUL (H)",
-              "difficulty": 0.9,
-              "is_dgw": false
-            },
-            {
-              "gw": 33,
-              "fixture": "EVE (A)",
-              "difficulty": 1.19,
-              "is_dgw": false
-            }
-          ]
-        }
-      }
     }
   ],
   "chip_strategy": [

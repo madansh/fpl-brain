@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22T06:43:42.176687",
+  "generated_at": "2026-03-23T07:03:43.818069",
   "team_id": 5033680,
   "next_gameweek": 32,
   "recommendations": [
@@ -100,9 +100,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.61,
+          "effective_pts": 4.59,
           "projected_pts": 4.65,
-          "xmin": 89.2,
+          "xmin": 88.8,
           "fixture": "NFO (A)",
           "difficulty": 1.25,
           "is_dgw": false
@@ -153,8 +153,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.24,
-          "xmin": 59.6,
+          "effective_pts": 3.27,
+          "xmin": 60.1,
           "status": "available",
           "bench_order": 2
         },
@@ -177,7 +177,7 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 1,
+        "low_xmin_count": 0,
         "needs_attention": false
       }
     },
@@ -256,9 +256,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 5.52,
+          "effective_pts": 5.5,
           "projected_pts": 5.57,
-          "xmin": 89.2,
+          "xmin": 88.8,
           "fixture": "SUN (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -323,8 +323,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.83,
-          "xmin": 59.6,
+          "effective_pts": 3.86,
+          "xmin": 60.1,
           "status": "available",
           "bench_order": 1
         },
@@ -355,7 +355,7 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 1,
+        "low_xmin_count": 0,
         "needs_attention": false
       }
     },
@@ -456,9 +456,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.94,
+          "effective_pts": 4.91,
           "projected_pts": 4.98,
-          "xmin": 89.2,
+          "xmin": 88.8,
           "fixture": "FUL (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -501,8 +501,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 4.07,
-          "xmin": 59.6,
+          "effective_pts": 4.11,
+          "xmin": 60.1,
           "status": "available",
           "bench_order": 1
         },
@@ -533,7 +533,7 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 1,
+        "low_xmin_count": 0,
         "needs_attention": false
       }
     },
@@ -634,9 +634,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.61,
+          "effective_pts": 4.59,
           "projected_pts": 4.65,
-          "xmin": 89.2,
+          "xmin": 88.8,
           "fixture": "TOT (H)",
           "difficulty": 1.24,
           "is_dgw": false
@@ -687,8 +687,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.62,
-          "xmin": 59.6,
+          "effective_pts": 3.65,
+          "xmin": 60.1,
           "status": "available",
           "bench_order": 2
         },
@@ -711,7 +711,7 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 1,
+        "low_xmin_count": 0,
         "needs_attention": false
       }
     },
@@ -801,9 +801,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 4.93,
+          "effective_pts": 4.9,
           "projected_pts": 4.97,
-          "xmin": 89.2,
+          "xmin": 88.8,
           "fixture": "BUR (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -865,8 +865,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.34,
-          "xmin": 59.6,
+          "effective_pts": 3.37,
+          "xmin": 60.1,
           "status": "available",
           "bench_order": 2
         },
@@ -889,14 +889,14 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 1,
+        "low_xmin_count": 0,
         "needs_attention": false
       }
     },
     {
       "gameweek": 37,
       "formation": "3-4-3",
-      "total_effective_pts": 56.5,
+      "total_effective_pts": 56.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -906,7 +906,7 @@
       },
       "vice_captain": {
         "name": "Rogers",
-        "effective_pts": 6.08
+        "effective_pts": 6.05
       },
       "starting_xi": [
         {
@@ -957,9 +957,9 @@
           "name": "Rogers",
           "position": "MID",
           "team": "AVL",
-          "effective_pts": 6.08,
+          "effective_pts": 6.05,
           "projected_pts": 6.13,
-          "xmin": 89.2,
+          "xmin": 88.8,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
           "is_dgw": false
@@ -1043,8 +1043,8 @@
         {
           "name": "Gordon",
           "position": "MID",
-          "effective_pts": 3.34,
-          "xmin": 59.6,
+          "effective_pts": 3.37,
+          "xmin": 60.1,
           "status": "available",
           "bench_order": 2
         },
@@ -1067,7 +1067,7 @@
       ],
       "alerts": {
         "blank_count": 0,
-        "low_xmin_count": 1,
+        "low_xmin_count": 0,
         "needs_attention": false
       }
     }
