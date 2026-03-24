@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-23T07:03:43.818069",
+  "generated_at": "2026-03-24T06:58:30.120811",
   "team_id": 5033680,
   "next_gameweek": 32,
   "recommendations": [
     {
       "gameweek": 32,
       "formation": "3-4-3",
-      "total_effective_pts": 58.2,
+      "total_effective_pts": 55.4,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -31,28 +31,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 5.31,
-          "projected_pts": 5.31,
-          "xmin": 90,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.49,
-          "projected_pts": 4.68,
-          "xmin": 86.4,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -61,6 +39,28 @@
           "xmin": 89.2,
           "fixture": "LEE (H)",
           "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.72,
+          "projected_pts": 3.8,
+          "xmin": 88.2,
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
           "is_dgw": false
         },
         {
@@ -143,34 +143,34 @@
       ],
       "bench": [
         {
-          "name": "Andersen",
-          "position": "DEF",
-          "effective_pts": 3.72,
-          "xmin": 88.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Gordon",
           "position": "MID",
           "effective_pts": 3.27,
           "xmin": 60.1,
           "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 3
+          "bench_order": 1
         },
         {
           "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 2.98,
+          "xmin": 67.5,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 2.53,
+          "xmin": 64.8,
           "status": "available",
           "bench_order": 4
         }
@@ -184,7 +184,7 @@
     {
       "gameweek": 33,
       "formation": "3-4-3",
-      "total_effective_pts": 58.2,
+      "total_effective_pts": 55.6,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -209,28 +209,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 5.07,
-          "projected_pts": 5.07,
-          "xmin": 90,
-          "fixture": "MCI (A)",
-          "difficulty": 1.18,
-          "is_dgw": false
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.36,
-          "projected_pts": 4.54,
-          "xmin": 86.4,
-          "fixture": "MCI (A)",
-          "difficulty": 1.18,
-          "is_dgw": false
-        },
-        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -239,6 +217,28 @@
           "xmin": 89.2,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.64,
+          "projected_pts": 3.71,
+          "xmin": 88.2,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
           "is_dgw": false
         },
         {
@@ -329,26 +329,26 @@
           "bench_order": 1
         },
         {
-          "name": "Andersen",
-          "position": "DEF",
-          "effective_pts": 3.64,
-          "xmin": 88.2,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
           "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 2.85,
+          "xmin": 67.5,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 2.46,
+          "xmin": 64.8,
           "status": "available",
           "bench_order": 4
         }
@@ -362,7 +362,7 @@
     {
       "gameweek": 34,
       "formation": "3-4-3",
-      "total_effective_pts": 55.3,
+      "total_effective_pts": 52.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -387,28 +387,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 5.31,
-          "projected_pts": 5.31,
-          "xmin": 90,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.49,
-          "projected_pts": 4.68,
-          "xmin": 86.4,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -417,6 +395,28 @@
           "xmin": 89.2,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.7,
+          "projected_pts": 3.78,
+          "xmin": 88.2,
+          "fixture": "AVL (H)",
+          "difficulty": 1.0,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
           "is_dgw": false
         },
         {
@@ -507,26 +507,26 @@
           "bench_order": 1
         },
         {
-          "name": "Andersen",
-          "position": "DEF",
-          "effective_pts": 3.7,
-          "xmin": 88.2,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
           "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 2.98,
+          "xmin": 67.5,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 2.53,
+          "xmin": 64.8,
           "status": "available",
           "bench_order": 4
         }
@@ -540,7 +540,7 @@
     {
       "gameweek": 35,
       "formation": "3-4-3",
-      "total_effective_pts": 57.9,
+      "total_effective_pts": 54.8,
       "captain": {
         "name": "B.Fernandes",
         "team": "MUN",
@@ -565,28 +565,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 5.45,
-          "projected_pts": 5.45,
-          "xmin": 90,
-          "fixture": "FUL (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.57,
-          "projected_pts": 4.76,
-          "xmin": 86.4,
-          "fixture": "FUL (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -595,6 +573,28 @@
           "xmin": 89.2,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.74,
+          "projected_pts": 3.82,
+          "xmin": 88.2,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "LEE (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
@@ -677,34 +677,34 @@
       ],
       "bench": [
         {
-          "name": "Andersen",
-          "position": "DEF",
-          "effective_pts": 3.74,
-          "xmin": 88.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Gordon",
           "position": "MID",
           "effective_pts": 3.65,
           "xmin": 60.1,
           "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 3
+          "bench_order": 1
         },
         {
           "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 3.07,
+          "xmin": 67.5,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 2.57,
+          "xmin": 64.8,
           "status": "available",
           "bench_order": 4
         }
@@ -718,7 +718,7 @@
     {
       "gameweek": 36,
       "formation": "3-4-3",
-      "total_effective_pts": 56.0,
+      "total_effective_pts": 53.9,
       "captain": {
         "name": "Jo\u00e3o Pedro",
         "team": "CHE",
@@ -743,28 +743,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.81,
-          "projected_pts": 4.81,
-          "xmin": 90,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.21,
-          "projected_pts": 4.39,
-          "xmin": 86.4,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -773,6 +751,28 @@
           "xmin": 89.2,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.71,
+          "projected_pts": 3.79,
+          "xmin": 88.2,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "AVL (H)",
+          "difficulty": 1.0,
           "is_dgw": false
         },
         {
@@ -855,34 +855,34 @@
       ],
       "bench": [
         {
-          "name": "Andersen",
-          "position": "DEF",
-          "effective_pts": 3.71,
-          "xmin": 88.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Gordon",
           "position": "MID",
           "effective_pts": 3.37,
           "xmin": 60.1,
           "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 3
+          "bench_order": 1
         },
         {
           "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 2.71,
+          "xmin": 67.5,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 2.37,
+          "xmin": 64.8,
           "status": "available",
           "bench_order": 4
         }
@@ -896,7 +896,7 @@
     {
       "gameweek": 37,
       "formation": "3-4-3",
-      "total_effective_pts": 56.4,
+      "total_effective_pts": 53.3,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -921,28 +921,6 @@
           "is_dgw": false
         },
         {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 5.44,
-          "projected_pts": 5.44,
-          "xmin": 90,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Saliba",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 4.56,
-          "projected_pts": 4.75,
-          "xmin": 86.4,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
@@ -951,6 +929,28 @@
           "xmin": 89.2,
           "fixture": "NFO (H)",
           "difficulty": 1.02,
+          "is_dgw": false
+        },
+        {
+          "name": "Andersen",
+          "position": "DEF",
+          "team": "FUL",
+          "effective_pts": 3.64,
+          "projected_pts": 3.71,
+          "xmin": 88.2,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
+          "is_dgw": false
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 3.22,
+          "projected_pts": 3.38,
+          "xmin": 85.8,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
           "is_dgw": false
         },
         {
@@ -1033,34 +1033,34 @@
       ],
       "bench": [
         {
-          "name": "Andersen",
-          "position": "DEF",
-          "effective_pts": 3.64,
-          "xmin": 88.2,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
           "name": "Gordon",
           "position": "MID",
           "effective_pts": 3.37,
           "xmin": 60.1,
           "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Est\u00e8ve",
-          "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
-          "status": "available",
-          "bench_order": 3
+          "bench_order": 1
         },
         {
           "name": "Ramsdale",
           "position": "GK",
           "effective_pts": 3.18,
           "xmin": 90,
+          "status": "available",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 3.06,
+          "xmin": 67.5,
+          "status": "available",
+          "bench_order": 3
+        },
+        {
+          "name": "Saliba",
+          "position": "DEF",
+          "effective_pts": 2.56,
+          "xmin": 64.8,
           "status": "available",
           "bench_order": 4
         }
