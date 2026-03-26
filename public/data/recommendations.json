@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T06:57:03.387929",
+  "generated_at": "2026-03-26T07:02:24.699257",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 14.6,
         "fixture": "MCI (H)",
         "fixture_difficulty": 0.96,
-        "ownership": 50.5,
-        "estimated_captain_pct": 30.3,
+        "ownership": 50.4,
+        "estimated_captain_pct": 30.2,
         "form": "6.2",
         "form_trend": "neutral",
         "is_differential": false,
@@ -35,7 +35,7 @@
         "fixture_difficulty": 0.9,
         "ownership": 44.3,
         "estimated_captain_pct": 17.7,
-        "form": "9.2",
+        "form": "11.0",
         "form_trend": "hot",
         "is_differential": false,
         "is_template": true,
@@ -118,8 +118,8 @@
       "doubled_pts": 14.6,
       "fixture": "MCI (H)",
       "fixture_difficulty": 0.96,
-      "ownership": 50.5,
-      "estimated_captain_pct": 30.3,
+      "ownership": 50.4,
+      "estimated_captain_pct": 30.2,
       "form": "6.2",
       "form_trend": "neutral",
       "is_differential": false,
@@ -152,7 +152,7 @@
       "downside_pts": 0.8,
       "risk_category": "risky",
       "vs_safe_diff": -1.01,
-      "eo_advantage": 29.9,
+      "eo_advantage": 29.8,
       "risk_level": "medium_risk",
       "haul_upside": 4.5
     },
@@ -178,7 +178,7 @@
         "downside_pts": 0.8,
         "risk_category": "risky",
         "vs_safe_diff": -1.01,
-        "eo_advantage": 29.9,
+        "eo_advantage": 29.8,
         "risk_level": "medium_risk",
         "haul_upside": 4.5
       },
@@ -203,7 +203,7 @@
         "downside_pts": 0.9,
         "risk_category": "risky",
         "vs_safe_diff": -1.23,
-        "eo_advantage": 30.0,
+        "eo_advantage": 29.9,
         "risk_level": "medium_risk",
         "haul_upside": 4.5
       },
@@ -228,7 +228,7 @@
         "downside_pts": 1.3,
         "risk_category": "risky",
         "vs_safe_diff": -2.01,
-        "eo_advantage": 30.1,
+        "eo_advantage": 30.0,
         "risk_level": "high_risk",
         "haul_upside": 4.5
       }
