@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T07:02:24.699865",
+  "generated_at": "2026-03-27T07:00:53.769252",
   "next_gameweek": 32,
   "top_by_position": {
     "GK": [
@@ -3857,7 +3857,7 @@
         "team_id": 7,
         "position": 3,
         "price": 10.6,
-        "ownership": "16.4",
+        "ownership": "16.3",
         "form": "3.5",
         "form_trend": "neutral",
         "news": "",
@@ -6514,7 +6514,7 @@
         "team_id": 12,
         "position": 4,
         "price": 9.3,
-        "ownership": "35.6",
+        "ownership": "35.5",
         "form": "4.8",
         "form_trend": "neutral",
         "news": "",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T07:02:24.699257",
+  "generated_at": "2026-03-27T07:00:53.768708",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -246,7 +246,7 @@
       },
       {
         "name": "Palmer",
-        "ownership": 16.4,
+        "ownership": 16.3,
         "projected": 7.73
       }
     ]
