@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T07:00:53.769252",
+  "generated_at": "2026-03-28T06:53:25.561611",
   "next_gameweek": 32,
   "top_by_position": {
     "GK": [
@@ -4337,7 +4337,7 @@
         "team_id": 14,
         "position": 3,
         "price": 10.3,
-        "ownership": "44.3",
+        "ownership": "44.4",
         "form": "11.0",
         "form_trend": "hot",
         "news": "",
@@ -5427,7 +5427,7 @@
         "team": "MCI",
         "team_id": 13,
         "position": 4,
-        "price": 14.5,
+        "price": 14.4,
         "ownership": "54.9",
         "form": "1.3",
         "form_trend": "cold",
@@ -6388,126 +6388,6 @@
         "data_quality": "understat"
       },
       {
-        "player_id": 100,
-        "name": "Kroupi.Jr",
-        "team": "BOU",
-        "team_id": 4,
-        "position": 4,
-        "price": 4.7,
-        "ownership": "6.1",
-        "form": "2.5",
-        "form_trend": "neutral",
-        "news": "",
-        "news_severity": 0,
-        "news_category": "healthy",
-        "chance_of_playing": null,
-        "xg_p90": 0.706,
-        "xa_p90": 0.0,
-        "next_gw_pts": 6.79,
-        "next_fixture": "ARS (A)",
-        "next_fixture_diff": 0.89,
-        "has_dgw_soon": false,
-        "dgw_gws": [],
-        "next_4gw_pts": 25.0,
-        "next_6gw_pts": 37.3,
-        "avg_difficulty_4gw": 1.53,
-        "fixtures": [
-          {
-            "gw": 32,
-            "projected_pts": 6.79,
-            "opponent": "ARS (A)",
-            "is_home": false,
-            "difficulty": 0.89,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 33,
-            "projected_pts": 5.52,
-            "opponent": "NEW (A)",
-            "is_home": false,
-            "difficulty": 1.2,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 34,
-            "projected_pts": 6.74,
-            "opponent": "LEE (H)",
-            "is_home": true,
-            "difficulty": 0.9,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 35,
-            "projected_pts": 5.96,
-            "opponent": "CRY (H)",
-            "is_home": true,
-            "difficulty": 1.07,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 36,
-            "projected_pts": 5.87,
-            "opponent": "FUL (A)",
-            "is_home": false,
-            "difficulty": 1.1,
-            "is_dgw": false,
-            "is_bgw": false
-          },
-          {
-            "gw": 37,
-            "projected_pts": 6.42,
-            "opponent": "MCI (H)",
-            "is_home": true,
-            "difficulty": 0.96,
-            "is_dgw": false,
-            "is_bgw": false
-          }
-        ],
-        "fixture_preview": [
-          {
-            "gw": 32,
-            "fixture": "ARS (A)",
-            "difficulty": 0.89,
-            "is_dgw": false
-          },
-          {
-            "gw": 33,
-            "fixture": "NEW (A)",
-            "difficulty": 1.2,
-            "is_dgw": false
-          },
-          {
-            "gw": 34,
-            "fixture": "LEE (H)",
-            "difficulty": 0.9,
-            "is_dgw": false
-          },
-          {
-            "gw": 35,
-            "fixture": "CRY (H)",
-            "difficulty": 1.07,
-            "is_dgw": false
-          },
-          {
-            "gw": 36,
-            "fixture": "FUL (A)",
-            "difficulty": 1.1,
-            "is_dgw": false
-          },
-          {
-            "gw": 37,
-            "fixture": "MCI (H)",
-            "difficulty": 0.96,
-            "is_dgw": false
-          }
-        ],
-        "data_quality": "approximated"
-      },
-      {
         "player_id": 661,
         "name": "Ekitik\u00e9",
         "team": "LIV",
@@ -7225,6 +7105,126 @@
             "gw": 37,
             "fixture": "ARS (A)",
             "difficulty": 0.89,
+            "is_dgw": false
+          }
+        ],
+        "data_quality": "approximated"
+      },
+      {
+        "player_id": 666,
+        "name": "Gy\u00f6keres",
+        "team": "ARS",
+        "team_id": 1,
+        "position": 4,
+        "price": 8.8,
+        "ownership": "11.5",
+        "form": "3.3",
+        "form_trend": "neutral",
+        "news": "",
+        "news_severity": 0,
+        "news_category": "healthy",
+        "chance_of_playing": 100,
+        "xg_p90": 0.524,
+        "xa_p90": 0.0,
+        "next_gw_pts": 5.46,
+        "next_fixture": "BOU (H)",
+        "next_fixture_diff": 0.98,
+        "has_dgw_soon": false,
+        "dgw_gws": [],
+        "next_4gw_pts": 21.6,
+        "next_6gw_pts": 31.7,
+        "avg_difficulty_4gw": 1.61,
+        "fixtures": [
+          {
+            "gw": 32,
+            "projected_pts": 5.46,
+            "opponent": "BOU (H)",
+            "is_home": true,
+            "difficulty": 0.98,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 33,
+            "projected_pts": 4.89,
+            "opponent": "MCI (A)",
+            "is_home": false,
+            "difficulty": 1.18,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 34,
+            "projected_pts": 5.47,
+            "opponent": "NEW (H)",
+            "is_home": true,
+            "difficulty": 0.98,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 35,
+            "projected_pts": 5.8,
+            "opponent": "FUL (H)",
+            "is_home": true,
+            "difficulty": 0.9,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 36,
+            "projected_pts": 4.27,
+            "opponent": "WHU (A)",
+            "is_home": false,
+            "difficulty": 1.5,
+            "is_dgw": false,
+            "is_bgw": false
+          },
+          {
+            "gw": 37,
+            "projected_pts": 5.79,
+            "opponent": "BUR (H)",
+            "is_home": true,
+            "difficulty": 0.9,
+            "is_dgw": false,
+            "is_bgw": false
+          }
+        ],
+        "fixture_preview": [
+          {
+            "gw": 32,
+            "fixture": "BOU (H)",
+            "difficulty": 0.98,
+            "is_dgw": false
+          },
+          {
+            "gw": 33,
+            "fixture": "MCI (A)",
+            "difficulty": 1.18,
+            "is_dgw": false
+          },
+          {
+            "gw": 34,
+            "fixture": "NEW (H)",
+            "difficulty": 0.98,
+            "is_dgw": false
+          },
+          {
+            "gw": 35,
+            "fixture": "FUL (H)",
+            "difficulty": 0.9,
+            "is_dgw": false
+          },
+          {
+            "gw": 36,
+            "fixture": "WHU (A)",
+            "difficulty": 1.5,
+            "is_dgw": false
+          },
+          {
+            "gw": 37,
+            "fixture": "BUR (H)",
+            "difficulty": 0.9,
             "is_dgw": false
           }
         ],

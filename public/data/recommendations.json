@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T07:00:53.768708",
+  "generated_at": "2026-03-28T06:53:25.561066",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -33,8 +33,8 @@
         "doubled_pts": 13.0,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 44.3,
-        "estimated_captain_pct": 17.7,
+        "ownership": 44.4,
+        "estimated_captain_pct": 17.8,
         "form": "11.0",
         "form_trend": "hot",
         "is_differential": false,
@@ -241,7 +241,7 @@
       },
       {
         "name": "B.Fernandes",
-        "ownership": 44.3,
+        "ownership": 44.4,
         "projected": 6.5
       },
       {
