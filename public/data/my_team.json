@@ -4,9 +4,9 @@
   "next_gw": 32,
   "bank": 0.0,
   "chips_available": [
-    "triple_captain",
+    "free_hit",
     "bench_boost",
-    "free_hit"
+    "triple_captain"
   ],
   "squad": [
     {
@@ -416,7 +416,7 @@
       "selling_price": 7.8,
       "projected_pts": 7.3,
       "projected_4gw": 26.8,
-      "form_trend": "neutral",
+      "form_trend": "hot",
       "rolling_form": 5.22,
       "form_direction": "falling",
       "news": "",
@@ -592,7 +592,7 @@
       "selling_price": 6.1,
       "projected_pts": 3.51,
       "projected_4gw": 14.0,
-      "form_trend": "hot",
+      "form_trend": "neutral",
       "rolling_form": 4.33,
       "form_direction": "rising",
       "news": "Ankle injury - 75% chance of playing",
