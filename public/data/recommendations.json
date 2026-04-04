@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T07:01:56.504907",
+  "generated_at": "2026-04-04T06:54:42.210976",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -14,8 +14,8 @@
         "fixture_difficulty": 0.96,
         "ownership": 50.3,
         "estimated_captain_pct": 30.2,
-        "form": "7.7",
-        "form_trend": "hot",
+        "form": "2.0",
+        "form_trend": "cold",
         "is_differential": false,
         "is_template": false,
         "has_dgw": false,
@@ -35,7 +35,7 @@
         "fixture_difficulty": 0.9,
         "ownership": 44.6,
         "estimated_captain_pct": 17.8,
-        "form": "10.3",
+        "form": "11.5",
         "form_trend": "hot",
         "is_differential": false,
         "is_template": true,
@@ -77,7 +77,7 @@
         "fixture_difficulty": 0.94,
         "ownership": 3.0,
         "estimated_captain_pct": 0.3,
-        "form": "2.7",
+        "form": "3.5",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -120,8 +120,8 @@
       "fixture_difficulty": 0.96,
       "ownership": 50.3,
       "estimated_captain_pct": 30.2,
-      "form": "7.7",
-      "form_trend": "hot",
+      "form": "2.0",
+      "form_trend": "cold",
       "is_differential": false,
       "is_template": false,
       "has_dgw": false,
@@ -192,7 +192,7 @@
         "fixture_difficulty": 0.94,
         "ownership": 3.0,
         "estimated_captain_pct": 0.3,
-        "form": "2.7",
+        "form": "3.5",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -246,65 +246,12 @@
       },
       {
         "name": "Palmer",
-        "ownership": 16.3,
+        "ownership": 16.2,
         "projected": 7.73
       }
     ]
   },
-  "transfer_recommendations": [
-    {
-      "priority": 1,
-      "out_id": 47,
-      "out_name": "Rogers",
-      "out_reasons": [
-        "cold_form",
-        "hard_fixtures"
-      ],
-      "in_id": 267,
-      "in_name": "Sarr",
-      "in_team": "CRY",
-      "in_cost": 6.3,
-      "gain_4gw": 7.7,
-      "effective_4gw": 27.0,
-      "in_xmin": 90,
-      "buy_reasons": [
-        "nailed",
-        "hot_form"
-      ],
-      "worth_hit": true,
-      "hit_value": 2.4,
-      "value_score": 4.29,
-      "position": 3,
-      "fixtures": [
-        {
-          "gw": 32,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 33,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
-          "is_dgw": false
-        },
-        {
-          "gw": 35,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {}
-    }
-  ],
+  "transfer_recommendations": [],
   "chip_strategy": [
     {
       "chip": "Bench Boost",
