@@ -4,9 +4,9 @@
   "next_gw": 32,
   "bank": 0.0,
   "chips_available": [
-    "bench_boost",
     "free_hit",
-    "triple_captain"
+    "triple_captain",
+    "bench_boost"
   ],
   "squad": [
     {
@@ -590,14 +590,14 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 6.1,
-      "projected_pts": 3.51,
-      "projected_4gw": 14.0,
+      "projected_pts": 4.68,
+      "projected_4gw": 18.7,
       "form_trend": "hot",
       "rolling_form": 4.33,
       "form_direction": "rising",
-      "news": "Ankle injury - 75% chance of playing",
-      "news_severity": 1,
-      "news_category": "unknown",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 32,
