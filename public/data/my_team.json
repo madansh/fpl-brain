@@ -5,8 +5,8 @@
   "bank": 0.0,
   "chips_available": [
     "bench_boost",
-    "triple_captain",
-    "free_hit"
+    "free_hit",
+    "triple_captain"
   ],
   "squad": [
     {
@@ -151,7 +151,7 @@
       "multiplier": 1,
       "selling_price": 3.9,
       "projected_pts": 3.38,
-      "projected_4gw": 13.5,
+      "projected_4gw": 10.1,
       "form_trend": "hot",
       "rolling_form": 2.17,
       "form_direction": "rising",
@@ -173,9 +173,8 @@
         },
         {
           "gw": 34,
-          "fixture": "MCI (H)",
-          "difficulty": 0.96,
-          "is_dgw": false
+          "fixture": "BLANK",
+          "difficulty": 0
         },
         {
           "gw": 35,
@@ -327,7 +326,7 @@
       "multiplier": 1,
       "selling_price": 5.6,
       "projected_pts": 5.29,
-      "projected_4gw": 19.8,
+      "projected_4gw": 14.5,
       "form_trend": "cold",
       "rolling_form": 2.17,
       "form_direction": "stable",
@@ -349,9 +348,8 @@
         },
         {
           "gw": 34,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
+          "fixture": "BLANK",
+          "difficulty": 0
         },
         {
           "gw": 35,
@@ -415,7 +413,7 @@
       "multiplier": 1,
       "selling_price": 7.8,
       "projected_pts": 7.3,
-      "projected_4gw": 26.8,
+      "projected_4gw": 20.9,
       "form_trend": "cold",
       "rolling_form": 5.22,
       "form_direction": "falling",
@@ -437,9 +435,8 @@
         },
         {
           "gw": 34,
-          "fixture": "BHA (A)",
-          "difficulty": 1.32,
-          "is_dgw": false
+          "fixture": "BLANK",
+          "difficulty": 0
         },
         {
           "gw": 35,
@@ -503,7 +500,7 @@
       "multiplier": 0,
       "selling_price": 4.0,
       "projected_pts": 3.38,
-      "projected_4gw": 13.5,
+      "projected_4gw": 10.1,
       "form_trend": "hot",
       "rolling_form": 2.14,
       "form_direction": "rising",
@@ -525,9 +522,8 @@
         },
         {
           "gw": 34,
-          "fixture": "MCI (H)",
-          "difficulty": 0.96,
-          "is_dgw": false
+          "fixture": "BLANK",
+          "difficulty": 0
         },
         {
           "gw": 35,
@@ -547,7 +543,7 @@
       "multiplier": 0,
       "selling_price": 14.4,
       "projected_pts": 6.75,
-      "projected_4gw": 30.6,
+      "projected_4gw": 23.3,
       "form_trend": "cold",
       "rolling_form": 2.33,
       "form_direction": "falling",
@@ -569,9 +565,8 @@
         },
         {
           "gw": 34,
-          "fixture": "BUR (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
+          "fixture": "BLANK",
+          "difficulty": 0
         },
         {
           "gw": 35,
@@ -634,14 +629,14 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 7.2,
-      "projected_pts": 3.98,
-      "projected_4gw": 15.8,
+      "projected_pts": 5.31,
+      "projected_4gw": 21.1,
       "form_trend": "hot",
       "rolling_form": 6.24,
       "form_direction": "rising",
-      "news": "Knee injury - 75% chance of playing",
-      "news_severity": 1,
-      "news_category": "unknown",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 32,

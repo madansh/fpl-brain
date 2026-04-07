@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T07:22:33.737841",
+  "generated_at": "2026-04-07T07:08:40.138979",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -33,7 +33,7 @@
         "doubled_pts": 13.0,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 44.7,
+        "ownership": 44.8,
         "estimated_captain_pct": 17.9,
         "form": "11.5",
         "form_trend": "hot",
@@ -236,12 +236,12 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 55.1,
+        "ownership": 55.2,
         "projected": 6.75
       },
       {
         "name": "B.Fernandes",
-        "ownership": 44.7,
+        "ownership": 44.8,
         "projected": 6.5
       },
       {
@@ -257,52 +257,52 @@
       "chip": "Bench Boost",
       "recommended_gw": 33,
       "confidence": "HIGH",
-      "reasoning": "GW33 has favorable fixtures (ease: 3.7). Projected bench value: 21.5 pts.",
+      "reasoning": "GW33 has favorable fixtures (ease: 3.7). Projected bench value: 22.8 pts.",
       "action_needed": "Ensure bench has high xMin players with easy fixtures by GW33.",
       "analysis": [
         {
           "gw": 33,
           "dgw_players": 0,
-          "bench_proj": 21.5,
+          "bench_proj": 22.8,
           "bench_xmin": 240,
           "fixture_ease": 3.66,
-          "score": 41.2,
+          "score": 43.6,
           "is_dgw": false
         },
         {
           "gw": 37,
           "dgw_players": 0,
-          "bench_proj": 19.0,
+          "bench_proj": 20.4,
           "bench_xmin": 240,
           "fixture_ease": 4.11,
-          "score": 38.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "dgw_players": 0,
-          "bench_proj": 19.3,
-          "bench_xmin": 240,
-          "fixture_ease": 3.98,
-          "score": 38.4,
+          "score": 41.3,
           "is_dgw": false
         },
         {
           "gw": 35,
           "dgw_players": 0,
-          "bench_proj": 19.0,
+          "bench_proj": 20.4,
           "bench_xmin": 240,
           "fixture_ease": 3.91,
-          "score": 37.7,
+          "score": 40.3,
           "is_dgw": false
         },
         {
           "gw": 32,
           "dgw_players": 0,
-          "bench_proj": 18.8,
+          "bench_proj": 20.1,
           "bench_xmin": 240,
           "fixture_ease": 3.75,
-          "score": 36.4,
+          "score": 39.0,
+          "is_dgw": false
+        },
+        {
+          "gw": 36,
+          "dgw_players": 0,
+          "bench_proj": 19.8,
+          "bench_xmin": 240,
+          "fixture_ease": 2.89,
+          "score": 34.0,
           "is_dgw": false
         }
       ]
@@ -368,23 +368,97 @@
           "xmin": 85
         },
         {
-          "gw": 34,
-          "player": "Haaland",
-          "player_id": 430,
+          "gw": 37,
+          "player": "B.Fernandes",
+          "player_id": 449,
           "fixtures": [
-            "BUR (A)"
+            "NFO (H)"
           ],
-          "avg_difficulty": 1.1,
-          "is_home": false,
+          "avg_difficulty": 1.02,
+          "is_home": true,
           "is_dgw": false,
-          "projected_tc_pts": 19.5,
+          "projected_tc_pts": 19.4,
           "xmin": 85
+        }
+      ]
+    },
+    {
+      "chip": "Free Hit",
+      "recommended_gw": 34,
+      "confidence": "MEDIUM",
+      "reasoning": "GW34 is a BGW where only 10 of your players have fixtures.",
+      "action_needed": "Save Free Hit for GW34. Don't waste transfers preparing.",
+      "players_blanking": [
+        "Est\u00e8ve",
+        "Rayan",
+        "Jo\u00e3o Pedro",
+        "D\u00fabravka",
+        "Haaland"
+      ],
+      "analysis": [
+        {
+          "gw": 34,
+          "players_with_fixtures": 10,
+          "players_blanking": 5,
+          "blanking_names": [
+            "Est\u00e8ve",
+            "Rayan",
+            "Jo\u00e3o Pedro",
+            "D\u00fabravka",
+            "Haaland"
+          ],
+          "avg_difficulty": 1.04,
+          "hard_fixtures": 3,
+          "score": 15.4,
+          "is_bgw": true
+        },
+        {
+          "gw": 36,
+          "players_with_fixtures": 15,
+          "players_blanking": 0,
+          "blanking_names": [],
+          "avg_difficulty": 1.14,
+          "hard_fixtures": 6,
+          "score": 1.4,
+          "is_bgw": false
+        },
+        {
+          "gw": 33,
+          "players_with_fixtures": 15,
+          "players_blanking": 0,
+          "blanking_names": [],
+          "avg_difficulty": 1.12,
+          "hard_fixtures": 10,
+          "score": 1.2,
+          "is_bgw": false
+        },
+        {
+          "gw": 37,
+          "players_with_fixtures": 15,
+          "players_blanking": 0,
+          "blanking_names": [],
+          "avg_difficulty": 1.07,
+          "hard_fixtures": 6,
+          "score": 0.7,
+          "is_bgw": false
+        },
+        {
+          "gw": 32,
+          "players_with_fixtures": 15,
+          "players_blanking": 0,
+          "blanking_names": [],
+          "avg_difficulty": 1.05,
+          "hard_fixtures": 4,
+          "score": 0.5,
+          "is_bgw": false
         }
       ]
     }
   ],
   "fixture_alerts": {
     "dgw_gws": [],
-    "bgw_gws": []
+    "bgw_gws": [
+      34
+    ]
   }
 }
