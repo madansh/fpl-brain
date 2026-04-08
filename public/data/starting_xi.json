@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T07:08:40.148767",
+  "generated_at": "2026-04-08T07:11:22.393449",
   "team_id": 5033680,
   "next_gameweek": 32,
   "recommendations": [
@@ -184,29 +184,40 @@
     {
       "gameweek": 33,
       "formation": "3-4-3",
-      "total_effective_pts": 58.2,
+      "total_effective_pts": 82.0,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
-        "effective_pts": 9.38,
+        "effective_pts": 16.29,
         "xmin": 86.2,
-        "fixture": "ARS (H)"
+        "fixture": "ARS (H), BUR (A)"
       },
       "vice_captain": {
-        "name": "O.Dango",
-        "effective_pts": 6.66
+        "name": "Jo\u00e3o Pedro",
+        "effective_pts": 11.83
       },
       "starting_xi": [
         {
           "name": "D\u00fabravka",
           "position": "GK",
           "team": "BUR",
-          "effective_pts": 3.38,
-          "projected_pts": 3.38,
+          "effective_pts": 6.76,
+          "projected_pts": 6.76,
           "xmin": 90,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
-          "is_dgw": false
+          "fixture": "NFO (A), MCI (H)",
+          "difficulty": 1.1,
+          "is_dgw": true
+        },
+        {
+          "name": "Est\u00e8ve",
+          "position": "DEF",
+          "team": "BUR",
+          "effective_pts": 6.44,
+          "projected_pts": 6.76,
+          "xmin": 85.8,
+          "fixture": "NFO (A), MCI (H)",
+          "difficulty": 1.1,
+          "is_dgw": true
         },
         {
           "name": "Gabriel",
@@ -231,15 +242,15 @@
           "is_dgw": false
         },
         {
-          "name": "Dalot",
-          "position": "DEF",
-          "team": "MUN",
-          "effective_pts": 3.71,
-          "projected_pts": 3.74,
-          "xmin": 89.2,
-          "fixture": "CHE (A)",
-          "difficulty": 1.21,
-          "is_dgw": false
+          "name": "Rayan",
+          "position": "MID",
+          "team": "BOU",
+          "effective_pts": 9.62,
+          "projected_pts": 9.73,
+          "xmin": 89.0,
+          "fixture": "NEW (A), LEE (H)",
+          "difficulty": 1.05,
+          "is_dgw": true
         },
         {
           "name": "O.Dango",
@@ -275,37 +286,26 @@
           "is_dgw": false
         },
         {
-          "name": "Rayan",
-          "position": "MID",
-          "team": "BOU",
-          "effective_pts": 4.42,
-          "projected_pts": 4.47,
-          "xmin": 89.0,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 9.38,
-          "projected_pts": 9.79,
+          "effective_pts": 16.29,
+          "projected_pts": 17.01,
           "xmin": 86.2,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
-          "is_dgw": false
+          "fixture": "ARS (H), BUR (A)",
+          "difficulty": 0.91,
+          "is_dgw": true
         },
         {
           "name": "Jo\u00e3o Pedro",
           "position": "FWD",
           "team": "CHE",
-          "effective_pts": 6.27,
-          "projected_pts": 6.61,
+          "effective_pts": 11.83,
+          "projected_pts": 12.47,
           "xmin": 85.4,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
+          "fixture": "MUN (H), BHA (A)",
+          "difficulty": 1.21,
+          "is_dgw": true
         },
         {
           "name": "Ra\u00fal",
@@ -329,18 +329,18 @@
           "bench_order": 1
         },
         {
-          "name": "Andersen",
+          "name": "Dalot",
           "position": "DEF",
-          "effective_pts": 3.64,
-          "xmin": 88.2,
+          "effective_pts": 3.71,
+          "xmin": 89.2,
           "status": "available",
           "bench_order": 2
         },
         {
-          "name": "Est\u00e8ve",
+          "name": "Andersen",
           "position": "DEF",
-          "effective_pts": 3.22,
-          "xmin": 85.8,
+          "effective_pts": 3.64,
+          "xmin": 88.2,
           "status": "available",
           "bench_order": 3
         },

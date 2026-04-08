@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T07:08:40.138979",
+  "generated_at": "2026-04-08T07:11:22.383130",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -96,7 +96,7 @@
         "doubled_pts": 10.6,
         "fixture": "ARS (A)",
         "fixture_difficulty": 0.89,
-        "ownership": 2.2,
+        "ownership": 2.1,
         "estimated_captain_pct": 0.2,
         "form": "2.5",
         "form_trend": "cold",
@@ -215,7 +215,7 @@
         "doubled_pts": 10.6,
         "fixture": "ARS (A)",
         "fixture_difficulty": 0.89,
-        "ownership": 2.2,
+        "ownership": 2.1,
         "estimated_captain_pct": 0.2,
         "form": "2.5",
         "form_trend": "cold",
@@ -236,7 +236,7 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 55.2,
+        "ownership": 55.3,
         "projected": 6.75
       },
       {
@@ -246,28 +246,81 @@
       },
       {
         "name": "Palmer",
-        "ownership": 16.3,
+        "ownership": 16.4,
         "projected": 7.73
       }
     ]
   },
-  "transfer_recommendations": [],
+  "transfer_recommendations": [
+    {
+      "priority": 1,
+      "out_id": 440,
+      "out_name": "Dalot",
+      "out_reasons": [
+        "cold_form",
+        "hard_fixtures"
+      ],
+      "in_id": 148,
+      "in_name": "F.Kad\u0131o\u011flu",
+      "in_team": "BHA",
+      "in_cost": 4.4,
+      "gain_4gw": 7.1,
+      "effective_4gw": 20.6,
+      "in_xmin": 90,
+      "buy_reasons": [
+        "nailed",
+        "hot_form",
+        "dgw33"
+      ],
+      "worth_hit": true,
+      "hit_value": 1.8,
+      "value_score": 4.68,
+      "position": 2,
+      "fixtures": [
+        {
+          "gw": 32,
+          "fixture": "BUR (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 33,
+          "fixture": "TOT (A), CHE (H)",
+          "difficulty": 1.24,
+          "is_dgw": true
+        },
+        {
+          "gw": 34,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 35,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {}
+    }
+  ],
   "chip_strategy": [
     {
       "chip": "Bench Boost",
       "recommended_gw": 33,
       "confidence": "HIGH",
-      "reasoning": "GW33 has favorable fixtures (ease: 3.7). Projected bench value: 22.8 pts.",
+      "reasoning": "GW33 is a DGW with 5 players doubling. Projected bench value: 33.4 pts.",
       "action_needed": "Ensure bench has high xMin players with easy fixtures by GW33.",
       "analysis": [
         {
           "gw": 33,
-          "dgw_players": 0,
-          "bench_proj": 22.8,
+          "dgw_players": 5,
+          "bench_proj": 33.4,
           "bench_xmin": 240,
-          "fixture_ease": 3.66,
-          "score": 43.6,
-          "is_dgw": false
+          "fixture_ease": 3.63,
+          "score": 111.4,
+          "is_dgw": true
         },
         {
           "gw": 37,
@@ -312,7 +365,7 @@
       "recommended_gw": 33,
       "recommended_player": "Haaland",
       "confidence": "HIGH",
-      "reasoning": "TC Haaland in GW33 (ARS (H)) - HOME fixture. Projected: 41 pts.",
+      "reasoning": "TC Haaland in GW33 (ARS (H), BUR (A)) - DOUBLE GAMEWEEK. Projected: 110 pts.",
       "action_needed": "Ensure Haaland is in your squad for GW33.",
       "analysis": [
         {
@@ -320,12 +373,13 @@
           "player": "Haaland",
           "player_id": 430,
           "fixtures": [
-            "ARS (H)"
+            "ARS (H)",
+            "BUR (A)"
           ],
-          "avg_difficulty": 0.73,
+          "avg_difficulty": 0.91,
           "is_home": true,
-          "is_dgw": false,
-          "projected_tc_pts": 41.1,
+          "is_dgw": true,
+          "projected_tc_pts": 109.7,
           "xmin": 85
         },
         {
@@ -413,6 +467,16 @@
           "is_bgw": true
         },
         {
+          "gw": 33,
+          "players_with_fixtures": 15,
+          "players_blanking": 0,
+          "blanking_names": [],
+          "avg_difficulty": 1.47,
+          "hard_fixtures": 11,
+          "score": 4.7,
+          "is_bgw": false
+        },
+        {
           "gw": 36,
           "players_with_fixtures": 15,
           "players_blanking": 0,
@@ -420,16 +484,6 @@
           "avg_difficulty": 1.14,
           "hard_fixtures": 6,
           "score": 1.4,
-          "is_bgw": false
-        },
-        {
-          "gw": 33,
-          "players_with_fixtures": 15,
-          "players_blanking": 0,
-          "blanking_names": [],
-          "avg_difficulty": 1.12,
-          "hard_fixtures": 10,
-          "score": 1.2,
           "is_bgw": false
         },
         {
@@ -456,7 +510,9 @@
     }
   ],
   "fixture_alerts": {
-    "dgw_gws": [],
+    "dgw_gws": [
+      33
+    ],
     "bgw_gws": [
       34
     ]

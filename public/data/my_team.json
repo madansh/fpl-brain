@@ -151,7 +151,7 @@
       "multiplier": 1,
       "selling_price": 3.9,
       "projected_pts": 3.38,
-      "projected_4gw": 10.1,
+      "projected_4gw": 13.5,
       "form_trend": "hot",
       "rolling_form": 2.17,
       "form_direction": "rising",
@@ -167,9 +167,9 @@
         },
         {
           "gw": 33,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
-          "is_dgw": false
+          "fixture": "NFO (A), MCI (H)",
+          "difficulty": 1.1,
+          "is_dgw": true
         },
         {
           "gw": 34,
@@ -326,7 +326,7 @@
       "multiplier": 1,
       "selling_price": 5.6,
       "projected_pts": 5.29,
-      "projected_4gw": 14.5,
+      "projected_4gw": 19.8,
       "form_trend": "cold",
       "rolling_form": 2.17,
       "form_direction": "stable",
@@ -342,9 +342,9 @@
         },
         {
           "gw": 33,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
+          "fixture": "NEW (A), LEE (H)",
+          "difficulty": 1.05,
+          "is_dgw": true
         },
         {
           "gw": 34,
@@ -413,7 +413,7 @@
       "multiplier": 1,
       "selling_price": 7.8,
       "projected_pts": 7.3,
-      "projected_4gw": 20.9,
+      "projected_4gw": 26.8,
       "form_trend": "cold",
       "rolling_form": 5.22,
       "form_direction": "falling",
@@ -429,9 +429,9 @@
         },
         {
           "gw": 33,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
+          "fixture": "MUN (H), BHA (A)",
+          "difficulty": 1.21,
+          "is_dgw": true
         },
         {
           "gw": 34,
@@ -500,7 +500,7 @@
       "multiplier": 0,
       "selling_price": 4.0,
       "projected_pts": 3.38,
-      "projected_4gw": 10.1,
+      "projected_4gw": 13.5,
       "form_trend": "hot",
       "rolling_form": 2.14,
       "form_direction": "rising",
@@ -516,9 +516,9 @@
         },
         {
           "gw": 33,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
-          "is_dgw": false
+          "fixture": "NFO (A), MCI (H)",
+          "difficulty": 1.1,
+          "is_dgw": true
         },
         {
           "gw": 34,
@@ -543,7 +543,7 @@
       "multiplier": 0,
       "selling_price": 14.4,
       "projected_pts": 6.75,
-      "projected_4gw": 23.3,
+      "projected_4gw": 30.6,
       "form_trend": "cold",
       "rolling_form": 2.33,
       "form_direction": "falling",
@@ -559,9 +559,9 @@
         },
         {
           "gw": 33,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
-          "is_dgw": false
+          "fixture": "ARS (H), BUR (A)",
+          "difficulty": 0.91,
+          "is_dgw": true
         },
         {
           "gw": 34,
