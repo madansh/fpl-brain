@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T07:15:06.696719",
+  "generated_at": "2026-04-10T07:20:24.906125",
   "next_gameweek": 32,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 14.6,
         "fixture": "MCI (H)",
         "fixture_difficulty": 0.96,
-        "ownership": 50.3,
-        "estimated_captain_pct": 30.2,
+        "ownership": 50.1,
+        "estimated_captain_pct": 30.1,
         "form": "2.0",
         "form_trend": "cold",
         "is_differential": false,
@@ -33,7 +33,7 @@
         "doubled_pts": 13.0,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 44.9,
+        "ownership": 45.1,
         "estimated_captain_pct": 18.0,
         "form": "11.5",
         "form_trend": "hot",
@@ -54,7 +54,7 @@
         "doubled_pts": 12.6,
         "fixture": "EVE (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 3.7,
+        "ownership": 3.6,
         "estimated_captain_pct": 0.4,
         "form": "4.5",
         "form_trend": "neutral",
@@ -75,7 +75,7 @@
         "doubled_pts": 12.1,
         "fixture": "LIV (A)",
         "fixture_difficulty": 0.94,
-        "ownership": 2.9,
+        "ownership": 2.8,
         "estimated_captain_pct": 0.3,
         "form": "3.5",
         "form_trend": "neutral",
@@ -118,8 +118,8 @@
       "doubled_pts": 14.6,
       "fixture": "MCI (H)",
       "fixture_difficulty": 0.96,
-      "ownership": 50.3,
-      "estimated_captain_pct": 30.2,
+      "ownership": 50.1,
+      "estimated_captain_pct": 30.1,
       "form": "2.0",
       "form_trend": "cold",
       "is_differential": false,
@@ -139,7 +139,7 @@
       "doubled_pts": 12.6,
       "fixture": "EVE (H)",
       "fixture_difficulty": 0.98,
-      "ownership": 3.7,
+      "ownership": 3.6,
       "estimated_captain_pct": 0.4,
       "form": "4.5",
       "form_trend": "neutral",
@@ -152,7 +152,7 @@
       "downside_pts": 0.8,
       "risk_category": "risky",
       "vs_safe_diff": -1.01,
-      "eo_advantage": 29.8,
+      "eo_advantage": 29.7,
       "risk_level": "medium_risk",
       "haul_upside": 4.5
     },
@@ -165,7 +165,7 @@
         "doubled_pts": 12.6,
         "fixture": "EVE (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 3.7,
+        "ownership": 3.6,
         "estimated_captain_pct": 0.4,
         "form": "4.5",
         "form_trend": "neutral",
@@ -178,7 +178,7 @@
         "downside_pts": 0.8,
         "risk_category": "risky",
         "vs_safe_diff": -1.01,
-        "eo_advantage": 29.8,
+        "eo_advantage": 29.7,
         "risk_level": "medium_risk",
         "haul_upside": 4.5
       },
@@ -190,7 +190,7 @@
         "doubled_pts": 12.1,
         "fixture": "LIV (A)",
         "fixture_difficulty": 0.94,
-        "ownership": 2.9,
+        "ownership": 2.8,
         "estimated_captain_pct": 0.3,
         "form": "3.5",
         "form_trend": "neutral",
@@ -203,7 +203,7 @@
         "downside_pts": 0.9,
         "risk_category": "risky",
         "vs_safe_diff": -1.23,
-        "eo_advantage": 29.9,
+        "eo_advantage": 29.8,
         "risk_level": "medium_risk",
         "haul_upside": 4.5
       },
@@ -228,7 +228,7 @@
         "downside_pts": 1.4,
         "risk_category": "risky",
         "vs_safe_diff": -2.01,
-        "eo_advantage": 30.0,
+        "eo_advantage": 29.9,
         "risk_level": "high_risk",
         "haul_upside": 4.5
       }
@@ -236,17 +236,17 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 55.5,
+        "ownership": 56.1,
         "projected": 6.75
       },
       {
         "name": "B.Fernandes",
-        "ownership": 44.9,
+        "ownership": 45.1,
         "projected": 6.5
       },
       {
         "name": "Palmer",
-        "ownership": 16.5,
+        "ownership": 16.8,
         "projected": 7.73
       }
     ]
