@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T07:55:13.446514",
+  "generated_at": "2026-04-14T07:23:42.479086",
   "team_id": 5033680,
   "next_gameweek": 33,
   "recommendations": [
@@ -100,9 +100,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.22,
+          "effective_pts": 5.23,
           "projected_pts": 5.4,
-          "xmin": 87.0,
+          "xmin": 87.1,
           "fixture": "CHE (A)",
           "difficulty": 1.21,
           "is_dgw": false
@@ -153,8 +153,8 @@
         {
           "name": "Dalot",
           "position": "DEF",
-          "effective_pts": 3.71,
-          "xmin": 89.2,
+          "effective_pts": 3.74,
+          "xmin": 90.0,
           "status": "available",
           "bench_order": 2
         },
@@ -188,8 +188,8 @@
       "captain": {
         "name": "B.Fernandes",
         "team": "MUN",
-        "effective_pts": 5.5,
-        "xmin": 87.0,
+        "effective_pts": 5.51,
+        "xmin": 87.1,
         "fixture": "BRE (H)"
       },
       "vice_captain": {
@@ -234,9 +234,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.77,
+          "effective_pts": 3.8,
           "projected_pts": 3.8,
-          "xmin": 89.2,
+          "xmin": 90.0,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -256,9 +256,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.5,
+          "effective_pts": 5.51,
           "projected_pts": 5.69,
-          "xmin": 87.0,
+          "xmin": 87.1,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
           "is_dgw": false
@@ -355,8 +355,8 @@
       "captain": {
         "name": "B.Fernandes",
         "team": "MUN",
-        "effective_pts": 6.98,
-        "xmin": 87.0,
+        "effective_pts": 6.99,
+        "xmin": 87.1,
         "fixture": "LIV (H)"
       },
       "vice_captain": {
@@ -401,9 +401,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 4.07,
+          "effective_pts": 4.11,
           "projected_pts": 4.11,
-          "xmin": 89.2,
+          "xmin": 90.0,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
           "is_dgw": false
@@ -412,9 +412,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 6.98,
+          "effective_pts": 6.99,
           "projected_pts": 7.22,
-          "xmin": 87.0,
+          "xmin": 87.1,
           "fixture": "LIV (H)",
           "difficulty": 0.77,
           "is_dgw": false
@@ -529,7 +529,7 @@
     {
       "gameweek": 36,
       "formation": "3-4-3",
-      "total_effective_pts": 55.2,
+      "total_effective_pts": 55.3,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -579,9 +579,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.78,
+          "effective_pts": 3.81,
           "projected_pts": 3.81,
-          "xmin": 89.2,
+          "xmin": 90.0,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -590,9 +590,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.53,
+          "effective_pts": 5.54,
           "projected_pts": 5.72,
-          "xmin": 87.0,
+          "xmin": 87.1,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
           "is_dgw": false
@@ -757,9 +757,9 @@
           "name": "Dalot",
           "position": "DEF",
           "team": "MUN",
-          "effective_pts": 3.83,
+          "effective_pts": 3.86,
           "projected_pts": 3.86,
-          "xmin": 89.2,
+          "xmin": 90.0,
           "fixture": "NFO (H)",
           "difficulty": 1.02,
           "is_dgw": false
@@ -779,9 +779,9 @@
           "name": "B.Fernandes",
           "position": "MID",
           "team": "MUN",
-          "effective_pts": 5.8,
+          "effective_pts": 5.81,
           "projected_pts": 6.0,
-          "xmin": 87.0,
+          "xmin": 87.1,
           "fixture": "NFO (H)",
           "difficulty": 1.02,
           "is_dgw": false
@@ -959,7 +959,7 @@
           "team": "MUN",
           "effective_pts": 4.97,
           "projected_pts": 5.14,
-          "xmin": 87.0,
+          "xmin": 87.1,
           "fixture": "BHA (A)",
           "difficulty": 1.32,
           "is_dgw": false
@@ -1024,8 +1024,8 @@
         {
           "name": "Dalot",
           "position": "DEF",
-          "effective_pts": 3.66,
-          "xmin": 89.2,
+          "effective_pts": 3.69,
+          "xmin": 90.0,
           "status": "available",
           "bench_order": 1
         },

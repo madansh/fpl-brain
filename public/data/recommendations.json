@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T07:55:13.436614",
+  "generated_at": "2026-04-14T07:23:42.468825",
   "next_gameweek": 33,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 34.0,
         "fixture": "ARS (H), BUR (A)",
         "fixture_difficulty": 0.91,
-        "ownership": 58.4,
-        "estimated_captain_pct": 35.0,
+        "ownership": 58.7,
+        "estimated_captain_pct": 35.2,
         "form": "2.0",
         "form_trend": "cold",
         "is_differential": false,
@@ -33,7 +33,7 @@
         "doubled_pts": 24.3,
         "fixture": "MUN (H), BHA (A)",
         "fixture_difficulty": 1.21,
-        "ownership": 50.1,
+        "ownership": 50.2,
         "estimated_captain_pct": 30.1,
         "form": "2.0",
         "form_trend": "cold",
@@ -56,7 +56,7 @@
         "fixture_difficulty": 1.05,
         "ownership": 1.9,
         "estimated_captain_pct": 0.2,
-        "form": "2.3",
+        "form": "2.0",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -96,9 +96,9 @@
         "doubled_pts": 11.6,
         "fixture": "BOU (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 7.5,
-        "estimated_captain_pct": 0.8,
-        "form": "8.0",
+        "ownership": 7.4,
+        "estimated_captain_pct": 0.7,
+        "form": "6.5",
         "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
@@ -118,8 +118,8 @@
       "doubled_pts": 34.0,
       "fixture": "ARS (H), BUR (A)",
       "fixture_difficulty": 0.91,
-      "ownership": 58.4,
-      "estimated_captain_pct": 35.0,
+      "ownership": 58.7,
+      "estimated_captain_pct": 35.2,
       "form": "2.0",
       "form_trend": "cold",
       "is_differential": false,
@@ -141,7 +141,7 @@
       "fixture_difficulty": 1.05,
       "ownership": 1.9,
       "estimated_captain_pct": 0.2,
-      "form": "2.3",
+      "form": "2.0",
       "form_trend": "cold",
       "is_differential": true,
       "is_template": false,
@@ -152,7 +152,7 @@
       "downside_pts": 4.6,
       "risk_category": "risky",
       "vs_safe_diff": -7.82,
-      "eo_advantage": 34.8,
+      "eo_advantage": 35.0,
       "risk_level": "high_risk",
       "haul_upside": 5.2
     },
@@ -167,7 +167,7 @@
         "fixture_difficulty": 1.05,
         "ownership": 1.9,
         "estimated_captain_pct": 0.2,
-        "form": "2.3",
+        "form": "2.0",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -178,7 +178,7 @@
         "downside_pts": 4.6,
         "risk_category": "risky",
         "vs_safe_diff": -7.82,
-        "eo_advantage": 34.8,
+        "eo_advantage": 35.0,
         "risk_level": "high_risk",
         "haul_upside": 5.2
       },
@@ -203,7 +203,7 @@
         "downside_pts": 6.2,
         "risk_category": "risky",
         "vs_safe_diff": -10.57,
-        "eo_advantage": 34.7,
+        "eo_advantage": 34.9,
         "risk_level": "high_risk",
         "haul_upside": 5.2
       },
@@ -215,9 +215,9 @@
         "doubled_pts": 11.6,
         "fixture": "BOU (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 7.5,
-        "estimated_captain_pct": 0.8,
-        "form": "8.0",
+        "ownership": 7.4,
+        "estimated_captain_pct": 0.7,
+        "form": "6.5",
         "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
@@ -228,84 +228,30 @@
         "downside_pts": 6.6,
         "risk_category": "risky",
         "vs_safe_diff": -11.23,
-        "eo_advantage": 34.2,
+        "eo_advantage": 34.5,
         "risk_level": "high_risk",
-        "haul_upside": 5.1
+        "haul_upside": 5.2
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 58.4,
+        "ownership": 58.7,
         "projected": 17.01
       },
       {
         "name": "B.Fernandes",
-        "ownership": 45.4,
+        "ownership": 45.2,
         "projected": 5.4
       },
       {
         "name": "Palmer",
-        "ownership": 18.2,
+        "ownership": 18.5,
         "projected": 13.28
       }
     ]
   },
-  "transfer_recommendations": [
-    {
-      "priority": 1,
-      "out_id": 440,
-      "out_name": "Dalot",
-      "out_reasons": [
-        "cold_form",
-        "low_xmin",
-        "hard_fixtures"
-      ],
-      "in_id": 148,
-      "in_name": "F.Kad\u0131o\u011flu",
-      "in_team": "BHA",
-      "in_cost": 4.4,
-      "gain_4gw": 16.0,
-      "effective_4gw": 22.1,
-      "in_xmin": 90,
-      "buy_reasons": [
-        "nailed",
-        "hot_form",
-        "dgw33"
-      ],
-      "worth_hit": true,
-      "hit_value": 10.7,
-      "value_score": 5.02,
-      "position": 2,
-      "fixtures": [
-        {
-          "gw": 33,
-          "fixture": "TOT (A), CHE (H)",
-          "difficulty": 1.24,
-          "is_dgw": true
-        },
-        {
-          "gw": 34,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
-        {
-          "gw": 35,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "gw": 36,
-          "fixture": "WOL (H)",
-          "difficulty": 1.12,
-          "is_dgw": false
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {}
-    }
-  ],
+  "transfer_recommendations": [],
   "chip_strategy": [
     {
       "chip": "Bench Boost",
