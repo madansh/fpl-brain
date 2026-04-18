@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T07:25:10.965468",
+  "generated_at": "2026-04-18T07:00:52.806901",
   "next_gameweek": 33,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 34.0,
         "fixture": "ARS (H), BUR (A)",
         "fixture_difficulty": 0.91,
-        "ownership": 60.0,
-        "estimated_captain_pct": 36.0,
+        "ownership": 61.6,
+        "estimated_captain_pct": 37.0,
         "form": "2.0",
         "form_trend": "cold",
         "is_differential": false,
@@ -33,8 +33,8 @@
         "doubled_pts": 24.3,
         "fixture": "MUN (H), BHA (A)",
         "fixture_difficulty": 1.21,
-        "ownership": 50.9,
-        "estimated_captain_pct": 30.5,
+        "ownership": 52.0,
+        "estimated_captain_pct": 31.2,
         "form": "2.0",
         "form_trend": "cold",
         "is_differential": false,
@@ -43,7 +43,7 @@
         "data_quality": "approximated",
         "diff_vs_template": -4.84,
         "upside_pts": 0.0,
-        "downside_pts": 2.9,
+        "downside_pts": 3.0,
         "risk_category": "risky"
       },
       {
@@ -64,7 +64,7 @@
         "data_quality": "approximated",
         "diff_vs_template": -7.82,
         "upside_pts": 0.0,
-        "downside_pts": 4.7,
+        "downside_pts": 4.8,
         "risk_category": "risky"
       },
       {
@@ -75,8 +75,8 @@
         "doubled_pts": 12.9,
         "fixture": "FUL (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 2.6,
-        "estimated_captain_pct": 0.3,
+        "ownership": 2.2,
+        "estimated_captain_pct": 0.2,
         "form": "1.5",
         "form_trend": "cold",
         "is_differential": true,
@@ -85,7 +85,7 @@
         "data_quality": "approximated",
         "diff_vs_template": -10.57,
         "upside_pts": 0.0,
-        "downside_pts": 6.3,
+        "downside_pts": 6.5,
         "risk_category": "risky"
       },
       {
@@ -96,7 +96,7 @@
         "doubled_pts": 11.6,
         "fixture": "BOU (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 7.0,
+        "ownership": 6.5,
         "estimated_captain_pct": 0.7,
         "form": "6.5",
         "form_trend": "hot",
@@ -106,7 +106,7 @@
         "data_quality": "understat",
         "diff_vs_template": -11.23,
         "upside_pts": 0.0,
-        "downside_pts": 6.7,
+        "downside_pts": 6.9,
         "risk_category": "risky"
       }
     ],
@@ -118,8 +118,8 @@
       "doubled_pts": 34.0,
       "fixture": "ARS (H), BUR (A)",
       "fixture_difficulty": 0.91,
-      "ownership": 60.0,
-      "estimated_captain_pct": 36.0,
+      "ownership": 61.6,
+      "estimated_captain_pct": 37.0,
       "form": "2.0",
       "form_trend": "cold",
       "is_differential": false,
@@ -149,12 +149,12 @@
       "data_quality": "approximated",
       "diff_vs_template": -7.82,
       "upside_pts": 0.0,
-      "downside_pts": 4.7,
+      "downside_pts": 4.8,
       "risk_category": "risky",
       "vs_safe_diff": -7.82,
-      "eo_advantage": 35.8,
+      "eo_advantage": 36.8,
       "risk_level": "high_risk",
-      "haul_upside": 5.4
+      "haul_upside": 5.5
     },
     "all_differentials": [
       {
@@ -175,12 +175,12 @@
         "data_quality": "approximated",
         "diff_vs_template": -7.82,
         "upside_pts": 0.0,
-        "downside_pts": 4.7,
+        "downside_pts": 4.8,
         "risk_category": "risky",
         "vs_safe_diff": -7.82,
-        "eo_advantage": 35.8,
+        "eo_advantage": 36.8,
         "risk_level": "high_risk",
-        "haul_upside": 5.4
+        "haul_upside": 5.5
       },
       {
         "player_id": 83,
@@ -190,8 +190,8 @@
         "doubled_pts": 12.9,
         "fixture": "FUL (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 2.6,
-        "estimated_captain_pct": 0.3,
+        "ownership": 2.2,
+        "estimated_captain_pct": 0.2,
         "form": "1.5",
         "form_trend": "cold",
         "is_differential": true,
@@ -200,12 +200,12 @@
         "data_quality": "approximated",
         "diff_vs_template": -10.57,
         "upside_pts": 0.0,
-        "downside_pts": 6.3,
+        "downside_pts": 6.5,
         "risk_category": "risky",
         "vs_safe_diff": -10.57,
-        "eo_advantage": 35.7,
+        "eo_advantage": 36.8,
         "risk_level": "high_risk",
-        "haul_upside": 5.4
+        "haul_upside": 5.5
       },
       {
         "player_id": 485,
@@ -215,7 +215,7 @@
         "doubled_pts": 11.6,
         "fixture": "BOU (H)",
         "fixture_difficulty": 0.98,
-        "ownership": 7.0,
+        "ownership": 6.5,
         "estimated_captain_pct": 0.7,
         "form": "6.5",
         "form_trend": "hot",
@@ -225,28 +225,28 @@
         "data_quality": "understat",
         "diff_vs_template": -11.23,
         "upside_pts": 0.0,
-        "downside_pts": 6.7,
+        "downside_pts": 6.9,
         "risk_category": "risky",
         "vs_safe_diff": -11.23,
-        "eo_advantage": 35.3,
+        "eo_advantage": 36.3,
         "risk_level": "high_risk",
-        "haul_upside": 5.3
+        "haul_upside": 5.4
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 60.0,
+        "ownership": 61.6,
         "projected": 17.01
       },
       {
         "name": "B.Fernandes",
-        "ownership": 44.3,
+        "ownership": 43.0,
         "projected": 5.4
       },
       {
         "name": "Palmer",
-        "ownership": 19.7,
+        "ownership": 21.8,
         "projected": 13.28
       }
     ]

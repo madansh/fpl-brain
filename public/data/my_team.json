@@ -5,8 +5,8 @@
   "bank": 0.0,
   "chips_available": [
     "free_hit",
-    "bench_boost",
-    "triple_captain"
+    "triple_captain",
+    "bench_boost"
   ],
   "squad": [
     {
@@ -149,7 +149,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.2,
+      "selling_price": 7.1,
       "projected_pts": 5.07,
       "projected_4gw": 20.6,
       "form_trend": "cold",
@@ -281,7 +281,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 6.0,
+      "selling_price": 5.9,
       "projected_pts": 6.44,
       "projected_4gw": 22.1,
       "form_trend": "cold",
@@ -585,7 +585,7 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 4.6,
+      "selling_price": 4.5,
       "projected_pts": 3.71,
       "projected_4gw": 15.1,
       "form_trend": "cold",
