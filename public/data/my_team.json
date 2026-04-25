@@ -1,12 +1,12 @@
 {
   "team_id": 5033680,
-  "current_gw": 32,
-  "next_gw": 33,
+  "current_gw": 34,
+  "next_gw": 35,
   "bank": 0.0,
   "chips_available": [
-    "free_hit",
     "triple_captain",
-    "bench_boost"
+    "bench_boost",
+    "free_hit"
   ],
   "squad": [
     {
@@ -21,24 +21,12 @@
       "projected_pts": 3.18,
       "projected_4gw": 12.7,
       "form_trend": "cold",
-      "rolling_form": 2.22,
-      "form_direction": "stable",
+      "rolling_form": 1.57,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "BHA (H)",
@@ -49,6 +37,18 @@
           "gw": 36,
           "fixture": "NFO (A)",
           "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         }
       ]
@@ -62,27 +62,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 6.1,
-      "projected_pts": 4.54,
+      "projected_pts": 4.76,
       "projected_4gw": 18.4,
       "form_trend": "cold",
-      "rolling_form": 4.05,
-      "form_direction": "stable",
+      "rolling_form": 2.39,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "MCI (A)",
-          "difficulty": 1.18,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "FUL (H)",
@@ -93,6 +81,18 @@
           "gw": 36,
           "fixture": "WHU (A)",
           "difficulty": 1.5,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
           "is_dgw": false
         }
       ]
@@ -106,27 +106,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 4.6,
-      "projected_pts": 3.74,
+      "projected_pts": 4.11,
       "projected_4gw": 15.5,
       "form_trend": "cold",
-      "rolling_form": 1.01,
-      "form_direction": "stable",
+      "rolling_form": 1.72,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "CHE (A)",
-          "difficulty": 1.21,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "LIV (H)",
@@ -137,6 +125,18 @@
           "gw": 36,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "NFO (H)",
+          "difficulty": 1.02,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "BHA (A)",
+          "difficulty": 1.32,
           "is_dgw": false
         }
       ]
@@ -150,27 +150,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.1,
-      "projected_pts": 5.07,
+      "projected_pts": 5.45,
       "projected_4gw": 20.6,
       "form_trend": "cold",
-      "rolling_form": 5.99,
-      "form_direction": "stable",
+      "rolling_form": 3.46,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "MCI (A)",
-          "difficulty": 1.18,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "FUL (H)",
@@ -181,6 +169,18 @@
           "gw": 36,
           "fixture": "WHU (A)",
           "difficulty": 1.5,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
           "is_dgw": false
         }
       ]
@@ -194,27 +194,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 7.4,
-      "projected_pts": 5.78,
-      "projected_4gw": 22.4,
-      "form_trend": "hot",
-      "rolling_form": 5.68,
-      "form_direction": "rising",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
+      "projected_pts": 2.74,
+      "projected_4gw": 10.5,
+      "form_trend": "cold",
+      "rolling_form": 3.44,
+      "form_direction": "falling",
+      "news": "Hip injury - 50% chance of playing",
+      "news_severity": 1,
+      "news_category": "unknown",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "BHA (H)",
@@ -225,6 +213,18 @@
           "gw": 36,
           "fixture": "NFO (A)",
           "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         }
       ]
@@ -237,28 +237,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.4,
-      "projected_pts": 5.57,
-      "projected_4gw": 20.2,
+      "selling_price": 7.5,
+      "projected_pts": 4.65,
+      "projected_4gw": 20.5,
       "form_trend": "neutral",
-      "rolling_form": 2.89,
-      "form_direction": "rising",
+      "rolling_form": 3.72,
+      "form_direction": "stable",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "SUN (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "FUL (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "TOT (H)",
@@ -269,6 +257,18 @@
           "gw": 36,
           "fixture": "BUR (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "LIV (H)",
+          "difficulty": 0.77,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "MCI (A)",
+          "difficulty": 1.18,
           "is_dgw": false
         }
       ]
@@ -281,28 +281,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 5.9,
-      "projected_pts": 6.44,
-      "projected_4gw": 22.1,
+      "selling_price": 5.8,
+      "projected_pts": 5.12,
+      "projected_4gw": 22.0,
       "form_trend": "cold",
-      "rolling_form": 3.05,
+      "rolling_form": 2.1,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "FUL (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "MUN (A)",
-          "difficulty": 1.35,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "WHU (H)",
@@ -313,6 +301,18 @@
           "gw": 36,
           "fixture": "MCI (A)",
           "difficulty": 1.18,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
           "is_dgw": false
         }
       ]
@@ -325,27 +325,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 5.5,
-      "projected_pts": 9.19,
-      "projected_4gw": 18.1,
-      "form_trend": "cold",
-      "rolling_form": 2.0,
-      "form_direction": "stable",
+      "selling_price": 5.4,
+      "projected_pts": 5.5,
+      "projected_4gw": 21.8,
+      "form_trend": "neutral",
+      "rolling_form": 3.18,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "NEW (A), LEE (H)",
-          "difficulty": 1.05,
-          "is_dgw": true
-        },
-        {
-          "gw": 34,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
         {
           "gw": 35,
           "fixture": "CRY (H)",
@@ -356,6 +345,18 @@
           "gw": 36,
           "fixture": "FUL (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
           "is_dgw": false
         }
       ]
@@ -368,28 +369,16 @@
       "is_captain": true,
       "is_vice": false,
       "multiplier": 2,
-      "selling_price": 10.3,
-      "projected_pts": 5.4,
-      "projected_4gw": 24.0,
-      "form_trend": "neutral",
-      "rolling_form": 7.86,
-      "form_direction": "stable",
+      "selling_price": 10.4,
+      "projected_pts": 7.22,
+      "projected_4gw": 24.1,
+      "form_trend": "cold",
+      "rolling_form": 5.07,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "CHE (A)",
-          "difficulty": 1.21,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "LIV (H)",
@@ -400,6 +389,18 @@
           "gw": 36,
           "fixture": "SUN (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "NFO (H)",
+          "difficulty": 1.02,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "BHA (A)",
+          "difficulty": 1.32,
           "is_dgw": false
         }
       ]
@@ -412,27 +413,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.7,
-      "projected_pts": 12.17,
-      "projected_4gw": 26.2,
+      "selling_price": 7.6,
+      "projected_pts": 6.84,
+      "projected_4gw": 26.5,
       "form_trend": "cold",
-      "rolling_form": 4.23,
+      "rolling_form": 0.9,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "MUN (H), BHA (A)",
-          "difficulty": 1.21,
-          "is_dgw": true
-        },
-        {
-          "gw": 34,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
         {
           "gw": 35,
           "fixture": "NFO (H)",
@@ -443,6 +433,18 @@
           "gw": 36,
           "fixture": "LIV (A)",
           "difficulty": 0.94,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "TOT (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "SUN (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         }
       ]
@@ -456,26 +458,15 @@
       "is_vice": true,
       "multiplier": 1,
       "selling_price": 14.5,
-      "projected_pts": 17.01,
-      "projected_4gw": 31.0,
-      "form_trend": "cold",
-      "rolling_form": 1.9,
-      "form_direction": "falling",
+      "projected_pts": 6.81,
+      "projected_4gw": 28.5,
+      "form_trend": "neutral",
+      "rolling_form": 3.44,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "ARS (H), BUR (A)",
-          "difficulty": 0.91,
-          "is_dgw": true
-        },
-        {
-          "gw": 34,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
         {
           "gw": 35,
           "fixture": "EVE (A)",
@@ -486,6 +477,18 @@
           "gw": 36,
           "fixture": "BRE (H)",
           "difficulty": 1.11,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "AVL (H)",
+          "difficulty": 1.0,
           "is_dgw": false
         }
       ]
@@ -499,26 +502,15 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 4.0,
-      "projected_pts": 6.76,
+      "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "neutral",
-      "rolling_form": 2.1,
-      "form_direction": "rising",
+      "rolling_form": 2.22,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "NFO (A), MCI (H)",
-          "difficulty": 1.1,
-          "is_dgw": true
-        },
-        {
-          "gw": 34,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
         {
           "gw": 35,
           "fixture": "LEE (A)",
@@ -529,6 +521,18 @@
           "gw": 36,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "WOL (H)",
+          "difficulty": 1.12,
           "is_dgw": false
         }
       ]
@@ -542,27 +546,15 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 6.1,
-      "projected_pts": 4.8,
-      "projected_4gw": 22.8,
-      "form_trend": "neutral",
-      "rolling_form": 1.9,
-      "form_direction": "rising",
+      "projected_pts": 6.31,
+      "projected_4gw": 22.9,
+      "form_trend": "cold",
+      "rolling_form": 1.37,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "ARS (A)",
@@ -572,6 +564,18 @@
         {
           "gw": 36,
           "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
         }
@@ -586,27 +590,15 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 4.5,
-      "projected_pts": 3.71,
+      "projected_pts": 3.82,
       "projected_4gw": 15.1,
       "form_trend": "cold",
-      "rolling_form": 2.15,
-      "form_direction": "rising",
+      "rolling_form": 2.82,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
-          "is_dgw": false
-        },
-        {
-          "gw": 34,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
-          "is_dgw": false
-        },
         {
           "gw": 35,
           "fixture": "ARS (A)",
@@ -616,6 +608,18 @@
         {
           "gw": 36,
           "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
         }
@@ -630,26 +634,15 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 3.9,
-      "projected_pts": 6.76,
+      "projected_pts": 3.38,
       "projected_4gw": 13.5,
       "form_trend": "neutral",
-      "rolling_form": 2.14,
-      "form_direction": "rising",
+      "rolling_form": 2.75,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 33,
-          "fixture": "NFO (A), MCI (H)",
-          "difficulty": 1.1,
-          "is_dgw": true
-        },
-        {
-          "gw": 34,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
         {
           "gw": 35,
           "fixture": "LEE (A)",
@@ -661,9 +654,21 @@
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "WOL (H)",
+          "difficulty": 1.12,
+          "is_dgw": false
         }
       ]
     }
   ],
-  "total_projected_pts": 83.5
+  "total_projected_pts": 63.6
 }
