@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T07:07:31.481316",
+  "generated_at": "2026-04-26T07:21:47.410584",
   "team_id": 5033680,
   "next_gameweek": 35,
   "recommendations": [
@@ -47,7 +47,7 @@
           "team": "ARS",
           "effective_pts": 4.59,
           "projected_pts": 4.76,
-          "xmin": 86.7,
+          "xmin": 86.8,
           "fixture": "FUL (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -133,9 +133,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.62,
+          "effective_pts": 5.58,
           "projected_pts": 6.31,
-          "xmin": 80.2,
+          "xmin": 79.6,
           "fixture": "ARS (A)",
           "difficulty": 0.89,
           "is_dgw": false
@@ -184,7 +184,7 @@
     {
       "gameweek": 36,
       "formation": "3-4-3",
-      "total_effective_pts": 56.3,
+      "total_effective_pts": 56.2,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -225,7 +225,7 @@
           "team": "ARS",
           "effective_pts": 4.23,
           "projected_pts": 4.39,
-          "xmin": 86.7,
+          "xmin": 86.8,
           "fixture": "WHU (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -311,9 +311,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.26,
+          "effective_pts": 5.22,
           "projected_pts": 5.9,
-          "xmin": 80.2,
+          "xmin": 79.6,
           "fixture": "BOU (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -403,7 +403,7 @@
           "team": "ARS",
           "effective_pts": 4.58,
           "projected_pts": 4.75,
-          "xmin": 86.7,
+          "xmin": 86.8,
           "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -489,9 +489,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 4.25,
+          "effective_pts": 4.22,
           "projected_pts": 4.77,
-          "xmin": 80.2,
+          "xmin": 79.6,
           "fixture": "WOL (A)",
           "difficulty": 1.37,
           "is_dgw": false
@@ -581,7 +581,7 @@
           "team": "ARS",
           "effective_pts": 4.31,
           "projected_pts": 4.47,
-          "xmin": 86.7,
+          "xmin": 86.8,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false
@@ -667,9 +667,9 @@
           "name": "Ra\u00fal",
           "position": "FWD",
           "team": "FUL",
-          "effective_pts": 5.26,
+          "effective_pts": 5.22,
           "projected_pts": 5.9,
-          "xmin": 80.2,
+          "xmin": 79.6,
           "fixture": "NEW (H)",
           "difficulty": 0.98,
           "is_dgw": false
@@ -735,7 +735,7 @@
           "name": "Saliba",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 86.7,
+          "xmin": 86.8,
           "status": "blank",
           "bench_order": 2
         },
@@ -782,7 +782,7 @@
           "name": "Saliba",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 86.7,
+          "xmin": 86.8,
           "status": "blank",
           "bench_order": 2
         },
