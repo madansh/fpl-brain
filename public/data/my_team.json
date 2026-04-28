@@ -54,50 +54,6 @@
       ]
     },
     {
-      "player_id": 6,
-      "name": "Saliba",
-      "position": 2,
-      "team_id": 1,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 6.1,
-      "projected_pts": 4.76,
-      "projected_4gw": 18.4,
-      "form_trend": "neutral",
-      "rolling_form": 3.59,
-      "form_direction": "stable",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 35,
-          "fixture": "FUL (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 36,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
       "player_id": 440,
       "name": "Dalot",
       "position": 2,
@@ -108,8 +64,8 @@
       "selling_price": 4.6,
       "projected_pts": 4.11,
       "projected_4gw": 15.5,
-      "form_trend": "cold",
-      "rolling_form": 1.72,
+      "form_trend": "neutral",
+      "rolling_form": 2.52,
       "form_direction": "rising",
       "news": "",
       "news_severity": 0,
@@ -186,45 +142,177 @@
       ]
     },
     {
-      "player_id": 485,
-      "name": "Gordon",
-      "position": 3,
-      "team_id": 15,
+      "player_id": 6,
+      "name": "Saliba",
+      "position": 2,
+      "team_id": 1,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.4,
-      "projected_pts": 2.74,
-      "projected_4gw": 10.5,
-      "form_trend": "cold",
-      "rolling_form": 3.44,
-      "form_direction": "falling",
-      "news": "Hip injury - 50% chance of playing",
-      "news_severity": 1,
-      "news_category": "unknown",
+      "selling_price": 6.1,
+      "projected_pts": 4.76,
+      "projected_4gw": 18.4,
+      "form_trend": "neutral",
+      "rolling_form": 3.79,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
       "fixture_preview": [
         {
           "gw": 35,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
+          "fixture": "FUL (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         },
         {
           "gw": 36,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
           "is_dgw": false
         },
         {
           "gw": 37,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 317,
+      "name": "Andersen",
+      "position": 2,
+      "team_id": 10,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 4.5,
+      "projected_pts": 3.82,
+      "projected_4gw": 15.1,
+      "form_trend": "hot",
+      "rolling_form": 5.02,
+      "form_direction": "rising",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 35,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
+          "is_dgw": false
+        },
+        {
+          "gw": 36,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 83,
+      "name": "O.Dango",
+      "position": 3,
+      "team_id": 5,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 5.8,
+      "projected_pts": 4.98,
+      "projected_4gw": 21.4,
+      "form_trend": "cold",
+      "rolling_form": 2.3,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 35,
           "fixture": "WHU (H)",
           "difficulty": 1.24,
           "is_dgw": false
         },
         {
+          "gw": 36,
+          "fixture": "MCI (A)",
+          "difficulty": 1.18,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
+          "is_dgw": false
+        },
+        {
           "gw": 38,
-          "fixture": "FUL (A)",
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 449,
+      "name": "B.Fernandes",
+      "position": 3,
+      "team_id": 14,
+      "is_captain": true,
+      "is_vice": false,
+      "multiplier": 2,
+      "selling_price": 10.4,
+      "projected_pts": 7.22,
+      "projected_4gw": 24.1,
+      "form_trend": "neutral",
+      "rolling_form": 6.07,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 35,
+          "fixture": "LIV (H)",
+          "difficulty": 0.77,
+          "is_dgw": false
+        },
+        {
+          "gw": 36,
+          "fixture": "SUN (A)",
           "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "NFO (H)",
+          "difficulty": 1.02,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "BHA (A)",
+          "difficulty": 1.32,
           "is_dgw": false
         }
       ]
@@ -274,18 +362,18 @@
       ]
     },
     {
-      "player_id": 83,
-      "name": "O.Dango",
-      "position": 3,
-      "team_id": 5,
+      "player_id": 337,
+      "name": "Ra\u00fal",
+      "position": 4,
+      "team_id": 10,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 5.8,
-      "projected_pts": 5.12,
-      "projected_4gw": 22.0,
+      "selling_price": 6.1,
+      "projected_pts": 6.31,
+      "projected_4gw": 22.9,
       "form_trend": "cold",
-      "rolling_form": 2.1,
+      "rolling_form": 1.77,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
@@ -293,113 +381,26 @@
       "fixture_preview": [
         {
           "gw": 35,
-          "fixture": "WHU (H)",
-          "difficulty": 1.24,
+          "fixture": "ARS (A)",
+          "difficulty": 0.89,
           "is_dgw": false
         },
         {
           "gw": 36,
-          "fixture": "MCI (A)",
-          "difficulty": 1.18,
+          "fixture": "BOU (H)",
+          "difficulty": 0.98,
           "is_dgw": false
         },
         {
           "gw": 37,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "LIV (A)",
-          "difficulty": 0.94,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 807,
-      "name": "Rayan",
-      "position": 3,
-      "team_id": 4,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 5.4,
-      "projected_pts": 5.5,
-      "projected_4gw": 16.0,
-      "form_trend": "neutral",
-      "rolling_form": 3.18,
-      "form_direction": "rising",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 35,
-          "fixture": "CRY (H)",
-          "difficulty": 1.07,
-          "is_dgw": false
-        },
-        {
-          "gw": 36,
-          "fixture": "FUL (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
-        {
-          "gw": 38,
-          "fixture": "NFO (A)",
-          "difficulty": 1.25,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 449,
-      "name": "B.Fernandes",
-      "position": 3,
-      "team_id": 14,
-      "is_captain": true,
-      "is_vice": false,
-      "multiplier": 2,
-      "selling_price": 10.4,
-      "projected_pts": 7.22,
-      "projected_4gw": 24.1,
-      "form_trend": "cold",
-      "rolling_form": 5.07,
-      "form_direction": "falling",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 35,
-          "fixture": "LIV (H)",
-          "difficulty": 0.77,
-          "is_dgw": false
-        },
-        {
-          "gw": 36,
-          "fixture": "SUN (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "fixture": "NFO (H)",
-          "difficulty": 1.02,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "BHA (A)",
-          "difficulty": 1.32,
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
           "is_dgw": false
         }
       ]
@@ -535,62 +536,18 @@
       ]
     },
     {
-      "player_id": 337,
-      "name": "Ra\u00fal",
-      "position": 4,
-      "team_id": 10,
+      "player_id": 807,
+      "name": "Rayan",
+      "position": 3,
+      "team_id": 4,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 6.1,
-      "projected_pts": 6.31,
-      "projected_4gw": 22.9,
-      "form_trend": "cold",
-      "rolling_form": 1.77,
-      "form_direction": "falling",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 35,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
-          "is_dgw": false
-        },
-        {
-          "gw": 36,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        }
-      ]
-    },
-    {
-      "player_id": 317,
-      "name": "Andersen",
-      "position": 2,
-      "team_id": 10,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 0,
-      "selling_price": 4.5,
-      "projected_pts": 3.82,
-      "projected_4gw": 15.1,
-      "form_trend": "hot",
-      "rolling_form": 5.02,
+      "selling_price": 5.4,
+      "projected_pts": 5.5,
+      "projected_4gw": 16.0,
+      "form_trend": "neutral",
+      "rolling_form": 3.18,
       "form_direction": "rising",
       "news": "",
       "news_severity": 0,
@@ -598,26 +555,69 @@
       "fixture_preview": [
         {
           "gw": 35,
-          "fixture": "ARS (A)",
-          "difficulty": 0.89,
+          "fixture": "CRY (H)",
+          "difficulty": 1.07,
           "is_dgw": false
         },
         {
           "gw": 36,
-          "fixture": "BOU (H)",
-          "difficulty": 0.98,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
           "gw": 37,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 38,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        }
+      ]
+    },
+    {
+      "player_id": 485,
+      "name": "Gordon",
+      "position": 3,
+      "team_id": 15,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 0,
+      "selling_price": 7.4,
+      "projected_pts": 2.74,
+      "projected_4gw": 10.5,
+      "form_trend": "cold",
+      "rolling_form": 3.44,
+      "form_direction": "falling",
+      "news": "Hip injury - 50% chance of playing",
+      "news_severity": 1,
+      "news_category": "unknown",
+      "fixture_preview": [
+        {
+          "gw": 35,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
+          "gw": 36,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "WHU (H)",
+          "difficulty": 1.24,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         }
       ]
@@ -667,5 +667,5 @@
       ]
     }
   ],
-  "total_projected_pts": 63.6
+  "total_projected_pts": 65.4
 }
