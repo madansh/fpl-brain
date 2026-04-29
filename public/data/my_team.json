@@ -4,8 +4,8 @@
   "next_gw": 35,
   "bank": 0.0,
   "chips_available": [
-    "bench_boost",
     "triple_captain",
+    "bench_boost",
     "free_hit"
   ],
   "squad": [
@@ -415,7 +415,7 @@
       "multiplier": 1,
       "selling_price": 7.6,
       "projected_pts": 6.84,
-      "projected_4gw": 20.6,
+      "projected_4gw": 26.5,
       "form_trend": "cold",
       "rolling_form": 0.9,
       "form_direction": "falling",
@@ -437,8 +437,9 @@
         },
         {
           "gw": 37,
-          "fixture": "BLANK",
-          "difficulty": 0
+          "fixture": "TOT (H)",
+          "difficulty": 1.24,
+          "is_dgw": false
         },
         {
           "gw": 38,
@@ -458,7 +459,7 @@
       "multiplier": 1,
       "selling_price": 14.5,
       "projected_pts": 6.81,
-      "projected_4gw": 21.7,
+      "projected_4gw": 35.9,
       "form_trend": "neutral",
       "rolling_form": 3.44,
       "form_direction": "rising",
@@ -474,14 +475,15 @@
         },
         {
           "gw": 36,
-          "fixture": "BRE (H)",
-          "difficulty": 1.11,
-          "is_dgw": false
+          "fixture": "BRE (H), CRY (H)",
+          "difficulty": 1.09,
+          "is_dgw": true
         },
         {
           "gw": 37,
-          "fixture": "BLANK",
-          "difficulty": 0
+          "fixture": "BOU (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
         },
         {
           "gw": 38,
@@ -545,7 +547,7 @@
       "multiplier": 0,
       "selling_price": 5.4,
       "projected_pts": 5.5,
-      "projected_4gw": 16.0,
+      "projected_4gw": 21.8,
       "form_trend": "neutral",
       "rolling_form": 3.18,
       "form_direction": "rising",
@@ -567,8 +569,9 @@
         },
         {
           "gw": 37,
-          "fixture": "BLANK",
-          "difficulty": 0
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
         },
         {
           "gw": 38,

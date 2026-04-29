@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T08:15:32.573430",
+  "generated_at": "2026-04-29T08:08:09.194782",
   "next_gameweek": 35,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 14.4,
         "fixture": "LIV (H)",
         "fixture_difficulty": 0.77,
-        "ownership": 46.8,
-        "estimated_captain_pct": 18.7,
+        "ownership": 46.9,
+        "estimated_captain_pct": 18.8,
         "form": "5.0",
         "form_trend": "neutral",
         "is_differential": false,
@@ -33,8 +33,8 @@
         "doubled_pts": 13.7,
         "fixture": "NFO (H)",
         "fixture_difficulty": 1.02,
-        "ownership": 42.8,
-        "estimated_captain_pct": 17.1,
+        "ownership": 42.6,
+        "estimated_captain_pct": 17.0,
         "form": "0.7",
         "form_trend": "cold",
         "is_differential": false,
@@ -43,7 +43,7 @@
         "data_quality": "approximated",
         "diff_vs_template": -0.59,
         "upside_pts": 0.0,
-        "downside_pts": 0.3,
+        "downside_pts": 0.4,
         "risk_category": "risky"
       },
       {
@@ -54,8 +54,8 @@
         "doubled_pts": 13.6,
         "fixture": "EVE (A)",
         "fixture_difficulty": 1.19,
-        "ownership": 59.1,
-        "estimated_captain_pct": 35.5,
+        "ownership": 59.4,
+        "estimated_captain_pct": 35.6,
         "form": "5.0",
         "form_trend": "neutral",
         "is_differential": false,
@@ -96,7 +96,7 @@
         "doubled_pts": 10.9,
         "fixture": "FUL (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 43.4,
+        "ownership": 43.6,
         "estimated_captain_pct": 17.4,
         "form": "4.0",
         "form_trend": "cold",
@@ -118,8 +118,8 @@
       "doubled_pts": 14.4,
       "fixture": "LIV (H)",
       "fixture_difficulty": 0.77,
-      "ownership": 46.8,
-      "estimated_captain_pct": 18.7,
+      "ownership": 46.9,
+      "estimated_captain_pct": 18.8,
       "form": "5.0",
       "form_trend": "neutral",
       "is_differential": false,
@@ -152,7 +152,7 @@
       "downside_pts": 0.7,
       "risk_category": "risky",
       "vs_safe_diff": -0.91,
-      "eo_advantage": 18.5,
+      "eo_advantage": 18.6,
       "risk_level": "medium_risk",
       "haul_upside": 2.8
     },
@@ -178,7 +178,7 @@
         "downside_pts": 0.7,
         "risk_category": "risky",
         "vs_safe_diff": -0.91,
-        "eo_advantage": 18.5,
+        "eo_advantage": 18.6,
         "risk_level": "medium_risk",
         "haul_upside": 2.8
       },
@@ -200,10 +200,10 @@
         "data_quality": "approximated",
         "diff_vs_template": -2.45,
         "upside_pts": 0.0,
-        "downside_pts": 1.4,
+        "downside_pts": 1.5,
         "risk_category": "risky",
         "vs_safe_diff": -2.24,
-        "eo_advantage": 18.5,
+        "eo_advantage": 18.6,
         "risk_level": "high_risk",
         "haul_upside": 2.8
       },
@@ -215,7 +215,7 @@
         "doubled_pts": 9.5,
         "fixture": "FUL (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 14.5,
+        "ownership": 14.6,
         "estimated_captain_pct": 1.5,
         "form": "3.7",
         "form_trend": "neutral",
@@ -228,7 +228,7 @@
         "downside_pts": 1.6,
         "risk_category": "risky",
         "vs_safe_diff": -2.46,
-        "eo_advantage": 17.2,
+        "eo_advantage": 17.3,
         "risk_level": "high_risk",
         "haul_upside": 2.6
       }
@@ -236,17 +236,17 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 59.1,
+        "ownership": 59.4,
         "projected": 6.81
       },
       {
         "name": "B.Fernandes",
-        "ownership": 46.8,
+        "ownership": 46.9,
         "projected": 7.22
       },
       {
         "name": "Palmer",
-        "ownership": 16.9,
+        "ownership": 16.8,
         "projected": 7.43
       }
     ]
@@ -313,21 +313,21 @@
       "out_reasons": [
         "cold_form",
         "low_xmin",
-        "blank_gw37"
+        "blank_gw39"
       ],
       "in_id": 97,
       "in_name": "Evanilson",
       "in_team": "BOU",
       "in_cost": 6.7,
-      "gain_4gw": 16.8,
-      "effective_4gw": 21.4,
+      "gain_4gw": 17.5,
+      "effective_4gw": 21.9,
       "in_xmin": 89.4,
       "buy_reasons": [
         "nailed"
       ],
       "worth_hit": true,
-      "hit_value": 11.5,
-      "value_score": 3.19,
+      "hit_value": 12.2,
+      "value_score": 3.26,
       "position": 4,
       "fixtures": [
         {
@@ -344,8 +344,9 @@
         },
         {
           "gw": 37,
-          "fixture": "BLANK",
-          "difficulty": 0
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
         },
         {
           "gw": 38,
@@ -361,11 +362,29 @@
   "chip_strategy": [
     {
       "chip": "Bench Boost",
-      "recommended_gw": 35,
+      "recommended_gw": 36,
       "confidence": "HIGH",
-      "reasoning": "GW35 has favorable fixtures (ease: 3.6). Projected bench value: 15.0 pts.",
-      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW35.",
+      "reasoning": "GW36 is a DGW with 1 players doubling. Projected bench value: 14.7 pts.",
+      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW36.",
       "analysis": [
+        {
+          "gw": 36,
+          "dgw_players": 1,
+          "bench_proj": 14.7,
+          "bench_xmin": 240,
+          "fixture_ease": 3.65,
+          "score": 32.4,
+          "is_dgw": true
+        },
+        {
+          "gw": 37,
+          "dgw_players": 0,
+          "bench_proj": 15.2,
+          "bench_xmin": 240,
+          "fixture_ease": 4.02,
+          "score": 30.4,
+          "is_dgw": false
+        },
         {
           "gw": 35,
           "dgw_players": 0,
@@ -376,30 +395,12 @@
           "is_dgw": false
         },
         {
-          "gw": 36,
-          "dgw_players": 0,
-          "bench_proj": 14.7,
-          "bench_xmin": 240,
-          "fixture_ease": 3.65,
-          "score": 28.1,
-          "is_dgw": false
-        },
-        {
           "gw": 38,
           "dgw_players": 0,
           "bench_proj": 14.5,
           "bench_xmin": 240,
           "fixture_ease": 3.41,
           "score": 26.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "dgw_players": 0,
-          "bench_proj": 9.3,
-          "bench_xmin": 180,
-          "fixture_ease": 2.98,
-          "score": 12.1,
           "is_dgw": false
         },
         {
@@ -415,12 +416,26 @@
     },
     {
       "chip": "Triple Captain",
-      "recommended_gw": 35,
-      "recommended_player": "B.Fernandes",
+      "recommended_gw": 36,
+      "recommended_player": "Haaland",
       "confidence": "HIGH",
-      "reasoning": "TC B.Fernandes in GW35 (LIV (H)) - HOME fixture. Projected: 29 pts.",
-      "action_needed": "Ensure B.Fernandes is in your squad for GW35.",
+      "reasoning": "TC Haaland in GW36 (BRE (H), CRY (H)) - DOUBLE GAMEWEEK. Projected: 86 pts.",
+      "action_needed": "Ensure Haaland is in your squad for GW36.",
       "analysis": [
+        {
+          "gw": 36,
+          "player": "Haaland",
+          "player_id": 430,
+          "fixtures": [
+            "BRE (H)",
+            "CRY (H)"
+          ],
+          "avg_difficulty": 1.09,
+          "is_home": true,
+          "is_dgw": true,
+          "projected_tc_pts": 85.6,
+          "xmin": 85
+        },
         {
           "gw": 35,
           "player": "B.Fernandes",
@@ -445,19 +460,6 @@
           "is_home": true,
           "is_dgw": false,
           "projected_tc_pts": 25.5,
-          "xmin": 85
-        },
-        {
-          "gw": 36,
-          "player": "Haaland",
-          "player_id": 430,
-          "fixtures": [
-            "BRE (H)"
-          ],
-          "avg_difficulty": 1.11,
-          "is_home": true,
-          "is_dgw": false,
-          "projected_tc_pts": 21.1,
           "xmin": 85
         },
         {
@@ -535,27 +537,13 @@
           "is_bgw": false
         },
         {
-          "gw": 37,
-          "players_with_fixtures": 12,
-          "players_blanking": 3,
-          "blanking_names": [
-            "Jo\u00e3o Pedro",
-            "Haaland",
-            "Rayan"
-          ],
-          "avg_difficulty": 1.06,
-          "hard_fixtures": 4,
-          "score": 9.6,
-          "is_bgw": true
-        },
-        {
           "gw": 36,
           "players_with_fixtures": 15,
           "players_blanking": 0,
           "blanking_names": [],
-          "avg_difficulty": 1.14,
+          "avg_difficulty": 1.21,
           "hard_fixtures": 6,
-          "score": 1.4,
+          "score": 2.1,
           "is_bgw": false
         },
         {
@@ -567,14 +555,24 @@
           "hard_fixtures": 8,
           "score": 1.4,
           "is_bgw": false
+        },
+        {
+          "gw": 37,
+          "players_with_fixtures": 15,
+          "players_blanking": 0,
+          "blanking_names": [],
+          "avg_difficulty": 1.07,
+          "hard_fixtures": 6,
+          "score": 0.7,
+          "is_bgw": false
         }
       ]
     }
   ],
   "fixture_alerts": {
-    "dgw_gws": [],
-    "bgw_gws": [
-      37
-    ]
+    "dgw_gws": [
+      36
+    ],
+    "bgw_gws": []
   }
 }
