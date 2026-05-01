@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T08:12:06.236166",
+  "generated_at": "2026-05-01T08:06:11.588223",
   "next_gameweek": 35,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,7 +12,7 @@
         "doubled_pts": 14.4,
         "fixture": "LIV (H)",
         "fixture_difficulty": 0.77,
-        "ownership": 46.9,
+        "ownership": 47.0,
         "estimated_captain_pct": 18.8,
         "form": "5.0",
         "form_trend": "neutral",
@@ -33,8 +33,8 @@
         "doubled_pts": 13.7,
         "fixture": "NFO (H)",
         "fixture_difficulty": 1.02,
-        "ownership": 42.4,
-        "estimated_captain_pct": 17.0,
+        "ownership": 41.9,
+        "estimated_captain_pct": 16.8,
         "form": "0.7",
         "form_trend": "cold",
         "is_differential": false,
@@ -54,8 +54,8 @@
         "doubled_pts": 13.6,
         "fixture": "EVE (A)",
         "fixture_difficulty": 1.19,
-        "ownership": 59.6,
-        "estimated_captain_pct": 35.8,
+        "ownership": 60.3,
+        "estimated_captain_pct": 36.2,
         "form": "5.0",
         "form_trend": "neutral",
         "is_differential": false,
@@ -96,8 +96,8 @@
         "doubled_pts": 10.9,
         "fixture": "FUL (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 43.7,
-        "estimated_captain_pct": 17.5,
+        "ownership": 43.9,
+        "estimated_captain_pct": 17.6,
         "form": "4.0",
         "form_trend": "cold",
         "is_differential": false,
@@ -118,7 +118,7 @@
       "doubled_pts": 14.4,
       "fixture": "LIV (H)",
       "fixture_difficulty": 0.77,
-      "ownership": 46.9,
+      "ownership": 47.0,
       "estimated_captain_pct": 18.8,
       "form": "5.0",
       "form_trend": "neutral",
@@ -190,7 +190,7 @@
         "doubled_pts": 10.0,
         "fixture": "WHU (H)",
         "fixture_difficulty": 1.24,
-        "ownership": 2.3,
+        "ownership": 2.2,
         "estimated_captain_pct": 0.2,
         "form": "2.0",
         "form_trend": "cold",
@@ -215,7 +215,7 @@
         "doubled_pts": 9.5,
         "fixture": "FUL (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 14.7,
+        "ownership": 14.9,
         "estimated_captain_pct": 1.5,
         "form": "3.7",
         "form_trend": "neutral",
@@ -236,17 +236,17 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 59.6,
+        "ownership": 60.3,
         "projected": 6.81
       },
       {
         "name": "B.Fernandes",
-        "ownership": 46.9,
+        "ownership": 47.0,
         "projected": 7.22
       },
       {
         "name": "Palmer",
-        "ownership": 16.7,
+        "ownership": 16.5,
         "projected": 7.43
       }
     ]
