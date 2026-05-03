@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T07:25:27.045193",
+  "generated_at": "2026-05-03T07:54:58.329413",
   "next_gameweek": 36,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 29.1,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 61.4,
-        "estimated_captain_pct": 36.8,
+        "ownership": 61.6,
+        "estimated_captain_pct": 37.0,
         "form": "3.8",
         "form_trend": "cold",
         "is_differential": false,
@@ -33,7 +33,7 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 17.8,
+        "ownership": 18.0,
         "estimated_captain_pct": 4.5,
         "form": "6.8",
         "form_trend": "hot",
@@ -54,9 +54,9 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 7.5,
+        "ownership": 7.6,
         "estimated_captain_pct": 0.8,
-        "form": "0.2",
+        "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -75,11 +75,11 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 15.0,
+        "ownership": 14.9,
         "estimated_captain_pct": 1.5,
-        "form": "6.5",
-        "form_trend": "neutral",
-        "is_differential": false,
+        "form": "7.0",
+        "form_trend": "hot",
+        "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "understat",
@@ -89,24 +89,24 @@
         "risk_category": "risky"
       },
       {
-        "player_id": 266,
-        "name": "Eze",
+        "player_id": 5,
+        "name": "Gabriel",
         "team": "ARS",
-        "projected_pts": 4.84,
-        "doubled_pts": 9.7,
+        "projected_pts": 4.81,
+        "doubled_pts": 9.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.8,
-        "estimated_captain_pct": 0.9,
-        "form": "2.2",
+        "ownership": 44.5,
+        "estimated_captain_pct": 17.8,
+        "form": "4.5",
         "form_trend": "cold",
-        "is_differential": true,
+        "is_differential": false,
         "is_template": false,
         "has_dgw": false,
-        "data_quality": "approximated",
-        "diff_vs_template": -9.69,
+        "data_quality": "understat",
+        "diff_vs_template": -9.72,
         "upside_pts": 0.0,
-        "downside_pts": 5.9,
+        "downside_pts": 6.0,
         "risk_category": "risky"
       }
     ],
@@ -118,8 +118,8 @@
       "doubled_pts": 29.1,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 61.4,
-      "estimated_captain_pct": 36.8,
+      "ownership": 61.6,
+      "estimated_captain_pct": 37.0,
       "form": "3.8",
       "form_trend": "cold",
       "is_differential": false,
@@ -139,7 +139,7 @@
       "doubled_pts": 16.2,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 17.8,
+      "ownership": 18.0,
       "estimated_captain_pct": 4.5,
       "form": "6.8",
       "form_trend": "hot",
@@ -152,9 +152,9 @@
       "downside_pts": 3.9,
       "risk_category": "risky",
       "vs_safe_diff": -6.41,
-      "eo_advantage": 32.3,
+      "eo_advantage": 32.5,
       "risk_level": "high_risk",
-      "haul_upside": 4.8
+      "haul_upside": 4.9
     },
     "all_differentials": [
       {
@@ -165,7 +165,7 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 17.8,
+        "ownership": 18.0,
         "estimated_captain_pct": 4.5,
         "form": "6.8",
         "form_trend": "hot",
@@ -178,9 +178,9 @@
         "downside_pts": 3.9,
         "risk_category": "risky",
         "vs_safe_diff": -6.41,
-        "eo_advantage": 32.3,
+        "eo_advantage": 32.5,
         "risk_level": "high_risk",
-        "haul_upside": 4.8
+        "haul_upside": 4.9
       },
       {
         "player_id": 16,
@@ -190,9 +190,9 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 7.5,
+        "ownership": 7.6,
         "estimated_captain_pct": 0.8,
-        "form": "0.2",
+        "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -203,7 +203,7 @@
         "downside_pts": 4.8,
         "risk_category": "risky",
         "vs_safe_diff": -7.74,
-        "eo_advantage": 36.0,
+        "eo_advantage": 36.2,
         "risk_level": "high_risk",
         "haul_upside": 5.4
       },
@@ -215,11 +215,11 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 15.0,
+        "ownership": 14.9,
         "estimated_captain_pct": 1.5,
-        "form": "6.5",
-        "form_trend": "neutral",
-        "is_differential": false,
+        "form": "7.0",
+        "form_trend": "hot",
+        "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "understat",
@@ -228,7 +228,7 @@
         "downside_pts": 5.2,
         "risk_category": "risky",
         "vs_safe_diff": -8.48,
-        "eo_advantage": 35.3,
+        "eo_advantage": 35.5,
         "risk_level": "high_risk",
         "haul_upside": 5.3
       }
@@ -236,7 +236,7 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 61.4,
+        "ownership": 61.6,
         "projected": 14.53
       },
       {
@@ -246,12 +246,142 @@
       },
       {
         "name": "Palmer",
-        "ownership": 16.1,
+        "ownership": 16.0,
         "projected": 7.85
       }
     ]
   },
-  "transfer_recommendations": [],
+  "transfer_recommendations": [
+    {
+      "priority": 1,
+      "out_id": 417,
+      "out_name": "Cherki",
+      "out_reasons": [
+        "low_projection",
+        "low_xmin",
+        "blank_gw39"
+      ],
+      "in_id": 613,
+      "in_name": "Sou\u010dek",
+      "in_team": "WHU",
+      "in_cost": 5.7,
+      "gain_4gw": 18.6,
+      "effective_4gw": 18.6,
+      "in_xmin": 88.4,
+      "buy_reasons": [
+        "nailed",
+        "hot_form"
+      ],
+      "worth_hit": true,
+      "hit_value": 13.3,
+      "value_score": 3.26,
+      "position": 3,
+      "fixtures": [
+        {
+          "gw": 36,
+          "fixture": "ARS (H)",
+          "difficulty": 0.73,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {}
+    },
+    {
+      "priority": 2,
+      "out_id": 16,
+      "out_name": "Saka",
+      "out_reasons": [
+        "cold_form",
+        "low_xmin",
+        "blank_gw39",
+        "hard_fixtures"
+      ],
+      "in_id": 613,
+      "in_name": "Sou\u010dek",
+      "in_team": "WHU",
+      "in_cost": 5.7,
+      "gain_4gw": 8.4,
+      "effective_4gw": 18.6,
+      "in_xmin": 88.4,
+      "buy_reasons": [
+        "nailed",
+        "hot_form"
+      ],
+      "worth_hit": true,
+      "hit_value": 3.1,
+      "value_score": 3.26,
+      "position": 3,
+      "fixtures": [
+        {
+          "gw": 36,
+          "fixture": "ARS (H)",
+          "difficulty": 0.73,
+          "is_dgw": false
+        },
+        {
+          "gw": 37,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {
+        "premium": {
+          "player_id": 120,
+          "name": "Schade",
+          "team": "BRE",
+          "cost": 6.9,
+          "gain_4gw": 7.3,
+          "value_score": 2.53,
+          "reasons": [],
+          "fixtures": [
+            {
+              "gw": 36,
+              "fixture": "MCI (A)",
+              "difficulty": 1.18,
+              "is_dgw": false
+            },
+            {
+              "gw": 37,
+              "fixture": "CRY (H)",
+              "difficulty": 1.07,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
+    }
+  ],
   "chip_strategy": [
     {
       "chip": "Bench Boost",
