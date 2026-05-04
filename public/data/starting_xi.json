@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-03T07:54:58.339704",
+  "generated_at": "2026-05-04T08:23:26.406474",
   "team_id": 5033680,
   "next_gameweek": 36,
   "recommendations": [
     {
       "gameweek": 36,
       "formation": "4-3-3",
-      "total_effective_pts": 76.5,
+      "total_effective_pts": 76.4,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -16,7 +16,7 @@
       },
       "vice_captain": {
         "name": "Mu\u00f1oz",
-        "effective_pts": 9.49
+        "effective_pts": 9.31
       },
       "starting_xi": [
         {
@@ -34,9 +34,9 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "team": "CRY",
-          "effective_pts": 9.49,
+          "effective_pts": 9.31,
           "projected_pts": 10.0,
-          "xmin": 85.4,
+          "xmin": 83.8,
           "fixture": "EVE (H), MCI (A)",
           "difficulty": 1.08,
           "is_dgw": true
@@ -161,8 +161,8 @@
         {
           "name": "Casemiro",
           "position": "MID",
-          "effective_pts": 2.4,
-          "xmin": 77.6,
+          "effective_pts": 2.41,
+          "xmin": 78.0,
           "status": "available",
           "bench_order": 3
         },
@@ -234,9 +234,9 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "team": "CRY",
-          "effective_pts": 4.37,
+          "effective_pts": 4.29,
           "projected_pts": 4.61,
-          "xmin": 85.4,
+          "xmin": 83.8,
           "fixture": "BRE (A)",
           "difficulty": 1.36,
           "is_dgw": false
@@ -339,8 +339,8 @@
         {
           "name": "Casemiro",
           "position": "MID",
-          "effective_pts": 2.45,
-          "xmin": 77.6,
+          "effective_pts": 2.46,
+          "xmin": 78.0,
           "status": "available",
           "bench_order": 3
         },
@@ -362,7 +362,7 @@
     {
       "gameweek": 38,
       "formation": "4-3-3",
-      "total_effective_pts": 55.8,
+      "total_effective_pts": 55.7,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -390,9 +390,9 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "team": "CRY",
-          "effective_pts": 5.55,
+          "effective_pts": 5.45,
           "projected_pts": 5.85,
-          "xmin": 85.4,
+          "xmin": 83.8,
           "fixture": "ARS (H)",
           "difficulty": 0.73,
           "is_dgw": false
@@ -517,8 +517,8 @@
         {
           "name": "Casemiro",
           "position": "MID",
-          "effective_pts": 2.28,
-          "xmin": 77.6,
+          "effective_pts": 2.3,
+          "xmin": 78.0,
           "status": "available",
           "bench_order": 3
         },
