@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-04T08:23:26.406474",
+  "generated_at": "2026-05-05T08:01:54.606661",
   "team_id": 5033680,
   "next_gameweek": 36,
   "recommendations": [
     {
       "gameweek": 36,
       "formation": "4-3-3",
-      "total_effective_pts": 76.4,
+      "total_effective_pts": 76.3,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
-        "effective_pts": 13.96,
-        "xmin": 86.5,
+        "effective_pts": 14.0,
+        "xmin": 86.7,
         "fixture": "BRE (H), CRY (H)"
       },
       "vice_captain": {
@@ -89,9 +89,9 @@
           "name": "Dewsbury-Hall",
           "position": "MID",
           "team": "EVE",
-          "effective_pts": 4.91,
-          "projected_pts": 5.05,
-          "xmin": 87.5,
+          "effective_pts": 4.82,
+          "projected_pts": 4.95,
+          "xmin": 87.6,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false
@@ -111,9 +111,9 @@
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 13.96,
+          "effective_pts": 14.0,
           "projected_pts": 14.53,
-          "xmin": 86.5,
+          "xmin": 86.7,
           "fixture": "BRE (H), CRY (H)",
           "difficulty": 1.09,
           "is_dgw": true
@@ -184,7 +184,7 @@
     {
       "gameweek": 37,
       "formation": "4-3-3",
-      "total_effective_pts": 59.1,
+      "total_effective_pts": 58.9,
       "captain": {
         "name": "Saka",
         "team": "ARS",
@@ -194,7 +194,7 @@
       },
       "vice_captain": {
         "name": "Haaland",
-        "effective_pts": 6.52
+        "effective_pts": 6.53
       },
       "starting_xi": [
         {
@@ -264,17 +264,6 @@
           "is_dgw": false
         },
         {
-          "name": "Dewsbury-Hall",
-          "position": "MID",
-          "team": "EVE",
-          "effective_pts": 6.15,
-          "projected_pts": 6.33,
-          "xmin": 87.5,
-          "fixture": "SUN (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
           "name": "Eze",
           "position": "MID",
           "team": "ARS",
@@ -286,12 +275,23 @@
           "is_dgw": false
         },
         {
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "team": "EVE",
+          "effective_pts": 6.02,
+          "projected_pts": 6.18,
+          "xmin": 87.6,
+          "fixture": "SUN (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 6.52,
+          "effective_pts": 6.53,
           "projected_pts": 6.78,
-          "xmin": 86.5,
+          "xmin": 86.7,
           "fixture": "BOU (A)",
           "difficulty": 1.2,
           "is_dgw": false
@@ -362,12 +362,12 @@
     {
       "gameweek": 38,
       "formation": "4-3-3",
-      "total_effective_pts": 55.7,
+      "total_effective_pts": 55.6,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
-        "effective_pts": 7.43,
-        "xmin": 86.5,
+        "effective_pts": 7.45,
+        "xmin": 86.7,
         "fixture": "AVL (H)"
       },
       "vice_captain": {
@@ -456,9 +456,9 @@
           "name": "Dewsbury-Hall",
           "position": "MID",
           "team": "EVE",
-          "effective_pts": 4.57,
-          "projected_pts": 4.7,
-          "xmin": 87.5,
+          "effective_pts": 4.49,
+          "projected_pts": 4.61,
+          "xmin": 87.6,
           "fixture": "TOT (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -467,9 +467,9 @@
           "name": "Haaland",
           "position": "FWD",
           "team": "MCI",
-          "effective_pts": 7.43,
+          "effective_pts": 7.45,
           "projected_pts": 7.73,
-          "xmin": 86.5,
+          "xmin": 86.7,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
