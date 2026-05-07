@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T08:16:39.197172",
+  "generated_at": "2026-05-07T08:26:50.975064",
   "next_gameweek": 36,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 29.1,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 62.6,
-        "estimated_captain_pct": 37.6,
+        "ownership": 62.8,
+        "estimated_captain_pct": 37.7,
         "form": "5.5",
         "form_trend": "neutral",
         "is_differential": false,
@@ -33,7 +33,7 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 18.6,
+        "ownership": 18.7,
         "estimated_captain_pct": 4.7,
         "form": "7.0",
         "form_trend": "hot",
@@ -54,8 +54,8 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.2,
-        "estimated_captain_pct": 0.8,
+        "ownership": 8.5,
+        "estimated_captain_pct": 0.9,
         "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
@@ -64,7 +64,7 @@
         "data_quality": "understat",
         "diff_vs_template": -7.74,
         "upside_pts": 0.0,
-        "downside_pts": 4.8,
+        "downside_pts": 4.9,
         "risk_category": "risky"
       },
       {
@@ -75,7 +75,7 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 14.2,
+        "ownership": 14.0,
         "estimated_captain_pct": 1.4,
         "form": "7.0",
         "form_trend": "hot",
@@ -118,8 +118,8 @@
       "doubled_pts": 29.1,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 62.6,
-      "estimated_captain_pct": 37.6,
+      "ownership": 62.8,
+      "estimated_captain_pct": 37.7,
       "form": "5.5",
       "form_trend": "neutral",
       "is_differential": false,
@@ -139,7 +139,7 @@
       "doubled_pts": 16.2,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 18.6,
+      "ownership": 18.7,
       "estimated_captain_pct": 4.7,
       "form": "7.0",
       "form_trend": "hot",
@@ -152,9 +152,9 @@
       "downside_pts": 4.0,
       "risk_category": "risky",
       "vs_safe_diff": -6.41,
-      "eo_advantage": 32.9,
+      "eo_advantage": 33.0,
       "risk_level": "high_risk",
-      "haul_upside": 4.9
+      "haul_upside": 5.0
     },
     "all_differentials": [
       {
@@ -165,7 +165,7 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 18.6,
+        "ownership": 18.7,
         "estimated_captain_pct": 4.7,
         "form": "7.0",
         "form_trend": "hot",
@@ -178,9 +178,9 @@
         "downside_pts": 4.0,
         "risk_category": "risky",
         "vs_safe_diff": -6.41,
-        "eo_advantage": 32.9,
+        "eo_advantage": 33.0,
         "risk_level": "high_risk",
-        "haul_upside": 4.9
+        "haul_upside": 5.0
       },
       {
         "player_id": 16,
@@ -190,8 +190,8 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.2,
-        "estimated_captain_pct": 0.8,
+        "ownership": 8.5,
+        "estimated_captain_pct": 0.9,
         "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
@@ -200,7 +200,7 @@
         "data_quality": "understat",
         "diff_vs_template": -7.74,
         "upside_pts": 0.0,
-        "downside_pts": 4.8,
+        "downside_pts": 4.9,
         "risk_category": "risky",
         "vs_safe_diff": -7.74,
         "eo_advantage": 36.8,
@@ -215,7 +215,7 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 14.2,
+        "ownership": 14.0,
         "estimated_captain_pct": 1.4,
         "form": "7.0",
         "form_trend": "hot",
@@ -228,7 +228,7 @@
         "downside_pts": 5.3,
         "risk_category": "risky",
         "vs_safe_diff": -8.48,
-        "eo_advantage": 36.2,
+        "eo_advantage": 36.3,
         "risk_level": "high_risk",
         "haul_upside": 5.4
       }
@@ -236,7 +236,7 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 62.6,
+        "ownership": 62.8,
         "projected": 14.53
       },
       {
@@ -246,7 +246,7 @@
       },
       {
         "name": "Palmer",
-        "ownership": 15.3,
+        "ownership": 15.0,
         "projected": 7.85
       }
     ]
@@ -304,31 +304,6 @@
       ],
       "data_quality": "understat",
       "alternatives": {
-        "budget": {
-          "player_id": 84,
-          "name": "Tavernier",
-          "team": "BOU",
-          "cost": 5.4,
-          "gain_4gw": 10.6,
-          "value_score": 3.85,
-          "reasons": [
-            "nailed"
-          ],
-          "fixtures": [
-            {
-              "gw": 36,
-              "fixture": "FUL (A)",
-              "difficulty": 1.1,
-              "is_dgw": false
-            },
-            {
-              "gw": 37,
-              "fixture": "MCI (H)",
-              "difficulty": 0.96,
-              "is_dgw": false
-            }
-          ]
-        },
         "value": {
           "player_id": 84,
           "name": "Tavernier",
