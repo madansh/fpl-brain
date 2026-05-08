@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T08:26:50.975064",
+  "generated_at": "2026-05-08T07:22:09.399588",
   "next_gameweek": 36,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 29.1,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 62.8,
-        "estimated_captain_pct": 37.7,
+        "ownership": 63.1,
+        "estimated_captain_pct": 37.9,
         "form": "5.5",
         "form_trend": "neutral",
         "is_differential": false,
@@ -33,7 +33,7 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 18.7,
+        "ownership": 18.9,
         "estimated_captain_pct": 4.7,
         "form": "7.0",
         "form_trend": "hot",
@@ -54,7 +54,7 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.5,
+        "ownership": 8.9,
         "estimated_captain_pct": 0.9,
         "form": "3.0",
         "form_trend": "cold",
@@ -75,7 +75,7 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 14.0,
+        "ownership": 13.8,
         "estimated_captain_pct": 1.4,
         "form": "7.0",
         "form_trend": "hot",
@@ -85,7 +85,7 @@
         "data_quality": "understat",
         "diff_vs_template": -8.48,
         "upside_pts": 0.0,
-        "downside_pts": 5.3,
+        "downside_pts": 5.4,
         "risk_category": "risky"
       },
       {
@@ -96,7 +96,7 @@
         "doubled_pts": 9.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 44.7,
+        "ownership": 44.8,
         "estimated_captain_pct": 17.9,
         "form": "4.5",
         "form_trend": "cold",
@@ -118,8 +118,8 @@
       "doubled_pts": 29.1,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 62.8,
-      "estimated_captain_pct": 37.7,
+      "ownership": 63.1,
+      "estimated_captain_pct": 37.9,
       "form": "5.5",
       "form_trend": "neutral",
       "is_differential": false,
@@ -139,7 +139,7 @@
       "doubled_pts": 16.2,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 18.7,
+      "ownership": 18.9,
       "estimated_captain_pct": 4.7,
       "form": "7.0",
       "form_trend": "hot",
@@ -152,7 +152,7 @@
       "downside_pts": 4.0,
       "risk_category": "risky",
       "vs_safe_diff": -6.41,
-      "eo_advantage": 33.0,
+      "eo_advantage": 33.2,
       "risk_level": "high_risk",
       "haul_upside": 5.0
     },
@@ -165,7 +165,7 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 18.7,
+        "ownership": 18.9,
         "estimated_captain_pct": 4.7,
         "form": "7.0",
         "form_trend": "hot",
@@ -178,7 +178,7 @@
         "downside_pts": 4.0,
         "risk_category": "risky",
         "vs_safe_diff": -6.41,
-        "eo_advantage": 33.0,
+        "eo_advantage": 33.2,
         "risk_level": "high_risk",
         "haul_upside": 5.0
       },
@@ -190,7 +190,7 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.5,
+        "ownership": 8.9,
         "estimated_captain_pct": 0.9,
         "form": "3.0",
         "form_trend": "cold",
@@ -203,7 +203,7 @@
         "downside_pts": 4.9,
         "risk_category": "risky",
         "vs_safe_diff": -7.74,
-        "eo_advantage": 36.8,
+        "eo_advantage": 37.0,
         "risk_level": "high_risk",
         "haul_upside": 5.5
       },
@@ -215,7 +215,7 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 14.0,
+        "ownership": 13.8,
         "estimated_captain_pct": 1.4,
         "form": "7.0",
         "form_trend": "hot",
@@ -225,18 +225,18 @@
         "data_quality": "understat",
         "diff_vs_template": -8.48,
         "upside_pts": 0.0,
-        "downside_pts": 5.3,
+        "downside_pts": 5.4,
         "risk_category": "risky",
         "vs_safe_diff": -8.48,
-        "eo_advantage": 36.3,
+        "eo_advantage": 36.5,
         "risk_level": "high_risk",
-        "haul_upside": 5.4
+        "haul_upside": 5.5
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 62.8,
+        "ownership": 63.1,
         "projected": 14.53
       },
       {
@@ -246,7 +246,7 @@
       },
       {
         "name": "Palmer",
-        "ownership": 15.0,
+        "ownership": 14.7,
         "projected": 7.85
       }
     ]
