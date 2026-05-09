@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T07:22:09.399588",
+  "generated_at": "2026-05-09T07:49:57.188846",
   "next_gameweek": 36,
   "data_source": "Understat (380 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 29.1,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 63.1,
-        "estimated_captain_pct": 37.9,
+        "ownership": 64.1,
+        "estimated_captain_pct": 38.5,
         "form": "5.5",
         "form_trend": "neutral",
         "is_differential": false,
@@ -33,8 +33,8 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 18.9,
-        "estimated_captain_pct": 4.7,
+        "ownership": 19.7,
+        "estimated_captain_pct": 4.9,
         "form": "7.0",
         "form_trend": "hot",
         "is_differential": false,
@@ -43,7 +43,7 @@
         "data_quality": "understat",
         "diff_vs_template": -6.41,
         "upside_pts": 0.0,
-        "downside_pts": 4.0,
+        "downside_pts": 4.1,
         "risk_category": "risky"
       },
       {
@@ -54,8 +54,8 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.9,
-        "estimated_captain_pct": 0.9,
+        "ownership": 10.4,
+        "estimated_captain_pct": 1.0,
         "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
@@ -64,7 +64,7 @@
         "data_quality": "understat",
         "diff_vs_template": -7.74,
         "upside_pts": 0.0,
-        "downside_pts": 4.9,
+        "downside_pts": 5.0,
         "risk_category": "risky"
       },
       {
@@ -75,8 +75,8 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 13.8,
-        "estimated_captain_pct": 1.4,
+        "ownership": 13.0,
+        "estimated_captain_pct": 1.3,
         "form": "7.0",
         "form_trend": "hot",
         "is_differential": true,
@@ -96,8 +96,8 @@
         "doubled_pts": 9.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 44.8,
-        "estimated_captain_pct": 17.9,
+        "ownership": 45.0,
+        "estimated_captain_pct": 18.0,
         "form": "4.5",
         "form_trend": "cold",
         "is_differential": false,
@@ -106,7 +106,7 @@
         "data_quality": "understat",
         "diff_vs_template": -9.72,
         "upside_pts": 0.0,
-        "downside_pts": 6.1,
+        "downside_pts": 6.2,
         "risk_category": "risky"
       }
     ],
@@ -118,8 +118,8 @@
       "doubled_pts": 29.1,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 63.1,
-      "estimated_captain_pct": 37.9,
+      "ownership": 64.1,
+      "estimated_captain_pct": 38.5,
       "form": "5.5",
       "form_trend": "neutral",
       "is_differential": false,
@@ -139,8 +139,8 @@
       "doubled_pts": 16.2,
       "fixture": "BRE (H), CRY (H)",
       "fixture_difficulty": 1.09,
-      "ownership": 18.9,
-      "estimated_captain_pct": 4.7,
+      "ownership": 19.7,
+      "estimated_captain_pct": 4.9,
       "form": "7.0",
       "form_trend": "hot",
       "is_differential": false,
@@ -149,10 +149,10 @@
       "data_quality": "understat",
       "diff_vs_template": -6.41,
       "upside_pts": 0.0,
-      "downside_pts": 4.0,
+      "downside_pts": 4.1,
       "risk_category": "risky",
       "vs_safe_diff": -6.41,
-      "eo_advantage": 33.2,
+      "eo_advantage": 33.6,
       "risk_level": "high_risk",
       "haul_upside": 5.0
     },
@@ -165,8 +165,8 @@
         "doubled_pts": 16.2,
         "fixture": "BRE (H), CRY (H)",
         "fixture_difficulty": 1.09,
-        "ownership": 18.9,
-        "estimated_captain_pct": 4.7,
+        "ownership": 19.7,
+        "estimated_captain_pct": 4.9,
         "form": "7.0",
         "form_trend": "hot",
         "is_differential": false,
@@ -175,10 +175,10 @@
         "data_quality": "understat",
         "diff_vs_template": -6.41,
         "upside_pts": 0.0,
-        "downside_pts": 4.0,
+        "downside_pts": 4.1,
         "risk_category": "risky",
         "vs_safe_diff": -6.41,
-        "eo_advantage": 33.2,
+        "eo_advantage": 33.6,
         "risk_level": "high_risk",
         "haul_upside": 5.0
       },
@@ -190,8 +190,8 @@
         "doubled_pts": 13.6,
         "fixture": "WHU (A)",
         "fixture_difficulty": 1.5,
-        "ownership": 8.9,
-        "estimated_captain_pct": 0.9,
+        "ownership": 10.4,
+        "estimated_captain_pct": 1.0,
         "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
@@ -200,12 +200,12 @@
         "data_quality": "understat",
         "diff_vs_template": -7.74,
         "upside_pts": 0.0,
-        "downside_pts": 4.9,
+        "downside_pts": 5.0,
         "risk_category": "risky",
         "vs_safe_diff": -7.74,
-        "eo_advantage": 37.0,
+        "eo_advantage": 37.5,
         "risk_level": "high_risk",
-        "haul_upside": 5.5
+        "haul_upside": 5.6
       },
       {
         "player_id": 624,
@@ -215,8 +215,8 @@
         "doubled_pts": 12.1,
         "fixture": "ARS (H)",
         "fixture_difficulty": 0.73,
-        "ownership": 13.8,
-        "estimated_captain_pct": 1.4,
+        "ownership": 13.0,
+        "estimated_captain_pct": 1.3,
         "form": "7.0",
         "form_trend": "hot",
         "is_differential": true,
@@ -228,26 +228,26 @@
         "downside_pts": 5.4,
         "risk_category": "risky",
         "vs_safe_diff": -8.48,
-        "eo_advantage": 36.5,
+        "eo_advantage": 37.2,
         "risk_level": "high_risk",
-        "haul_upside": 5.5
+        "haul_upside": 5.6
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 63.1,
+        "ownership": 64.1,
         "projected": 14.53
       },
       {
         "name": "B.Fernandes",
-        "ownership": 47.3,
+        "ownership": 47.4,
         "projected": 5.72
       },
       {
-        "name": "Palmer",
-        "ownership": 14.7,
-        "projected": 7.85
+        "name": "M.Salah",
+        "ownership": 13.8,
+        "projected": 0
       }
     ]
   },
