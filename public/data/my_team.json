@@ -1,95 +1,51 @@
 {
   "team_id": 5033680,
-  "current_gw": 35,
-  "next_gw": 36,
+  "current_gw": 36,
+  "next_gw": 37,
   "bank": 0.1,
   "chips_available": [
-    "free_hit",
     "bench_boost",
-    "triple_captain"
+    "triple_captain",
+    "free_hit"
   ],
   "squad": [
     {
-      "player_id": 341,
-      "name": "Darlow",
+      "player_id": 253,
+      "name": "Henderson",
       "position": 1,
-      "team_id": 11,
+      "team_id": 8,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 4.0,
-      "projected_pts": 3.21,
-      "projected_4gw": 9.6,
-      "form_trend": "neutral",
-      "rolling_form": 3.18,
+      "selling_price": 5.1,
+      "projected_pts": 3.02,
+      "projected_4gw": 6.0,
+      "form_trend": "cold",
+      "rolling_form": 1.25,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
         {
-          "gw": 36,
-          "fixture": "TOT (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
           "gw": 37,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
+          "fixture": "ARS (H)",
+          "difficulty": 0.73,
           "is_dgw": false
         },
         {
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
-        }
-      ]
-    },
-    {
-      "player_id": 706,
-      "name": "Justin",
-      "position": 2,
-      "team_id": 11,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 4.0,
-      "projected_pts": 4.1,
-      "projected_4gw": 12.6,
-      "form_trend": "hot",
-      "rolling_form": 4.62,
-      "form_direction": "falling",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "TOT (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
         },
         {
-          "gw": 37,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
+          "gw": 40,
           "fixture": "BLANK",
           "difficulty": 0
         }
@@ -104,21 +60,15 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 5.3,
-      "projected_pts": 8.12,
-      "projected_4gw": 16.2,
-      "form_trend": "hot",
-      "rolling_form": 4.89,
+      "projected_pts": 3.94,
+      "projected_4gw": 8.1,
+      "form_trend": "neutral",
+      "rolling_form": 2.93,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "BRE (H), CRY (H)",
-          "difficulty": 1.09,
-          "is_dgw": true
-        },
         {
           "gw": 37,
           "fixture": "BOU (A)",
@@ -135,6 +85,11 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
         }
       ]
     },
@@ -146,22 +101,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 7.2,
-      "projected_pts": 4.81,
-      "projected_4gw": 15.2,
+      "selling_price": 7.3,
+      "projected_pts": 5.44,
+      "projected_4gw": 10.4,
       "form_trend": "cold",
-      "rolling_form": 4.49,
-      "form_direction": "stable",
+      "rolling_form": 3.02,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
         {
           "gw": 37,
           "fixture": "BUR (H)",
@@ -178,6 +127,179 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ]
+    },
+    {
+      "player_id": 256,
+      "name": "Mu\u00f1oz",
+      "position": 2,
+      "team_id": 8,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 5.9,
+      "projected_pts": 4.61,
+      "projected_4gw": 10.5,
+      "form_trend": "cold",
+      "rolling_form": 1.81,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 37,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "ARS (H)",
+          "difficulty": 0.73,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ]
+    },
+    {
+      "player_id": 257,
+      "name": "Lacroix",
+      "position": 2,
+      "team_id": 8,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 5.2,
+      "projected_pts": 3.77,
+      "projected_4gw": 8.1,
+      "form_trend": "neutral",
+      "rolling_form": 2.22,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 37,
+          "fixture": "BRE (A)",
+          "difficulty": 1.36,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "ARS (H)",
+          "difficulty": 0.73,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ]
+    },
+    {
+      "player_id": 706,
+      "name": "Justin",
+      "position": 2,
+      "team_id": 11,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 4.0,
+      "projected_pts": 4.38,
+      "projected_4gw": 8.5,
+      "form_trend": "hot",
+      "rolling_form": 3.42,
+      "form_direction": "falling",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 37,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ]
+    },
+    {
+      "player_id": 266,
+      "name": "Eze",
+      "position": 3,
+      "team_id": 1,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 1,
+      "selling_price": 7.3,
+      "projected_pts": 6.32,
+      "projected_4gw": 11.4,
+      "form_trend": "cold",
+      "rolling_form": 2.02,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 37,
+          "fixture": "BUR (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "CRY (A)",
+          "difficulty": 1.31,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
         }
       ]
     },
@@ -189,22 +311,16 @@
       "is_captain": false,
       "is_vice": false,
       "multiplier": 1,
-      "selling_price": 5.8,
-      "projected_pts": 2.78,
-      "projected_4gw": 8.3,
-      "form_trend": "hot",
-      "rolling_form": 5.41,
-      "form_direction": "rising",
+      "selling_price": 5.9,
+      "projected_pts": 2.84,
+      "projected_4gw": 5.5,
+      "form_trend": "neutral",
+      "rolling_form": 4.72,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "SUN (A)",
-          "difficulty": 1.1,
-          "is_dgw": false
-        },
         {
           "gw": 37,
           "fixture": "NFO (H)",
@@ -221,47 +337,9 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
-        }
-      ]
-    },
-    {
-      "player_id": 266,
-      "name": "Eze",
-      "position": 3,
-      "team_id": 1,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 7.3,
-      "projected_pts": 4.73,
-      "projected_4gw": 16.1,
-      "form_trend": "neutral",
-      "rolling_form": 2.62,
-      "form_direction": "rising",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
         },
         {
-          "gw": 37,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
+          "gw": 40,
           "fixture": "BLANK",
           "difficulty": 0
         }
@@ -273,7 +351,7 @@
       "position": 3,
       "team_id": 13,
       "is_captain": false,
-      "is_vice": false,
+      "is_vice": true,
       "multiplier": 1,
       "selling_price": 6.6,
       "projected_pts": 0,
@@ -291,25 +369,19 @@
       "name": "Saka",
       "position": 3,
       "team_id": 1,
-      "is_captain": true,
+      "is_captain": false,
       "is_vice": false,
-      "multiplier": 2,
-      "selling_price": 9.9,
-      "projected_pts": 6.79,
-      "projected_4gw": 24.0,
+      "multiplier": 1,
+      "selling_price": 10.0,
+      "projected_pts": 9.76,
+      "projected_4gw": 17.2,
       "form_trend": "cold",
-      "rolling_form": 2.78,
+      "rolling_form": 2.26,
       "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
         {
           "gw": 37,
           "fixture": "BUR (H)",
@@ -326,90 +398,9 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
-        }
-      ]
-    },
-    {
-      "player_id": 624,
-      "name": "Bowen",
-      "position": 4,
-      "team_id": 19,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 7.7,
-      "projected_pts": 6.05,
-      "projected_4gw": 15.7,
-      "form_trend": "hot",
-      "rolling_form": 5.0,
-      "form_direction": "stable",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
-          "is_dgw": false
         },
         {
-          "gw": 37,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "LEE (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
-          "fixture": "BLANK",
-          "difficulty": 0
-        }
-      ]
-    },
-    {
-      "player_id": 691,
-      "name": "Calvert-Lewin",
-      "position": 4,
-      "team_id": 11,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 1,
-      "selling_price": 5.8,
-      "projected_pts": 4.16,
-      "projected_4gw": 13.3,
-      "form_trend": "neutral",
-      "rolling_form": 3.16,
-      "form_direction": "rising",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "TOT (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "WHU (A)",
-          "difficulty": 1.5,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
+          "gw": 40,
           "fixture": "BLANK",
           "difficulty": 0
         }
@@ -420,25 +411,19 @@
       "name": "Haaland",
       "position": 4,
       "team_id": 13,
-      "is_captain": false,
-      "is_vice": true,
-      "multiplier": 1,
+      "is_captain": true,
+      "is_vice": false,
+      "multiplier": 3,
       "selling_price": 14.7,
-      "projected_pts": 14.53,
-      "projected_4gw": 29.0,
+      "projected_pts": 6.78,
+      "projected_4gw": 14.5,
       "form_trend": "neutral",
-      "rolling_form": 4.31,
-      "form_direction": "rising",
+      "rolling_form": 5.11,
+      "form_direction": "stable",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "BRE (H), CRY (H)",
-          "difficulty": 1.09,
-          "is_dgw": true
-        },
         {
           "gw": 37,
           "fixture": "BOU (A)",
@@ -455,47 +440,51 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
         }
       ]
     },
     {
-      "player_id": 253,
-      "name": "Henderson",
+      "player_id": 341,
+      "name": "Darlow",
       "position": 1,
-      "team_id": 8,
+      "team_id": 11,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 5.1,
-      "projected_pts": 6.05,
-      "projected_4gw": 12.1,
+      "selling_price": 4.0,
+      "projected_pts": 3.21,
+      "projected_4gw": 6.4,
       "form_trend": "neutral",
-      "rolling_form": 1.89,
-      "form_direction": "stable",
+      "rolling_form": 2.14,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
         {
-          "gw": 36,
-          "fixture": "EVE (H), MCI (A)",
-          "difficulty": 1.08,
-          "is_dgw": true
-        },
-        {
           "gw": 37,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
           "is_dgw": false
         },
         {
           "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
           "fixture": "BLANK",
           "difficulty": 0
         }
@@ -510,21 +499,15 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 5.2,
-      "projected_pts": 4.95,
-      "projected_4gw": 15.7,
+      "projected_pts": 6.18,
+      "projected_4gw": 10.8,
       "form_trend": "neutral",
-      "rolling_form": 4.68,
-      "form_direction": "stable",
+      "rolling_form": 3.81,
+      "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "CRY (A)",
-          "difficulty": 1.31,
-          "is_dgw": false
-        },
         {
           "gw": 37,
           "fixture": "SUN (H)",
@@ -541,95 +524,98 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
-        }
-      ]
-    },
-    {
-      "player_id": 256,
-      "name": "Mu\u00f1oz",
-      "position": 2,
-      "team_id": 8,
-      "is_captain": false,
-      "is_vice": false,
-      "multiplier": 0,
-      "selling_price": 5.9,
-      "projected_pts": 10.0,
-      "projected_4gw": 20.5,
-      "form_trend": "neutral",
-      "rolling_form": 2.93,
-      "form_direction": "rising",
-      "news": "",
-      "news_severity": 0,
-      "news_category": "healthy",
-      "fixture_preview": [
-        {
-          "gw": 36,
-          "fixture": "EVE (H), MCI (A)",
-          "difficulty": 1.08,
-          "is_dgw": true
         },
         {
-          "gw": 37,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
+          "gw": 40,
           "fixture": "BLANK",
           "difficulty": 0
         }
       ]
     },
     {
-      "player_id": 257,
-      "name": "Lacroix",
-      "position": 2,
-      "team_id": 8,
+      "player_id": 691,
+      "name": "Calvert-Lewin",
+      "position": 4,
+      "team_id": 11,
       "is_captain": false,
       "is_vice": false,
       "multiplier": 0,
-      "selling_price": 5.2,
-      "projected_pts": 7.86,
-      "projected_4gw": 15.9,
+      "selling_price": 5.8,
+      "projected_pts": 5.01,
+      "projected_4gw": 9.2,
       "form_trend": "neutral",
-      "rolling_form": 4.61,
+      "rolling_form": 2.64,
+      "form_direction": "stable",
+      "news": "",
+      "news_severity": 0,
+      "news_category": "healthy",
+      "fixture_preview": [
+        {
+          "gw": 37,
+          "fixture": "BHA (H)",
+          "difficulty": 1.08,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ]
+    },
+    {
+      "player_id": 624,
+      "name": "Bowen",
+      "position": 4,
+      "team_id": 19,
+      "is_captain": false,
+      "is_vice": false,
+      "multiplier": 0,
+      "selling_price": 7.7,
+      "projected_pts": 4.41,
+      "projected_4gw": 9.7,
+      "form_trend": "neutral",
+      "rolling_form": 4.2,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
       "fixture_preview": [
         {
-          "gw": 36,
-          "fixture": "EVE (H), MCI (A)",
-          "difficulty": 1.08,
-          "is_dgw": true
-        },
-        {
           "gw": 37,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
+          "fixture": "NEW (A)",
+          "difficulty": 1.2,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
+          "fixture": "LEE (H)",
+          "difficulty": 0.9,
           "is_dgw": false
         },
         {
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
         }
       ]
     }
   ],
-  "total_projected_pts": 66.1
+  "total_projected_pts": 64.4
 }

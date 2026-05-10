@@ -1,24 +1,45 @@
 {
-  "generated_at": "2026-05-09T07:49:57.188846",
-  "next_gameweek": 36,
-  "data_source": "Understat (380 players matched)",
+  "generated_at": "2026-05-10T08:02:14.040453",
+  "next_gameweek": 37,
+  "data_source": "Understat (381 players matched)",
   "captain_picks": {
     "picks": [
+      {
+        "player_id": 16,
+        "name": "Saka",
+        "team": "ARS",
+        "projected_pts": 9.76,
+        "doubled_pts": 19.5,
+        "fixture": "BUR (H)",
+        "fixture_difficulty": 0.9,
+        "ownership": 11.1,
+        "estimated_captain_pct": 1.1,
+        "form": "2.4",
+        "form_trend": "cold",
+        "is_differential": true,
+        "is_template": false,
+        "has_dgw": false,
+        "data_quality": "understat",
+        "diff_vs_template": 2.98,
+        "upside_pts": 5.9,
+        "downside_pts": 0.0,
+        "risk_category": "high_upside"
+      },
       {
         "player_id": 430,
         "name": "Haaland",
         "team": "MCI",
-        "projected_pts": 14.53,
-        "doubled_pts": 29.1,
-        "fixture": "BRE (H), CRY (H)",
-        "fixture_difficulty": 1.09,
-        "ownership": 64.1,
-        "estimated_captain_pct": 38.5,
+        "projected_pts": 6.78,
+        "doubled_pts": 13.6,
+        "fixture": "BOU (A)",
+        "fixture_difficulty": 1.2,
+        "ownership": 64.3,
+        "estimated_captain_pct": 38.6,
         "form": "5.5",
         "form_trend": "neutral",
         "is_differential": false,
         "is_template": true,
-        "has_dgw": true,
+        "has_dgw": false,
         "data_quality": "understat",
         "diff_vs_template": 0.0,
         "upside_pts": 0,
@@ -26,273 +47,347 @@
         "risk_category": "safe"
       },
       {
-        "player_id": 411,
-        "name": "O'Reilly",
-        "team": "MCI",
-        "projected_pts": 8.12,
-        "doubled_pts": 16.2,
-        "fixture": "BRE (H), CRY (H)",
-        "fixture_difficulty": 1.09,
-        "ownership": 19.7,
-        "estimated_captain_pct": 4.9,
-        "form": "7.0",
-        "form_trend": "hot",
-        "is_differential": false,
-        "is_template": false,
-        "has_dgw": true,
-        "data_quality": "understat",
-        "diff_vs_template": -6.41,
-        "upside_pts": 0.0,
-        "downside_pts": 4.1,
-        "risk_category": "risky"
-      },
-      {
-        "player_id": 16,
-        "name": "Saka",
+        "player_id": 266,
+        "name": "Eze",
         "team": "ARS",
-        "projected_pts": 6.79,
-        "doubled_pts": 13.6,
-        "fixture": "WHU (A)",
-        "fixture_difficulty": 1.5,
-        "ownership": 10.4,
-        "estimated_captain_pct": 1.0,
-        "form": "3.0",
+        "projected_pts": 6.32,
+        "doubled_pts": 12.6,
+        "fixture": "BUR (H)",
+        "fixture_difficulty": 0.9,
+        "ownership": 8.8,
+        "estimated_captain_pct": 0.9,
+        "form": "2.4",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
-        "data_quality": "understat",
-        "diff_vs_template": -7.74,
+        "data_quality": "approximated",
+        "diff_vs_template": -0.46,
         "upside_pts": 0.0,
-        "downside_pts": 5.0,
-        "risk_category": "risky"
-      },
-      {
-        "player_id": 624,
-        "name": "Bowen",
-        "team": "WHU",
-        "projected_pts": 6.05,
-        "doubled_pts": 12.1,
-        "fixture": "ARS (H)",
-        "fixture_difficulty": 0.73,
-        "ownership": 13.0,
-        "estimated_captain_pct": 1.3,
-        "form": "7.0",
-        "form_trend": "hot",
-        "is_differential": true,
-        "is_template": false,
-        "has_dgw": false,
-        "data_quality": "understat",
-        "diff_vs_template": -8.48,
-        "upside_pts": 0.0,
-        "downside_pts": 5.4,
+        "downside_pts": 0.3,
         "risk_category": "risky"
       },
       {
         "player_id": 5,
         "name": "Gabriel",
         "team": "ARS",
-        "projected_pts": 4.81,
-        "doubled_pts": 9.6,
-        "fixture": "WHU (A)",
-        "fixture_difficulty": 1.5,
-        "ownership": 45.0,
+        "projected_pts": 5.44,
+        "doubled_pts": 10.9,
+        "fixture": "BUR (H)",
+        "fixture_difficulty": 0.9,
+        "ownership": 45.1,
         "estimated_captain_pct": 18.0,
-        "form": "4.5",
+        "form": "3.6",
         "form_trend": "cold",
         "is_differential": false,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "understat",
-        "diff_vs_template": -9.72,
+        "diff_vs_template": -1.34,
         "upside_pts": 0.0,
-        "downside_pts": 6.2,
+        "downside_pts": 0.9,
+        "risk_category": "risky"
+      },
+      {
+        "player_id": 256,
+        "name": "Mu\u00f1oz",
+        "team": "CRY",
+        "projected_pts": 4.61,
+        "doubled_pts": 9.2,
+        "fixture": "BRE (A)",
+        "fixture_difficulty": 1.36,
+        "ownership": 10.1,
+        "estimated_captain_pct": 1.0,
+        "form": "2.8",
+        "form_trend": "cold",
+        "is_differential": true,
+        "is_template": false,
+        "has_dgw": false,
+        "data_quality": "understat",
+        "diff_vs_template": -2.17,
+        "upside_pts": 0.0,
+        "downside_pts": 1.4,
         "risk_category": "risky"
       }
     ],
     "safe_pick": {
-      "player_id": 430,
-      "name": "Haaland",
-      "team": "MCI",
-      "projected_pts": 14.53,
-      "doubled_pts": 29.1,
-      "fixture": "BRE (H), CRY (H)",
-      "fixture_difficulty": 1.09,
-      "ownership": 64.1,
-      "estimated_captain_pct": 38.5,
-      "form": "5.5",
-      "form_trend": "neutral",
-      "is_differential": false,
-      "is_template": true,
-      "has_dgw": true,
+      "player_id": 16,
+      "name": "Saka",
+      "team": "ARS",
+      "projected_pts": 9.76,
+      "doubled_pts": 19.5,
+      "fixture": "BUR (H)",
+      "fixture_difficulty": 0.9,
+      "ownership": 11.1,
+      "estimated_captain_pct": 1.1,
+      "form": "2.4",
+      "form_trend": "cold",
+      "is_differential": true,
+      "is_template": false,
+      "has_dgw": false,
       "data_quality": "understat",
-      "diff_vs_template": 0.0,
-      "upside_pts": 0,
-      "downside_pts": 0,
-      "risk_category": "safe"
+      "diff_vs_template": 2.98,
+      "upside_pts": 5.9,
+      "downside_pts": 0.0,
+      "risk_category": "high_upside"
     },
     "differential_pick": {
-      "player_id": 411,
-      "name": "O'Reilly",
-      "team": "MCI",
-      "projected_pts": 8.12,
-      "doubled_pts": 16.2,
-      "fixture": "BRE (H), CRY (H)",
-      "fixture_difficulty": 1.09,
-      "ownership": 19.7,
-      "estimated_captain_pct": 4.9,
-      "form": "7.0",
-      "form_trend": "hot",
-      "is_differential": false,
+      "player_id": 266,
+      "name": "Eze",
+      "team": "ARS",
+      "projected_pts": 6.32,
+      "doubled_pts": 12.6,
+      "fixture": "BUR (H)",
+      "fixture_difficulty": 0.9,
+      "ownership": 8.8,
+      "estimated_captain_pct": 0.9,
+      "form": "2.4",
+      "form_trend": "cold",
+      "is_differential": true,
       "is_template": false,
-      "has_dgw": true,
-      "data_quality": "understat",
-      "diff_vs_template": -6.41,
+      "has_dgw": false,
+      "data_quality": "approximated",
+      "diff_vs_template": -0.46,
       "upside_pts": 0.0,
-      "downside_pts": 4.1,
+      "downside_pts": 0.3,
       "risk_category": "risky",
-      "vs_safe_diff": -6.41,
-      "eo_advantage": 33.6,
+      "vs_safe_diff": -3.44,
+      "eo_advantage": 0.2,
       "risk_level": "high_risk",
-      "haul_upside": 5.0
+      "haul_upside": 0.0
     },
     "all_differentials": [
       {
-        "player_id": 411,
-        "name": "O'Reilly",
-        "team": "MCI",
-        "projected_pts": 8.12,
-        "doubled_pts": 16.2,
-        "fixture": "BRE (H), CRY (H)",
-        "fixture_difficulty": 1.09,
-        "ownership": 19.7,
-        "estimated_captain_pct": 4.9,
-        "form": "7.0",
-        "form_trend": "hot",
-        "is_differential": false,
+        "player_id": 266,
+        "name": "Eze",
+        "team": "ARS",
+        "projected_pts": 6.32,
+        "doubled_pts": 12.6,
+        "fixture": "BUR (H)",
+        "fixture_difficulty": 0.9,
+        "ownership": 8.8,
+        "estimated_captain_pct": 0.9,
+        "form": "2.4",
+        "form_trend": "cold",
+        "is_differential": true,
         "is_template": false,
-        "has_dgw": true,
-        "data_quality": "understat",
-        "diff_vs_template": -6.41,
+        "has_dgw": false,
+        "data_quality": "approximated",
+        "diff_vs_template": -0.46,
         "upside_pts": 0.0,
-        "downside_pts": 4.1,
+        "downside_pts": 0.3,
         "risk_category": "risky",
-        "vs_safe_diff": -6.41,
-        "eo_advantage": 33.6,
+        "vs_safe_diff": -3.44,
+        "eo_advantage": 0.2,
         "risk_level": "high_risk",
-        "haul_upside": 5.0
+        "haul_upside": 0.0
       },
       {
-        "player_id": 16,
-        "name": "Saka",
-        "team": "ARS",
-        "projected_pts": 6.79,
-        "doubled_pts": 13.6,
-        "fixture": "WHU (A)",
-        "fixture_difficulty": 1.5,
-        "ownership": 10.4,
+        "player_id": 256,
+        "name": "Mu\u00f1oz",
+        "team": "CRY",
+        "projected_pts": 4.61,
+        "doubled_pts": 9.2,
+        "fixture": "BRE (A)",
+        "fixture_difficulty": 1.36,
+        "ownership": 10.1,
         "estimated_captain_pct": 1.0,
-        "form": "3.0",
+        "form": "2.8",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "understat",
-        "diff_vs_template": -7.74,
+        "diff_vs_template": -2.17,
         "upside_pts": 0.0,
-        "downside_pts": 5.0,
+        "downside_pts": 1.4,
         "risk_category": "risky",
-        "vs_safe_diff": -7.74,
-        "eo_advantage": 37.5,
+        "vs_safe_diff": -5.15,
+        "eo_advantage": 0.1,
         "risk_level": "high_risk",
-        "haul_upside": 5.6
+        "haul_upside": 0.0
       },
       {
-        "player_id": 624,
-        "name": "Bowen",
-        "team": "WHU",
-        "projected_pts": 6.05,
-        "doubled_pts": 12.1,
-        "fixture": "ARS (H)",
-        "fixture_difficulty": 0.73,
-        "ownership": 13.0,
-        "estimated_captain_pct": 1.3,
-        "form": "7.0",
+        "player_id": 706,
+        "name": "Justin",
+        "team": "LEE",
+        "projected_pts": 4.38,
+        "doubled_pts": 8.8,
+        "fixture": "BHA (H)",
+        "fixture_difficulty": 1.08,
+        "ownership": 2.1,
+        "estimated_captain_pct": 0.2,
+        "form": "4.4",
         "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
-        "data_quality": "understat",
-        "diff_vs_template": -8.48,
+        "data_quality": "approximated",
+        "diff_vs_template": -2.4,
         "upside_pts": 0.0,
-        "downside_pts": 5.4,
+        "downside_pts": 1.5,
         "risk_category": "risky",
-        "vs_safe_diff": -8.48,
-        "eo_advantage": 37.2,
+        "vs_safe_diff": -5.38,
+        "eo_advantage": 0.9,
         "risk_level": "high_risk",
-        "haul_upside": 5.6
+        "haul_upside": 0.1
       }
     ],
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 64.1,
-        "projected": 14.53
+        "ownership": 64.3,
+        "projected": 6.78
       },
       {
         "name": "B.Fernandes",
-        "ownership": 47.4,
-        "projected": 5.72
+        "ownership": 47.5,
+        "projected": 6.0
       },
       {
         "name": "M.Salah",
-        "ownership": 13.8,
-        "projected": 0
+        "ownership": 13.7,
+        "projected": 4.36
       }
     ]
   },
   "transfer_recommendations": [
     {
       "priority": 1,
-      "out_id": 16,
-      "out_name": "Saka",
+      "out_id": 417,
+      "out_name": "Cherki",
+      "out_reasons": [
+        "low_projection",
+        "low_xmin",
+        "mins_declining",
+        "blank_gw39"
+      ],
+      "in_id": 84,
+      "in_name": "Tavernier",
+      "in_team": "BOU",
+      "in_cost": 5.4,
+      "gain_4gw": 20.3,
+      "effective_4gw": 20.3,
+      "in_xmin": 86.0,
+      "buy_reasons": [
+        "nailed"
+      ],
+      "worth_hit": true,
+      "hit_value": 15.0,
+      "value_score": 3.75,
+      "position": 3,
+      "fixtures": [
+        {
+          "gw": 37,
+          "fixture": "MCI (H)",
+          "difficulty": 0.96,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "NFO (A)",
+          "difficulty": 1.25,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {}
+    },
+    {
+      "priority": 2,
+      "out_id": 253,
+      "out_name": "Henderson",
       "out_reasons": [
         "cold_form",
         "low_xmin",
-        "blank_gw39",
-        "hard_fixtures"
+        "blank_gw39"
       ],
-      "in_id": 387,
-      "in_name": "Szoboszlai",
-      "in_team": "LIV",
-      "in_cost": 7.0,
-      "gain_4gw": 11.6,
-      "effective_4gw": 21.8,
+      "in_id": 314,
+      "in_name": "Leno",
+      "in_team": "FUL",
+      "in_cost": 4.9,
+      "gain_4gw": 11.3,
+      "effective_4gw": 13.5,
       "in_xmin": 90,
       "buy_reasons": [
         "nailed",
         "hot_form"
       ],
       "worth_hit": true,
-      "hit_value": 6.3,
-      "value_score": 3.11,
-      "position": 3,
+      "hit_value": 6.0,
+      "value_score": 2.76,
+      "position": 1,
       "fixtures": [
         {
-          "gw": 36,
-          "fixture": "CHE (H)",
-          "difficulty": 0.99,
-          "is_dgw": false
-        },
-        {
           "gw": 37,
-          "fixture": "AVL (A)",
-          "difficulty": 1.22,
+          "fixture": "WOL (A)",
+          "difficulty": 1.37,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "BRE (H)",
+          "fixture": "NEW (H)",
+          "difficulty": 0.98,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {}
+    },
+    {
+      "priority": 3,
+      "out_id": 256,
+      "out_name": "Mu\u00f1oz",
+      "out_reasons": [
+        "cold_form",
+        "low_xmin",
+        "blank_gw39"
+      ],
+      "in_id": 148,
+      "in_name": "F.Kad\u0131o\u011flu",
+      "in_team": "BHA",
+      "in_cost": 4.4,
+      "gain_4gw": 12.2,
+      "effective_4gw": 15.3,
+      "in_xmin": 90,
+      "buy_reasons": [
+        "nailed",
+        "hot_form"
+      ],
+      "worth_hit": true,
+      "hit_value": 6.9,
+      "value_score": 3.48,
+      "position": 2,
+      "fixtures": [
+        {
+          "gw": 37,
+          "fixture": "LEE (A)",
+          "difficulty": 1.1,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "MUN (H)",
           "difficulty": 1.11,
           "is_dgw": false
         },
@@ -300,107 +395,36 @@
           "gw": 39,
           "fixture": "BLANK",
           "difficulty": 0
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {
-        "value": {
-          "player_id": 84,
-          "name": "Tavernier",
-          "team": "BOU",
-          "cost": 5.4,
-          "gain_4gw": 10.6,
-          "value_score": 3.85,
-          "reasons": [
-            "nailed"
-          ],
-          "fixtures": [
-            {
-              "gw": 36,
-              "fixture": "FUL (A)",
-              "difficulty": 1.1,
-              "is_dgw": false
-            },
-            {
-              "gw": 37,
-              "fixture": "MCI (H)",
-              "difficulty": 0.96,
-              "is_dgw": false
-            }
-          ]
-        }
-      }
-    },
-    {
-      "priority": 2,
-      "out_id": 417,
-      "out_name": "Cherki",
-      "out_reasons": [
-        "low_projection",
-        "blank_gw39"
-      ],
-      "in_id": 416,
-      "in_name": "Bernardo",
-      "in_team": "MCI",
-      "in_cost": 6.2,
-      "gain_4gw": 22.0,
-      "effective_4gw": 22.0,
-      "in_xmin": 84.0,
-      "buy_reasons": [
-        "dgw36"
-      ],
-      "worth_hit": true,
-      "hit_value": 16.7,
-      "value_score": 3.55,
-      "position": 3,
-      "fixtures": [
-        {
-          "gw": 36,
-          "fixture": "BRE (H), CRY (H)",
-          "difficulty": 1.09,
-          "is_dgw": true
         },
         {
-          "gw": 37,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "AVL (H)",
-          "difficulty": 1.0,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
+          "gw": 40,
           "fixture": "BLANK",
           "difficulty": 0
         }
       ],
       "data_quality": "understat",
       "alternatives": {
-        "value": {
-          "player_id": 84,
-          "name": "Tavernier",
-          "team": "BOU",
-          "cost": 5.4,
-          "gain_4gw": 20.8,
-          "value_score": 3.85,
+        "premium": {
+          "player_id": 374,
+          "name": "Konat\u00e9",
+          "team": "LIV",
+          "cost": 5.5,
+          "gain_4gw": 13.5,
+          "value_score": 3.02,
           "reasons": [
             "nailed"
           ],
           "fixtures": [
             {
-              "gw": 36,
-              "fixture": "FUL (A)",
-              "difficulty": 1.1,
+              "gw": 37,
+              "fixture": "AVL (A)",
+              "difficulty": 1.22,
               "is_dgw": false
             },
             {
-              "gw": 37,
-              "fixture": "MCI (H)",
-              "difficulty": 0.96,
+              "gw": 38,
+              "fixture": "BRE (H)",
+              "difficulty": 1.11,
               "is_dgw": false
             }
           ]
@@ -411,36 +435,27 @@
   "chip_strategy": [
     {
       "chip": "Bench Boost",
-      "recommended_gw": 36,
+      "recommended_gw": 37,
       "confidence": "HIGH",
-      "reasoning": "GW36 is a DGW with 6 players doubling. Projected bench value: 28.9 pts.",
-      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW36.",
+      "reasoning": "GW37 has favorable fixtures (ease: 3.7). Projected bench value: 18.8 pts.",
+      "action_needed": "Ensure bench has high xMin players with easy fixtures by GW37.",
       "analysis": [
         {
-          "gw": 36,
-          "dgw_players": 6,
-          "bench_proj": 28.9,
+          "gw": 37,
+          "dgw_players": 0,
+          "bench_proj": 18.8,
           "bench_xmin": 240,
-          "fixture_ease": 3.45,
-          "score": 102.1,
-          "is_dgw": true
+          "fixture_ease": 3.74,
+          "score": 36.4,
+          "is_dgw": false
         },
         {
           "gw": 38,
           "dgw_players": 0,
-          "bench_proj": 17.8,
+          "bench_proj": 17.2,
           "bench_xmin": 240,
-          "fixture_ease": 4.31,
-          "score": 36.9,
-          "is_dgw": false
-        },
-        {
-          "gw": 37,
-          "dgw_players": 0,
-          "bench_proj": 17.6,
-          "bench_xmin": 240,
-          "fixture_ease": 3.02,
-          "score": 30.9,
+          "fixture_ease": 2.6,
+          "score": 28.4,
           "is_dgw": false
         },
         {
@@ -460,29 +475,37 @@
           "fixture_ease": 0,
           "score": 0.0,
           "is_dgw": false
+        },
+        {
+          "gw": 41,
+          "dgw_players": 0,
+          "bench_proj": 0,
+          "bench_xmin": 0,
+          "fixture_ease": 0,
+          "score": 0.0,
+          "is_dgw": false
         }
       ]
     },
     {
       "chip": "Triple Captain",
-      "recommended_gw": 36,
-      "recommended_player": "Haaland",
-      "confidence": "HIGH",
-      "reasoning": "TC Haaland in GW36 (BRE (H), CRY (H)) - DOUBLE GAMEWEEK. Projected: 86 pts.",
-      "action_needed": "Ensure Haaland is in your squad for GW36.",
+      "recommended_gw": 37,
+      "recommended_player": "Saka",
+      "confidence": "MEDIUM",
+      "reasoning": "TC Saka in GW37 (BUR (H)) - HOME fixture. Projected: 35 pts.",
+      "action_needed": "Ensure Saka is in your squad for GW37.",
       "analysis": [
         {
-          "gw": 36,
-          "player": "Haaland",
-          "player_id": 430,
+          "gw": 37,
+          "player": "Saka",
+          "player_id": 16,
           "fixtures": [
-            "BRE (H)",
-            "CRY (H)"
+            "BUR (H)"
           ],
-          "avg_difficulty": 1.09,
+          "avg_difficulty": 0.9,
           "is_home": true,
-          "is_dgw": true,
-          "projected_tc_pts": 85.6,
+          "is_dgw": false,
+          "projected_tc_pts": 35.4,
           "xmin": 85
         },
         {
@@ -510,6 +533,19 @@
           "is_dgw": false,
           "projected_tc_pts": 16.2,
           "xmin": 85
+        },
+        {
+          "gw": 38,
+          "player": "Saka",
+          "player_id": 16,
+          "fixtures": [
+            "CRY (A)"
+          ],
+          "avg_difficulty": 1.31,
+          "is_home": false,
+          "is_dgw": false,
+          "projected_tc_pts": 15.6,
+          "xmin": 85
         }
       ]
     },
@@ -520,11 +556,11 @@
       "reasoning": "GW39 has difficult fixtures for your squad (avg difficulty: 0.00, 0 hard games).",
       "action_needed": "Save Free Hit for GW39. Don't waste transfers preparing.",
       "players_blanking": [
-        "Darlow",
-        "Justin",
+        "Henderson",
         "O'Reilly",
         "Gabriel",
-        "Casemiro"
+        "Mu\u00f1oz",
+        "Lacroix"
       ],
       "analysis": [
         {
@@ -532,11 +568,11 @@
           "players_with_fixtures": 0,
           "players_blanking": 15,
           "blanking_names": [
-            "Darlow",
-            "Justin",
+            "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Casemiro"
+            "Mu\u00f1oz",
+            "Lacroix"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
@@ -548,11 +584,11 @@
           "players_with_fixtures": 0,
           "players_blanking": 15,
           "blanking_names": [
-            "Darlow",
-            "Justin",
+            "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Casemiro"
+            "Mu\u00f1oz",
+            "Lacroix"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
@@ -564,11 +600,11 @@
           "players_with_fixtures": 0,
           "players_blanking": 15,
           "blanking_names": [
-            "Darlow",
-            "Justin",
+            "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Casemiro"
+            "Mu\u00f1oz",
+            "Lacroix"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
@@ -576,13 +612,19 @@
           "is_bgw": false
         },
         {
-          "gw": 36,
-          "players_with_fixtures": 15,
-          "players_blanking": 0,
-          "blanking_names": [],
-          "avg_difficulty": 1.68,
-          "hard_fixtures": 13,
-          "score": 6.8,
+          "gw": 42,
+          "players_with_fixtures": 0,
+          "players_blanking": 15,
+          "blanking_names": [
+            "Henderson",
+            "O'Reilly",
+            "Gabriel",
+            "Mu\u00f1oz",
+            "Lacroix"
+          ],
+          "avg_difficulty": 0.0,
+          "hard_fixtures": 0,
+          "score": 35.0,
           "is_bgw": false
         },
         {
@@ -599,9 +641,7 @@
     }
   ],
   "fixture_alerts": {
-    "dgw_gws": [
-      36
-    ],
+    "dgw_gws": [],
     "bgw_gws": []
   }
 }
