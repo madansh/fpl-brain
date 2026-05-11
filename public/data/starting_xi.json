@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-10T08:02:14.050275",
+  "generated_at": "2026-05-11T09:31:01.174103",
   "team_id": 5033680,
   "next_gameweek": 37,
   "recommendations": [
     {
       "gameweek": 37,
       "formation": "4-3-3",
-      "total_effective_pts": 59.0,
+      "total_effective_pts": 58.8,
       "captain": {
         "name": "Saka",
         "team": "ARS",
-        "effective_pts": 9.66,
-        "xmin": 89.1,
+        "effective_pts": 9.62,
+        "xmin": 88.7,
         "fixture": "BUR (H)"
       },
       "vice_captain": {
@@ -56,9 +56,9 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "team": "CRY",
-          "effective_pts": 4.29,
+          "effective_pts": 4.3,
           "projected_pts": 4.61,
-          "xmin": 83.8,
+          "xmin": 84.0,
           "fixture": "BRE (A)",
           "difficulty": 1.36,
           "is_dgw": false
@@ -78,20 +78,9 @@
           "name": "Saka",
           "position": "MID",
           "team": "ARS",
-          "effective_pts": 9.66,
+          "effective_pts": 9.62,
           "projected_pts": 9.76,
-          "xmin": 89.1,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Eze",
-          "position": "MID",
-          "team": "ARS",
-          "effective_pts": 6.08,
-          "projected_pts": 6.32,
-          "xmin": 86.6,
+          "xmin": 88.7,
           "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
@@ -100,10 +89,21 @@
           "name": "Dewsbury-Hall",
           "position": "MID",
           "team": "EVE",
-          "effective_pts": 6.02,
-          "projected_pts": 6.18,
-          "xmin": 87.6,
+          "effective_pts": 6.1,
+          "projected_pts": 6.26,
+          "xmin": 87.7,
           "fixture": "SUN (H)",
+          "difficulty": 0.9,
+          "is_dgw": false
+        },
+        {
+          "name": "Eze",
+          "position": "MID",
+          "team": "ARS",
+          "effective_pts": 5.87,
+          "projected_pts": 6.17,
+          "xmin": 85.6,
+          "fixture": "BUR (H)",
           "difficulty": 0.9,
           "is_dgw": false
         },
@@ -184,7 +184,7 @@
     {
       "gameweek": 38,
       "formation": "4-3-3",
-      "total_effective_pts": 55.6,
+      "total_effective_pts": 55.5,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -194,7 +194,7 @@
       },
       "vice_captain": {
         "name": "Saka",
-        "effective_pts": 7.36
+        "effective_pts": 7.32
       },
       "starting_xi": [
         {
@@ -212,9 +212,9 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "team": "CRY",
-          "effective_pts": 5.45,
+          "effective_pts": 5.46,
           "projected_pts": 5.85,
-          "xmin": 83.8,
+          "xmin": 84.0,
           "fixture": "ARS (H)",
           "difficulty": 0.73,
           "is_dgw": false
@@ -256,9 +256,9 @@
           "name": "Saka",
           "position": "MID",
           "team": "ARS",
-          "effective_pts": 7.36,
+          "effective_pts": 7.32,
           "projected_pts": 7.43,
-          "xmin": 89.1,
+          "xmin": 88.7,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false
@@ -267,9 +267,9 @@
           "name": "Eze",
           "position": "MID",
           "team": "ARS",
-          "effective_pts": 4.88,
-          "projected_pts": 5.07,
-          "xmin": 86.6,
+          "effective_pts": 4.73,
+          "projected_pts": 4.97,
+          "xmin": 85.6,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false
@@ -278,9 +278,9 @@
           "name": "Dewsbury-Hall",
           "position": "MID",
           "team": "EVE",
-          "effective_pts": 4.49,
-          "projected_pts": 4.61,
-          "xmin": 87.6,
+          "effective_pts": 4.53,
+          "projected_pts": 4.65,
+          "xmin": 87.7,
           "fixture": "TOT (A)",
           "difficulty": 1.5,
           "is_dgw": false
@@ -395,7 +395,7 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 83.8,
+          "xmin": 84.0,
           "status": "blank",
           "bench_order": 4
         }
@@ -442,7 +442,7 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 83.8,
+          "xmin": 84.0,
           "status": "blank",
           "bench_order": 4
         }
@@ -489,7 +489,7 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 83.8,
+          "xmin": 84.0,
           "status": "blank",
           "bench_order": 4
         }
@@ -536,7 +536,7 @@
           "name": "Mu\u00f1oz",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 83.8,
+          "xmin": 84.0,
           "status": "blank",
           "bench_order": 4
         }
