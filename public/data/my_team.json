@@ -4,9 +4,9 @@
   "next_gw": 37,
   "bank": 0.1,
   "chips_available": [
+    "triple_captain",
     "free_hit",
-    "bench_boost",
-    "triple_captain"
+    "bench_boost"
   ],
   "squad": [
     {
@@ -228,10 +228,10 @@
       "is_vice": false,
       "multiplier": 1,
       "selling_price": 4.0,
-      "projected_pts": 4.38,
-      "projected_4gw": 8.5,
+      "projected_pts": 4.33,
+      "projected_4gw": 8.4,
       "form_trend": "hot",
-      "rolling_form": 3.42,
+      "rolling_form": 4.22,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
@@ -375,7 +375,7 @@
       "selling_price": 10.0,
       "projected_pts": 9.76,
       "projected_4gw": 17.2,
-      "form_trend": "cold",
+      "form_trend": "neutral",
       "rolling_form": 2.66,
       "form_direction": "rising",
       "news": "",
@@ -460,7 +460,7 @@
       "projected_pts": 3.21,
       "projected_4gw": 6.4,
       "form_trend": "neutral",
-      "rolling_form": 2.14,
+      "rolling_form": 2.54,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
@@ -541,11 +541,11 @@
       "is_vice": false,
       "multiplier": 0,
       "selling_price": 5.8,
-      "projected_pts": 5.01,
-      "projected_4gw": 9.2,
+      "projected_pts": 5.11,
+      "projected_4gw": 9.4,
       "form_trend": "neutral",
-      "rolling_form": 2.64,
-      "form_direction": "stable",
+      "rolling_form": 4.04,
+      "form_direction": "rising",
       "news": "",
       "news_severity": 0,
       "news_category": "healthy",
@@ -617,5 +617,5 @@
       ]
     }
   ],
-  "total_projected_pts": 64.3
+  "total_projected_pts": 64.2
 }

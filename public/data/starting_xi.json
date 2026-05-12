@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-11T09:31:01.174103",
+  "generated_at": "2026-05-12T08:32:37.372522",
   "team_id": 5033680,
   "next_gameweek": 37,
   "recommendations": [
     {
       "gameweek": 37,
       "formation": "4-3-3",
-      "total_effective_pts": 58.8,
+      "total_effective_pts": 58.9,
       "captain": {
         "name": "Saka",
         "team": "ARS",
@@ -45,8 +45,8 @@
           "name": "Justin",
           "position": "DEF",
           "team": "LEE",
-          "effective_pts": 4.38,
-          "projected_pts": 4.38,
+          "effective_pts": 4.33,
+          "projected_pts": 4.33,
           "xmin": 90,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
@@ -122,8 +122,8 @@
           "name": "Calvert-Lewin",
           "position": "FWD",
           "team": "LEE",
-          "effective_pts": 5.01,
-          "projected_pts": 5.01,
+          "effective_pts": 5.11,
+          "projected_pts": 5.11,
           "xmin": 90,
           "fixture": "BHA (H)",
           "difficulty": 1.08,
@@ -311,8 +311,8 @@
           "name": "Calvert-Lewin",
           "position": "FWD",
           "team": "LEE",
-          "effective_pts": 4.16,
-          "projected_pts": 4.16,
+          "effective_pts": 4.24,
+          "projected_pts": 4.24,
           "xmin": 90,
           "fixture": "WHU (A)",
           "difficulty": 1.5,
@@ -323,7 +323,7 @@
         {
           "name": "Justin",
           "position": "DEF",
-          "effective_pts": 4.1,
+          "effective_pts": 4.06,
           "xmin": 90,
           "status": "available",
           "bench_order": 1

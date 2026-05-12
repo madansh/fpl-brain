@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T09:31:01.164163",
+  "generated_at": "2026-05-12T08:32:37.361095",
   "next_gameweek": 37,
   "data_source": "Understat (382 players matched)",
   "captain_picks": {
@@ -14,8 +14,8 @@
         "fixture_difficulty": 0.9,
         "ownership": 11.3,
         "estimated_captain_pct": 1.1,
-        "form": "2.8",
-        "form_trend": "cold",
+        "form": "3.5",
+        "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
@@ -54,9 +54,9 @@
         "doubled_pts": 12.3,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 8.8,
+        "ownership": 8.9,
         "estimated_captain_pct": 0.9,
-        "form": "3.0",
+        "form": "3.5",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -75,9 +75,9 @@
         "doubled_pts": 10.9,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 45.2,
+        "ownership": 45.3,
         "estimated_captain_pct": 18.1,
-        "form": "5.8",
+        "form": "6.2",
         "form_trend": "neutral",
         "is_differential": false,
         "is_template": false,
@@ -120,8 +120,8 @@
       "fixture_difficulty": 0.9,
       "ownership": 11.3,
       "estimated_captain_pct": 1.1,
-      "form": "2.8",
-      "form_trend": "cold",
+      "form": "3.5",
+      "form_trend": "neutral",
       "is_differential": true,
       "is_template": false,
       "has_dgw": false,
@@ -139,9 +139,9 @@
       "doubled_pts": 12.3,
       "fixture": "BUR (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 8.8,
+      "ownership": 8.9,
       "estimated_captain_pct": 0.9,
-      "form": "3.0",
+      "form": "3.5",
       "form_trend": "neutral",
       "is_differential": true,
       "is_template": false,
@@ -165,9 +165,9 @@
         "doubled_pts": 12.3,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 8.8,
+        "ownership": 8.9,
         "estimated_captain_pct": 0.9,
-        "form": "3.0",
+        "form": "3.5",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -211,23 +211,23 @@
         "player_id": 706,
         "name": "Justin",
         "team": "LEE",
-        "projected_pts": 4.38,
-        "doubled_pts": 8.8,
+        "projected_pts": 4.33,
+        "doubled_pts": 8.7,
         "fixture": "BHA (H)",
         "fixture_difficulty": 1.08,
         "ownership": 2.1,
         "estimated_captain_pct": 0.2,
-        "form": "4.4",
+        "form": "5.2",
         "form_trend": "hot",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "approximated",
-        "diff_vs_template": -2.4,
+        "diff_vs_template": -2.45,
         "upside_pts": 0.0,
-        "downside_pts": 1.5,
+        "downside_pts": 1.6,
         "risk_category": "risky",
-        "vs_safe_diff": -5.38,
+        "vs_safe_diff": -5.43,
         "eo_advantage": 0.9,
         "risk_level": "high_risk",
         "haul_upside": 0.1
@@ -301,7 +301,34 @@
         }
       ],
       "data_quality": "understat",
-      "alternatives": {}
+      "alternatives": {
+        "premium": {
+          "player_id": 584,
+          "name": "Tel",
+          "team": "TOT",
+          "cost": 6.2,
+          "gain_4gw": 13.2,
+          "value_score": 2.13,
+          "reasons": [
+            "rotation_risk",
+            "hot_form"
+          ],
+          "fixtures": [
+            {
+              "gw": 37,
+              "fixture": "CHE (A)",
+              "difficulty": 1.21,
+              "is_dgw": false
+            },
+            {
+              "gw": 38,
+              "fixture": "EVE (H)",
+              "difficulty": 0.98,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
     },
     {
       "priority": 2,
@@ -363,32 +390,32 @@
         "low_xmin",
         "blank_gw39"
       ],
-      "in_id": 148,
-      "in_name": "F.Kad\u0131o\u011flu",
-      "in_team": "BHA",
-      "in_cost": 4.4,
-      "gain_4gw": 6.6,
-      "effective_4gw": 15.3,
+      "in_id": 568,
+      "in_name": "Pedro Porro",
+      "in_team": "TOT",
+      "in_cost": 5.2,
+      "gain_4gw": 8.1,
+      "effective_4gw": 16.8,
       "in_xmin": 90,
       "buy_reasons": [
         "nailed",
         "hot_form"
       ],
       "worth_hit": true,
-      "hit_value": 1.3,
-      "value_score": 3.48,
+      "hit_value": 2.8,
+      "value_score": 3.23,
       "position": 2,
       "fixtures": [
         {
           "gw": 37,
-          "fixture": "LEE (A)",
-          "difficulty": 1.1,
+          "fixture": "CHE (A)",
+          "difficulty": 1.21,
           "is_dgw": false
         },
         {
           "gw": 38,
-          "fixture": "MUN (H)",
-          "difficulty": 1.11,
+          "fixture": "EVE (H)",
+          "difficulty": 0.98,
           "is_dgw": false
         },
         {
@@ -404,26 +431,27 @@
       ],
       "data_quality": "understat",
       "alternatives": {
-        "premium": {
-          "player_id": 374,
-          "name": "Konat\u00e9",
-          "team": "LIV",
-          "cost": 5.5,
-          "gain_4gw": 7.9,
-          "value_score": 3.02,
+        "value": {
+          "player_id": 148,
+          "name": "F.Kad\u0131o\u011flu",
+          "team": "BHA",
+          "cost": 4.4,
+          "gain_4gw": 6.6,
+          "value_score": 3.48,
           "reasons": [
-            "nailed"
+            "nailed",
+            "hot_form"
           ],
           "fixtures": [
             {
               "gw": 37,
-              "fixture": "AVL (A)",
-              "difficulty": 1.22,
+              "fixture": "LEE (A)",
+              "difficulty": 1.1,
               "is_dgw": false
             },
             {
               "gw": 38,
-              "fixture": "BRE (H)",
+              "fixture": "MUN (H)",
               "difficulty": 1.11,
               "is_dgw": false
             }
@@ -437,25 +465,25 @@
       "chip": "Bench Boost",
       "recommended_gw": 37,
       "confidence": "HIGH",
-      "reasoning": "GW37 has favorable fixtures (ease: 3.7). Projected bench value: 18.9 pts.",
+      "reasoning": "GW37 has favorable fixtures (ease: 3.7). Projected bench value: 19.0 pts.",
       "action_needed": "Ensure bench has high xMin players with easy fixtures by GW37.",
       "analysis": [
         {
           "gw": 37,
           "dgw_players": 0,
-          "bench_proj": 18.9,
+          "bench_proj": 19.0,
           "bench_xmin": 240,
           "fixture_ease": 3.74,
-          "score": 36.6,
+          "score": 36.7,
           "is_dgw": false
         },
         {
           "gw": 38,
           "dgw_players": 0,
-          "bench_proj": 17.3,
+          "bench_proj": 17.4,
           "bench_xmin": 240,
           "fixture_ease": 2.6,
-          "score": 28.5,
+          "score": 28.6,
           "is_dgw": false
         },
         {
