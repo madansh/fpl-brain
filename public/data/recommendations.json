@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T08:32:37.361095",
+  "generated_at": "2026-05-13T08:37:59.142051",
   "next_gameweek": 37,
   "data_source": "Understat (382 players matched)",
   "captain_picks": {
@@ -12,7 +12,7 @@
         "doubled_pts": 19.5,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 11.3,
+        "ownership": 11.4,
         "estimated_captain_pct": 1.1,
         "form": "3.5",
         "form_trend": "neutral",
@@ -33,9 +33,9 @@
         "doubled_pts": 13.6,
         "fixture": "BOU (A)",
         "fixture_difficulty": 1.2,
-        "ownership": 64.4,
-        "estimated_captain_pct": 38.6,
-        "form": "5.5",
+        "ownership": 64.5,
+        "estimated_captain_pct": 38.7,
+        "form": "6.2",
         "form_trend": "neutral",
         "is_differential": false,
         "is_template": true,
@@ -98,7 +98,7 @@
         "fixture_difficulty": 1.36,
         "ownership": 10.1,
         "estimated_captain_pct": 1.0,
-        "form": "3.2",
+        "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -118,7 +118,7 @@
       "doubled_pts": 19.5,
       "fixture": "BUR (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 11.3,
+      "ownership": 11.4,
       "estimated_captain_pct": 1.1,
       "form": "3.5",
       "form_trend": "neutral",
@@ -192,7 +192,7 @@
         "fixture_difficulty": 1.36,
         "ownership": 10.1,
         "estimated_captain_pct": 1.0,
-        "form": "3.2",
+        "form": "3.0",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -236,7 +236,7 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 64.4,
+        "ownership": 64.5,
         "projected": 6.78
       },
       {
