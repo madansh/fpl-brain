@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T08:37:59.142051",
+  "generated_at": "2026-05-14T08:31:38.465976",
   "next_gameweek": 37,
   "data_source": "Understat (382 players matched)",
   "captain_picks": {
@@ -12,8 +12,8 @@
         "doubled_pts": 19.5,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 11.4,
-        "estimated_captain_pct": 1.1,
+        "ownership": 11.6,
+        "estimated_captain_pct": 1.2,
         "form": "3.5",
         "form_trend": "neutral",
         "is_differential": true,
@@ -47,6 +47,27 @@
         "risk_category": "safe"
       },
       {
+        "player_id": 242,
+        "name": "Dewsbury-Hall",
+        "team": "EVE",
+        "projected_pts": 6.26,
+        "doubled_pts": 12.5,
+        "fixture": "SUN (H)",
+        "fixture_difficulty": 0.9,
+        "ownership": 6.9,
+        "estimated_captain_pct": 0.7,
+        "form": "5.2",
+        "form_trend": "neutral",
+        "is_differential": true,
+        "is_template": false,
+        "has_dgw": false,
+        "data_quality": "approximated",
+        "diff_vs_template": -0.52,
+        "upside_pts": 0.0,
+        "downside_pts": 0.3,
+        "risk_category": "risky"
+      },
+      {
         "player_id": 266,
         "name": "Eze",
         "team": "ARS",
@@ -75,8 +96,8 @@
         "doubled_pts": 10.9,
         "fixture": "BUR (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 45.3,
-        "estimated_captain_pct": 18.1,
+        "ownership": 45.5,
+        "estimated_captain_pct": 18.2,
         "form": "6.2",
         "form_trend": "neutral",
         "is_differential": false,
@@ -86,27 +107,6 @@
         "diff_vs_template": -1.34,
         "upside_pts": 0.0,
         "downside_pts": 0.9,
-        "risk_category": "risky"
-      },
-      {
-        "player_id": 256,
-        "name": "Mu\u00f1oz",
-        "team": "CRY",
-        "projected_pts": 4.61,
-        "doubled_pts": 9.2,
-        "fixture": "BRE (A)",
-        "fixture_difficulty": 1.36,
-        "ownership": 10.1,
-        "estimated_captain_pct": 1.0,
-        "form": "3.0",
-        "form_trend": "cold",
-        "is_differential": true,
-        "is_template": false,
-        "has_dgw": false,
-        "data_quality": "understat",
-        "diff_vs_template": -2.17,
-        "upside_pts": 0.0,
-        "downside_pts": 1.4,
         "risk_category": "risky"
       }
     ],
@@ -118,8 +118,8 @@
       "doubled_pts": 19.5,
       "fixture": "BUR (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 11.4,
-      "estimated_captain_pct": 1.1,
+      "ownership": 11.6,
+      "estimated_captain_pct": 1.2,
       "form": "3.5",
       "form_trend": "neutral",
       "is_differential": true,
@@ -132,31 +132,56 @@
       "risk_category": "high_upside"
     },
     "differential_pick": {
-      "player_id": 266,
-      "name": "Eze",
-      "team": "ARS",
-      "projected_pts": 6.17,
-      "doubled_pts": 12.3,
-      "fixture": "BUR (H)",
+      "player_id": 242,
+      "name": "Dewsbury-Hall",
+      "team": "EVE",
+      "projected_pts": 6.26,
+      "doubled_pts": 12.5,
+      "fixture": "SUN (H)",
       "fixture_difficulty": 0.9,
-      "ownership": 8.9,
-      "estimated_captain_pct": 0.9,
-      "form": "3.5",
+      "ownership": 6.9,
+      "estimated_captain_pct": 0.7,
+      "form": "5.2",
       "form_trend": "neutral",
       "is_differential": true,
       "is_template": false,
       "has_dgw": false,
       "data_quality": "approximated",
-      "diff_vs_template": -0.61,
+      "diff_vs_template": -0.52,
       "upside_pts": 0.0,
-      "downside_pts": 0.4,
+      "downside_pts": 0.3,
       "risk_category": "risky",
-      "vs_safe_diff": -3.59,
-      "eo_advantage": 0.2,
+      "vs_safe_diff": -3.5,
+      "eo_advantage": 0.5,
       "risk_level": "high_risk",
-      "haul_upside": 0.0
+      "haul_upside": 0.1
     },
     "all_differentials": [
+      {
+        "player_id": 242,
+        "name": "Dewsbury-Hall",
+        "team": "EVE",
+        "projected_pts": 6.26,
+        "doubled_pts": 12.5,
+        "fixture": "SUN (H)",
+        "fixture_difficulty": 0.9,
+        "ownership": 6.9,
+        "estimated_captain_pct": 0.7,
+        "form": "5.2",
+        "form_trend": "neutral",
+        "is_differential": true,
+        "is_template": false,
+        "has_dgw": false,
+        "data_quality": "approximated",
+        "diff_vs_template": -0.52,
+        "upside_pts": 0.0,
+        "downside_pts": 0.3,
+        "risk_category": "risky",
+        "vs_safe_diff": -3.5,
+        "eo_advantage": 0.5,
+        "risk_level": "high_risk",
+        "haul_upside": 0.1
+      },
       {
         "player_id": 266,
         "name": "Eze",
@@ -178,7 +203,7 @@
         "downside_pts": 0.4,
         "risk_category": "risky",
         "vs_safe_diff": -3.59,
-        "eo_advantage": 0.2,
+        "eo_advantage": 0.3,
         "risk_level": "high_risk",
         "haul_upside": 0.0
       },
@@ -190,9 +215,9 @@
         "doubled_pts": 9.2,
         "fixture": "BRE (A)",
         "fixture_difficulty": 1.36,
-        "ownership": 10.1,
+        "ownership": 10.0,
         "estimated_captain_pct": 1.0,
-        "form": "3.0",
+        "form": "3.2",
         "form_trend": "cold",
         "is_differential": true,
         "is_template": false,
@@ -203,34 +228,9 @@
         "downside_pts": 1.4,
         "risk_category": "risky",
         "vs_safe_diff": -5.15,
-        "eo_advantage": 0.1,
+        "eo_advantage": 0.2,
         "risk_level": "high_risk",
         "haul_upside": 0.0
-      },
-      {
-        "player_id": 706,
-        "name": "Justin",
-        "team": "LEE",
-        "projected_pts": 4.33,
-        "doubled_pts": 8.7,
-        "fixture": "BHA (H)",
-        "fixture_difficulty": 1.08,
-        "ownership": 2.1,
-        "estimated_captain_pct": 0.2,
-        "form": "5.2",
-        "form_trend": "hot",
-        "is_differential": true,
-        "is_template": false,
-        "has_dgw": false,
-        "data_quality": "approximated",
-        "diff_vs_template": -2.45,
-        "upside_pts": 0.0,
-        "downside_pts": 1.6,
-        "risk_category": "risky",
-        "vs_safe_diff": -5.43,
-        "eo_advantage": 0.9,
-        "risk_level": "high_risk",
-        "haul_upside": 0.1
       }
     ],
     "template_captains": [
@@ -241,7 +241,7 @@
       },
       {
         "name": "B.Fernandes",
-        "ownership": 47.5,
+        "ownership": 47.6,
         "projected": 6.0
       },
       {
@@ -258,7 +258,6 @@
       "out_name": "Cherki",
       "out_reasons": [
         "low_projection",
-        "low_xmin",
         "mins_declining",
         "blank_gw39"
       ],
@@ -332,61 +331,9 @@
     },
     {
       "priority": 2,
-      "out_id": 253,
-      "out_name": "Henderson",
+      "out_id": 411,
+      "out_name": "O'Reilly",
       "out_reasons": [
-        "cold_form",
-        "low_xmin",
-        "blank_gw39"
-      ],
-      "in_id": 314,
-      "in_name": "Leno",
-      "in_team": "FUL",
-      "in_cost": 4.9,
-      "gain_4gw": 7.7,
-      "effective_4gw": 13.5,
-      "in_xmin": 90,
-      "buy_reasons": [
-        "nailed",
-        "hot_form"
-      ],
-      "worth_hit": true,
-      "hit_value": 2.4,
-      "value_score": 2.76,
-      "position": 1,
-      "fixtures": [
-        {
-          "gw": 37,
-          "fixture": "WOL (A)",
-          "difficulty": 1.37,
-          "is_dgw": false
-        },
-        {
-          "gw": 38,
-          "fixture": "NEW (H)",
-          "difficulty": 0.98,
-          "is_dgw": false
-        },
-        {
-          "gw": 39,
-          "fixture": "BLANK",
-          "difficulty": 0
-        },
-        {
-          "gw": 40,
-          "fixture": "BLANK",
-          "difficulty": 0
-        }
-      ],
-      "data_quality": "understat",
-      "alternatives": {}
-    },
-    {
-      "priority": 3,
-      "out_id": 256,
-      "out_name": "Mu\u00f1oz",
-      "out_reasons": [
-        "cold_form",
         "low_xmin",
         "blank_gw39"
       ],
@@ -394,7 +341,7 @@
       "in_name": "Pedro Porro",
       "in_team": "TOT",
       "in_cost": 5.2,
-      "gain_4gw": 8.1,
+      "gain_4gw": 9.0,
       "effective_4gw": 16.8,
       "in_xmin": 90,
       "buy_reasons": [
@@ -402,7 +349,7 @@
         "hot_form"
       ],
       "worth_hit": true,
-      "hit_value": 2.8,
+      "hit_value": 3.7,
       "value_score": 3.23,
       "position": 2,
       "fixtures": [
@@ -436,7 +383,7 @@
           "name": "F.Kad\u0131o\u011flu",
           "team": "BHA",
           "cost": 4.4,
-          "gain_4gw": 6.6,
+          "gain_4gw": 7.5,
           "value_score": 3.48,
           "reasons": [
             "nailed",
@@ -458,6 +405,79 @@
           ]
         }
       }
+    },
+    {
+      "priority": 3,
+      "out_id": 430,
+      "out_name": "Haaland",
+      "out_reasons": [
+        "low_xmin",
+        "blank_gw39"
+      ],
+      "in_id": 64,
+      "in_name": "Watkins",
+      "in_team": "AVL",
+      "in_cost": 8.7,
+      "gain_4gw": 9.6,
+      "effective_4gw": 23.5,
+      "in_xmin": 72.8,
+      "buy_reasons": [
+        "hot_form"
+      ],
+      "worth_hit": true,
+      "hit_value": 4.3,
+      "value_score": 2.7,
+      "position": 4,
+      "fixtures": [
+        {
+          "gw": 37,
+          "fixture": "LIV (H)",
+          "difficulty": 0.77,
+          "is_dgw": false
+        },
+        {
+          "gw": 38,
+          "fixture": "MCI (A)",
+          "difficulty": 1.18,
+          "is_dgw": false
+        },
+        {
+          "gw": 39,
+          "fixture": "BLANK",
+          "difficulty": 0
+        },
+        {
+          "gw": 40,
+          "fixture": "BLANK",
+          "difficulty": 0
+        }
+      ],
+      "data_quality": "understat",
+      "alternatives": {
+        "value": {
+          "player_id": 97,
+          "name": "Evanilson",
+          "team": "BOU",
+          "cost": 6.7,
+          "gain_4gw": 5.1,
+          "value_score": 2.83,
+          "reasons": [],
+          "fixtures": [
+            {
+              "gw": 37,
+              "fixture": "MCI (H)",
+              "difficulty": 0.96,
+              "is_dgw": false
+            },
+            {
+              "gw": 38,
+              "fixture": "NFO (A)",
+              "difficulty": 1.25,
+              "is_dgw": false
+            }
+          ]
+        }
+      }
     }
   ],
   "chip_strategy": [
@@ -465,25 +485,25 @@
       "chip": "Bench Boost",
       "recommended_gw": 37,
       "confidence": "HIGH",
-      "reasoning": "GW37 has favorable fixtures (ease: 3.7). Projected bench value: 19.0 pts.",
+      "reasoning": "GW37 has favorable fixtures (ease: 3.6). Projected bench value: 15.6 pts.",
       "action_needed": "Ensure bench has high xMin players with easy fixtures by GW37.",
       "analysis": [
         {
           "gw": 37,
           "dgw_players": 0,
-          "bench_proj": 19.0,
+          "bench_proj": 15.6,
           "bench_xmin": 240,
-          "fixture_ease": 3.74,
-          "score": 36.7,
+          "fixture_ease": 3.62,
+          "score": 29.7,
           "is_dgw": false
         },
         {
           "gw": 38,
           "dgw_players": 0,
-          "bench_proj": 17.4,
+          "bench_proj": 15.4,
           "bench_xmin": 240,
-          "fixture_ease": 2.6,
-          "score": 28.6,
+          "fixture_ease": 2.78,
+          "score": 26.0,
           "is_dgw": false
         },
         {
@@ -587,8 +607,8 @@
         "Henderson",
         "O'Reilly",
         "Gabriel",
-        "Mu\u00f1oz",
-        "Lacroix"
+        "Lacroix",
+        "Justin"
       ],
       "analysis": [
         {
@@ -599,8 +619,8 @@
             "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Mu\u00f1oz",
-            "Lacroix"
+            "Lacroix",
+            "Justin"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
@@ -615,8 +635,8 @@
             "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Mu\u00f1oz",
-            "Lacroix"
+            "Lacroix",
+            "Justin"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
@@ -631,8 +651,8 @@
             "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Mu\u00f1oz",
-            "Lacroix"
+            "Lacroix",
+            "Justin"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
@@ -647,8 +667,8 @@
             "Henderson",
             "O'Reilly",
             "Gabriel",
-            "Mu\u00f1oz",
-            "Lacroix"
+            "Lacroix",
+            "Justin"
           ],
           "avg_difficulty": 0.0,
           "hard_fixtures": 0,
