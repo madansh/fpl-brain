@@ -1,190 +1,12 @@
 {
-  "generated_at": "2026-05-15T08:48:20.525288",
+  "generated_at": "2026-05-16T07:57:01.184920",
   "team_id": 5033680,
-  "next_gameweek": 37,
+  "next_gameweek": 38,
   "recommendations": [
     {
-      "gameweek": 37,
-      "formation": "4-3-3",
-      "total_effective_pts": 58.9,
-      "captain": {
-        "name": "Saka",
-        "team": "ARS",
-        "effective_pts": 9.62,
-        "xmin": 88.7,
-        "fixture": "BUR (H)"
-      },
-      "vice_captain": {
-        "name": "Haaland",
-        "effective_pts": 6.54
-      },
-      "starting_xi": [
-        {
-          "name": "Darlow",
-          "position": "GK",
-          "team": "LEE",
-          "effective_pts": 3.21,
-          "projected_pts": 3.21,
-          "xmin": 90,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "effective_pts": 5.44,
-          "projected_pts": 5.44,
-          "xmin": 90,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Justin",
-          "position": "DEF",
-          "team": "LEE",
-          "effective_pts": 4.33,
-          "projected_pts": 4.33,
-          "xmin": 90,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "name": "Mu\u00f1oz",
-          "position": "DEF",
-          "team": "CRY",
-          "effective_pts": 4.3,
-          "projected_pts": 4.61,
-          "xmin": 83.9,
-          "fixture": "BRE (A)",
-          "difficulty": 1.36,
-          "is_dgw": false
-        },
-        {
-          "name": "O'Reilly",
-          "position": "DEF",
-          "team": "MCI",
-          "effective_pts": 3.94,
-          "projected_pts": 3.94,
-          "xmin": 90,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "name": "Saka",
-          "position": "MID",
-          "team": "ARS",
-          "effective_pts": 9.62,
-          "projected_pts": 9.76,
-          "xmin": 88.7,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Dewsbury-Hall",
-          "position": "MID",
-          "team": "EVE",
-          "effective_pts": 6.1,
-          "projected_pts": 6.26,
-          "xmin": 87.7,
-          "fixture": "SUN (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Eze",
-          "position": "MID",
-          "team": "ARS",
-          "effective_pts": 5.87,
-          "projected_pts": 6.17,
-          "xmin": 85.6,
-          "fixture": "BUR (H)",
-          "difficulty": 0.9,
-          "is_dgw": false
-        },
-        {
-          "name": "Haaland",
-          "position": "FWD",
-          "team": "MCI",
-          "effective_pts": 6.54,
-          "projected_pts": 6.78,
-          "xmin": 86.8,
-          "fixture": "BOU (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        },
-        {
-          "name": "Calvert-Lewin",
-          "position": "FWD",
-          "team": "LEE",
-          "effective_pts": 5.11,
-          "projected_pts": 5.11,
-          "xmin": 90,
-          "fixture": "BHA (H)",
-          "difficulty": 1.08,
-          "is_dgw": false
-        },
-        {
-          "name": "Bowen",
-          "position": "FWD",
-          "team": "WHU",
-          "effective_pts": 4.39,
-          "projected_pts": 4.41,
-          "xmin": 89.6,
-          "fixture": "NEW (A)",
-          "difficulty": 1.2,
-          "is_dgw": false
-        }
-      ],
-      "bench": [
-        {
-          "name": "Lacroix",
-          "position": "DEF",
-          "effective_pts": 3.73,
-          "xmin": 89.0,
-          "status": "available",
-          "bench_order": 1
-        },
-        {
-          "name": "Henderson",
-          "position": "GK",
-          "effective_pts": 3.02,
-          "xmin": 90,
-          "status": "available",
-          "bench_order": 2
-        },
-        {
-          "name": "Casemiro",
-          "position": "MID",
-          "effective_pts": 2.46,
-          "xmin": 78.0,
-          "status": "available",
-          "bench_order": 3
-        },
-        {
-          "name": "Cherki",
-          "position": "MID",
-          "effective_pts": 0.0,
-          "xmin": 89.8,
-          "status": "available",
-          "bench_order": 4
-        }
-      ],
-      "alerts": {
-        "blank_count": 0,
-        "low_xmin_count": 0,
-        "needs_attention": false
-      }
-    },
-    {
       "gameweek": 38,
-      "formation": "4-3-3",
-      "total_effective_pts": 55.5,
+      "formation": "3-4-3",
+      "total_effective_pts": 53.9,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -209,17 +31,6 @@
           "is_dgw": false
         },
         {
-          "name": "Mu\u00f1oz",
-          "position": "DEF",
-          "team": "CRY",
-          "effective_pts": 5.45,
-          "projected_pts": 5.85,
-          "xmin": 83.9,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
-          "is_dgw": false
-        },
-        {
           "name": "Gabriel",
           "position": "DEF",
           "team": "ARS",
@@ -231,17 +42,6 @@
           "is_dgw": false
         },
         {
-          "name": "Lacroix",
-          "position": "DEF",
-          "team": "CRY",
-          "effective_pts": 4.24,
-          "projected_pts": 4.29,
-          "xmin": 89.0,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
-          "is_dgw": false
-        },
-        {
           "name": "O'Reilly",
           "position": "DEF",
           "team": "MCI",
@@ -250,6 +50,17 @@
           "xmin": 90,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
+          "is_dgw": false
+        },
+        {
+          "name": "Justin",
+          "position": "DEF",
+          "team": "LEE",
+          "effective_pts": 4.06,
+          "projected_pts": 4.06,
+          "xmin": 90,
+          "fixture": "WHU (A)",
+          "difficulty": 1.5,
           "is_dgw": false
         },
         {
@@ -283,6 +94,17 @@
           "xmin": 87.7,
           "fixture": "TOT (A)",
           "difficulty": 1.5,
+          "is_dgw": false
+        },
+        {
+          "name": "Bruno G.",
+          "position": "MID",
+          "team": "NEW",
+          "effective_pts": 4.01,
+          "projected_pts": 4.01,
+          "xmin": 90,
+          "fixture": "FUL (A)",
+          "difficulty": 1.1,
           "is_dgw": false
         },
         {
@@ -321,26 +143,26 @@
       ],
       "bench": [
         {
-          "name": "Justin",
+          "name": "Tarkowski",
           "position": "DEF",
-          "effective_pts": 4.06,
+          "effective_pts": 3.81,
           "xmin": 90,
           "status": "available",
           "bench_order": 1
         },
         {
-          "name": "Henderson",
-          "position": "GK",
-          "effective_pts": 3.03,
-          "xmin": 90,
+          "name": "Maguire",
+          "position": "DEF",
+          "effective_pts": 3.51,
+          "xmin": 86.4,
           "status": "available",
           "bench_order": 2
         },
         {
-          "name": "Casemiro",
-          "position": "MID",
-          "effective_pts": 2.3,
-          "xmin": 78.0,
+          "name": "Kelleher",
+          "position": "GK",
+          "effective_pts": 3.1,
+          "xmin": 90,
           "status": "available",
           "bench_order": 3
         },
@@ -368,7 +190,7 @@
       "starting_xi": [],
       "bench": [
         {
-          "name": "Henderson",
+          "name": "Kelleher",
           "position": "GK",
           "effective_pts": 0.0,
           "xmin": 90,
@@ -392,10 +214,10 @@
           "bench_order": 3
         },
         {
-          "name": "Lacroix",
+          "name": "Tarkowski",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 89.0,
+          "xmin": 90,
           "status": "blank",
           "bench_order": 4
         }
@@ -415,7 +237,7 @@
       "starting_xi": [],
       "bench": [
         {
-          "name": "Henderson",
+          "name": "Kelleher",
           "position": "GK",
           "effective_pts": 0.0,
           "xmin": 90,
@@ -439,10 +261,10 @@
           "bench_order": 3
         },
         {
-          "name": "Lacroix",
+          "name": "Tarkowski",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 89.0,
+          "xmin": 90,
           "status": "blank",
           "bench_order": 4
         }
@@ -462,7 +284,7 @@
       "starting_xi": [],
       "bench": [
         {
-          "name": "Henderson",
+          "name": "Kelleher",
           "position": "GK",
           "effective_pts": 0.0,
           "xmin": 90,
@@ -486,10 +308,10 @@
           "bench_order": 3
         },
         {
-          "name": "Lacroix",
+          "name": "Tarkowski",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 89.0,
+          "xmin": 90,
           "status": "blank",
           "bench_order": 4
         }
@@ -509,7 +331,7 @@
       "starting_xi": [],
       "bench": [
         {
-          "name": "Henderson",
+          "name": "Kelleher",
           "position": "GK",
           "effective_pts": 0.0,
           "xmin": 90,
@@ -533,10 +355,57 @@
           "bench_order": 3
         },
         {
-          "name": "Lacroix",
+          "name": "Tarkowski",
           "position": "DEF",
           "effective_pts": 0.0,
-          "xmin": 89.0,
+          "xmin": 90,
+          "status": "blank",
+          "bench_order": 4
+        }
+      ],
+      "alerts": {
+        "blank_count": 14,
+        "low_xmin_count": 0,
+        "needs_attention": true
+      }
+    },
+    {
+      "gameweek": 43,
+      "formation": "?",
+      "total_effective_pts": -1,
+      "captain": null,
+      "vice_captain": null,
+      "starting_xi": [],
+      "bench": [
+        {
+          "name": "Kelleher",
+          "position": "GK",
+          "effective_pts": 0.0,
+          "xmin": 90,
+          "status": "blank",
+          "bench_order": 1
+        },
+        {
+          "name": "O'Reilly",
+          "position": "DEF",
+          "effective_pts": 0.0,
+          "xmin": 90,
+          "status": "blank",
+          "bench_order": 2
+        },
+        {
+          "name": "Gabriel",
+          "position": "DEF",
+          "effective_pts": 0.0,
+          "xmin": 90,
+          "status": "blank",
+          "bench_order": 3
+        },
+        {
+          "name": "Tarkowski",
+          "position": "DEF",
+          "effective_pts": 0.0,
+          "xmin": 90,
           "status": "blank",
           "bench_order": 4
         }
