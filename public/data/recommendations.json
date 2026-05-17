@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T07:57:01.174821",
+  "generated_at": "2026-05-17T08:14:07.102794",
   "next_gameweek": 38,
   "data_source": "Understat (382 players matched)",
   "captain_picks": {
@@ -54,8 +54,8 @@
         "doubled_pts": 10.5,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 12.5,
-        "estimated_captain_pct": 1.2,
+        "ownership": 12.6,
+        "estimated_captain_pct": 1.3,
         "form": "3.2",
         "form_trend": "cold",
         "is_differential": true,
@@ -190,8 +190,8 @@
         "doubled_pts": 10.5,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 12.5,
-        "estimated_captain_pct": 1.2,
+        "ownership": 12.6,
+        "estimated_captain_pct": 1.3,
         "form": "3.2",
         "form_trend": "cold",
         "is_differential": true,
@@ -203,7 +203,7 @@
         "downside_pts": 2.7,
         "risk_category": "risky",
         "vs_safe_diff": -2.47,
-        "eo_advantage": 37.4,
+        "eo_advantage": 37.3,
         "risk_level": "high_risk",
         "haul_upside": 5.6
       },
