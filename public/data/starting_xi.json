@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-18T09:51:54.640746",
+  "generated_at": "2026-05-19T09:33:50.562678",
   "team_id": 5033680,
   "next_gameweek": 38,
   "recommendations": [
     {
       "gameweek": 38,
       "formation": "3-4-3",
-      "total_effective_pts": 53.9,
+      "total_effective_pts": 53.7,
       "captain": {
         "name": "Haaland",
         "team": "MCI",
@@ -78,9 +78,9 @@
           "name": "Eze",
           "position": "MID",
           "team": "ARS",
-          "effective_pts": 4.73,
-          "projected_pts": 4.97,
-          "xmin": 85.6,
+          "effective_pts": 4.6,
+          "projected_pts": 4.87,
+          "xmin": 85.0,
           "fixture": "CRY (A)",
           "difficulty": 1.31,
           "is_dgw": false

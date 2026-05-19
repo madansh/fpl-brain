@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T09:51:54.631326",
+  "generated_at": "2026-05-19T09:33:50.552720",
   "next_gameweek": 38,
   "data_source": "Understat (382 players matched)",
   "captain_picks": {
@@ -35,8 +35,8 @@
         "fixture_difficulty": 1.31,
         "ownership": 13.0,
         "estimated_captain_pct": 1.3,
-        "form": "2.8",
-        "form_trend": "cold",
+        "form": "4.8",
+        "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
@@ -68,27 +68,6 @@
         "risk_category": "risky"
       },
       {
-        "player_id": 266,
-        "name": "Eze",
-        "team": "ARS",
-        "projected_pts": 4.97,
-        "doubled_pts": 9.9,
-        "fixture": "CRY (A)",
-        "fixture_difficulty": 1.31,
-        "ownership": 8.9,
-        "estimated_captain_pct": 0.9,
-        "form": "2.8",
-        "form_trend": "neutral",
-        "is_differential": true,
-        "is_template": false,
-        "has_dgw": false,
-        "data_quality": "approximated",
-        "diff_vs_template": -4.41,
-        "upside_pts": 0.0,
-        "downside_pts": 2.8,
-        "risk_category": "risky"
-      },
-      {
         "player_id": 5,
         "name": "Gabriel",
         "team": "ARS",
@@ -98,13 +77,34 @@
         "fixture_difficulty": 1.31,
         "ownership": 46.1,
         "estimated_captain_pct": 18.4,
-        "form": "5.0",
+        "form": "6.2",
         "form_trend": "neutral",
         "is_differential": false,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "understat",
         "diff_vs_template": -4.44,
+        "upside_pts": 0.0,
+        "downside_pts": 2.9,
+        "risk_category": "risky"
+      },
+      {
+        "player_id": 266,
+        "name": "Eze",
+        "team": "ARS",
+        "projected_pts": 4.87,
+        "doubled_pts": 9.7,
+        "fixture": "CRY (A)",
+        "fixture_difficulty": 1.31,
+        "ownership": 8.9,
+        "estimated_captain_pct": 0.9,
+        "form": "3.4",
+        "form_trend": "neutral",
+        "is_differential": true,
+        "is_template": false,
+        "has_dgw": false,
+        "data_quality": "approximated",
+        "diff_vs_template": -4.51,
         "upside_pts": 0.0,
         "downside_pts": 2.9,
         "risk_category": "risky"
@@ -141,8 +141,8 @@
       "fixture_difficulty": 1.31,
       "ownership": 13.0,
       "estimated_captain_pct": 1.3,
-      "form": "2.8",
-      "form_trend": "cold",
+      "form": "4.8",
+      "form_trend": "neutral",
       "is_differential": true,
       "is_template": false,
       "has_dgw": false,
@@ -167,8 +167,8 @@
         "fixture_difficulty": 1.31,
         "ownership": 13.0,
         "estimated_captain_pct": 1.3,
-        "form": "2.8",
-        "form_trend": "cold",
+        "form": "4.8",
+        "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
@@ -211,23 +211,23 @@
         "player_id": 266,
         "name": "Eze",
         "team": "ARS",
-        "projected_pts": 4.97,
-        "doubled_pts": 9.9,
+        "projected_pts": 4.87,
+        "doubled_pts": 9.7,
         "fixture": "CRY (A)",
         "fixture_difficulty": 1.31,
         "ownership": 8.9,
         "estimated_captain_pct": 0.9,
-        "form": "2.8",
+        "form": "3.4",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
         "has_dgw": false,
         "data_quality": "approximated",
-        "diff_vs_template": -4.41,
+        "diff_vs_template": -4.51,
         "upside_pts": 0.0,
-        "downside_pts": 2.8,
+        "downside_pts": 2.9,
         "risk_category": "risky",
-        "vs_safe_diff": -2.76,
+        "vs_safe_diff": -2.86,
         "eo_advantage": 37.8,
         "risk_level": "high_risk",
         "haul_upside": 5.7
@@ -305,34 +305,33 @@
     },
     {
       "priority": 2,
-      "out_id": 266,
-      "out_name": "Eze",
+      "out_id": 411,
+      "out_name": "O'Reilly",
       "out_reasons": [
+        "cold_form",
         "low_xmin",
-        "mins_declining",
-        "blank_gw39",
-        "hard_fixtures"
+        "blank_gw39"
       ],
-      "in_id": 267,
-      "in_name": "Sarr",
-      "in_team": "CRY",
-      "in_cost": 6.4,
-      "gain_4gw": 20.1,
-      "effective_4gw": 27.2,
-      "in_xmin": 69.0,
+      "in_id": 107,
+      "in_name": "Lewis-Potter",
+      "in_team": "BRE",
+      "in_cost": 4.8,
+      "gain_4gw": 13.4,
+      "effective_4gw": 16.4,
+      "in_xmin": 90,
       "buy_reasons": [
-        "easy_fixtures",
+        "nailed",
         "easy_next_2"
       ],
       "worth_hit": true,
-      "hit_value": 14.8,
-      "value_score": 4.25,
-      "position": 3,
+      "hit_value": 8.1,
+      "value_score": 3.42,
+      "position": 2,
       "fixtures": [
         {
           "gw": 38,
-          "fixture": "ARS (H)",
-          "difficulty": 0.73,
+          "fixture": "LIV (A)",
+          "difficulty": 0.94,
           "is_dgw": false
         },
         {
@@ -352,65 +351,13 @@
         }
       ],
       "data_quality": "understat",
-      "alternatives": {
-        "budget": {
-          "player_id": 273,
-          "name": "Wharton",
-          "team": "CRY",
-          "cost": 5.0,
-          "gain_4gw": 5.0,
-          "value_score": 2.42,
-          "reasons": [
-            "easy_fixtures",
-            "easy_next_2"
-          ],
-          "fixtures": [
-            {
-              "gw": 38,
-              "fixture": "ARS (H)",
-              "difficulty": 0.73,
-              "is_dgw": false
-            },
-            {
-              "gw": 39,
-              "fixture": "BLANK",
-              "difficulty": 0
-            }
-          ]
-        },
-        "premium": {
-          "player_id": 387,
-          "name": "Szoboszlai",
-          "team": "LIV",
-          "cost": 7.0,
-          "gain_4gw": 14.5,
-          "value_score": 3.09,
-          "reasons": [
-            "nailed",
-            "hot_form"
-          ],
-          "fixtures": [
-            {
-              "gw": 38,
-              "fixture": "BRE (H)",
-              "difficulty": 1.11,
-              "is_dgw": false
-            },
-            {
-              "gw": 39,
-              "fixture": "BLANK",
-              "difficulty": 0
-            }
-          ]
-        }
-      }
+      "alternatives": {}
     },
     {
       "priority": 3,
       "out_id": 16,
       "out_name": "Saka",
       "out_reasons": [
-        "cold_form",
         "low_xmin",
         "blank_gw39",
         "hard_fixtures"
@@ -419,7 +366,7 @@
       "in_name": "Sarr",
       "in_team": "CRY",
       "in_cost": 6.4,
-      "gain_4gw": 21.9,
+      "gain_4gw": 12.5,
       "effective_4gw": 27.2,
       "in_xmin": 69.0,
       "buy_reasons": [
@@ -427,7 +374,7 @@
         "easy_next_2"
       ],
       "worth_hit": true,
-      "hit_value": 16.6,
+      "hit_value": 7.2,
       "value_score": 4.25,
       "position": 3,
       "fixtures": [
@@ -460,7 +407,7 @@
           "name": "Szoboszlai",
           "team": "LIV",
           "cost": 7.0,
-          "gain_4gw": 16.3,
+          "gain_4gw": 6.9,
           "value_score": 3.09,
           "reasons": [
             "nailed",
