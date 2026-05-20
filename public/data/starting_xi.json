@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T09:33:50.562678",
+  "generated_at": "2026-05-20T08:58:51.186235",
   "team_id": 5033680,
   "next_gameweek": 38,
   "recommendations": [
@@ -11,7 +11,7 @@
         "name": "Haaland",
         "team": "MCI",
         "effective_pts": 7.46,
-        "xmin": 86.8,
+        "xmin": 86.9,
         "fixture": "AVL (H)"
       },
       "vice_captain": {
@@ -113,7 +113,7 @@
           "team": "MCI",
           "effective_pts": 7.46,
           "projected_pts": 7.73,
-          "xmin": 86.8,
+          "xmin": 86.9,
           "fixture": "AVL (H)",
           "difficulty": 1.0,
           "is_dgw": false
@@ -170,7 +170,7 @@
           "name": "Cherki",
           "position": "MID",
           "effective_pts": 0.0,
-          "xmin": 89.8,
+          "xmin": 90,
           "status": "available",
           "bench_order": 4
         }

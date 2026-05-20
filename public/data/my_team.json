@@ -4,9 +4,9 @@
   "next_gw": 38,
   "bank": 0.1,
   "chips_available": [
-    "triple_captain",
     "bench_boost",
-    "free_hit"
+    "free_hit",
+    "triple_captain"
   ],
   "squad": [
     {
@@ -62,7 +62,7 @@
       "projected_pts": 4.17,
       "projected_4gw": 4.2,
       "form_trend": "cold",
-      "rolling_form": 1.78,
+      "rolling_form": 2.18,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
@@ -409,7 +409,7 @@
       "projected_pts": 7.73,
       "projected_4gw": 7.7,
       "form_trend": "neutral",
-      "rolling_form": 3.83,
+      "rolling_form": 5.63,
       "form_direction": "falling",
       "news": "",
       "news_severity": 0,
