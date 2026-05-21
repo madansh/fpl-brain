@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T08:58:51.176491",
+  "generated_at": "2026-05-21T09:30:04.503020",
   "next_gameweek": 38,
   "data_source": "Understat (383 players matched)",
   "captain_picks": {
@@ -12,7 +12,7 @@
         "doubled_pts": 15.5,
         "fixture": "AVL (H)",
         "fixture_difficulty": 1.0,
-        "ownership": 64.4,
+        "ownership": 64.3,
         "estimated_captain_pct": 38.6,
         "form": "6.8",
         "form_trend": "neutral",
@@ -54,9 +54,9 @@
         "doubled_pts": 10.5,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 12.9,
+        "ownership": 13.2,
         "estimated_captain_pct": 1.3,
-        "form": "3.6",
+        "form": "4.0",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -64,7 +64,7 @@
         "data_quality": "understat",
         "diff_vs_template": -4.12,
         "upside_pts": 0.0,
-        "downside_pts": 2.7,
+        "downside_pts": 2.6,
         "risk_category": "risky"
       },
       {
@@ -118,7 +118,7 @@
       "doubled_pts": 15.5,
       "fixture": "AVL (H)",
       "fixture_difficulty": 1.0,
-      "ownership": 64.4,
+      "ownership": 64.3,
       "estimated_captain_pct": 38.6,
       "form": "6.8",
       "form_trend": "neutral",
@@ -190,9 +190,9 @@
         "doubled_pts": 10.5,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 12.9,
+        "ownership": 13.2,
         "estimated_captain_pct": 1.3,
-        "form": "3.6",
+        "form": "4.0",
         "form_trend": "neutral",
         "is_differential": true,
         "is_template": false,
@@ -200,7 +200,7 @@
         "data_quality": "understat",
         "diff_vs_template": -4.12,
         "upside_pts": 0.0,
-        "downside_pts": 2.7,
+        "downside_pts": 2.6,
         "risk_category": "risky",
         "vs_safe_diff": -2.47,
         "eo_advantage": 37.3,
@@ -236,12 +236,12 @@
     "template_captains": [
       {
         "name": "Haaland",
-        "ownership": 64.4,
+        "ownership": 64.3,
         "projected": 7.73
       },
       {
         "name": "B.Fernandes",
-        "ownership": 47.7,
+        "ownership": 47.8,
         "projected": 5.14
       },
       {
@@ -406,9 +406,9 @@
           "player_id": 387,
           "name": "Szoboszlai",
           "team": "LIV",
-          "cost": 7.0,
+          "cost": 7.1,
           "gain_4gw": 6.9,
-          "value_score": 3.09,
+          "value_score": 3.04,
           "reasons": [
             "nailed",
             "hot_form"
