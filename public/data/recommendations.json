@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T09:30:04.503020",
+  "generated_at": "2026-05-22T08:54:11.696298",
   "next_gameweek": 38,
   "data_source": "Understat (383 players matched)",
   "captain_picks": {
@@ -54,8 +54,8 @@
         "doubled_pts": 10.5,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 13.2,
-        "estimated_captain_pct": 1.3,
+        "ownership": 13.6,
+        "estimated_captain_pct": 1.4,
         "form": "4.0",
         "form_trend": "neutral",
         "is_differential": true,
@@ -75,7 +75,7 @@
         "doubled_pts": 9.9,
         "fixture": "CRY (A)",
         "fixture_difficulty": 1.31,
-        "ownership": 46.1,
+        "ownership": 46.0,
         "estimated_captain_pct": 18.4,
         "form": "7.8",
         "form_trend": "neutral",
@@ -190,8 +190,8 @@
         "doubled_pts": 10.5,
         "fixture": "LEE (H)",
         "fixture_difficulty": 0.9,
-        "ownership": 13.2,
-        "estimated_captain_pct": 1.3,
+        "ownership": 13.6,
+        "estimated_captain_pct": 1.4,
         "form": "4.0",
         "form_trend": "neutral",
         "is_differential": true,
@@ -203,7 +203,7 @@
         "downside_pts": 2.6,
         "risk_category": "risky",
         "vs_safe_diff": -2.47,
-        "eo_advantage": 37.3,
+        "eo_advantage": 37.2,
         "risk_level": "high_risk",
         "haul_upside": 5.6
       },
@@ -246,7 +246,7 @@
       },
       {
         "name": "M.Salah",
-        "ownership": 13.8,
+        "ownership": 13.9,
         "projected": 9.38
       }
     ]
